@@ -111,7 +111,14 @@ body {
   font-size: 1.0625rem;
   line-height: 1.6;
   overflow-wrap: break-word;
+  /* El pie siempre abajo del todo, aunque la página sea corta. */
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }
+main { flex: 1 0 auto; display: flex; flex-direction: column; }
+main > * { flex-shrink: 0; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 1.5px; }
 a:focus-visible, summary:focus-visible {
@@ -189,7 +196,7 @@ h1, h2, h3 { text-wrap: balance; }
 @media (prefers-reduced-motion: reduce) { .banner-tab { transition: none; } }
 
 /* Pie sencillo */
-.site-foot { margin-top: 56px; border-top: 1px solid var(--b-line); background: var(--b-surface); color: var(--b-muted); }
+.site-foot { margin-top: 40px; border-top: 1px solid var(--b-line); background: var(--b-surface); color: var(--b-muted); }
 .foot-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px; padding-block: 20px 32px; font-size: 0.9375rem; }
 .foot-row p { margin: 0; }
 .foot-row a { color: var(--b-muted); }
@@ -239,7 +246,7 @@ h1, h2, h3 { text-wrap: balance; }
 /* hacia cada lado.                                                    */
 
 .stage {
-  min-height: calc(100svh - 190px);
+  flex: 1 0 auto;
   display: flex; flex-direction: column; justify-content: center;
   padding-block: 32px 8px;
 }
@@ -253,8 +260,11 @@ h1, h2, h3 { text-wrap: balance; }
   -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
 }
-@media (min-width: 720px) { .carousel { --tile-size: 116px; --gap: 16px; } }
-@media (min-width: 1200px) { .carousel { --tile-size: 128px; --gap: 18px; } }
+/* En ordenador, las fichas se ajustan al alto de la ventana: banner, carrusel y
+   pie caben en la primera pantalla también en portátiles de 768 de alto. */
+@media (min-width: 720px) {
+  .carousel { --gap: 16px; --tile-size: clamp(80px, calc((100vh - 420px) / 4), 128px); }
+}
 .carousel-track {
   list-style: none; margin: 0;
   display: flex; gap: var(--gap); width: max-content;
