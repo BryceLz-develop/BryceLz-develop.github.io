@@ -17,19 +17,19 @@ tools/export-privacy.ts   ← copia la nota de privacidad desde la app
 ## Publicar por primera vez
 
 1. En GitHub, crea un repositorio público llamado exactamente
-   `TU_USUARIO.github.io` (con tu nombre de usuario de GitHub).
-2. En `content/site.json`, cambia `baseUrl` a `https://TU_USUARIO.github.io` y
+   `BryceLz-develop.github.io` (con tu nombre de usuario de GitHub).
+2. En `content/site.json`, cambia `baseUrl` a `https://BryceLz-develop.github.io` y
    ejecuta `python3 build.py`.
 3. Sube este proyecto a ese repositorio (rama `main`).
 4. En el repositorio: **Settings › Pages › Build and deployment**, elige
    **Deploy from a branch**, rama `main` y carpeta `/docs`. Guarda.
-5. En un par de minutos la web está en `https://TU_USUARIO.github.io`.
+5. En un par de minutos la web está en `https://BryceLz-develop.github.io`.
 
 ## Después de publicar
 
 - **Play Console** (ficha de AllTheGames): sitio web
-  `https://TU_USUARIO.github.io` y política de privacidad
-  `https://TU_USUARIO.github.io/apps/allthegames/privacidad/`.
+  `https://BryceLz-develop.github.io` y política de privacidad
+  `https://BryceLz-develop.github.io/apps/allthegames/privacidad/`.
 - **AdMob**: el archivo `app-ads.txt` ya está en la raíz. AdMob lo comprueba
   solo en unas 24 horas desde que el sitio web de la ficha apunta aquí.
 - **Google Sites**: deja la página antigua unas semanas con un enlace a la web
