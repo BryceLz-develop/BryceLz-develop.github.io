@@ -182,50 +182,39 @@ class Ctx:
 # ---------------------------------------------------------------------------
 # Piezas comunes
 
-NAV = [('apps/', 'Apps'), ('soporte/', 'Soporte'), ('contacto/', 'Contacto')]
+# Los apartados del banner. De momento: Inicio y AllTheGames.
+NAV = [('', 'Inicio'), ('apps/allthegames/', 'AllTheGames')]
 
 
 def wordmark(c: Ctx) -> str:
-    return f'<a class="wordmark" href="{c.to("")}" aria-label="{BRAND}, inicio">{BRAND}<span class="wordmark-dot" aria-hidden="true"></span></a>'
+    return (
+        f'<a class="wordmark" href="{c.to("")}" aria-label="{BRAND}, inicio">'
+        f'{BRAND}<span class="wordmark-dot" aria-hidden="true"></span></a>'
+    )
 
 
 def site_header(c: Ctx, section: str | None) -> str:
-    links = ''.join(_nav_link(c, path, label, section) for path, label in NAV)
-    return f'''<header class="site-head">
-  <div class="wrap head-row">
+    """El banner de arriba, como los de la app: banda honda con labio y botones dentro."""
+    tabs = ''.join(_nav_link(c, path, label, section) for path, label in NAV)
+    return f'''<header class="banner">
+  <div class="wrap banner-row">
     {wordmark(c)}
-    <nav class="head-nav" aria-label="Principal">{links}</nav>
+    <nav class="banner-nav" aria-label="Apartados">{tabs}</nav>
   </div>
 </header>'''
 
 
 def _nav_link(c: Ctx, path: str, label: str, section: str | None) -> str:
     current = ' aria-current="page"' if section == path else ''
-    return f'<a href="{c.to(path)}"{current}>{label}</a>'
+    return f'<a class="banner-tab" href="{c.to(path)}"{current}>{label}</a>'
 
 
 def site_footer(c: Ctx, apps: list[dict]) -> str:
-    app_links = ''.join(
-        f'<li><a href="{c.to("apps/" + a["slug"] + "/")}">{esc(a["name"])}</a></li>' for a in apps
-    )
-    legal = ''.join(
-        f'<li><a href="{c.to("apps/" + a["slug"] + "/privacidad/")}">Privacidad de {esc(a["name"])}</a></li>'
-        f'<li><a href="{c.to("apps/" + a["slug"] + "/terminos/")}">Términos de {esc(a["name"])}</a></li>'
-        for a in apps
-    )
     return f'''<footer class="site-foot">
-  <div class="wrap foot-grid">
-    <div class="foot-brand">
-      {wordmark(c)}
-      <p>{esc(SITE['tagline'])}</p>
-      <p>{mail_link()}</p>
-    </div>
-    <nav aria-label="Apps"><h2>Apps</h2><ul>{app_links}</ul></nav>
-    <nav aria-label="Ayuda"><h2>Ayuda</h2><ul><li><a href="{c.to('soporte/')}">Soporte</a></li><li><a href="{c.to('contacto/')}">Contacto</a></li></ul></nav>
-    <nav aria-label="Legal"><h2>Legal</h2><ul><li><a href="{c.to('aviso-legal/')}">Aviso legal</a></li>{legal}</ul></nav>
-  </div>
-  <div class="wrap foot-base">
-    <p>© {YEAR} {esc(OWNER)}. {BRAND} es el nombre con el que publico mis apps.</p>
+  <div class="wrap foot-row">
+    <p>© {YEAR} {esc(OWNER)}</p>
+    <a href="{c.to('aviso-legal/')}">Aviso legal</a>
+    {mail_link()}
   </div>
 </footer>'''
 
@@ -307,202 +296,63 @@ def load() -> dict:
     }
 
 
-def store_line(app: dict) -> str:
-    if app.get('storePublished'):
-        return 'Para Android. Ya está en Google Play.'
-    return 'Para Android. Muy pronto en Google Play.'
-
-
-def app_card(c: Ctx, d: dict, heading: str = 'h3') -> str:
-    """La tarjeta de una app: un trozo de la app con sus colores."""
-    app, games = d['app'], d['games']
-    s = lambda p: c.to('static/apps/allthegames/' + p)
-    chips = ''.join(
-        f'<li style="--chip:{cat["accent"]}">{esc(cat["label"])} <span>{sum(1 for g in games if g["folder"] == cat["id"])}</span></li>'
-        for cat in app['categories']
-    )
-    return f'''<article class="appcard">
-  <a class="appcard-art" href="{c.to('apps/allthegames/')}" tabindex="-1" aria-hidden="true">
-    <img src="{s('logo.webp')}" alt="" width="743" height="500">
-  </a>
-  <div class="appcard-copy">
-    <{heading} class="appcard-name"><a href="{c.to('apps/allthegames/')}">{esc(app['name'])}</a></{heading}>
-    <p>{esc(app['lead'])}</p>
-    <ul class="appcard-cats" aria-label="Juegos por categoría">{chips}</ul>
-    <p class="appcard-meta">{store_line(app)}</p>
-    <div class="appcard-links">
-      <a class="sticker" href="{c.to('apps/allthegames/')}">Ver la app</a>
-      <a class="sticker sticker-soft" href="{c.to('apps/allthegames/soporte/')}">Soporte</a>
-      <a class="sticker sticker-soft" href="{c.to('apps/allthegames/privacidad/')}">Privacidad</a>
-    </div>
-  </div>
-</article>'''
-
-
-def hero_board(c: Ctx, d: dict) -> str:
-    """Tablero de la portada: juegos reales, en el pastel de su categoría."""
-    cats = d['app']['categories']
-    by_cat = {cat['id']: [g for g in d['games'] if g['folder'] == cat['id']] for cat in cats}
-    accent = {cat['id']: cat['accent'] for cat in cats}
-    picks = []
-    for r in range(4):
-        for cat in cats:
-            lst = by_cat[cat['id']]
-            # Cuatro juegos distintos de cada categoría, repartidos por la lista.
-            picks.append((lst[(r * len(lst)) // 4], cat['id']))
-    tiles = ''.join(
-        f'<li style="--i:{i};--tile:{pastel(accent[cid], 0.14)}">'
-        f'<img src="{c.to("static/apps/allthegames/games/" + g["slug"] + ".webp")}" alt="" width="80" height="80"></li>'
-        for i, (g, cid) in enumerate(picks[:24])
-    )
-    return f'<ul class="board" aria-hidden="true">{tiles}</ul>'
-
-
-# ---------------------------------------------------------------------------
-# Páginas de BryceLz
-
-
 def build_home(d: dict) -> None:
+    """Inicio: solo el carrusel con los iconos de los juegos de AllTheGames."""
     c = Ctx('')
-    principles = ''.join(
-        f'''<li class="principle">
-        <h3>{esc(t)}</h3>
-        <p>{esc(b)}</p>
-      </li>'''
-        for t, b in SITE['principles']
-    )
-    main = f'''<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <h1>{esc(SITE['headline'])}</h1>
-      <p class="hero-lead">{esc(SITE['intro'])}</p>
-      <div class="hero-actions">
-        <a class="btn" href="apps/allthegames/">Conoce AllTheGames</a>
-        <a class="btn btn-ghost" href="contacto/">Escríbeme</a>
-      </div>
-    </div>
-    {hero_board(c, d)}
+    app, games = d['app'], d['games']
+    accent = {cat['id']: cat['accent'] for cat in app['categories']}
+    order = [cat['id'] for cat in app['categories']]
+    # Intercaladas por categoría, para que los colores se vayan alternando.
+    queues = {cid: [g for g in games if g['folder'] == cid] for cid in order}
+    mixed = []
+    while any(queues.values()):
+        for cid in order:
+            if queues[cid]:
+                mixed.append(queues[cid].pop(0))
+
+    def tile(g: dict, copy: bool) -> str:
+        hidden = ' aria-hidden="true" tabindex="-1"' if copy else ''
+        alt = '' if copy else esc(g['name'])
+        return (
+            f'<li style="--tile:{pastel(accent[g["folder"]], 0.14)}">'
+            f'<a href="{c.to("apps/allthegames/")}#cat-{g["folder"]}" title="{esc(g["name"])}"{hidden}>'
+            f'<img src="{c.to("static/apps/allthegames/games/" + g["slug"] + ".webp")}" alt="{alt}" width="96" height="96">'
+            f'</a></li>'
+        )
+
+    first = ''.join(tile(g, False) for g in mixed)
+    again = ''.join(tile(g, True) for g in mixed)
+    main = f'''<h1 class="visually-hidden">{BRAND}</h1>
+<section class="stage" aria-label="Juegos de AllTheGames">
+  <div class="carousel" data-carousel>
+    <ul class="carousel-track">{first}{again}</ul>
+  </div>
+  <div class="wrap carousel-bar">
+    <button class="carousel-toggle" type="button" data-carousel-toggle aria-pressed="false">Pausar</button>
   </div>
 </section>
-
-<section class="band" aria-labelledby="apps-h">
-  <div class="wrap">
-    <div class="section-head">
-      <h2 id="apps-h">Apps</h2>
-      <a href="apps/">Todas las apps</a>
-    </div>
-    {app_card(c, d)}
-  </div>
-</section>
-
-<section class="band band-ink" aria-labelledby="como-h">
-  <div class="wrap">
-    <h2 id="como-h">Cómo hago las apps</h2>
-    <ul class="principles">{principles}</ul>
-  </div>
-</section>
-
-<section class="band" aria-labelledby="ayuda-h">
-  <div class="wrap duo">
-    <div class="panel">
-      <h2 id="ayuda-h">¿Necesitas ayuda con una app?</h2>
-      <p>Cada app tiene sus preguntas frecuentes. Si no encuentras la respuesta, escríbeme y lo miro.</p>
-      <a class="btn" href="soporte/">Ir a soporte</a>
-    </div>
-    <div class="panel">
-      <h2>¿Hablamos de trabajo?</h2>
-      <p>Para propuestas, colaboraciones o encargos, cuéntame la idea y los plazos que tienes en mente.</p>
-      <a class="btn btn-ghost" href="contacto/">Ver contacto</a>
-    </div>
-  </div>
-</section>'''
+<script>
+  // El carrusel se mueve solo; este botón lo para y lo vuelve a mover.
+  (function () {{
+    var box = document.querySelector('[data-carousel]');
+    var btn = document.querySelector('[data-carousel-toggle]');
+    if (!box || !btn) return;
+    btn.addEventListener('click', function () {{
+      var paused = box.classList.toggle('is-paused');
+      btn.setAttribute('aria-pressed', paused ? 'true' : 'false');
+      btn.textContent = paused ? 'Reanudar' : 'Pausar';
+    }});
+  }})();
+</script>'''
     page(
         '',
-        title=f'{BRAND}: {SITE["headline"].lower().rstrip(".")}',
+        title=f'{BRAND}',
         description=SITE['intro'],
         main=main,
         theme='brand',
-        section=None,
+        section='',
         apps=d['apps'],
     )
-
-
-def build_apps_index(d: dict) -> None:
-    c = Ctx('apps/')
-    main = f'''<section class="page-head">
-  <div class="wrap">
-    <h1>Apps</h1>
-    <p class="page-lead">Todas las apps de {BRAND}, con su ayuda y sus textos legales.</p>
-  </div>
-</section>
-<section class="band band-tight">
-  <div class="wrap">
-    {app_card(c, d, 'h2')}
-    <p class="next-app">La siguiente app está en el taller. Cuando salga, aparecerá aquí.</p>
-  </div>
-</section>'''
-    page('apps/', title=f'Apps · {BRAND}', description=f'Las apps de {BRAND} para Android.', main=main,
-         theme='brand', section='apps/', apps=d['apps'])
-
-
-def build_support_hub(d: dict) -> None:
-    c = Ctx('soporte/')
-    qs = ''.join(
-        f'<li><a href="{c.to("apps/allthegames/soporte/")}#{slug(q)}">{esc(q)}</a></li>'
-        for q, _ in d['faq'][:4]
-    )
-    main = f'''<section class="page-head">
-  <div class="wrap">
-    <h1>Soporte</h1>
-    <p class="page-lead">Elige la app con la que necesitas ayuda.</p>
-  </div>
-</section>
-<section class="band band-tight">
-  <div class="wrap duo">
-    <article class="support-card">
-      <div class="support-card-head">
-        <img src="{c.to('static/apps/allthegames/icon.webp')}" alt="" width="64" height="64">
-        <h2><a href="{c.to('apps/allthegames/soporte/')}">AllTheGames</a></h2>
-      </div>
-      <ul class="support-qs">{qs}</ul>
-      <a class="sticker" href="{c.to('apps/allthegames/soporte/')}">Todas las preguntas</a>
-    </article>
-    <div class="panel">
-      <h2>¿No es de ninguna app?</h2>
-      <p>Escríbeme a {mail_link()} y te contesto.</p>
-      <a class="btn btn-ghost" href="{c.to('contacto/')}">Ver contacto</a>
-    </div>
-  </div>
-</section>'''
-    page('soporte/', title=f'Soporte · {BRAND}', description='Ayuda con las apps de BryceLz.', main=main,
-         theme='brand', section='soporte/', apps=d['apps'])
-
-
-def build_contact(d: dict) -> None:
-    subj_help = 'AllTheGames%20%C2%B7%20Ayuda'
-    subj_work = 'Propuesta%20de%20trabajo'
-    main = f'''<section class="page-head">
-  <div class="wrap">
-    <h1>Contacto</h1>
-    <p class="page-lead">Escríbeme a <a class="big-mail" href="mailto:{EMAIL}">{EMAIL}</a></p>
-  </div>
-</section>
-<section class="band band-tight">
-  <div class="wrap duo">
-    <div class="panel">
-      <h2>Ayuda con una app</h2>
-      <p>Dime qué app usas, qué móvil tienes y qué ha pasado. Si es un cobro, añade la fecha. Antes, mira las <a href="../soporte/">preguntas frecuentes</a>: puede que la respuesta ya esté ahí.</p>
-      <a class="btn" href="mailto:{EMAIL}?subject={subj_help}">Pedir ayuda</a>
-    </div>
-    <div class="panel">
-      <h2>Trabajo y colaboraciones</h2>
-      <p>Cuéntame la idea, para quién es y los plazos que tienes en mente.</p>
-      <a class="btn btn-ghost" href="mailto:{EMAIL}?subject={subj_work}">Escribir una propuesta</a>
-    </div>
-  </div>
-</section>'''
-    page('contacto/', title=f'Contacto · {BRAND}', description=f'Cómo contactar con {BRAND}.', main=main,
-         theme='brand', section='contacto/', apps=d['apps'])
 
 
 def build_legal_notice(d: dict) -> None:
@@ -620,7 +470,7 @@ def build_atg_home(d: dict) -> None:
   </div>
 </section>'''
     page(here, title=f'AllTheGames · {BRAND}', description=app['lead'], main=main, theme='atg',
-         section='apps/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
+         section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
 
 
 def build_atg_support(d: dict) -> None:
@@ -653,7 +503,7 @@ def build_atg_support(d: dict) -> None:
   window.addEventListener('hashchange', abrirPregunta);
 </script>'''
     page(here, title=f'Soporte de AllTheGames · {BRAND}', description='Preguntas frecuentes de AllTheGames y contacto.',
-         main=main, theme='atg', section='soporte/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
+         main=main, theme='atg', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
 
 
 def privacy_paths() -> dict:
@@ -694,11 +544,11 @@ def build_atg_privacy(d: dict) -> None:
         title = p['title'][:1] + p['title'][1:].lower()
         here = paths[lang]
         page(here, title=f'{title} · AllTheGames', description=p['intro'], main=privacy_main(d, lang, here),
-             theme='atg', section=None, apps=d['apps'], lang=lang, alternates=paths,
+             theme='atg', section='apps/allthegames/', apps=d['apps'], lang=lang, alternates=paths,
              pre_main=atg_nav(Ctx(here), current), favicon=ATG_ICON)
     dated = f'apps/allthegames/privacidad/{version}/'
     page(dated, title=f'Privacidad ({version}) · AllTheGames', description=d['privacy']['es']['intro'],
-         main=privacy_main(d, 'es', dated), theme='atg', section=None, apps=d['apps'],
+         main=privacy_main(d, 'es', dated), theme='atg', section='apps/allthegames/', apps=d['apps'],
          pre_main=atg_nav(Ctx(dated), current), favicon=ATG_ICON)
 
 
@@ -718,7 +568,7 @@ def build_atg_terms(d: dict) -> None:
   {sections}
 </div>'''
         page(here, title=f'Términos de las compras · AllTheGames', description=t['intro'], main=main,
-             theme='atg', section=None, apps=d['apps'], pre_main=atg_nav(c, current), favicon=ATG_ICON)
+             theme='atg', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, current), favicon=ATG_ICON)
 
 
 # ---------------------------------------------------------------------------
@@ -736,9 +586,6 @@ def build() -> None:
         (OUT / 'CNAME').write_text(SITE['domain'] + '\n', 'utf-8')
     d = load()
     build_home(d)
-    build_apps_index(d)
-    build_support_hub(d)
-    build_contact(d)
     build_legal_notice(d)
     build_404(d)
     build_atg_home(d)

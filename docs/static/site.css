@@ -136,55 +136,62 @@ h1, h2, h3 { text-wrap: balance; }
 .skip:focus { top: 12px; }
 
 /* =================================================================== */
-/* Cabecera y pie: iguales en toda la web                              */
+/* Banner de arriba (igual en toda la web), como los de la app:        */
+/* una banda honda con labio, y los apartados como botones con labio.  */
 
-.site-head { background: var(--b-surface); border-bottom: 1px solid var(--b-line); }
-.head-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; }
+:root {
+  --ban-fill: #1B2550;
+  --ban-lip: #0B1130;
+  --ban-ink: #FAFBFC;
+  --tab-face: #2C3A78;
+}
+
+.banner { padding: 10px 10px 0; }
+.banner-row {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px;
+  min-height: 68px;
+  /* Centrado en la cara: el labio de los botones queda en el hueco de abajo. */
+  padding: 12px 14px 8px;
+  border-radius: 20px;
+  background: var(--ban-fill);
+  box-shadow: 0 6px 0 var(--ban-lip);
+}
+.banner .wrap.banner-row { max-width: calc(72rem - 32px); }
+@media (min-width: 720px) {
+  .banner { padding: 14px 16px 0; }
+  .banner-row { padding: 12px 20px 8px; min-height: 76px; }
+}
 
 .wordmark {
   display: inline-flex; align-items: baseline;
-  color: var(--b-ink); text-decoration: none;
-  font-family: var(--display); font-weight: 700; font-size: 1.625rem; line-height: 1; letter-spacing: -0.015em;
+  padding-bottom: 4px;
+  color: var(--ban-ink); text-decoration: none;
+  font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1; letter-spacing: -0.015em;
 }
-.wordmark-dot {
-  width: 0.3em; height: 0.3em; margin-left: 0.07em; border-radius: 50%;
-  background: var(--b-sun);
-}
+@media (min-width: 420px) { .wordmark { font-size: 1.75rem; } }
+.wordmark-dot { width: 0.3em; height: 0.3em; margin-left: 0.07em; border-radius: 50%; background: var(--b-sun); }
+.wordmark:focus-visible { outline: 3px solid var(--b-sun); outline-offset: 4px; border-radius: 6px; }
 
-.head-nav { display: flex; gap: 2px; }
-.head-nav a {
-  padding: 8px 10px; border-radius: 10px;
-  color: var(--b-ink); font-weight: 700; font-size: 0.9375rem; text-decoration: none;
+.banner-nav { display: flex; gap: 8px; }
+.banner-tab {
+  display: inline-flex; align-items: center; min-height: 42px; padding: 0 12px;
+  border: 2px solid var(--ban-lip); border-radius: 14px;
+  background: var(--tab-face); color: var(--ban-ink);
+  box-shadow: 0 4px 0 var(--ban-lip);
+  font-weight: 900; font-size: 0.9375rem; text-decoration: none;
+  transition: transform 80ms ease-out, box-shadow 80ms ease-out;
 }
-.head-nav a:hover { background: var(--b-bg); }
-.head-nav a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--b-sun); border-radius: 10px 10px 0 0; }
-@media (min-width: 720px) {
-  .head-nav { gap: 6px; }
-  .head-nav a { padding: 8px 14px; font-size: 1rem; }
-}
+@media (min-width: 420px) { .banner-tab { padding: 0 16px; font-size: 1rem; } }
+.banner-tab:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ban-lip); }
+.banner-tab[aria-current="page"] { background: var(--b-sun); color: #141C3D; }
+.banner-tab:focus-visible { outline: 3px solid var(--b-sun); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { .banner-tab { transition: none; } }
 
-.site-foot { margin-top: 72px; background: var(--b-band); color: var(--b-band-ink); }
-.site-foot a { color: var(--b-band-ink); }
-.site-foot .wordmark { color: var(--b-band-ink); font-size: 2rem; }
-.foot-grid {
-  display: grid; gap: 28px 24px; grid-template-columns: 1fr 1fr;
-  padding-block: 48px 32px;
-}
-.foot-brand { grid-column: 1 / -1; }
-.foot-brand p { margin: 10px 0 0; color: var(--b-band-muted); }
-.foot-brand p a { color: var(--b-band-ink); font-weight: 700; }
-.site-foot h2 { margin: 0 0 8px; font-family: var(--display); font-size: 1.0625rem; font-weight: 700; }
-.site-foot ul { list-style: none; margin: 0; padding: 0; }
-.site-foot li { margin: 0 0 6px; }
-.site-foot nav a { text-decoration: none; color: var(--b-band-muted); }
-.site-foot nav a:hover { color: var(--b-band-ink); text-decoration: underline; }
-.foot-base { padding-block: 18px 32px; border-top: 1px solid rgba(238, 241, 244, 0.14); }
-.foot-base p { margin: 0; font-size: 0.875rem; color: var(--b-band-muted); }
-.site-foot a:focus-visible { outline-color: var(--b-sun); }
-@media (min-width: 860px) {
-  .foot-grid { grid-template-columns: 1.5fr 1fr 1fr 1.4fr; }
-  .foot-brand { grid-column: auto; }
-}
+/* Pie sencillo */
+.site-foot { margin-top: 56px; border-top: 1px solid var(--b-line); background: var(--b-surface); color: var(--b-muted); }
+.foot-row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px; padding-block: 20px 32px; font-size: 0.9375rem; }
+.foot-row p { margin: 0; }
+.foot-row a { color: var(--b-muted); }
 
 /* =================================================================== */
 /* Botones                                                             */
@@ -226,130 +233,71 @@ h1, h2, h3 { text-wrap: balance; }
 }
 
 /* =================================================================== */
-/* Páginas de BryceLz                                                  */
+/* Inicio: el carrusel de juegos                                       */
 
-.hero { padding-block: 40px 56px; }
-.hero-grid { display: grid; gap: 40px; align-items: center; }
-.hero h1 {
-  margin: 0 0 20px; max-width: 11ch;
-  font-family: var(--display); font-weight: 700;
-  font-size: clamp(2.75rem, 9vw, 4.75rem); line-height: 0.98; letter-spacing: -0.03em;
+.stage {
+  min-height: calc(100svh - 220px);
+  display: flex; flex-direction: column; justify-content: center;
+  padding-block: 40px 8px;
 }
-.hero-lead { margin: 0 0 28px; max-width: 36ch; font-size: 1.25rem; line-height: 1.5; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
-@media (min-width: 900px) {
-  .hero { padding-block: 80px 96px; }
-  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
+.carousel {
+  --tile-size: 104px;
+  --gap: 14px;
+  overflow: hidden;
+  padding-block: 10px 18px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
 }
-
-/* Tablero de la portada: juegos de verdad, cada uno en su color. */
-.board {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+@media (min-width: 720px) { .carousel { --tile-size: 136px; --gap: 18px; } }
+.carousel-track {
+  list-style: none; margin: 0;
+  display: flex; gap: var(--gap); width: max-content;
+  /* Medio hueco a cada lado: la segunda copia empieza justo donde acaba la primera. */
+  padding: 0 calc(var(--gap) / 2);
+  animation: carousel 120s linear infinite;
 }
-.board li {
-  aspect-ratio: 1; display: grid; place-items: center;
-  border: 2px solid #141C3D; border-radius: 18px;
+.carousel:hover .carousel-track,
+.carousel:focus-within .carousel-track,
+.carousel.is-paused .carousel-track { animation-play-state: paused; }
+@keyframes carousel { to { transform: translateX(-50%); } }
+.carousel-track a {
+  display: grid; place-items: center;
+  width: var(--tile-size); aspect-ratio: 1;
+  border: 3px solid #141C3D; border-radius: 26px;
   background: var(--tile);
-  box-shadow: 0 3px 0 #141C3D;
-  animation: deal 460ms cubic-bezier(.2, .8, .2, 1) both;
-  animation-delay: calc(var(--i) * 30ms + 120ms);
+  box-shadow: 0 6px 0 #141C3D;
+  transition: transform 120ms ease-out;
 }
-.board li:nth-child(n+13) { display: none; }
-.board img { width: 74%; height: auto; }
-@keyframes deal {
-  from { opacity: 0; transform: translateY(10px) scale(0.9); }
+.carousel-track a:hover { transform: translateY(-4px); }
+.carousel-track a:focus-visible { outline: 3px solid var(--b-link); outline-offset: 4px; }
+.carousel-track img { width: 76%; height: auto; }
+
+.carousel-bar { display: flex; justify-content: center; margin-top: 18px; }
+.carousel-toggle {
+  min-height: 40px; padding: 0 18px;
+  border: 2px solid var(--b-ink); border-radius: 999px;
+  background: var(--b-surface); color: var(--b-ink);
+  font: inherit; font-weight: 800; font-size: 0.9375rem; cursor: pointer;
 }
-@media (min-width: 560px) {
-  .board { grid-template-columns: repeat(6, 1fr); }
-  .board li:nth-child(n+13) { display: grid; }
-  .board li:nth-child(n+19) { display: none; }
-}
-@media (min-width: 900px) {
-  .board li:nth-child(n+19) { display: grid; }
-}
+.carousel-toggle:focus-visible { outline: 3px solid var(--b-link); outline-offset: 3px; }
+
+/* Sin animaciones: el carrusel se desliza con el dedo, sin copia. */
 @media (prefers-reduced-motion: reduce) {
-  .board li { animation: none; }
+  .carousel { overflow-x: auto; scroll-snap-type: x mandatory; -webkit-mask-image: none; mask-image: none; }
+  .carousel-track { animation: none; padding-inline: 16px; }
+  .carousel-track li { scroll-snap-align: start; }
+  .carousel-track li:has(a[aria-hidden="true"]) { display: none; }
+  .carousel-track a { transition: none; }
+  .carousel-bar { display: none; }
 }
 
-.band { padding-block: 56px; }
-.band-tight { padding-block: 16px 24px; }
-.band-ink { background: var(--b-band); color: var(--b-band-ink); }
-.band h2, .page-head h1, .panel h2, .prose h2 { font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; }
-.band > .wrap > h2, .section-head h2 { margin: 0 0 24px; font-size: clamp(2rem, 5vw, 2.75rem); line-height: 1.05; }
-.section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
-.section-head a { font-weight: 800; }
-
-.principles {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; gap: 28px 32px; grid-template-columns: 1fr;
-}
-.principle { padding-top: 16px; border-top: 3px solid var(--b-sun); }
-.principle h3 { margin: 0 0 6px; font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1.15; }
-.principle p { margin: 0; color: var(--b-band-muted); }
-@media (min-width: 640px) { .principles { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1000px) { .principles { grid-template-columns: repeat(4, 1fr); } }
-
-.duo { display: grid; gap: 20px; }
-@media (min-width: 760px) { .duo { grid-template-columns: 1fr 1fr; } }
-.panel {
-  padding: 28px 24px;
-  border: 2px solid var(--b-line); border-radius: 24px;
-  background: var(--b-surface);
-}
-.panel h2 { margin: 0 0 8px; font-size: 1.625rem; line-height: 1.15; }
-.panel p { margin: 0 0 20px; }
-
+/* Páginas de texto con la marca (aviso legal, 404) */
 .page-head { padding-block: 48px 24px; }
-.page-head h1 { margin: 0 0 10px; font-size: clamp(2.5rem, 7vw, 4rem); line-height: 1; }
+.page-head h1 { margin: 0 0 10px; font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; font-size: clamp(2.5rem, 7vw, 4rem); line-height: 1; }
 .page-lead { margin: 0; max-width: 40ch; font-size: 1.25rem; line-height: 1.5; }
-.big-mail { font-weight: 900; }
-.next-app { margin: 28px 0 0; color: var(--muted); }
-
-.prose h2 { margin: 32px 0 6px; font-size: 1.375rem; }
+.band-tight { padding-block: 16px 24px; }
+.prose h2 { margin: 32px 0 6px; font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; font-size: 1.375rem; }
 .prose p { margin: 0 0 12px; }
-
-/* La tarjeta de una app: un trozo de la app pegado en la web. */
-.appcard {
-  display: grid; grid-template-columns: 1fr; overflow: hidden;
-  border: 3px solid var(--a-outline); border-radius: 26px;
-  background: var(--a-paper) url('apps/allthegames/wallpaper.webp') center / 420px auto;
-  box-shadow: 0 8px 0 var(--a-lip);
-  color: var(--a-ink);
-}
-.appcard-art { display: flex; align-items: center; justify-content: center; padding: 28px 24px 20px; }
-.appcard-art img { width: min(100%, 400px); }
-.appcard-copy { padding: 22px 20px 26px; background: var(--a-surface); border-top: 3px solid var(--a-outline); }
-.appcard .appcard-name { margin: 0 0 6px; font-family: var(--atg); font-weight: 400; font-size: 2.25rem; line-height: 1.05; letter-spacing: 0; }
-.appcard-name a { color: var(--a-ink); text-decoration: none; }
-.appcard p { margin: 0 0 12px; }
-.appcard-meta { color: var(--a-muted); font-size: 0.9375rem; }
-.appcard-cats { list-style: none; margin: 4px 0 14px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.appcard-cats li {
-  padding: 3px 12px; border-radius: 999px;
-  background: var(--chip); color: #FFF8EE;
-  font-weight: 900; font-size: 0.875rem;
-}
-.appcard-cats span { opacity: 0.85; font-weight: 700; }
-.appcard-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
-@media (min-width: 820px) {
-  .appcard { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
-  .appcard-copy { border-top: 0; border-left: 3px solid var(--a-outline); padding: 36px 36px 38px; }
-  .appcard-art { padding: 36px; }
-}
-
-.support-card {
-  padding: 24px; color: var(--a-ink);
-  border: 3px solid var(--a-outline); border-radius: 24px;
-  background: var(--a-surface); box-shadow: 0 7px 0 var(--a-lip);
-}
-.support-card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
-.support-card-head img { width: 64px; height: 64px; border-radius: 16px; }
-.support-card h2 { margin: 0; font-family: var(--atg); font-weight: 400; font-size: 2rem; line-height: 1; letter-spacing: 0; }
-.support-card h2 a { color: var(--a-ink); text-decoration: none; }
-.support-qs { margin: 8px 0 22px; padding-left: 20px; }
-.support-qs li { margin: 0 0 6px; }
-.support-qs a { color: #8A4317; font-weight: 700; }
 
 /* =================================================================== */
 /* Páginas de AllTheGames                                              */
@@ -360,8 +308,16 @@ h1, h2, h3 { text-wrap: balance; }
   background-size: auto, 520px auto;
 }
 
-.appnav { background: var(--surface); border-bottom: 3px solid var(--outline); }
-.appnav-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; padding-block: 10px; }
+/* Barra de la app: una segunda banda bajo el banner, con los colores de la app. */
+.appnav { padding: 16px 10px 0; }
+@media (min-width: 720px) { .appnav { padding: 18px 16px 0; } }
+.appnav-row {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px;
+  padding: 10px 14px;
+  border: 3px solid var(--outline); border-radius: 18px;
+  background: var(--surface); box-shadow: 0 5px 0 var(--lip);
+}
+.appnav .wrap.appnav-row { max-width: calc(72rem - 32px); }
 .appnav-brand {
   display: inline-flex; align-items: center; gap: 10px;
   color: var(--ink); text-decoration: none;

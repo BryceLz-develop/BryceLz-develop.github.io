@@ -1,8 +1,9 @@
 # Web de BryceLz
 
 Web de BryceLz, el nombre con el que Brais López Arias publica sus apps.
-Tiene portada, apps, soporte, contacto y aviso legal, y cada app su ficha,
-su soporte, su nota de privacidad (en 6 idiomas) y sus términos.
+De momento tiene dos apartados: Inicio (un carrusel con los juegos de
+AllTheGames) y AllTheGames, con su ficha,
+soporte, nota de privacidad (en 6 idiomas) y términos. Abajo, el aviso legal.
 
 ```
 docs/                     ← lo que publica GitHub Pages (se genera, no se edita a mano)
