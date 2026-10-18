@@ -1,0 +1,349 @@
+/* Fuentes: Nunito Sans (la de las apps) y la rotulación de AllTheGames. */
+@font-face { font-family: 'Nunito Sans'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/nunito-sans-400Regular.woff') format('woff'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 400; font-style: italic; font-display: swap; src: url('fonts/nunito-sans-400Regular_Italic.woff') format('woff'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 700; font-style: normal; font-display: swap; src: url('fonts/nunito-sans-700Bold.woff') format('woff'); }
+@font-face { font-family: 'Nunito Sans'; font-weight: 900; font-style: normal; font-display: swap; src: url('fonts/nunito-sans-900Black.woff') format('woff'); }
+@font-face { font-family: 'ATG Display'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/atg-display.woff') format('woff'); }
+
+/* ------------------------------------------------------------------ */
+/* Colores. La web propia es pizarra; cada app trae los suyos.         */
+
+:root {
+  /* AllTheGames, fijos (la tarjeta de la portada es un trozo de la app). */
+  --atg-paper: #F4EBDD;
+  --atg-surface: #FFF8EE;
+  --atg-ink: #2B2118;
+  --atg-muted: #6B5A48;
+  --atg-line: #D9C9AE;
+  --atg-outline: #3A2C20;
+  --atg-lip: #C9B89A;
+  --atg-primary: #AE5420;
+  --atg-primary-ink: #FFF8EE;
+}
+
+.theme-shell {
+  --bg: #E8ECEF;
+  --surface: #F6F8F9;
+  --ink: #1B2632;
+  --muted: #52606D;
+  --line: #C5CED6;
+  --link: #2F5679;
+  --focus: #2F5679;
+}
+
+.theme-atg {
+  --bg: var(--atg-paper);
+  --surface: var(--atg-surface);
+  --ink: var(--atg-ink);
+  --muted: var(--atg-muted);
+  --line: var(--atg-line);
+  --outline: var(--atg-outline);
+  --lip: var(--atg-lip);
+  --primary: var(--atg-primary);
+  --primary-ink: var(--atg-primary-ink);
+  --link: #8A4317;
+  --focus: #2F5679;
+  --wallpaper: url('apps/allthegames/wallpaper.webp');
+  --veil: rgba(244, 235, 221, 0.55);
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-shell {
+    --bg: #141A20;
+    --surface: #1C242C;
+    --ink: #E6EBEF;
+    --muted: #A3B0BC;
+    --line: #33404C;
+    --link: #9CC0E2;
+    --focus: #9CC0E2;
+  }
+  .theme-atg {
+    --bg: #1E1813;
+    --surface: #2C231C;
+    --ink: #F3E9DA;
+    --muted: #C9B7A0;
+    --line: #57473A;
+    --outline: #140E0A;
+    --lip: #120D0A;
+    --primary: #D8783A;
+    --primary-ink: #1E1813;
+    --link: #F0A46B;
+    --focus: #F0A46B;
+    --wallpaper: url('apps/allthegames/wallpaper-dark.webp');
+    --veil: rgba(30, 24, 19, 0.5);
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/* Base                                                                */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Nunito Sans', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 1.5px; }
+
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.wrap { width: 100%; max-width: 60rem; margin-inline: auto; padding-inline: 16px; }
+.narrow { max-width: 44rem; }
+
+@media (min-width: 720px) {
+  .wrap { padding-inline: 32px; }
+}
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.skip {
+  position: absolute; left: 16px; top: -60px; z-index: 10;
+  padding: 10px 16px; border-radius: 10px;
+  background: var(--ink); color: var(--bg); font-weight: 700;
+}
+.skip:focus { top: 12px; }
+
+/* Botones con labio, como los de la app. */
+.sticker {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 48px; padding: 0 20px;
+  border: 3px solid var(--atg-outline); border-radius: 14px;
+  background: var(--atg-primary); color: var(--atg-primary-ink);
+  font-weight: 900; font-size: 1.0625rem; line-height: 1.2; text-decoration: none;
+  box-shadow: 0 4px 0 var(--atg-outline);
+  transition: transform 80ms ease-out, box-shadow 80ms ease-out;
+}
+.sticker:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--atg-outline); }
+.sticker-soft {
+  background: var(--atg-surface); color: var(--atg-ink);
+  box-shadow: 0 4px 0 var(--atg-lip);
+}
+.sticker-soft:active { box-shadow: 0 1px 0 var(--atg-lip); }
+
+.theme-atg .sticker { background: var(--primary); color: var(--primary-ink); border-color: var(--outline); box-shadow: 0 4px 0 var(--outline); }
+.theme-atg .sticker-soft { background: var(--surface); color: var(--ink); box-shadow: 0 4px 0 var(--lip); }
+
+@media (prefers-reduced-motion: reduce) {
+  .sticker { transition: none; }
+}
+
+/* Pie, igual en toda la web. */
+.foot { margin-top: 56px; border-top: 1px solid var(--line); background: var(--surface); }
+.foot-row {
+  display: flex; flex-wrap: wrap; gap: 8px 24px;
+  padding-block: 24px 40px; font-size: 0.9375rem;
+}
+.foot a { color: var(--muted); }
+.foot a:first-child { color: var(--ink); font-weight: 700; text-decoration: none; }
+
+/* ------------------------------------------------------------------ */
+/* Web propia                                                          */
+
+.intro { padding-block: 56px 32px; }
+.name {
+  margin: 0 0 20px;
+  max-width: 9ch;
+  font-weight: 900;
+  font-size: clamp(2.75rem, 11vw, 5.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+}
+.intro-text { margin: 0 0 12px; max-width: 34ch; font-size: 1.25rem; line-height: 1.45; }
+.intro-mail { margin: 0; font-weight: 700; }
+
+@media (min-width: 720px) {
+  .intro { padding-block: 96px 48px; }
+}
+
+.shell-h2 { margin: 0 0 16px; font-size: 1.5rem; font-weight: 900; letter-spacing: -0.01em; }
+.shell-h1 { margin: 40px 0 8px; font-size: clamp(2rem, 7vw, 3rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; }
+.theme-shell main.narrow h2 { margin: 32px 0 6px; font-size: 1.1875rem; font-weight: 900; }
+.theme-shell main.narrow p { margin: 0 0 12px; }
+
+.shell-top { border-bottom: 1px solid var(--line); background: var(--surface); }
+.shell-top .wrap { padding-block: 14px; }
+.shell-top a { color: var(--ink); font-weight: 900; text-decoration: none; }
+
+/* La tarjeta de una app: un trozo de la app pegado en la pizarra. */
+.appcard {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  border: 3px solid var(--atg-outline);
+  border-radius: 24px;
+  background: var(--atg-paper) url('apps/allthegames/wallpaper.webp') center / 420px auto;
+  box-shadow: 0 7px 0 var(--atg-lip);
+  color: var(--atg-ink);
+}
+.appcard-art { display: flex; align-items: center; justify-content: center; padding: 28px 24px 20px; }
+.appcard-art img { width: min(100%, 360px); }
+.appcard-copy {
+  padding: 22px 20px 26px;
+  background: var(--atg-surface);
+  border-top: 3px solid var(--atg-outline);
+}
+.appcard h3 { margin: 0 0 6px; font-family: 'ATG Display', 'Nunito Sans', sans-serif; font-weight: 400; font-size: 2rem; line-height: 1.1; }
+.appcard h3 a { color: var(--atg-ink); text-decoration: none; }
+.appcard p { margin: 0 0 10px; }
+.appcard-meta { color: var(--atg-muted); font-size: 0.9375rem; }
+.appcard-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+.appcard a:focus-visible { outline-color: #2F5679; }
+
+@media (min-width: 760px) {
+  .appcard { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+  .appcard-copy { border-top: 0; border-left: 3px solid var(--atg-outline); padding: 32px 32px 34px; align-self: stretch; }
+  .appcard-art { padding: 32px; }
+}
+
+.notfound { padding-block: 48px; }
+
+/* ------------------------------------------------------------------ */
+/* Páginas de AllTheGames                                              */
+
+.theme-atg {
+  background-color: var(--bg);
+  /* El fondo de la app, con un velo para que el texto encima se lea tranquilo. */
+  background-image: linear-gradient(var(--veil), var(--veil)), var(--wallpaper);
+  background-size: auto, 520px auto;
+}
+
+.atg-top { background: var(--surface); border-bottom: 3px solid var(--outline); }
+.atg-top-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding-block: 10px;
+}
+.atg-brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  color: var(--ink); text-decoration: none;
+  font-family: 'ATG Display', 'Nunito Sans', sans-serif; font-size: 1.375rem; line-height: 1;
+}
+.atg-brand img { width: 36px; height: 36px; border-radius: 9px; }
+.atg-owner { color: var(--muted); font-size: 0.9375rem; font-weight: 700; text-align: right; }
+
+.atg-hero {
+  display: grid; gap: 8px; align-items: center;
+  padding-block: 24px 8px;
+}
+.atg-logo { width: min(100%, 380px); margin-inline: auto; }
+.lead { margin: 0 0 16px; font-size: 1.25rem; font-weight: 700; line-height: 1.4; }
+.soon {
+  display: inline-block; margin: 0 0 8px;
+  padding: 8px 16px; border: 2px dashed var(--muted); border-radius: 999px;
+  background: var(--surface); font-weight: 900;
+}
+.facts { list-style: none; margin: 16px 0 0; padding: 0; }
+.facts li {
+  position: relative; margin: 0 0 10px; padding-left: 34px;
+}
+.facts li::before {
+  content: ''; position: absolute; left: 0; top: 2px; width: 24px; height: 24px;
+  background: url('apps/allthegames/check.webp') center / contain no-repeat;
+}
+
+@media (min-width: 760px) {
+  .atg-hero { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 40px; padding-block: 48px 16px; }
+}
+
+.atg-h2 {
+  margin: 40px 0 16px;
+  font-family: 'ATG Display', 'Nunito Sans', sans-serif; font-weight: 400;
+  font-size: clamp(1.75rem, 6vw, 2.25rem); line-height: 1.1;
+}
+
+.cat {
+  margin: 0 0 24px; overflow: hidden;
+  border: 3px solid var(--outline); border-radius: 20px;
+  background: var(--surface); box-shadow: 0 6px 0 var(--lip);
+}
+.cat-band {
+  display: flex; align-items: center; gap: 12px; margin: 0;
+  padding: 8px 16px 8px 10px;
+  background: var(--fill); border-bottom: 5px solid var(--lip);
+  color: #FFF8EE;
+  font-family: 'ATG Display', 'Nunito Sans', sans-serif; font-weight: 400; font-size: 1.5rem; line-height: 1.1;
+}
+.cat-band img { width: 44px; height: 44px; }
+.cat-count { margin-left: auto; font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 0.9375rem; white-space: nowrap; }
+.games {
+  list-style: none; margin: 0; padding: 16px 12px 18px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 14px 6px;
+}
+.game {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  text-align: center; font-size: 0.875rem; font-weight: 700; line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+.game img { width: 72px; height: 72px; }
+
+.help-row { display: flex; flex-wrap: wrap; gap: 14px; }
+
+/* Hoja para textos largos (soporte, privacidad, términos). */
+.theme-atg main.narrow {
+  margin-block: 24px 0;
+  padding: 0 20px 28px;
+  border: 3px solid var(--outline); border-radius: 22px;
+  background: var(--surface); box-shadow: 0 7px 0 var(--lip);
+}
+@media (min-width: 720px) {
+  .theme-atg main.narrow { margin-block: 40px 0; padding: 0 36px 36px; }
+}
+.band-title {
+  margin: 0 -20px 16px; padding: 18px 20px 14px;
+  border-radius: 19px 19px 0 0;
+  background: var(--fill); border-bottom: 5px solid var(--lip);
+  color: #FFF8EE;
+  font-family: 'ATG Display', 'Nunito Sans', sans-serif; font-weight: 400;
+  font-size: clamp(1.75rem, 6vw, 2.25rem); line-height: 1.1;
+}
+@media (min-width: 720px) {
+  .band-title { margin-inline: -36px; padding-inline: 36px; }
+}
+.meta { margin: 0 0 14px; color: var(--muted); font-size: 0.9375rem; }
+.legal h2, .contact h2 { margin: 28px 0 6px; font-size: 1.1875rem; font-weight: 900; line-height: 1.3; }
+.legal p, .contact p { margin: 0 0 10px; max-width: 68ch; }
+.legal-links { margin-top: 28px !important; font-weight: 700; }
+
+.langs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; }
+.chip {
+  display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px;
+  border: 2px solid var(--line); border-radius: 999px;
+  background: var(--bg); color: var(--ink); font-weight: 700; font-size: 0.9375rem; text-decoration: none;
+}
+.chip-on { background: #3F4B56; border-color: #3F4B56; color: #FFF8EE; }
+
+.faq {
+  margin: 0 0 10px;
+  border: 2px solid var(--line); border-radius: 16px;
+  background: var(--bg);
+}
+.faq summary {
+  position: relative; cursor: pointer; list-style: none;
+  padding: 14px 48px 14px 16px; font-weight: 900; line-height: 1.35;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ''; position: absolute; right: 18px; top: 50%;
+  width: 10px; height: 10px; margin-top: -7px;
+  border-right: 3px solid var(--ink); border-bottom: 3px solid var(--ink);
+  transform: rotate(45deg);
+}
+.faq[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+.faq p { margin: 0; padding: 0 16px 16px; max-width: 68ch; }
+.contact { margin-top: 28px; }
+.contact .sticker { margin-top: 8px; }
