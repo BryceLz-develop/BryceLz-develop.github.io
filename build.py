@@ -301,7 +301,6 @@ def load() -> dict:
 
 
 PRIMARY = '#C9692E'  # el naranja de la app (botones principales)
-FOUR_TONES = [0.08, 0.18, 0.12, 0.23]  # los cuatro pasteles de la app, intercalados
 
 
 def carousel(c: Ctx, d: dict) -> str:
@@ -372,13 +371,6 @@ def build_home(d: dict) -> None:
         f'<li style="--chip:{cat["accent"]}">{esc(cat["label"])} <span>{sum(1 for g in games if g["folder"] == cat["id"])}</span></li>'
         for cat in app['categories']
     )
-    tones = ''.join(
-        f'''<li class="tone" style="--face:{pastel(PRIMARY, FOUR_TONES[i % 4])}">
-        <h3>{esc(t)}</h3>
-        <p>{esc(b)}</p>
-      </li>'''
-        for i, (t, b) in enumerate(SITE['principles'])
-    )
     store = 'Ya está en Google Play.' if app.get('storePublished') else 'Muy pronto en Google Play.'
     main = f'''<section class="wrap hero">
   <div class="hero-copy">
@@ -423,11 +415,6 @@ def build_home(d: dict) -> None:
       </div>
     </div>
   </article>
-</section>
-
-<section class="wrap block" aria-labelledby="como-h">
-  <h2 id="como-h" class="display">Cómo hago las apps</h2>
-  <ul class="tones">{tones}</ul>
 </section>
 
 <section class="wrap block" id="contacto" aria-labelledby="contacto-h">
