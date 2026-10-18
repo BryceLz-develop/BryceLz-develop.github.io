@@ -210,11 +210,15 @@ def _nav_link(c: Ctx, path: str, label: str, section: str | None) -> str:
 
 
 def site_footer(c: Ctx, apps: list[dict]) -> str:
+    """El pie cierra la página como el banner la abre: banda honda, esquinas de arriba redondas."""
     return f'''<footer class="site-foot">
   <div class="wrap foot-row">
-    <p>© {YEAR} {esc(OWNER)}</p>
-    <a href="{c.to('aviso-legal/')}">Aviso legal</a>
-    {mail_link()}
+    {wordmark(c)}
+    <nav class="foot-links" aria-label="Pie">
+      <a href="{c.to('aviso-legal/')}">Aviso legal</a>
+      {mail_link()}
+    </nav>
+    <p class="foot-copy">© {YEAR} {esc(OWNER)}</p>
   </div>
 </footer>'''
 
@@ -312,11 +316,13 @@ def build_home(d: dict) -> None:
 
     def tile(g: dict, copy: bool) -> str:
         hidden = ' aria-hidden="true" tabindex="-1"' if copy else ''
-        alt = '' if copy else esc(g['name'])
+        cat = accent[g['folder']]
+        # El nombre sale en una etiqueta del color de su categoría al pasar por encima.
         return (
-            f'<li style="--tile:{pastel(accent[g["folder"]], 0.14)}">'
-            f'<a href="{c.to("apps/allthegames/")}#cat-{g["folder"]}" title="{esc(g["name"])}"{hidden}>'
-            f'<img src="{c.to("static/apps/allthegames/games/" + g["slug"] + ".webp")}" alt="{alt}" width="96" height="96">'
+            f'<li style="--tile:{pastel(cat, 0.14)};--tag:{band_fill(cat)}">'
+            f'<a href="{c.to("apps/allthegames/")}#cat-{g["folder"]}"{hidden}>'
+            f'<img src="{c.to("static/apps/allthegames/games/" + g["slug"] + ".webp")}" alt="" width="96" height="96">'
+            f'<span class="tile-name">{esc(g["name"])}</span>'
             f'</a></li>'
         )
 
@@ -339,7 +345,11 @@ def build_home(d: dict) -> None:
     {''.join(lines)}
   </div>
   <div class="wrap carousel-bar">
-    <button class="carousel-toggle" type="button" data-carousel-toggle aria-pressed="false">Pausar</button>
+    <button class="carousel-toggle" type="button" data-carousel-toggle aria-pressed="false">
+      <svg class="icon-pause" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><rect x="4" y="3" width="4.2" height="14" rx="1.6"/><rect x="11.8" y="3" width="4.2" height="14" rx="1.6"/></svg>
+      <svg class="icon-play" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M6 3.6c0-1 1.1-1.6 2-1.1l9 5.9c.8.5.8 1.7 0 2.2l-9 5.9c-.9.5-2-.1-2-1.1z"/></svg>
+      <span data-carousel-label>Pausar</span>
+    </button>
   </div>
 </section>
 <script>
@@ -348,10 +358,11 @@ def build_home(d: dict) -> None:
     var box = document.querySelector('[data-carousel]');
     var btn = document.querySelector('[data-carousel-toggle]');
     if (!box || !btn) return;
+    var label = btn.querySelector('[data-carousel-label]');
     btn.addEventListener('click', function () {{
       var paused = box.classList.toggle('is-paused');
       btn.setAttribute('aria-pressed', paused ? 'true' : 'false');
-      btn.textContent = paused ? 'Reanudar' : 'Pausar';
+      label.textContent = paused ? 'Reanudar' : 'Pausar';
     }});
   }})();
 </script>'''
@@ -461,7 +472,7 @@ def build_atg_home(d: dict) -> None:
     )
     main = f'''<section class="wrap atg-hero">
   <img class="atg-logo" src="{s('logo.webp')}" alt="" width="743" height="500">
-  <div>
+  <div class="atg-intro">
     <h1 class="visually-hidden">AllTheGames</h1>
     <p class="atg-lead">{esc(app['lead'])}</p>
     {store}
