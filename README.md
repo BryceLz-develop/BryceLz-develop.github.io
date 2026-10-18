@@ -1,11 +1,12 @@
-# Web de Brais López Arias
+# Web de BryceLz
 
-Web profesional con las apps que publico. Cada app tiene su ficha, su página de
-soporte, su nota de privacidad y sus términos.
+Web de BryceLz, el nombre con el que Brais López Arias publica sus apps.
+Tiene portada, apps, soporte, contacto y aviso legal, y cada app su ficha,
+su soporte, su nota de privacidad (en 6 idiomas) y sus términos.
 
 ```
 docs/                     ← lo que publica GitHub Pages (se genera, no se edita a mano)
-content/site.json         ← nombre, correo, dirección de la web, AdMob
+content/site.json         ← marca, textos de la portada, correo, dirección de la web, AdMob
 content/apps/allthegames/ ← textos de AllTheGames (ficha, juegos, soporte, legal)
 static/                   ← estilos, fuentes e imágenes
 build.py                  ← genera docs/ a partir de content/ y static/
@@ -59,5 +60,5 @@ la versión anterior queda guardada en `privacidad/AAAA-MM-DD/`.
 
 ## Licencias
 
-Las fuentes Nunito Sans y la rotulación de AllTheGames llevan licencia SIL Open
-Font License (`static/fonts/*-OFL.txt`).
+Las fuentes Bricolage Grotesque, Nunito Sans y la rotulación de AllTheGames
+llevan licencia SIL Open Font License (`static/fonts/*-OFL.txt`).

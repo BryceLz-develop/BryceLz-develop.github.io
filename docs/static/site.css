@@ -1,62 +1,86 @@
-/* Fuentes: Nunito Sans (la de las apps) y la rotulación de AllTheGames. */
+/* =================================================================== */
+/* Fuentes                                                             */
+
+@font-face { font-family: 'Bricolage Grotesque'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/bricolage-Regular.woff') format('woff'); }
+@font-face { font-family: 'Bricolage Grotesque'; font-weight: 700; font-style: normal; font-display: swap; src: url('fonts/bricolage-Bold.woff') format('woff'); }
 @font-face { font-family: 'Nunito Sans'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/nunito-sans-400Regular.woff') format('woff'); }
 @font-face { font-family: 'Nunito Sans'; font-weight: 400; font-style: italic; font-display: swap; src: url('fonts/nunito-sans-400Regular_Italic.woff') format('woff'); }
 @font-face { font-family: 'Nunito Sans'; font-weight: 700; font-style: normal; font-display: swap; src: url('fonts/nunito-sans-700Bold.woff') format('woff'); }
 @font-face { font-family: 'Nunito Sans'; font-weight: 900; font-style: normal; font-display: swap; src: url('fonts/nunito-sans-900Black.woff') format('woff'); }
 @font-face { font-family: 'ATG Display'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/atg-display.woff') format('woff'); }
 
-/* ------------------------------------------------------------------ */
-/* Colores. La web propia es pizarra; cada app trae los suyos.         */
+/* =================================================================== */
+/* Colores                                                             */
+/* BryceLz: tinta azul noche, niebla y girasol (la ficha del logo).    */
+/* Cada app trae los suyos; la cabecera y el pie son siempre BryceLz.  */
 
 :root {
-  /* AllTheGames, fijos (la tarjeta de la portada es un trozo de la app). */
-  --atg-paper: #F4EBDD;
-  --atg-surface: #FFF8EE;
-  --atg-ink: #2B2118;
-  --atg-muted: #6B5A48;
-  --atg-line: #D9C9AE;
-  --atg-outline: #3A2C20;
-  --atg-lip: #C9B89A;
-  --atg-primary: #AE5420;
-  --atg-primary-ink: #FFF8EE;
+  --b-bg: #EEF1F4;
+  --b-surface: #FAFBFC;
+  --b-ink: #141C3D;
+  --b-muted: #4E5872;
+  --b-line: #CDD4DE;
+  --b-link: #24418F;
+  --b-sun: #F5B82E;
+  --b-band: #141C3D;
+  --b-band-ink: #EEF1F4;
+  --b-band-muted: #B9C2DA;
+
+  /* AllTheGames, fijos en sus tarjetas (son un trozo de la app). */
+  --a-paper: #F4EBDD;
+  --a-surface: #FFF8EE;
+  --a-ink: #2B2118;
+  --a-muted: #6B5A48;
+  --a-line: #D9C9AE;
+  --a-outline: #3A2C20;
+  --a-lip: #C9B89A;
+  --a-primary: #AE5420;
+  --a-primary-ink: #FFF8EE;
+
+  --display: 'Bricolage Grotesque', 'Nunito Sans', system-ui, sans-serif;
+  --text: 'Nunito Sans', system-ui, sans-serif;
+  --atg: 'ATG Display', 'Nunito Sans', sans-serif;
 }
 
-.theme-shell {
-  --bg: #E8ECEF;
-  --surface: #F6F8F9;
-  --ink: #1B2632;
-  --muted: #52606D;
-  --line: #C5CED6;
-  --link: #2F5679;
-  --focus: #2F5679;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --b-bg: #0E1430;
+    --b-surface: #161E42;
+    --b-ink: #EEF1F4;
+    --b-muted: #AAB4CF;
+    --b-line: #2A3566;
+    --b-link: #A9BEF5;
+    --b-band: #1A2350;
+    --b-band-ink: #EEF1F4;
+    --b-band-muted: #AAB4CF;
+  }
+}
+
+.theme-brand {
+  --bg: var(--b-bg);
+  --ink: var(--b-ink);
+  --muted: var(--b-muted);
+  --link: var(--b-link);
+  --focus: var(--b-link);
 }
 
 .theme-atg {
-  --bg: var(--atg-paper);
-  --surface: var(--atg-surface);
-  --ink: var(--atg-ink);
-  --muted: var(--atg-muted);
-  --line: var(--atg-line);
-  --outline: var(--atg-outline);
-  --lip: var(--atg-lip);
-  --primary: var(--atg-primary);
-  --primary-ink: var(--atg-primary-ink);
+  --bg: var(--a-paper);
+  --surface: var(--a-surface);
+  --ink: var(--a-ink);
+  --muted: var(--a-muted);
+  --line: var(--a-line);
+  --outline: var(--a-outline);
+  --lip: var(--a-lip);
+  --primary: var(--a-primary);
+  --primary-ink: var(--a-primary-ink);
   --link: #8A4317;
-  --focus: #2F5679;
+  --focus: #24418F;
   --wallpaper: url('apps/allthegames/wallpaper.webp');
   --veil: rgba(244, 235, 221, 0.55);
 }
 
 @media (prefers-color-scheme: dark) {
-  .theme-shell {
-    --bg: #141A20;
-    --surface: #1C242C;
-    --ink: #E6EBEF;
-    --muted: #A3B0BC;
-    --line: #33404C;
-    --link: #9CC0E2;
-    --focus: #9CC0E2;
-  }
   .theme-atg {
     --bg: #1E1813;
     --surface: #2C231C;
@@ -74,197 +98,304 @@
   }
 }
 
-/* ------------------------------------------------------------------ */
+/* =================================================================== */
 /* Base                                                                */
 
 *, *::before, *::after { box-sizing: border-box; }
-
 html { -webkit-text-size-adjust: 100%; }
-
 body {
   margin: 0;
   background: var(--bg);
   color: var(--ink);
-  font-family: 'Nunito Sans', system-ui, sans-serif;
+  font-family: var(--text);
   font-size: 1.0625rem;
   line-height: 1.6;
+  overflow-wrap: break-word;
 }
-
 img { max-width: 100%; height: auto; display: block; }
-
 a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 1.5px; }
-
 a:focus-visible, summary:focus-visible {
   outline: 3px solid var(--focus);
   outline-offset: 3px;
-  border-radius: 6px;
 }
+h1, h2, h3 { text-wrap: balance; }
 
-.wrap { width: 100%; max-width: 60rem; margin-inline: auto; padding-inline: 16px; }
-.narrow { max-width: 44rem; }
-
-@media (min-width: 720px) {
-  .wrap { padding-inline: 32px; }
-}
+.wrap { width: 100%; max-width: 72rem; margin-inline: auto; padding-inline: 16px; }
+.wrap.narrow { max-width: 46rem; }
+@media (min-width: 720px) { .wrap { padding-inline: 32px; } }
 
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
-
 .skip {
-  position: absolute; left: 16px; top: -60px; z-index: 10;
+  position: absolute; left: 16px; top: -80px; z-index: 20;
   padding: 10px 16px; border-radius: 10px;
-  background: var(--ink); color: var(--bg); font-weight: 700;
+  background: var(--b-sun); color: #141C3D; font-weight: 900;
 }
 .skip:focus { top: 12px; }
 
-/* Botones con labio, como los de la app. */
+/* =================================================================== */
+/* Cabecera y pie: iguales en toda la web                              */
+
+.site-head { background: var(--b-surface); border-bottom: 1px solid var(--b-line); }
+.head-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; }
+
+.wordmark {
+  display: inline-flex; align-items: baseline;
+  color: var(--b-ink); text-decoration: none;
+  font-family: var(--display); font-weight: 700; font-size: 1.625rem; line-height: 1; letter-spacing: -0.015em;
+}
+.wordmark-dot {
+  width: 0.3em; height: 0.3em; margin-left: 0.07em; border-radius: 50%;
+  background: var(--b-sun);
+}
+
+.head-nav { display: flex; gap: 2px; }
+.head-nav a {
+  padding: 8px 10px; border-radius: 10px;
+  color: var(--b-ink); font-weight: 700; font-size: 0.9375rem; text-decoration: none;
+}
+.head-nav a:hover { background: var(--b-bg); }
+.head-nav a[aria-current="page"] { box-shadow: inset 0 -3px 0 var(--b-sun); border-radius: 10px 10px 0 0; }
+@media (min-width: 720px) {
+  .head-nav { gap: 6px; }
+  .head-nav a { padding: 8px 14px; font-size: 1rem; }
+}
+
+.site-foot { margin-top: 72px; background: var(--b-band); color: var(--b-band-ink); }
+.site-foot a { color: var(--b-band-ink); }
+.site-foot .wordmark { color: var(--b-band-ink); font-size: 2rem; }
+.foot-grid {
+  display: grid; gap: 28px 24px; grid-template-columns: 1fr 1fr;
+  padding-block: 48px 32px;
+}
+.foot-brand { grid-column: 1 / -1; }
+.foot-brand p { margin: 10px 0 0; color: var(--b-band-muted); }
+.foot-brand p a { color: var(--b-band-ink); font-weight: 700; }
+.site-foot h2 { margin: 0 0 8px; font-family: var(--display); font-size: 1.0625rem; font-weight: 700; }
+.site-foot ul { list-style: none; margin: 0; padding: 0; }
+.site-foot li { margin: 0 0 6px; }
+.site-foot nav a { text-decoration: none; color: var(--b-band-muted); }
+.site-foot nav a:hover { color: var(--b-band-ink); text-decoration: underline; }
+.foot-base { padding-block: 18px 32px; border-top: 1px solid rgba(238, 241, 244, 0.14); }
+.foot-base p { margin: 0; font-size: 0.875rem; color: var(--b-band-muted); }
+.site-foot a:focus-visible { outline-color: var(--b-sun); }
+@media (min-width: 860px) {
+  .foot-grid { grid-template-columns: 1.5fr 1fr 1fr 1.4fr; }
+  .foot-brand { grid-column: auto; }
+}
+
+/* =================================================================== */
+/* Botones                                                             */
+
+/* BryceLz: pastilla girasol con labio de tinta, como una ficha. */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 50px; padding: 0 24px;
+  border: 2px solid #141C3D; border-radius: 999px;
+  background: var(--b-sun); color: #141C3D;
+  font-weight: 900; font-size: 1.0625rem; line-height: 1.2; text-decoration: none;
+  box-shadow: 0 4px 0 #141C3D;
+  transition: transform 80ms ease-out, box-shadow 80ms ease-out;
+}
+.btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #141C3D; }
+.btn-ghost { background: var(--b-surface); color: var(--b-ink); border-color: var(--b-ink); box-shadow: 0 4px 0 var(--b-ink); }
+.btn-ghost:active { box-shadow: 0 1px 0 var(--b-ink); }
+.btn:focus-visible { outline: 3px solid var(--b-link); outline-offset: 4px; }
+
+/* Apps: el botón con labio de la propia app. */
 .sticker {
   display: inline-flex; align-items: center; justify-content: center;
   min-height: 48px; padding: 0 20px;
-  border: 3px solid var(--atg-outline); border-radius: 14px;
-  background: var(--atg-primary); color: var(--atg-primary-ink);
+  border: 3px solid var(--a-outline); border-radius: 14px;
+  background: var(--a-primary); color: var(--a-primary-ink);
   font-weight: 900; font-size: 1.0625rem; line-height: 1.2; text-decoration: none;
-  box-shadow: 0 4px 0 var(--atg-outline);
+  box-shadow: 0 4px 0 var(--a-outline);
   transition: transform 80ms ease-out, box-shadow 80ms ease-out;
 }
-.sticker:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--atg-outline); }
-.sticker-soft {
-  background: var(--atg-surface); color: var(--atg-ink);
-  box-shadow: 0 4px 0 var(--atg-lip);
-}
-.sticker-soft:active { box-shadow: 0 1px 0 var(--atg-lip); }
-
+.sticker:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--a-outline); }
+.sticker-soft { background: var(--a-surface); color: var(--a-ink); box-shadow: 0 4px 0 var(--a-lip); }
+.sticker-soft:active { box-shadow: 0 1px 0 var(--a-lip); }
+.sticker:focus-visible { outline: 3px solid #24418F; outline-offset: 4px; }
 .theme-atg .sticker { background: var(--primary); color: var(--primary-ink); border-color: var(--outline); box-shadow: 0 4px 0 var(--outline); }
 .theme-atg .sticker-soft { background: var(--surface); color: var(--ink); box-shadow: 0 4px 0 var(--lip); }
 
 @media (prefers-reduced-motion: reduce) {
-  .sticker { transition: none; }
+  .btn, .sticker { transition: none; }
 }
 
-/* Pie, igual en toda la web. */
-.foot { margin-top: 56px; border-top: 1px solid var(--line); background: var(--surface); }
-.foot-row {
-  display: flex; flex-wrap: wrap; gap: 8px 24px;
-  padding-block: 24px 40px; font-size: 0.9375rem;
+/* =================================================================== */
+/* Páginas de BryceLz                                                  */
+
+.hero { padding-block: 40px 56px; }
+.hero-grid { display: grid; gap: 40px; align-items: center; }
+.hero h1 {
+  margin: 0 0 20px; max-width: 11ch;
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(2.75rem, 9vw, 4.75rem); line-height: 0.98; letter-spacing: -0.03em;
 }
-.foot a { color: var(--muted); }
-.foot a:first-child { color: var(--ink); font-weight: 700; text-decoration: none; }
-
-/* ------------------------------------------------------------------ */
-/* Web propia                                                          */
-
-.intro { padding-block: 56px 32px; }
-.name {
-  margin: 0 0 20px;
-  max-width: 9ch;
-  font-weight: 900;
-  font-size: clamp(2.75rem, 11vw, 5.5rem);
-  line-height: 0.92;
-  letter-spacing: -0.03em;
-}
-.intro-text { margin: 0 0 12px; max-width: 34ch; font-size: 1.25rem; line-height: 1.45; }
-.intro-mail { margin: 0; font-weight: 700; }
-
-@media (min-width: 720px) {
-  .intro { padding-block: 96px 48px; }
+.hero-lead { margin: 0 0 28px; max-width: 36ch; font-size: 1.25rem; line-height: 1.5; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+@media (min-width: 900px) {
+  .hero { padding-block: 80px 96px; }
+  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; }
 }
 
-.shell-h2 { margin: 0 0 16px; font-size: 1.5rem; font-weight: 900; letter-spacing: -0.01em; }
-.shell-h1 { margin: 40px 0 8px; font-size: clamp(2rem, 7vw, 3rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; }
-.theme-shell main.narrow h2 { margin: 32px 0 6px; font-size: 1.1875rem; font-weight: 900; }
-.theme-shell main.narrow p { margin: 0 0 12px; }
+/* Tablero de la portada: juegos de verdad, cada uno en su color. */
+.board {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+}
+.board li {
+  aspect-ratio: 1; display: grid; place-items: center;
+  border: 2px solid #141C3D; border-radius: 18px;
+  background: var(--tile);
+  box-shadow: 0 3px 0 #141C3D;
+  animation: deal 460ms cubic-bezier(.2, .8, .2, 1) both;
+  animation-delay: calc(var(--i) * 30ms + 120ms);
+}
+.board li:nth-child(n+13) { display: none; }
+.board img { width: 74%; height: auto; }
+@keyframes deal {
+  from { opacity: 0; transform: translateY(10px) scale(0.9); }
+}
+@media (min-width: 560px) {
+  .board { grid-template-columns: repeat(6, 1fr); }
+  .board li:nth-child(n+13) { display: grid; }
+  .board li:nth-child(n+19) { display: none; }
+}
+@media (min-width: 900px) {
+  .board li:nth-child(n+19) { display: grid; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .board li { animation: none; }
+}
 
-.shell-top { border-bottom: 1px solid var(--line); background: var(--surface); }
-.shell-top .wrap { padding-block: 14px; }
-.shell-top a { color: var(--ink); font-weight: 900; text-decoration: none; }
+.band { padding-block: 56px; }
+.band-tight { padding-block: 16px 24px; }
+.band-ink { background: var(--b-band); color: var(--b-band-ink); }
+.band h2, .page-head h1, .panel h2, .prose h2 { font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; }
+.band > .wrap > h2, .section-head h2 { margin: 0 0 24px; font-size: clamp(2rem, 5vw, 2.75rem); line-height: 1.05; }
+.section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+.section-head a { font-weight: 800; }
 
-/* La tarjeta de una app: un trozo de la app pegado en la pizarra. */
+.principles {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 28px 32px; grid-template-columns: 1fr;
+}
+.principle { padding-top: 16px; border-top: 3px solid var(--b-sun); }
+.principle h3 { margin: 0 0 6px; font-family: var(--display); font-weight: 700; font-size: 1.5rem; line-height: 1.15; }
+.principle p { margin: 0; color: var(--b-band-muted); }
+@media (min-width: 640px) { .principles { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .principles { grid-template-columns: repeat(4, 1fr); } }
+
+.duo { display: grid; gap: 20px; }
+@media (min-width: 760px) { .duo { grid-template-columns: 1fr 1fr; } }
+.panel {
+  padding: 28px 24px;
+  border: 2px solid var(--b-line); border-radius: 24px;
+  background: var(--b-surface);
+}
+.panel h2 { margin: 0 0 8px; font-size: 1.625rem; line-height: 1.15; }
+.panel p { margin: 0 0 20px; }
+
+.page-head { padding-block: 48px 24px; }
+.page-head h1 { margin: 0 0 10px; font-size: clamp(2.5rem, 7vw, 4rem); line-height: 1; }
+.page-lead { margin: 0; max-width: 40ch; font-size: 1.25rem; line-height: 1.5; }
+.big-mail { font-weight: 900; }
+.next-app { margin: 28px 0 0; color: var(--muted); }
+
+.prose h2 { margin: 32px 0 6px; font-size: 1.375rem; }
+.prose p { margin: 0 0 12px; }
+
+/* La tarjeta de una app: un trozo de la app pegado en la web. */
 .appcard {
-  display: grid;
-  grid-template-columns: 1fr;
-  overflow: hidden;
-  border: 3px solid var(--atg-outline);
-  border-radius: 24px;
-  background: var(--atg-paper) url('apps/allthegames/wallpaper.webp') center / 420px auto;
-  box-shadow: 0 7px 0 var(--atg-lip);
-  color: var(--atg-ink);
+  display: grid; grid-template-columns: 1fr; overflow: hidden;
+  border: 3px solid var(--a-outline); border-radius: 26px;
+  background: var(--a-paper) url('apps/allthegames/wallpaper.webp') center / 420px auto;
+  box-shadow: 0 8px 0 var(--a-lip);
+  color: var(--a-ink);
 }
 .appcard-art { display: flex; align-items: center; justify-content: center; padding: 28px 24px 20px; }
-.appcard-art img { width: min(100%, 360px); }
-.appcard-copy {
-  padding: 22px 20px 26px;
-  background: var(--atg-surface);
-  border-top: 3px solid var(--atg-outline);
+.appcard-art img { width: min(100%, 400px); }
+.appcard-copy { padding: 22px 20px 26px; background: var(--a-surface); border-top: 3px solid var(--a-outline); }
+.appcard .appcard-name { margin: 0 0 6px; font-family: var(--atg); font-weight: 400; font-size: 2.25rem; line-height: 1.05; letter-spacing: 0; }
+.appcard-name a { color: var(--a-ink); text-decoration: none; }
+.appcard p { margin: 0 0 12px; }
+.appcard-meta { color: var(--a-muted); font-size: 0.9375rem; }
+.appcard-cats { list-style: none; margin: 4px 0 14px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.appcard-cats li {
+  padding: 3px 12px; border-radius: 999px;
+  background: var(--chip); color: #FFF8EE;
+  font-weight: 900; font-size: 0.875rem;
 }
-.appcard h3 { margin: 0 0 6px; font-family: 'ATG Display', 'Nunito Sans', sans-serif; font-weight: 400; font-size: 2rem; line-height: 1.1; }
-.appcard h3 a { color: var(--atg-ink); text-decoration: none; }
-.appcard p { margin: 0 0 10px; }
-.appcard-meta { color: var(--atg-muted); font-size: 0.9375rem; }
+.appcard-cats span { opacity: 0.85; font-weight: 700; }
 .appcard-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
-.appcard a:focus-visible { outline-color: #2F5679; }
-
-@media (min-width: 760px) {
+@media (min-width: 820px) {
   .appcard { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
-  .appcard-copy { border-top: 0; border-left: 3px solid var(--atg-outline); padding: 32px 32px 34px; align-self: stretch; }
-  .appcard-art { padding: 32px; }
+  .appcard-copy { border-top: 0; border-left: 3px solid var(--a-outline); padding: 36px 36px 38px; }
+  .appcard-art { padding: 36px; }
 }
 
-.notfound { padding-block: 48px; }
+.support-card {
+  padding: 24px; color: var(--a-ink);
+  border: 3px solid var(--a-outline); border-radius: 24px;
+  background: var(--a-surface); box-shadow: 0 7px 0 var(--a-lip);
+}
+.support-card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+.support-card-head img { width: 64px; height: 64px; border-radius: 16px; }
+.support-card h2 { margin: 0; font-family: var(--atg); font-weight: 400; font-size: 2rem; line-height: 1; letter-spacing: 0; }
+.support-card h2 a { color: var(--a-ink); text-decoration: none; }
+.support-qs { margin: 8px 0 22px; padding-left: 20px; }
+.support-qs li { margin: 0 0 6px; }
+.support-qs a { color: #8A4317; font-weight: 700; }
 
-/* ------------------------------------------------------------------ */
+/* =================================================================== */
 /* Páginas de AllTheGames                                              */
 
 .theme-atg {
   background-color: var(--bg);
-  /* El fondo de la app, con un velo para que el texto encima se lea tranquilo. */
   background-image: linear-gradient(var(--veil), var(--veil)), var(--wallpaper);
   background-size: auto, 520px auto;
 }
 
-.atg-top { background: var(--surface); border-bottom: 3px solid var(--outline); }
-.atg-top-row {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  padding-block: 10px;
-}
-.atg-brand {
+.appnav { background: var(--surface); border-bottom: 3px solid var(--outline); }
+.appnav-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; padding-block: 10px; }
+.appnav-brand {
   display: inline-flex; align-items: center; gap: 10px;
   color: var(--ink); text-decoration: none;
-  font-family: 'ATG Display', 'Nunito Sans', sans-serif; font-size: 1.375rem; line-height: 1;
+  font-family: var(--atg); font-size: 1.5rem; line-height: 1;
 }
-.atg-brand img { width: 36px; height: 36px; border-radius: 9px; }
-.atg-owner { color: var(--muted); font-size: 0.9375rem; font-weight: 700; text-align: right; }
+.appnav-brand img { width: 40px; height: 40px; border-radius: 10px; }
+.appnav-tabs { display: flex; gap: 4px; overflow-x: auto; max-width: 100%; scrollbar-width: none; }
+.appnav-tabs a {
+  flex: none; padding: 7px 10px; border-radius: 999px;
+  color: var(--ink); font-weight: 800; font-size: 0.875rem; text-decoration: none;
+}
+@media (min-width: 420px) { .appnav-tabs a { padding: 7px 14px; font-size: 0.9375rem; } }
+.appnav-tabs a:hover { background: var(--bg); }
+.appnav-tabs a[aria-current="page"] { background: var(--primary); color: var(--primary-ink); }
 
-.atg-hero {
-  display: grid; gap: 8px; align-items: center;
-  padding-block: 24px 8px;
-}
-.atg-logo { width: min(100%, 380px); margin-inline: auto; }
-.lead { margin: 0 0 16px; font-size: 1.25rem; font-weight: 700; line-height: 1.4; }
+.atg-hero { display: grid; gap: 8px; align-items: center; padding-block: 24px 8px; }
+.atg-logo { width: min(100%, 400px); margin-inline: auto; }
+.atg-lead { margin: 0 0 16px; font-size: 1.25rem; font-weight: 700; line-height: 1.4; }
 .soon {
   display: inline-block; margin: 0 0 8px;
   padding: 8px 16px; border: 2px dashed var(--muted); border-radius: 999px;
   background: var(--surface); font-weight: 900;
 }
 .facts { list-style: none; margin: 16px 0 0; padding: 0; }
-.facts li {
-  position: relative; margin: 0 0 10px; padding-left: 34px;
-}
+.facts li { position: relative; margin: 0 0 10px; padding-left: 34px; }
 .facts li::before {
   content: ''; position: absolute; left: 0; top: 2px; width: 24px; height: 24px;
   background: url('apps/allthegames/check.webp') center / contain no-repeat;
 }
-
 @media (min-width: 760px) {
   .atg-hero { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 40px; padding-block: 48px 16px; }
 }
 
-.atg-h2 {
-  margin: 40px 0 16px;
-  font-family: 'ATG Display', 'Nunito Sans', sans-serif; font-weight: 400;
-  font-size: clamp(1.75rem, 6vw, 2.25rem); line-height: 1.1;
-}
+.atg-h2 { margin: 40px 0 16px; font-family: var(--atg); font-weight: 400; font-size: clamp(1.75rem, 6vw, 2.25rem); line-height: 1.1; }
 
 .cat {
   margin: 0 0 24px; overflow: hidden;
@@ -275,45 +406,35 @@ a:focus-visible, summary:focus-visible {
   display: flex; align-items: center; gap: 12px; margin: 0;
   padding: 8px 16px 8px 10px;
   background: var(--fill); border-bottom: 5px solid var(--lip);
-  color: #FFF8EE;
-  font-family: 'ATG Display', 'Nunito Sans', sans-serif; font-weight: 400; font-size: 1.5rem; line-height: 1.1;
+  color: #FFF8EE; font-family: var(--atg); font-weight: 400; font-size: 1.5rem; line-height: 1.1;
 }
 .cat-band img { width: 44px; height: 44px; }
-.cat-count { margin-left: auto; font-family: 'Nunito Sans', sans-serif; font-weight: 700; font-size: 0.9375rem; white-space: nowrap; }
+.cat-count { margin-left: auto; font-family: var(--text); font-weight: 700; font-size: 0.9375rem; white-space: nowrap; }
 .games {
   list-style: none; margin: 0; padding: 16px 12px 18px;
   display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 14px 6px;
 }
-.game {
-  display: flex; flex-direction: column; align-items: center; gap: 6px;
-  text-align: center; font-size: 0.875rem; font-weight: 700; line-height: 1.2;
-  overflow-wrap: anywhere;
-}
+.game { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; font-size: 0.875rem; font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; }
 .game img { width: 72px; height: 72px; }
-
 .help-row { display: flex; flex-wrap: wrap; gap: 14px; }
 
 /* Hoja para textos largos (soporte, privacidad, términos). */
-.theme-atg main.narrow {
-  margin-block: 24px 0;
-  padding: 0 20px 28px;
+.sheet {
+  margin-top: 24px; padding: 0 20px 28px;
   border: 3px solid var(--outline); border-radius: 22px;
   background: var(--surface); box-shadow: 0 7px 0 var(--lip);
 }
-@media (min-width: 720px) {
-  .theme-atg main.narrow { margin-block: 40px 0; padding: 0 36px 36px; }
-}
+.wrap.sheet { width: auto; margin-inline: 16px; max-width: 44rem; }
+@media (min-width: 720px) { .sheet { margin-top: 40px; padding: 0 36px 36px; } }
+@media (min-width: 46rem) { .wrap.sheet { margin-inline: auto; } }
 .band-title {
   margin: 0 -20px 16px; padding: 18px 20px 14px;
   border-radius: 19px 19px 0 0;
   background: var(--fill); border-bottom: 5px solid var(--lip);
-  color: #FFF8EE;
-  font-family: 'ATG Display', 'Nunito Sans', sans-serif; font-weight: 400;
+  color: #FFF8EE; font-family: var(--atg); font-weight: 400;
   font-size: clamp(1.75rem, 6vw, 2.25rem); line-height: 1.1;
 }
-@media (min-width: 720px) {
-  .band-title { margin-inline: -36px; padding-inline: 36px; }
-}
+@media (min-width: 720px) { .band-title { margin-inline: -36px; padding-inline: 36px; } }
 .meta { margin: 0 0 14px; color: var(--muted); font-size: 0.9375rem; }
 .legal h2, .contact h2 { margin: 28px 0 6px; font-size: 1.1875rem; font-weight: 900; line-height: 1.3; }
 .legal p, .contact p { margin: 0 0 10px; max-width: 68ch; }
@@ -327,15 +448,8 @@ a:focus-visible, summary:focus-visible {
 }
 .chip-on { background: #3F4B56; border-color: #3F4B56; color: #FFF8EE; }
 
-.faq {
-  margin: 0 0 10px;
-  border: 2px solid var(--line); border-radius: 16px;
-  background: var(--bg);
-}
-.faq summary {
-  position: relative; cursor: pointer; list-style: none;
-  padding: 14px 48px 14px 16px; font-weight: 900; line-height: 1.35;
-}
+.faq { margin: 0 0 10px; border: 2px solid var(--line); border-radius: 16px; background: var(--bg); scroll-margin-top: 16px; }
+.faq summary { position: relative; cursor: pointer; list-style: none; padding: 14px 48px 14px 16px; font-weight: 900; line-height: 1.35; }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after {
   content: ''; position: absolute; right: 18px; top: 50%;
@@ -345,5 +459,6 @@ a:focus-visible, summary:focus-visible {
 }
 .faq[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
 .faq p { margin: 0; padding: 0 16px 16px; max-width: 68ch; }
+.faq:target { border-color: var(--primary); }
 .contact { margin-top: 28px; }
 .contact .sticker { margin-top: 8px; }

@@ -3,9 +3,28 @@
   "ownerNote": "particular",
   "email": "bryce.lz.as@gmail.com",
   "baseUrl": "https://USUARIO.github.io",
-  "intro": "Desarrollo apps para Android: sencillas, sin cuentas y pensadas para que las use toda la casa.",
+  "intro": "BryceLz es el estudio de Brais López Arias. Hago apps para Android que se entienden a la primera, no piden cuenta y cuidan tus datos.",
   "admobPublisher": "pub-1832098184846201",
-  "apps": [
-    "allthegames"
+  "brand": "BryceLz",
+  "year": 2026,
+  "tagline": "Apps sencillas para toda la casa.",
+  "headline": "Apps sencillas para toda la casa",
+  "principles": [
+    [
+      "Sin cuentas",
+      "Las apps no piden registro ni correo. Lo que haces en ellas se guarda en tu teléfono."
+    ],
+    [
+      "Sin conexión",
+      "Funcionan en el metro o en el pueblo. Solo usan internet las partes que de verdad lo necesitan."
+    ],
+    [
+      "Privacidad clara",
+      "No vendo datos ni pongo anuncios personalizados. Cada app explica en palabras sencillas qué datos toca."
+    ],
+    [
+      "Para toda la casa",
+      "Pensadas para que las usen desde los pequeños hasta los abuelos, y en seis idiomas."
+    ]
   ]
 }
