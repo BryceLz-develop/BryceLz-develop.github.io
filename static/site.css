@@ -1,7 +1,9 @@
 /* =================================================================== */
-/* Fuentes                                                             */
+/* BryceLz: la web usa las mismas piezas que la app (AllTheGames):     */
+/* papel crema, tinta marrón, banners hondos con labio, fichas con      */
+/* labio y los cuatro pasteles intercalados.                           */
+/* =================================================================== */
 
-@font-face { font-family: 'Bricolage Grotesque'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/bricolage-Regular.woff') format('woff'); }
 @font-face { font-family: 'Bricolage Grotesque'; font-weight: 700; font-style: normal; font-display: swap; src: url('fonts/bricolage-Bold.woff') format('woff'); }
 @font-face { font-family: 'Nunito Sans'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/nunito-sans-400Regular.woff') format('woff'); }
 @font-face { font-family: 'Nunito Sans'; font-weight: 400; font-style: italic; font-display: swap; src: url('fonts/nunito-sans-400Regular_Italic.woff') format('woff'); }
@@ -9,90 +11,41 @@
 @font-face { font-family: 'Nunito Sans'; font-weight: 900; font-style: normal; font-display: swap; src: url('fonts/nunito-sans-900Black.woff') format('woff'); }
 @font-face { font-family: 'ATG Display'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/atg-display.woff') format('woff'); }
 
-/* =================================================================== */
-/* Colores                                                             */
-/* BryceLz: tinta azul noche, niebla y girasol (la ficha del logo).    */
-/* Cada app trae los suyos; la cabecera y el pie son siempre BryceLz.  */
-
 :root {
-  --b-bg: #EEF1F4;
-  --b-surface: #FAFBFC;
-  --b-ink: #141C3D;
-  --b-muted: #4E5872;
-  --b-line: #CDD4DE;
-  --b-link: #24418F;
-  --b-sun: #F5B82E;
-  --b-band: #141C3D;
-  --b-band-ink: #EEF1F4;
-  --b-band-muted: #B9C2DA;
-  --b-dot: rgba(20, 28, 61, 0.11);
-  --b-glow: rgba(255, 255, 255, 0.85);
+  /* Los colores de la app (tema claro). */
+  --paper: #F4EBDD;
+  --surface: #FFF8EE;
+  --surface-hot: #EFE3CF;
+  --ink: #2B2118;
+  --muted: #6B5A48;
+  --line: #D9C9AE;
+  --outline: #3A2C20;
+  --lip: #C9B89A;
+  --primary: #AE5420;        /* naranja de la app, un punto más hondo para leer bien el texto crema */
+  --primary-ink: #FFF8EE;
+  --link: #8A4317;
+  --focus: #2D63A6;
+  --gold: #E8B03A;
 
-  /* AllTheGames, fijos en sus tarjetas (son un trozo de la app). */
-  --a-paper: #F4EBDD;
-  --a-surface: #FFF8EE;
-  --a-ink: #2B2118;
-  --a-muted: #6B5A48;
-  --a-line: #D9C9AE;
-  --a-outline: #3A2C20;
-  --a-lip: #C9B89A;
-  --a-primary: #AE5420;
-  --a-primary-ink: #FFF8EE;
+  /* Banner y pie: el naranja de la app hundido hacia la tinta (como sus banners). */
+  --band: #935127;
+  --band-lip: #6D3F21;
+  --band-ink: #FFF8EE;
+  --band-muted: #F1D9C4;
 
-  --display: 'Bricolage Grotesque', 'Nunito Sans', system-ui, sans-serif;
+  --wallpaper: url('apps/allthegames/wallpaper.webp');
+  --veil: rgba(244, 235, 221, 0.55);
+
+  --display: 'ATG Display', 'Nunito Sans', sans-serif;
   --text: 'Nunito Sans', system-ui, sans-serif;
-  --atg: 'ATG Display', 'Nunito Sans', sans-serif;
+  --logo: 'Bricolage Grotesque', 'Nunito Sans', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --b-bg: #0E1430;
-    --b-surface: #161E42;
-    --b-ink: #EEF1F4;
-    --b-muted: #AAB4CF;
-    --b-line: #2A3566;
-    --b-link: #A9BEF5;
-    --b-band: #1A2350;
-    --b-band-ink: #EEF1F4;
-    --b-band-muted: #AAB4CF;
-    --b-dot: rgba(238, 241, 244, 0.08);
-    --b-glow: rgba(77, 99, 196, 0.22);
-  }
-}
-
-.theme-brand {
-  background-image:
-    radial-gradient(ellipse 70% 55% at 50% 42%, var(--b-glow), transparent 70%),
-    radial-gradient(circle, var(--b-dot) 1.3px, transparent 1.6px);
-  background-size: auto, 22px 22px;
-  background-position: 0 0, 11px 11px;
-  --bg: var(--b-bg);
-  --ink: var(--b-ink);
-  --muted: var(--b-muted);
-  --link: var(--b-link);
-  --focus: var(--b-link);
-}
-
-.theme-atg {
-  --bg: var(--a-paper);
-  --surface: var(--a-surface);
-  --ink: var(--a-ink);
-  --muted: var(--a-muted);
-  --line: var(--a-line);
-  --outline: var(--a-outline);
-  --lip: var(--a-lip);
-  --primary: var(--a-primary);
-  --primary-ink: var(--a-primary-ink);
-  --link: #8A4317;
-  --focus: #24418F;
-  --wallpaper: url('apps/allthegames/wallpaper.webp');
-  --veil: rgba(244, 235, 221, 0.55);
-}
-
-@media (prefers-color-scheme: dark) {
-  .theme-atg {
-    --bg: #1E1813;
+    --paper: #1E1813;
     --surface: #2C231C;
+    --surface-hot: #3A2E24;
     --ink: #F3E9DA;
     --muted: #C9B7A0;
     --line: #57473A;
@@ -102,38 +55,36 @@
     --primary-ink: #1E1813;
     --link: #F0A46B;
     --focus: #F0A46B;
+    --band: #7A4322;
+    --band-lip: #3C2213;
     --wallpaper: url('apps/allthegames/wallpaper-dark.webp');
     --veil: rgba(30, 24, 19, 0.5);
   }
 }
 
-/* =================================================================== */
+/* ------------------------------------------------------------------- */
 /* Base                                                                */
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
   margin: 0;
-  background: var(--bg);
+  min-height: 100vh; min-height: 100svh;
+  display: flex; flex-direction: column;
   color: var(--ink);
-  font-family: var(--text);
-  font-size: 1.0625rem;
-  line-height: 1.6;
+  background-color: var(--paper);
+  /* El fondo de dibujos de la app, con un velo para leer tranquilo. */
+  background-image: linear-gradient(var(--veil), var(--veil)), var(--wallpaper);
+  background-size: auto, 520px auto;
+  font-family: var(--text); font-size: 1.0625rem; line-height: 1.6;
   overflow-wrap: break-word;
-  /* El pie siempre abajo del todo, aunque la página sea corta. */
-  min-height: 100vh;
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
 }
 main { flex: 1 0 auto; display: flex; flex-direction: column; }
 main > * { flex-shrink: 0; }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--link); text-underline-offset: 0.18em; text-decoration-thickness: 1.5px; }
-a:focus-visible, summary:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 3px;
-}
+a:focus-visible, summary:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
 h1, h2, h3 { text-wrap: balance; }
 
 .wrap { width: 100%; max-width: 72rem; margin-inline: auto; padding-inline: 16px; }
@@ -146,137 +97,160 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .skip {
   position: absolute; left: 16px; top: -80px; z-index: 20;
-  padding: 10px 16px; border-radius: 10px;
-  background: var(--b-sun); color: #141C3D; font-weight: 900;
+  padding: 10px 16px; border-radius: 12px;
+  background: var(--surface); color: var(--ink); font-weight: 900; border: 3px solid var(--outline);
 }
 .skip:focus { top: 12px; }
 
-/* =================================================================== */
-/* Banner de arriba y pie: abren y cierran la página como dos         */
-/* sujetalibros (banda honda, esquinas redondas hacia el contenido).   */
-
-:root {
-  --ban-fill: #1B2550;
-  --ban-lip: #0B1130;
-  --ban-ink: #FAFBFC;
-  --ban-muted: #B9C2DA;
+.display {
+  margin: 0;
+  font-family: var(--display); font-weight: 400; line-height: 1.05; letter-spacing: 0.01em;
 }
+.lead { margin: 0 0 18px; font-size: 1.25rem; font-weight: 700; line-height: 1.45; }
+.muted { color: var(--muted); font-size: 0.9375rem; }
+
+/* ------------------------------------------------------------------- */
+/* Banner (pegado arriba) y pie: la misma banda honda, como en la app. */
 
 .banner {
-  /* Pegado arriba, de lado a lado; solo las esquinas de abajo redondas. */
   position: relative; z-index: 2;
-  background: var(--ban-fill);
+  background: var(--band);
   border-radius: 0 0 22px 22px;
-  box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.06), 0 6px 0 var(--ban-lip);
+  box-shadow: inset 0 -2px 0 rgba(255, 255, 255, 0.07), 0 6px 0 var(--band-lip);
 }
+@media (min-width: 720px) { .banner { border-radius: 0 0 28px 28px; } }
 .banner-row {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px;
   min-height: 68px;
-  /* Centrado en la cara: el labio de los botones queda en el hueco de abajo. */
+  /* Centrado en la cara: el labio de los botones cae en el hueco de abajo. */
   padding-top: 14px; padding-bottom: 10px;
 }
-@media (min-width: 720px) {
-  .banner { border-radius: 0 0 28px 28px; }
-  .banner-row { min-height: 84px; }
-}
+@media (min-width: 720px) { .banner-row { min-height: 84px; } }
 
 .wordmark {
-  display: inline-flex; align-items: baseline;
-  padding-bottom: 4px;
-  color: var(--ban-ink); text-decoration: none;
-  font-family: var(--display); font-weight: 700; font-size: 1.625rem; line-height: 1; letter-spacing: -0.02em;
+  display: inline-flex; align-items: baseline; padding-bottom: 4px;
+  color: var(--band-ink); text-decoration: none;
+  font-family: var(--logo); font-weight: 700; font-size: 1.625rem; line-height: 1; letter-spacing: -0.02em;
 }
 @media (min-width: 420px) { .wordmark { font-size: 1.875rem; } }
-.wordmark-dot { width: 0.3em; height: 0.3em; margin-left: 0.07em; border-radius: 50%; background: var(--b-sun); }
-.wordmark:focus-visible { outline: 3px solid var(--b-sun); outline-offset: 4px; border-radius: 6px; }
+.wordmark-dot { width: 0.3em; height: 0.3em; margin-left: 0.07em; border-radius: 50%; background: var(--gold); }
+.wordmark:focus-visible { outline-color: var(--gold); border-radius: 6px; }
 
 .banner-nav { display: flex; gap: 6px; }
 .banner-tab {
   display: inline-flex; align-items: center; min-height: 42px; padding: 0 12px;
   border: 2px solid transparent; border-radius: 14px;
-  color: var(--ban-ink);
-  font-weight: 900; font-size: 0.9375rem; text-decoration: none;
-  transition: background-color 120ms ease-out, transform 80ms ease-out, box-shadow 80ms ease-out;
+  color: var(--band-ink); font-weight: 900; font-size: 0.9375rem; text-decoration: none;
+  transition: background-color 120ms ease-out, transform 80ms ease-out;
 }
 @media (min-width: 420px) { .banner-tab { padding: 0 16px; font-size: 1rem; } }
-.banner-tab:hover { background: rgba(255, 255, 255, 0.08); }
-/* El apartado en el que estás: la ficha girasol, con su labio. */
+.banner-tab:hover { background: rgba(255, 248, 238, 0.12); }
+/* El apartado en el que estás: ficha crema con labio, como los botones de la app. */
 .banner-tab[aria-current="page"] {
-  background: var(--b-sun); color: #141C3D; border-color: var(--ban-lip);
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.45), 0 4px 0 var(--ban-lip);
+  background: #FFF8EE; color: #2B2118; border-color: #3A2C20;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.6), 0 4px 0 #3A2C20;
 }
 .banner-tab:active { transform: translateY(2px); }
-.banner-tab:focus-visible { outline: 3px solid var(--b-sun); outline-offset: 4px; }
-@media (prefers-reduced-motion: reduce) { .banner-tab { transition: none; } }
+.banner-tab:focus-visible { outline-color: var(--gold); }
 
 .site-foot {
-  margin-top: 40px;
-  background: var(--ban-fill); color: var(--ban-muted);
+  margin-top: 48px;
+  background: var(--band); color: var(--band-muted);
   border-radius: 22px 22px 0 0;
-  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.07);
 }
 @media (min-width: 720px) { .site-foot { border-radius: 28px 28px 0 0; } }
-.foot-row {
-  display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px;
-  padding-block: 22px 26px; font-size: 0.9375rem;
-}
+.foot-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px; padding-block: 22px 26px; font-size: 0.9375rem; }
 .site-foot .wordmark { font-size: 1.375rem; padding-bottom: 0; }
 .foot-links { display: flex; flex-wrap: wrap; gap: 6px 22px; }
-.foot-links a { color: var(--ban-ink); text-decoration-color: rgba(250, 251, 252, 0.35); }
-.foot-links a:hover { text-decoration-color: var(--b-sun); }
-.foot-links a:focus-visible { outline-color: var(--b-sun); }
+.foot-links a { color: var(--band-ink); text-decoration-color: rgba(255, 248, 238, 0.4); }
+.foot-links a:hover { text-decoration-color: var(--gold); }
+.foot-links a:focus-visible { outline-color: var(--gold); }
 .foot-copy { margin: 0; }
 @media (min-width: 720px) { .foot-copy { margin-left: auto; } }
 
-/* =================================================================== */
-/* Botones                                                             */
+/* ------------------------------------------------------------------- */
+/* Piezas comunes: botones con labio, tarjetas y bandas de título.      */
 
-/* BryceLz: pastilla girasol con labio de tinta, como una ficha. */
-.btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  min-height: 50px; padding: 0 24px;
-  border: 2px solid #141C3D; border-radius: 999px;
-  background: var(--b-sun); color: #141C3D;
-  font-weight: 900; font-size: 1.0625rem; line-height: 1.2; text-decoration: none;
-  box-shadow: 0 4px 0 #141C3D;
-  transition: transform 80ms ease-out, box-shadow 80ms ease-out;
-}
-.btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #141C3D; }
-.btn-ghost { background: var(--b-surface); color: var(--b-ink); border-color: var(--b-ink); box-shadow: 0 4px 0 var(--b-ink); }
-.btn-ghost:active { box-shadow: 0 1px 0 var(--b-ink); }
-.btn:focus-visible { outline: 3px solid var(--b-link); outline-offset: 4px; }
-
-/* Apps: el botón con labio de la propia app. */
 .sticker {
-  display: inline-flex; align-items: center; justify-content: center;
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 48px; padding: 0 20px;
-  border: 3px solid var(--a-outline); border-radius: 14px;
-  background: var(--a-primary); color: var(--a-primary-ink);
-  font-weight: 900; font-size: 1.0625rem; line-height: 1.2; text-decoration: none;
-  box-shadow: 0 4px 0 var(--a-outline);
+  border: 3px solid var(--outline); border-radius: 14px;
+  background: var(--primary); color: var(--primary-ink);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.25), 0 4px 0 var(--outline);
+  font-weight: 900; font-size: 1.0625rem; line-height: 1.2; text-decoration: none; text-align: center;
   transition: transform 80ms ease-out, box-shadow 80ms ease-out;
 }
-.sticker:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--a-outline); }
-.sticker-soft { background: var(--a-surface); color: var(--a-ink); box-shadow: 0 4px 0 var(--a-lip); }
-.sticker-soft:active { box-shadow: 0 1px 0 var(--a-lip); }
-.sticker:focus-visible { outline: 3px solid #24418F; outline-offset: 4px; }
-.theme-atg .sticker { background: var(--primary); color: var(--primary-ink); border-color: var(--outline); box-shadow: 0 4px 0 var(--outline); }
-.theme-atg .sticker-soft { background: var(--surface); color: var(--ink); box-shadow: 0 4px 0 var(--lip); }
+.sticker:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--outline); }
+.sticker-soft { background: var(--surface); color: var(--ink); box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 4px 0 var(--lip); }
+.sticker-soft:active { box-shadow: 0 1px 0 var(--lip); }
+@media (prefers-reduced-motion: reduce) { .sticker, .banner-tab { transition: none; } }
+.actions { display: flex; flex-wrap: wrap; gap: 12px 14px; }
 
-@media (prefers-reduced-motion: reduce) {
-  .btn, .sticker { transition: none; }
+.card {
+  border: 3px solid var(--outline); border-radius: 24px;
+  background: var(--surface);
+  box-shadow: 0 7px 0 var(--lip);
 }
 
-/* =================================================================== */
-/* Inicio: el carrusel de juegos                                       */
-/* Filas como ladrillos (cada una desplazada media ficha) que van una  */
-/* hacia cada lado.                                                    */
-
-.stage {
-  flex: 1 0 auto;
-  display: flex; flex-direction: column; justify-content: center;
-  padding-block: 32px 8px;
+/* Banda de título dentro de una hoja: la cabecera de los modales de la app. */
+.band-title {
+  margin: 0 -20px 18px; padding: 18px 20px 14px;
+  border-radius: 21px 21px 0 0;
+  background: var(--fill); border-bottom: 5px solid var(--lip);
+  color: #FFF8EE; font-family: var(--display); font-weight: 400;
+  font-size: clamp(1.75rem, 6vw, 2.25rem); line-height: 1.1; letter-spacing: 0.01em;
 }
+.band-title { border-bottom-color: var(--lip); }
+
+.chips { list-style: none; margin: 4px 0 14px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li {
+  padding: 3px 12px; border-radius: 999px; border: 2px solid var(--outline);
+  background: var(--chip); color: #FFF8EE; font-weight: 900; font-size: 0.875rem;
+}
+.chips span { opacity: 0.85; font-weight: 700; }
+
+.section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; margin-bottom: 18px; }
+.section-head a { font-weight: 900; }
+.block { margin-top: 56px; }
+.block > .display { margin-bottom: 18px; font-size: clamp(1.875rem, 6vw, 2.5rem); }
+.section-head .display { font-size: clamp(1.875rem, 6vw, 2.5rem); }
+
+/* ------------------------------------------------------------------- */
+/* Inicio                                                              */
+
+.hero {
+  display: grid; gap: 28px; align-items: center;
+  padding-block: 40px 8px;
+}
+.hero-title { margin-bottom: 16px; font-size: clamp(2.5rem, 9vw, 4.25rem); line-height: 0.98; }
+.hero .lead { max-width: 34ch; font-weight: 400; }
+@media (min-width: 880px) {
+  .hero { grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 48px; padding-block: 64px 16px; }
+}
+
+/* La app como una pegatina, con tres etiquetas alrededor. */
+.hero-art { position: relative; width: min(100%, 300px); margin-inline: auto; padding: 18px 24px 30px; }
+@media (min-width: 880px) { .hero-art { width: min(100%, 340px); } }
+.hero-icon {
+  width: 100%; aspect-ratio: 1;
+  border: 3px solid var(--outline); border-radius: 26%;
+  box-shadow: 0 8px 0 var(--outline);
+  transform: rotate(-4deg);
+}
+.hero-chip {
+  position: absolute; padding: 5px 14px;
+  border: 3px solid var(--outline); border-radius: 999px;
+  background: var(--chip); color: #FFF8EE;
+  box-shadow: 0 4px 0 var(--outline);
+  font-weight: 900; font-size: 1rem; white-space: nowrap;
+}
+.chip-a { top: 4px; right: 0; transform: rotate(6deg); }
+.chip-b { bottom: 50%; left: -6px; transform: rotate(-7deg); }
+.chip-c { bottom: 6px; right: 14px; transform: rotate(-3deg); }
+
+/* La pared de juegos */
+.games-wall { margin-top: 56px; }
 .carousel {
   --tile-size: 84px;
   --gap: 12px;
@@ -287,85 +261,60 @@ h1, h2, h3 { text-wrap: balance; }
   -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
   mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
 }
-/* En ordenador, las fichas se ajustan al alto de la ventana: banner, carrusel y
-   pie caben en la primera pantalla también en portátiles de 768 de alto. */
-@media (min-width: 720px) {
-  .carousel { --gap: 16px; --tile-size: clamp(80px, calc((100vh - 420px) / 4), 128px); }
-}
+@media (min-width: 720px) { .carousel { --tile-size: 112px; --gap: 16px; } }
 .carousel-track {
   list-style: none; margin: 0;
   display: flex; gap: var(--gap); width: max-content;
-  /* Medio hueco a cada lado: cada copia empieza justo donde acaba la anterior. */
   padding: 0 calc(var(--gap) / 2);
   animation: carousel 70s linear infinite;
 }
-/* Ladrillos: una fila sí y otra no, media ficha desplazada y en sentido contrario. */
-.carousel-track:nth-child(even) {
-  margin-left: calc(var(--step) / -2);
-  animation-direction: reverse;
-}
+.carousel-track:nth-child(even) { margin-left: calc(var(--step) / -2); animation-direction: reverse; }
 .carousel:hover .carousel-track,
 .carousel:focus-within .carousel-track,
 .carousel.is-paused .carousel-track { animation-play-state: paused; }
 @keyframes carousel { to { transform: translateX(calc(-100% / 3)); } }
 .carousel-track li { position: relative; }
+.carousel-track li:hover, .carousel-track li:focus-within { z-index: 3; }
 .carousel-track a {
-  position: relative;
-  display: grid; place-items: center;
+  position: relative; display: grid; place-items: center;
   width: var(--tile-size); aspect-ratio: 1;
-  border: 2.5px solid #141C3D; border-radius: 22px;
+  border: 3px solid var(--outline); border-radius: 22px;
   background: var(--tile);
-  /* Brillo arriba y labio abajo: como las fichas de la app. */
-  box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.6), 0 5px 0 #141C3D;
+  box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.6), 0 5px 0 var(--outline);
   text-decoration: none;
   transition: transform 140ms cubic-bezier(.3, 1.4, .5, 1);
 }
-@media (min-width: 720px) {
-  .carousel-track a { border-radius: 26px; box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.6), 0 6px 0 #141C3D; }
-}
+@media (min-width: 720px) { .carousel-track a { border-radius: 26px; box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.6), 0 6px 0 var(--outline); } }
 .carousel-track img { width: 78%; height: auto; }
-.carousel-track li:hover, .carousel-track li:focus-within { z-index: 3; }
 .carousel-track a:hover, .carousel-track a:focus-visible { transform: translateY(-5px) rotate(-3deg); }
 .carousel-track:nth-child(even) a:hover, .carousel-track:nth-child(even) a:focus-visible { transform: translateY(-5px) rotate(3deg); }
-.carousel-track a:focus-visible { outline: 3px solid var(--b-link); outline-offset: 5px; }
-
-/* El nombre del juego, en una etiqueta de su categoría, al pasar por encima. */
+.carousel-track a:focus-visible { outline-offset: 5px; }
 .tile-name {
   position: absolute; left: 50%; bottom: -13px;
-  transform: translate(-50%, 4px) rotate(0deg);
-  padding: 2px 10px;
-  border: 2px solid #141C3D; border-radius: 999px;
+  transform: translate(-50%, 4px);
+  padding: 2px 10px; border: 2px solid var(--outline); border-radius: 999px;
   background: var(--tag); color: #FFF8EE;
   font-weight: 900; font-size: 0.8125rem; line-height: 1.35; white-space: nowrap;
   opacity: 0; pointer-events: none;
   transition: opacity 120ms ease-out, transform 140ms ease-out;
 }
-.carousel-track a:hover .tile-name, .carousel-track a:focus-visible .tile-name {
-  opacity: 1; transform: translate(-50%, 0);
-}
+.carousel-track a:hover .tile-name, .carousel-track a:focus-visible .tile-name { opacity: 1; transform: translate(-50%, 0); }
 
-.carousel-bar { display: flex; justify-content: center; margin-top: 22px; }
+.carousel-bar { display: flex; justify-content: center; margin-top: 18px; }
 .carousel-toggle {
   display: inline-flex; align-items: center; gap: 8px;
   min-height: 42px; padding: 0 18px 0 14px;
-  border: 2px solid #141C3D; border-radius: 999px;
-  background: var(--b-surface); color: var(--b-ink);
-  box-shadow: 0 3px 0 #141C3D;
+  border: 3px solid var(--outline); border-radius: 999px;
+  background: var(--surface); color: var(--ink);
+  box-shadow: 0 3px 0 var(--lip);
   font: inherit; font-weight: 900; font-size: 0.9375rem; cursor: pointer;
-  transition: background-color 120ms ease-out, transform 80ms ease-out, box-shadow 80ms ease-out;
 }
 .carousel-toggle svg { fill: currentColor; }
-.carousel-toggle:hover { background: var(--b-sun); color: #141C3D; }
-.carousel-toggle:active { transform: translateY(2px); box-shadow: 0 1px 0 #141C3D; }
+.carousel-toggle:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--lip); }
 .carousel-toggle .icon-play { display: none; }
 .carousel-toggle[aria-pressed="true"] .icon-play { display: block; }
 .carousel-toggle[aria-pressed="true"] .icon-pause { display: none; }
-.carousel-toggle:focus-visible { outline: 3px solid var(--b-link); outline-offset: 3px; }
-@media (prefers-color-scheme: dark) {
-  .carousel-toggle { border-color: var(--b-line); box-shadow: 0 3px 0 #070B1E; }
-}
 
-/* Sin animaciones: las filas quietas, cada una se desliza con el dedo. */
 @media (prefers-reduced-motion: reduce) {
   .carousel { -webkit-mask-image: none; mask-image: none; }
   .carousel-track { animation: none; max-width: 100vw; overflow-x: auto; padding-inline: 16px; }
@@ -375,24 +324,50 @@ h1, h2, h3 { text-wrap: balance; }
   .carousel-bar { display: none; }
 }
 
-/* Páginas de texto con la marca (aviso legal, 404) */
-.page-head { padding-block: 48px 24px; }
-.page-head h1 { margin: 0 0 10px; font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; font-size: clamp(2.5rem, 7vw, 4rem); line-height: 1; }
-.page-lead { margin: 0; max-width: 40ch; font-size: 1.25rem; line-height: 1.5; }
-.band-tight { padding-block: 16px 24px; }
-.prose h2 { margin: 32px 0 6px; font-family: var(--display); font-weight: 700; letter-spacing: -0.02em; font-size: 1.375rem; }
-.prose p { margin: 0 0 12px; }
-
-/* =================================================================== */
-/* Páginas de AllTheGames                                              */
-
-.theme-atg {
-  background-color: var(--bg);
-  background-image: linear-gradient(var(--veil), var(--veil)), var(--wallpaper);
-  background-size: auto, 520px auto;
+/* La tarjeta de la app */
+.feature { display: grid; overflow: hidden; }
+.feature-art {
+  display: flex; align-items: center; justify-content: center; padding: 26px 22px 18px;
+  background: var(--paper) var(--wallpaper) center / 420px auto;
+}
+.feature-art img { width: min(100%, 380px); }
+.feature-copy { padding: 22px 20px 26px; border-top: 3px solid var(--outline); }
+.feature-name { margin-bottom: 8px; font-size: 2.25rem; }
+.feature-name a { color: var(--ink); text-decoration: none; }
+.feature-copy p { margin: 0 0 12px; }
+@media (min-width: 820px) {
+  .feature { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+  .feature-copy { border-top: 0; border-left: 3px solid var(--outline); padding: 34px; }
+  .feature-art { padding: 34px; }
 }
 
-/* Barra de la app: una segunda banda bajo el banner, con los colores de la app. */
+/* Cómo hago las apps: los cuatro pasteles intercalados, como las filas de Ajustes. */
+.tones { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .tones { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .tones { grid-template-columns: repeat(4, 1fr); } }
+.tone {
+  padding: 20px 20px 18px;
+  border: 3px solid var(--outline); border-radius: 22px;
+  background: var(--face); color: #2B2118;
+  box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.5), 0 6px 0 var(--outline);
+}
+.tone h3 { margin: 0 0 6px; font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1.1; letter-spacing: 0.01em; }
+.tone p { margin: 0; color: #4A3B2D; }
+
+/* Contacto, como una hoja con su banda */
+.sheet-card { padding: 0 20px 26px; }
+@media (min-width: 720px) {
+  .sheet-card { padding: 0 32px 32px; }
+  .sheet-card .band-title { margin-inline: -32px; padding-inline: 32px; }
+}
+.contact-grid { display: grid; gap: 24px; }
+@media (min-width: 760px) { .contact-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+.contact-grid h3 { margin: 0 0 6px; font-size: 1.25rem; font-weight: 900; }
+.contact-grid p { margin: 0 0 16px; }
+
+/* ------------------------------------------------------------------- */
+/* AllTheGames                                                         */
+
 .appnav { padding-top: 18px; }
 .appnav-row {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px;
@@ -406,30 +381,33 @@ h1, h2, h3 { text-wrap: balance; }
 .appnav-brand {
   display: inline-flex; align-items: center; gap: 10px;
   color: var(--ink); text-decoration: none;
-  font-family: var(--atg); font-size: 1.5rem; line-height: 1;
+  font-family: var(--display); font-size: 1.5rem; line-height: 1;
 }
-.appnav-brand img { width: 40px; height: 40px; border-radius: 10px; }
-.appnav-tabs { display: flex; gap: 4px; overflow-x: auto; max-width: 100%; scrollbar-width: none; }
+.appnav-brand img { width: 40px; height: 40px; border-radius: 10px; border: 2px solid var(--outline); }
+.appnav-tabs { display: flex; flex-wrap: wrap; gap: 2px; max-width: 100%; }
+@media (min-width: 420px) { .appnav-tabs { gap: 4px; } }
 .appnav-tabs a {
-  flex: none; padding: 7px 10px; border-radius: 999px;
-  color: var(--ink); font-weight: 800; font-size: 0.875rem; text-decoration: none;
+  flex: none; padding: 6px 8px; border-radius: 12px; border: 2px solid transparent;
+  color: var(--ink); font-weight: 900; font-size: 0.875rem; text-decoration: none;
 }
 @media (min-width: 420px) { .appnav-tabs a { padding: 7px 14px; font-size: 0.9375rem; } }
-.appnav-tabs a:hover { background: var(--bg); }
-.appnav-tabs a[aria-current="page"] { background: var(--primary); color: var(--primary-ink); }
+.appnav-tabs a:hover { background: var(--surface-hot); }
+.appnav-tabs a[aria-current="page"] { background: var(--primary); color: var(--primary-ink); border-color: var(--outline); box-shadow: 0 3px 0 var(--outline); }
 
 .atg-hero { display: grid; gap: 8px; align-items: center; padding-block: 24px 8px; }
 .atg-logo { width: min(100%, 400px); margin-inline: auto; }
-.atg-lead { margin: 0 0 16px; font-size: 1.25rem; font-weight: 700; line-height: 1.4; }
 .atg-intro {
   padding: 22px 20px 12px;
   border: 3px solid var(--outline); border-radius: 24px;
   background: var(--surface); box-shadow: 0 7px 0 var(--lip);
 }
-@media (min-width: 760px) { .atg-intro { padding: 30px 30px 18px; } }
+@media (min-width: 760px) {
+  .atg-hero { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 40px; padding-block: 48px 16px; }
+  .atg-intro { padding: 30px 30px 18px; }
+}
 .soon {
-  display: inline-block; margin: 0 0 8px;
-  padding: 8px 16px; border: 2px dashed var(--muted); border-radius: 999px;
+  display: inline-block; margin: 0 0 8px; padding: 8px 16px;
+  border: 2px dashed var(--muted); border-radius: 999px;
   background: var(--surface); font-weight: 900;
 }
 .facts { list-style: none; margin: 16px 0 0; padding: 0; }
@@ -438,50 +416,35 @@ h1, h2, h3 { text-wrap: balance; }
   content: ''; position: absolute; left: 0; top: 2px; width: 24px; height: 24px;
   background: url('apps/allthegames/check.webp') center / contain no-repeat;
 }
-@media (min-width: 760px) {
-  .atg-hero { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 40px; padding-block: 48px 16px; }
-}
 
-.atg-h2 { margin: 40px 0 16px; font-family: var(--atg); font-weight: 400; font-size: clamp(1.75rem, 6vw, 2.25rem); line-height: 1.1; }
+.atg-h2 { margin: 48px 0 18px; font-family: var(--display); font-weight: 400; font-size: clamp(1.875rem, 6vw, 2.5rem); line-height: 1.05; letter-spacing: 0.01em; }
 
-.cat {
-  margin: 0 0 24px; overflow: hidden;
-  border: 3px solid var(--outline); border-radius: 20px;
-  background: var(--surface); box-shadow: 0 6px 0 var(--lip);
-}
+.cat { margin: 0 0 24px; overflow: hidden; border: 3px solid var(--outline); border-radius: 22px; background: var(--surface); box-shadow: 0 6px 0 var(--lip); }
 .cat-band {
   display: flex; align-items: center; gap: 12px; margin: 0;
   padding: 8px 16px 8px 10px;
   background: var(--fill); border-bottom: 5px solid var(--lip);
-  color: #FFF8EE; font-family: var(--atg); font-weight: 400; font-size: 1.5rem; line-height: 1.1;
+  color: #FFF8EE; font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1.1;
 }
 .cat-band img { width: 44px; height: 44px; }
 .cat-count { margin-left: auto; font-family: var(--text); font-weight: 700; font-size: 0.9375rem; white-space: nowrap; }
-.games {
-  list-style: none; margin: 0; padding: 16px 12px 18px;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 14px 6px;
-}
+.games { list-style: none; margin: 0; padding: 16px 12px 18px; display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 14px 6px; }
 .game { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; font-size: 0.875rem; font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; }
 .game img { width: 72px; height: 72px; }
 .help-row { display: flex; flex-wrap: wrap; gap: 14px; }
 
-/* Hoja para textos largos (soporte, privacidad, términos). */
+/* Hojas de texto: soporte, privacidad, términos, aviso legal. */
 .sheet {
-  margin-top: 24px; padding: 0 20px 28px;
-  border: 3px solid var(--outline); border-radius: 22px;
+  margin-top: 28px; padding: 0 20px 28px;
+  border: 3px solid var(--outline); border-radius: 24px;
   background: var(--surface); box-shadow: 0 7px 0 var(--lip);
 }
 .wrap.sheet { width: auto; margin-inline: 16px; max-width: 44rem; }
-@media (min-width: 720px) { .sheet { margin-top: 40px; padding: 0 36px 36px; } }
-@media (min-width: 46rem) { .wrap.sheet { margin-inline: auto; } }
-.band-title {
-  margin: 0 -20px 16px; padding: 18px 20px 14px;
-  border-radius: 19px 19px 0 0;
-  background: var(--fill); border-bottom: 5px solid var(--lip);
-  color: #FFF8EE; font-family: var(--atg); font-weight: 400;
-  font-size: clamp(1.75rem, 6vw, 2.25rem); line-height: 1.1;
+@media (min-width: 720px) {
+  .sheet { margin-top: 40px; padding: 0 36px 36px; }
+  .sheet .band-title { margin-inline: -36px; padding-inline: 36px; }
 }
-@media (min-width: 720px) { .band-title { margin-inline: -36px; padding-inline: 36px; } }
+@media (min-width: 46rem) { .wrap.sheet { margin-inline: auto; } }
 .meta { margin: 0 0 14px; color: var(--muted); font-size: 0.9375rem; }
 .legal h2, .contact h2 { margin: 28px 0 6px; font-size: 1.1875rem; font-weight: 900; line-height: 1.3; }
 .legal p, .contact p { margin: 0 0 10px; max-width: 68ch; }
@@ -491,11 +454,11 @@ h1, h2, h3 { text-wrap: balance; }
 .chip {
   display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px;
   border: 2px solid var(--line); border-radius: 999px;
-  background: var(--bg); color: var(--ink); font-weight: 700; font-size: 0.9375rem; text-decoration: none;
+  background: var(--paper); color: var(--ink); font-weight: 700; font-size: 0.9375rem; text-decoration: none;
 }
-.chip-on { background: #3F4B56; border-color: #3F4B56; color: #FFF8EE; }
+.chip-on { background: var(--primary); border-color: var(--outline); color: var(--primary-ink); }
 
-.faq { margin: 0 0 10px; border: 2px solid var(--line); border-radius: 16px; background: var(--bg); scroll-margin-top: 16px; }
+.faq { margin: 0 0 10px; border: 2px solid var(--line); border-radius: 16px; background: var(--paper); scroll-margin-top: 16px; }
 .faq summary { position: relative; cursor: pointer; list-style: none; padding: 14px 48px 14px 16px; font-weight: 900; line-height: 1.35; }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after {

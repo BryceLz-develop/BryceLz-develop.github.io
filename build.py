@@ -300,13 +300,15 @@ def load() -> dict:
     }
 
 
-def build_home(d: dict) -> None:
-    """Inicio: solo el carrusel con los iconos de los juegos de AllTheGames."""
-    c = Ctx('')
+PRIMARY = '#C9692E'  # el naranja de la app (botones principales)
+FOUR_TONES = [0.08, 0.18, 0.12, 0.23]  # los cuatro pasteles de la app, intercalados
+
+
+def carousel(c: Ctx, d: dict) -> str:
+    """Pared de ladrillos con los juegos: filas desplazadas que van una hacia cada lado."""
     app, games = d['app'], d['games']
     accent = {cat['id']: cat['accent'] for cat in app['categories']}
     order = [cat['id'] for cat in app['categories']]
-    # Intercaladas por categoría, para que los colores se vayan alternando.
     queues = {cid: [g for g in games if g['folder'] == cid] for cid in order}
     mixed = []
     while any(queues.values()):
@@ -317,31 +319,25 @@ def build_home(d: dict) -> None:
     def tile(g: dict, copy: bool) -> str:
         hidden = ' aria-hidden="true" tabindex="-1"' if copy else ''
         cat = accent[g['folder']]
-        # El nombre sale en una etiqueta del color de su categoría al pasar por encima.
         return (
             f'<li style="--tile:{pastel(cat, 0.14)};--tag:{band_fill(cat)}">'
             f'<a href="{c.to("apps/allthegames/")}#cat-{g["folder"]}"{hidden}>'
-            f'<img src="{c.to("static/apps/allthegames/games/" + g["slug"] + ".webp")}" alt="" width="96" height="96">'
+            f'<img src="{c.to("static/apps/allthegames/games/" + g["slug"] + ".webp")}" alt="" width="96" height="96" loading="lazy">'
             f'<span class="tile-name">{esc(g["name"])}</span>'
             f'</a></li>'
         )
 
-    # Varias filas, como una pared de ladrillos: cada fila va en un sentido.
     rows = SITE.get('carouselRows', 4)
     per = math.ceil(len(mixed) / rows)
     lines = []
     for r in range(rows):
         part = mixed[r * per:(r + 1) * per]
-        # Cada fila empieza por otra categoría: los colores no se apilan en columnas.
         k = (r * 2) % max(1, len(part))
         part = part[k:] + part[:k]
         first = ''.join(tile(g, False) for g in part)
-        # Tres copias: la fila llena también pantallas muy anchas al dar la vuelta.
         again = ''.join(tile(g, True) for g in part) * 2
         lines.append(f'<ul class="carousel-track">{first}{again}</ul>')
-    main = f'''<h1 class="visually-hidden">{BRAND}</h1>
-<section class="stage" aria-label="Juegos de AllTheGames">
-  <div class="carousel" data-carousel>
+    return f'''<div class="carousel" data-carousel>
     {''.join(lines)}
   </div>
   <div class="wrap carousel-bar">
@@ -351,9 +347,7 @@ def build_home(d: dict) -> None:
       <span data-carousel-label>Pausar</span>
     </button>
   </div>
-</section>
 <script>
-  // El carrusel se mueve solo; este botón lo para y lo vuelve a mover.
   (function () {{
     var box = document.querySelector('[data-carousel]');
     var btn = document.querySelector('[data-carousel-toggle]');
@@ -366,47 +360,119 @@ def build_home(d: dict) -> None:
     }});
   }})();
 </script>'''
-    page(
-        '',
-        title=f'{BRAND}',
-        description=SITE['intro'],
-        main=main,
-        theme='brand',
-        section='',
-        apps=d['apps'],
+
+
+def build_home(d: dict) -> None:
+    """Inicio: la portada del estudio, con las mismas piezas que la app."""
+    c = Ctx('')
+    app, games = d['app'], d['games']
+    s = lambda p: c.to('static/apps/allthegames/' + p)
+    n_games = len(games)
+    chips = ''.join(
+        f'<li style="--chip:{cat["accent"]}">{esc(cat["label"])} <span>{sum(1 for g in games if g["folder"] == cat["id"])}</span></li>'
+        for cat in app['categories']
     )
+    tones = ''.join(
+        f'''<li class="tone" style="--face:{pastel(PRIMARY, FOUR_TONES[i % 4])}">
+        <h3>{esc(t)}</h3>
+        <p>{esc(b)}</p>
+      </li>'''
+        for i, (t, b) in enumerate(SITE['principles'])
+    )
+    store = 'Ya está en Google Play.' if app.get('storePublished') else 'Muy pronto en Google Play.'
+    main = f'''<section class="wrap hero">
+  <div class="hero-copy">
+    <h1 class="display hero-title">{esc(SITE['headline'])}</h1>
+    <p class="lead">{esc(SITE['intro'])}</p>
+    <div class="actions">
+      <a class="sticker" href="apps/allthegames/">Conoce AllTheGames</a>
+      <a class="sticker sticker-soft" href="#contacto">Escríbeme</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <img class="hero-icon" src="{s('icon.webp')}" alt="" width="384" height="384">
+    <span class="hero-chip chip-a" style="--chip:#2F7A55">{n_games} juegos</span>
+    <span class="hero-chip chip-b" style="--chip:#2D63A6">6 idiomas</span>
+    <span class="hero-chip chip-c" style="--chip:#7048A8">Sin cuenta</span>
+  </div>
+</section>
+
+<section class="games-wall" aria-labelledby="juegos-h">
+  <div class="wrap section-head">
+    <h2 id="juegos-h" class="display">Los {n_games} juegos de AllTheGames</h2>
+    <a href="apps/allthegames/">Verlos por categoría</a>
+  </div>
+  {carousel(c, d)}
+</section>
+
+<section class="wrap block" aria-labelledby="app-h">
+  <h2 id="app-h" class="display">La app</h2>
+  <article class="feature card">
+    <a class="feature-art" href="apps/allthegames/" tabindex="-1" aria-hidden="true">
+      <img src="{s('logo.webp')}" alt="" width="743" height="500">
+    </a>
+    <div class="feature-copy">
+      <h3 class="display feature-name"><a href="apps/allthegames/">AllTheGames</a></h3>
+      <p>{esc(app['lead'])}</p>
+      <ul class="chips" aria-label="Juegos por categoría">{chips}</ul>
+      <p class="muted">Para Android. {store}</p>
+      <div class="actions">
+        <a class="sticker" href="apps/allthegames/">Ver la app</a>
+        <a class="sticker sticker-soft" href="apps/allthegames/soporte/">Soporte</a>
+        <a class="sticker sticker-soft" href="apps/allthegames/privacidad/">Privacidad</a>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section class="wrap block" aria-labelledby="como-h">
+  <h2 id="como-h" class="display">Cómo hago las apps</h2>
+  <ul class="tones">{tones}</ul>
+</section>
+
+<section class="wrap block" id="contacto" aria-labelledby="contacto-h">
+  <div class="card sheet-card">
+    <h2 id="contacto-h" class="band-title" style="--fill:{band_fill(PRIMARY)};--lip:{band_lip(PRIMARY)}">Contacto</h2>
+    <div class="contact-grid">
+      <div>
+        <h3>Ayuda con una app</h3>
+        <p>Mira primero sus preguntas frecuentes. Si no está la respuesta, escríbeme con qué móvil usas y qué ha pasado.</p>
+        <a class="sticker" href="apps/allthegames/soporte/">Soporte de AllTheGames</a>
+      </div>
+      <div>
+        <h3>Trabajo y colaboraciones</h3>
+        <p>Cuéntame la idea, para quién es y los plazos que tienes en mente.</p>
+        <a class="sticker sticker-soft" href="mailto:{EMAIL}?subject=Propuesta%20de%20trabajo">Escribir a {esc(EMAIL)}</a>
+      </div>
+    </div>
+  </div>
+</section>'''
+    page('', title=f'{BRAND}: apps sencillas para toda la casa', description=SITE['intro'], main=main,
+         theme='app', section='', apps=d['apps'])
 
 
 def build_legal_notice(d: dict) -> None:
-    main = f'''<section class="page-head">
-  <div class="wrap narrow">
-    <h1>Aviso legal</h1>
-  </div>
-</section>
-<section class="band band-tight">
-  <div class="wrap narrow prose">
-    <h2>Titular</h2>
-    <p>Esta web y las apps que aparecen en ella son de {esc(OWNER)} ({esc(SITE['ownerNote'])}), que las publica con el nombre {BRAND}. Contacto: {mail_link()}.</p>
-    <h2>Qué es esta web</h2>
-    <p>Presenta las apps de {BRAND} y recoge su ayuda, su nota de privacidad y sus términos. Cada app tiene los suyos en su propia sección.</p>
-    <h2>Datos y cookies</h2>
-    <p>Esta web no usa cookies, ni analítica, ni formularios, y no carga nada de otros sitios. La aloja GitHub Pages: GitHub registra la dirección IP de las visitas por motivos de seguridad, como <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">explica en su documentación</a>. Si me escribes, uso tu correo solo para contestarte.</p>
-  </div>
-</section>'''
+    main = f'''<div class="wrap narrow sheet legal">
+  <h1 class="band-title" style="--fill:{band_fill(PRIMARY)};--lip:{band_lip(PRIMARY)}">Aviso legal</h1>
+  <h2>Titular</h2>
+  <p>Esta web y las apps que aparecen en ella son de {esc(OWNER)} ({esc(SITE['ownerNote'])}), que las publica con el nombre {BRAND}. Contacto: {mail_link()}.</p>
+  <h2>Qué es esta web</h2>
+  <p>Presenta las apps de {BRAND} y recoge su ayuda, su nota de privacidad y sus términos. Cada app tiene los suyos en su propia sección.</p>
+  <h2>Datos y cookies</h2>
+  <p>Esta web no usa cookies, ni analítica, ni formularios, y no carga nada de otros sitios. La aloja GitHub Pages: GitHub registra la dirección IP de las visitas por motivos de seguridad, como <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">explica en su documentación</a>. Si me escribes, uso tu correo solo para contestarte.</p>
+</div>'''
     page('aviso-legal/', title=f'Aviso legal · {BRAND}', description=f'Titular y datos de la web de {BRAND}.',
-         main=main, theme='brand', section=None, apps=d['apps'])
+         main=main, theme='app', section=None, apps=d['apps'])
 
 
 def build_404(d: dict) -> None:
-    main = '''<section class="page-head">
-  <div class="wrap narrow">
-    <h1>Esta página no existe</h1>
-    <p class="page-lead">Puede que la dirección esté mal escrita o que la página haya cambiado de sitio.</p>
-    <p><a class="btn" href="/">Ir al inicio</a></p>
-  </div>
-</section>'''
+    main = f'''<div class="wrap narrow sheet">
+  <h1 class="band-title" style="--fill:{band_fill(PRIMARY)};--lip:{band_lip(PRIMARY)}">Esta página no existe</h1>
+  <p class="lead">Puede que la dirección esté mal escrita o que la página haya cambiado de sitio.</p>
+  <p><a class="sticker" href="/">Ir al inicio</a></p>
+</div>'''
     page('404.html', title=f'Página no encontrada · {BRAND}', description='Página no encontrada.', main=main,
-         theme='brand', section=None, apps=d['apps'], absolute=True)
+         theme='app', section=None, apps=d['apps'], absolute=True)
 
 
 # ---------------------------------------------------------------------------
@@ -474,7 +540,7 @@ def build_atg_home(d: dict) -> None:
   <img class="atg-logo" src="{s('logo.webp')}" alt="" width="743" height="500">
   <div class="atg-intro">
     <h1 class="visually-hidden">AllTheGames</h1>
-    <p class="atg-lead">{esc(app['lead'])}</p>
+    <p class="lead">{esc(app['lead'])}</p>
     {store}
     <ul class="facts">{facts}</ul>
   </div>
@@ -491,7 +557,7 @@ def build_atg_home(d: dict) -> None:
     <a class="sticker sticker-soft" href="terminos/">Términos de las compras</a>
   </div>
 </section>'''
-    page(here, title=f'AllTheGames · {BRAND}', description=app['lead'], main=main, theme='atg',
+    page(here, title=f'AllTheGames · {BRAND}', description=app['lead'], main=main, theme='app',
          section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
 
 
@@ -507,7 +573,7 @@ def build_atg_support(d: dict) -> None:
     )
     main = f'''<div class="wrap narrow sheet">
   <h1 class="band-title" style="--fill:{band_fill('#C9692E')};--lip:{band_lip('#C9692E')}">Soporte</h1>
-  <p class="atg-lead">Respuestas a lo que más se pregunta. Si no encuentras la tuya, escríbeme y te contesto.</p>
+  <p class="lead">Respuestas a lo que más se pregunta. Si no encuentras la tuya, escríbeme y te contesto.</p>
   {items}
   <section class="contact">
     <h2>Escribir a soporte</h2>
@@ -525,7 +591,7 @@ def build_atg_support(d: dict) -> None:
   window.addEventListener('hashchange', abrirPregunta);
 </script>'''
     page(here, title=f'Soporte de AllTheGames · {BRAND}', description='Preguntas frecuentes de AllTheGames y contacto.',
-         main=main, theme='atg', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
+         main=main, theme='app', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
 
 
 def privacy_paths() -> dict:
@@ -551,7 +617,7 @@ def privacy_main(d: dict, lang: str, here: str) -> str:
   <h1 class="band-title" style="--fill:{band_fill(PIZARRA)};--lip:{band_lip(PIZARRA)}">{esc(title)}</h1>
   <p class="meta">{esc(p['updated'].replace('{date}', p['date']))}</p>
   <nav class="langs" aria-label="{esc(chrome['langs'])}">{''.join(chips)}</nav>
-  <p class="atg-lead">{rich(p['intro'])}</p>
+  <p class="lead">{rich(p['intro'])}</p>
   {sections}
   <p class="legal-links"><a href="{c.to('apps/allthegames/terminos/')}">{esc(chrome['terms'])}</a></p>
 </div>'''
@@ -566,11 +632,11 @@ def build_atg_privacy(d: dict) -> None:
         title = p['title'][:1] + p['title'][1:].lower()
         here = paths[lang]
         page(here, title=f'{title} · AllTheGames', description=p['intro'], main=privacy_main(d, lang, here),
-             theme='atg', section='apps/allthegames/', apps=d['apps'], lang=lang, alternates=paths,
+             theme='app', section='apps/allthegames/', apps=d['apps'], lang=lang, alternates=paths,
              pre_main=atg_nav(Ctx(here), current), favicon=ATG_ICON)
     dated = f'apps/allthegames/privacidad/{version}/'
     page(dated, title=f'Privacidad ({version}) · AllTheGames', description=d['privacy']['es']['intro'],
-         main=privacy_main(d, 'es', dated), theme='atg', section='apps/allthegames/', apps=d['apps'],
+         main=privacy_main(d, 'es', dated), theme='app', section='apps/allthegames/', apps=d['apps'],
          pre_main=atg_nav(Ctx(dated), current), favicon=ATG_ICON)
 
 
@@ -586,11 +652,11 @@ def build_atg_terms(d: dict) -> None:
         main = f'''<div class="wrap narrow sheet legal">
   <h1 class="band-title" style="--fill:{band_fill(PIZARRA)};--lip:{band_lip(PIZARRA)}">{esc(t['title'])}</h1>
   <p class="meta">{esc(t['updated'])}</p>
-  <p class="atg-lead">{esc(t['intro'])}</p>
+  <p class="lead">{esc(t['intro'])}</p>
   {sections}
 </div>'''
         page(here, title=f'Términos de las compras · AllTheGames', description=t['intro'], main=main,
-             theme='atg', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, current), favicon=ATG_ICON)
+             theme='app', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, current), favicon=ATG_ICON)
 
 
 # ---------------------------------------------------------------------------
