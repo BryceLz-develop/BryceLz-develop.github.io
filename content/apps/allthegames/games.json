@@ -1,0 +1,602 @@
+[
+{
+"id": 1,
+"name": "Solitario",
+"slug": "solitario",
+"type": "cartas",
+"playable": true,
+"short": "Klondike clásico a un jugador.",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 2,
+"name": "Spider",
+"slug": "spider",
+"type": "cartas",
+"playable": true,
+"short": "Spider Solitaire con 1, 2 o 4 palos.",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 45,
+"name": "Freecell",
+"slug": "freecell",
+"type": "cartas",
+"playable": true,
+"short": "Solitario con huecos libres, todas las cartas a la vista.",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 46,
+"name": "Pirámide",
+"slug": "piramide",
+"type": "cartas",
+"playable": true,
+"short": "Quita cartas de la pirámide sumando 13.",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 47,
+"name": "Siete y media",
+"slug": "siete-y-media",
+"type": "cartas",
+"playable": true,
+"short": "Llega a 7 y media: Siete y media (España) o Sette e mezzo (Italia).",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 53,
+"name": "Capitales",
+"slug": "capitales",
+"type": "puzzle",
+"playable": true,
+"short": "Un país, cuatro ciudades. Toca la capital.",
+"folder": "letras",
+"multi": false
+},
+{
+"id": 54,
+"name": "Banderas",
+"slug": "banderas",
+"type": "puzzle",
+"playable": true,
+"short": "Cuatro banderas o cuatro países. Toca la que toca.",
+"folder": "letras",
+"multi": false
+},
+{
+"id": 48,
+"name": "Ordenar colores",
+"slug": "ordenar-colores",
+"type": "puzzle",
+"playable": true,
+"short": "Pasa los cubos de una torre a otra hasta dejar cada color junto.",
+"folder": "puzzle",
+"multi": false
+},
+{
+"id": 3,
+"name": "Cinquillo",
+"slug": "cinquillo",
+"type": "cartas",
+"playable": true,
+"short": "Sale el 5: Cinquillo (España) o Cinque (Italia).",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 4,
+"name": "Escoba",
+"slug": "escoba",
+"type": "cartas",
+"playable": true,
+"short": "Pesca a 15: Escoba (España) o Scopa (Italia).",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 57,
+"name": "Basra",
+"slug": "basra",
+"type": "cartas",
+"playable": true,
+"short": "Pesca por valor: Basra (Egipto) o Xeri (Grecia).",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 5,
+"name": "Brisca",
+"slug": "brisca",
+"type": "cartas",
+"playable": true,
+"short": "Bazas con triunfo: Brisca (España) o Briscola (Italia).",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 6,
+"name": "Chinchón",
+"slug": "chinchon",
+"type": "cartas",
+"playable": true,
+"short": "Escaleras y grupos a 7 cartas.",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 58,
+"name": "Gin Rummy",
+"slug": "gin-rummy",
+"type": "cartas",
+"playable": true,
+"short": "Diez cartas, combinaciones y toque.",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 59,
+"name": "Scala 40",
+"slug": "scala-40",
+"type": "cartas",
+"playable": true,
+"short": "Trece cartas y comodines. Abre con 40 puntos.",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 60,
+"name": "Conquian",
+"slug": "conquian",
+"type": "cartas",
+"playable": true,
+"short": "Diez cartas. Baja la carta del centro o pásala.",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 7,
+"name": "Tute",
+"slug": "tute",
+"type": "cartas",
+"playable": true,
+"short": "Tute y Guiñote (bazas y cantes) o el Truco argentino.",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 61,
+"name": "Tressette",
+"slug": "tressette",
+"type": "cartas",
+"playable": true,
+"short": "Bazas italianas sin triunfo. El 3 es el más fuerte.",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 8,
+"name": "Dominó",
+"slug": "domino",
+"type": "mesa",
+"playable": true,
+"short": "Encaja fichas: por parejas (caribeño), con robo o de bloqueo.",
+"folder": "mesa",
+"multi": false
+},
+{
+"id": 9,
+"name": "Sudoku",
+"slug": "sudoku",
+"type": "puzzle",
+"playable": true,
+"short": "9×9: filas, columnas y recuadros del 1 al 9.",
+"folder": "numeros",
+"multi": false
+},
+{
+"id": 10,
+"name": "Ahorcado",
+"slug": "ahorcado",
+"type": "puzzle",
+"playable": true,
+"short": "Adivina la palabra letra a letra.",
+"folder": "letras",
+"multi": false
+},
+{
+"id": 11,
+"name": "2048",
+"slug": "2048",
+"type": "puzzle",
+"playable": true,
+"short": "Desliza, fusiona y suma puntos.",
+"folder": "numeros",
+"multi": false
+},
+{
+"id": 13,
+"name": "Mahjong",
+"slug": "mahjong",
+"type": "puzzle",
+"playable": true,
+"short": "Empareja fichas libres del tablero.",
+"folder": "puzzle",
+"multi": false
+},
+{
+"id": 14,
+"name": "Memoria",
+"slug": "memoria",
+"type": "puzzle",
+"playable": true,
+"short": "Encuentra las parejas.",
+"folder": "puzzle",
+"multi": false
+},
+{
+"id": 52,
+"name": "Memoria musical",
+"slug": "memoria-musical",
+"type": "puzzle",
+"playable": true,
+"short": "Repite la secuencia de colores, cada vez un poco más larga.",
+"folder": "puzzle",
+"multi": false
+},
+{
+"id": 15,
+"name": "Nonograma",
+"slug": "nonograma",
+"type": "puzzle",
+"playable": true,
+"short": "Pinta la cuadrícula con pistas.",
+"folder": "puzzle",
+"multi": false
+},
+{
+"id": 12,
+"name": "Tres en raya",
+"slug": "tres-en-raya",
+"type": "mesa",
+"playable": true,
+"short": "El clásico 3×3: alinea tres contra el móvil o un amigo.",
+"folder": "mesa",
+"multi": true
+},
+{
+"id": 16,
+"name": "Rueda, trenecito",
+"slug": "trenecito",
+"type": "accion",
+"playable": true,
+"short": "Lleva el tren y recoge cajitas.",
+"folder": "accion",
+"multi": false
+},
+{
+"id": 17,
+"name": "Buscaminas",
+"slug": "buscaminas",
+"type": "puzzle",
+"playable": true,
+"short": "Abre casillas y marca las minas.",
+"folder": "puzzle",
+"multi": false
+},
+{
+"id": 18,
+"name": "Vuela, avioncito",
+"slug": "avioncito",
+"type": "accion",
+"playable": true,
+"short": "Toca para subir y pasa por los huecos.",
+"folder": "accion",
+"multi": false
+},
+{
+"id": 19,
+"name": "Bloques de colores",
+"slug": "bloques",
+"type": "accion",
+"playable": true,
+"short": "Encaja las piezas y limpia filas y columnas.",
+"folder": "accion",
+"multi": false
+},
+{
+"id": 51,
+"name": "Conecta frutas",
+"slug": "match-3",
+"type": "accion",
+"playable": true,
+"short": "Junta tres frutas iguales y suma puntos.",
+"folder": "accion",
+"multi": false
+},
+{
+"id": 20,
+"name": "Lluvia de bloques",
+"slug": "lluvia-de-bloques",
+"type": "accion",
+"playable": true,
+"short": "Gira las piezas que caen y completa filas.",
+"folder": "accion",
+"multi": false
+},
+{
+"id": 55,
+"name": "Lanza canicas",
+"slug": "canicas",
+"type": "accion",
+"playable": true,
+"short": "Tira una canica a la cola. Tres del mismo color saltan.",
+"folder": "accion",
+"multi": false
+},
+{
+"id": 56,
+"name": "Dispara bolas",
+"slug": "burbujas",
+"type": "accion",
+"playable": true,
+"short": "Lanza bolas de colores al montón que baja.",
+"folder": "accion",
+"multi": false
+},
+{
+"id": 21,
+"name": "Sumas cruzadas",
+"slug": "sumas-cruzadas",
+"type": "puzzle",
+"playable": true,
+"short": "Un cuadrado: completa los números que faltan.",
+"folder": "numeros",
+"multi": false
+},
+{
+"id": 22,
+"name": "Sopa de letras",
+"slug": "sopa-de-letras",
+"type": "puzzle",
+"playable": true,
+"short": "Encuentra las palabras escondidas en la cuadrícula.",
+"folder": "letras",
+"multi": false
+},
+{
+"id": 23,
+"name": "Crucigrama",
+"slug": "crucigrama",
+"type": "puzzle",
+"playable": true,
+"short": "Rellena las casillas con las palabras de las pistas.",
+"folder": "letras",
+"multi": false
+},
+{
+"id": 24,
+"name": "Salta, ranita",
+"slug": "ranita",
+"type": "accion",
+"playable": true,
+"short": "Salta de plataforma en plataforma y sube todo lo que puedas.",
+"folder": "accion",
+"multi": false
+},
+{
+"id": 25,
+"name": "Caminos",
+"slug": "caminos",
+"type": "puzzle",
+"playable": true,
+"short": "Une los colores y cubre todo el tablero.",
+"folder": "puzzle",
+"multi": false
+},
+{
+"id": 27,
+"name": "Pintar el suelo",
+"slug": "pintar-suelo",
+"type": "puzzle",
+"playable": true,
+"short": "Desliza la ficha y pinta todo el suelo.",
+"folder": "puzzle",
+"multi": false
+},
+{
+"id": 28,
+"name": "Aventuras marcianas",
+"slug": "marcianito",
+"type": "accion",
+"playable": true,
+"short": "Mueve la nave y dispara a los marcianitos que bajan.",
+"folder": "accion",
+"multi": false
+},
+{
+"id": 29,
+"name": "La meta",
+"slug": "la-meta",
+"type": "puzzle",
+"playable": true,
+"short": "Desliza la ficha hasta pararte en la casilla verde.",
+"folder": "puzzle",
+"multi": false
+},
+{
+"id": 30,
+"name": "Adivina la palabra",
+"slug": "adivina-la-palabra",
+"type": "puzzle",
+"playable": true,
+"short": "Adivina la palabra secreta, con colores de pista.",
+"folder": "letras",
+"multi": false
+},
+{
+"id": 31,
+"name": "Ajedrez",
+"slug": "ajedrez",
+"type": "mesa",
+"playable": true,
+"short": "Mueve las piezas y da jaque mate al rey del otro.",
+"folder": "mesa",
+"multi": true
+},
+{
+"id": 32,
+"name": "Damas",
+"slug": "damas",
+"type": "mesa",
+"playable": true,
+"short": "Come en diagonal: damas españolas, inglesas o brasileñas.",
+"folder": "mesa",
+"multi": true
+},
+{
+"id": 33,
+"name": "Blackjack",
+"slug": "blackjack",
+"type": "cartas",
+"playable": true,
+"short": "Llega a 21 sin pasarte. La banca juega después.",
+"folder": "cartas",
+"multi": false
+},
+{
+"id": 34,
+"name": "Apila la torre",
+"slug": "torre",
+"type": "accion",
+"playable": true,
+"short": "Apila bloques. Lo que sobresale, se corta.",
+"folder": "accion",
+"multi": false
+},
+{
+"id": 35,
+"name": "Forma palabras",
+"slug": "forma-palabras",
+"type": "puzzle",
+"playable": true,
+"short": "Letras desordenadas. Saca las palabras que escondan.",
+"folder": "letras",
+"multi": false
+},
+{
+"id": 50,
+"name": "Palabras encadenadas",
+"slug": "palabras-encadenadas",
+"type": "puzzle",
+"playable": true,
+"short": "Cada palabra empieza por la última sílaba de la anterior.",
+"folder": "letras",
+"multi": false
+},
+{
+"id": 36,
+"name": "Bingo",
+"slug": "bingo",
+"type": "puzzle",
+"playable": true,
+"short": "Marca los números del cartón: solo o con más gente en el móvil.",
+"folder": "numeros",
+"multi": true
+},
+{
+"id": 37,
+"name": "Parchís",
+"slug": "parchis",
+"type": "mesa",
+"playable": true,
+"short": "Saca las fichas: Parchís, Ludo, Parcheesi o Mensch.",
+"folder": "mesa",
+"multi": true
+},
+{
+"id": 38,
+"name": "Oca",
+"slug": "oca",
+"type": "mesa",
+"playable": true,
+"short": "Tira el dado: Oca, Gioco dell’Oca o Jeu de l’oie.",
+"folder": "mesa",
+"multi": true
+},
+{
+"id": 39,
+"name": "Cifras",
+"slug": "cifras",
+"type": "puzzle",
+"playable": true,
+"short": "Llega al objetivo: Cifras, Countdown o Des chiffres.",
+"folder": "numeros",
+"multi": false
+},
+{
+"id": 40,
+"name": "KenKen",
+"slug": "kenken",
+"type": "puzzle",
+"playable": true,
+"short": "Rellena el tablero: en cada jaula la cuenta tiene que cuadrar y no se pueden repetir números.",
+"folder": "numeros",
+"multi": false
+},
+{
+"id": 49,
+"name": "Puentes",
+"slug": "puentes",
+"type": "puzzle",
+"playable": true,
+"short": "Une las islas con el número de puentes que pide cada una.",
+"folder": "numeros",
+"multi": false
+},
+{
+"id": 41,
+"name": "Suma X",
+"slug": "suma-x",
+"type": "puzzle",
+"playable": true,
+"short": "Junta parejas de fichas que sumen el objetivo.",
+"folder": "numeros",
+"multi": false
+},
+{
+"id": 42,
+"name": "Conecta 4",
+"slug": "conecta-4",
+"type": "mesa",
+"playable": true,
+"short": "Deja caer fichas. Gana quien pone cuatro en línea.",
+"folder": "mesa",
+"multi": true
+},
+{
+"id": 43,
+"name": "Hundir la flota",
+"slug": "hundir-la-flota",
+"type": "mesa",
+"playable": true,
+"short": "Coloca tus barcos y dispara al mar del otro.",
+"folder": "mesa",
+"multi": true
+},
+{
+"id": 44,
+"name": "Reversi",
+"slug": "reversi",
+"type": "mesa",
+"playable": true,
+"short": "Rodea fichas del otro y dales la vuelta.",
+"folder": "mesa",
+"multi": true
+}
+]

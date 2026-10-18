@@ -1,0 +1,48 @@
+{
+  "slug": "allthegames",
+  "name": "AllTheGames",
+  "package": "com.allthegames.app",
+  "storeUrl": "https://play.google.com/store/apps/details?id=com.allthegames.app",
+  "storePublished": false,
+  "lead": "60 juegos de siempre en una sola app: cartas, juegos de mesa, números, letras, puzzles y acción.",
+  "facts": [
+    "Sin cuenta ni registro: todo se guarda en tu teléfono.",
+    "Casi todo se juega sin conexión. Solo las banderas y tres juegos de palabras necesitan internet.",
+    "Nueve juegos para dos personas en el mismo teléfono.",
+    "En español, inglés, francés, alemán, italiano y portugués.",
+    "Para toda la familia: los anuncios nunca son personalizados y son aptos para menores."
+  ],
+  "categories": [
+    {
+      "id": "cartas",
+      "label": "Cartas",
+      "accent": "#2F7A55"
+    },
+    {
+      "id": "mesa",
+      "label": "De mesa",
+      "accent": "#C25E24"
+    },
+    {
+      "id": "numeros",
+      "label": "Números",
+      "accent": "#2D63A6"
+    },
+    {
+      "id": "accion",
+      "label": "Acción",
+      "accent": "#C23B3B"
+    },
+    {
+      "id": "puzzle",
+      "label": "Puzzles",
+      "accent": "#1F8A8A"
+    },
+    {
+      "id": "letras",
+      "label": "Letras",
+      "accent": "#7048A8"
+    }
+  ],
+  "policyVersion": "2026-10-06"
+}
