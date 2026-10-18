@@ -320,12 +320,23 @@ def build_home(d: dict) -> None:
             f'</a></li>'
         )
 
-    first = ''.join(tile(g, False) for g in mixed)
-    again = ''.join(tile(g, True) for g in mixed)
+    # Varias filas, como una pared de ladrillos: cada fila va en un sentido.
+    rows = SITE.get('carouselRows', 4)
+    per = math.ceil(len(mixed) / rows)
+    lines = []
+    for r in range(rows):
+        part = mixed[r * per:(r + 1) * per]
+        # Cada fila empieza por otra categoría: los colores no se apilan en columnas.
+        k = (r * 2) % max(1, len(part))
+        part = part[k:] + part[:k]
+        first = ''.join(tile(g, False) for g in part)
+        # Tres copias: la fila llena también pantallas muy anchas al dar la vuelta.
+        again = ''.join(tile(g, True) for g in part) * 2
+        lines.append(f'<ul class="carousel-track">{first}{again}</ul>')
     main = f'''<h1 class="visually-hidden">{BRAND}</h1>
 <section class="stage" aria-label="Juegos de AllTheGames">
   <div class="carousel" data-carousel>
-    <ul class="carousel-track">{first}{again}</ul>
+    {''.join(lines)}
   </div>
   <div class="wrap carousel-bar">
     <button class="carousel-toggle" type="button" data-carousel-toggle aria-pressed="false">Pausar</button>
