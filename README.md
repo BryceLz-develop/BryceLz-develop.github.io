@@ -14,16 +14,15 @@ build.py                  ← genera docs/ a partir de content/ y static/
 tools/export-privacy.ts   ← copia la nota de privacidad desde la app
 ```
 
-## Publicar por primera vez
+## Publicar
 
-1. En GitHub, crea un repositorio público llamado exactamente
-   `BryceLz-develop.github.io` (con tu nombre de usuario de GitHub).
-2. En `content/site.json`, cambia `baseUrl` a `https://BryceLz-develop.github.io` y
-   ejecuta `python3 build.py`.
-3. Sube este proyecto a ese repositorio (rama `main`).
-4. En el repositorio: **Settings › Pages › Build and deployment**, elige
-   **Deploy from a branch**, rama `main` y carpeta `/docs`. Guarda.
-5. En un par de minutos la web está en `https://BryceLz-develop.github.io`.
+La web está en `https://brycelz-develop.github.io` (repositorio
+`BryceLz-develop/BryceLz-develop.github.io`, GitHub Pages desde la rama `main`,
+carpeta raíz). La rama `fuente` guarda este proyecto; `main` solo lleva lo generado en `docs/`.
+
+1. `python3 build.py` y commit de los cambios.
+2. Doble clic en `herramientas/publicar-web.bat`: sube el proyecto a `fuente` y `docs/` a `main`.
+   El resultado queda en `herramientas/publicar.log`.
 
 ## Después de publicar
 
@@ -39,7 +38,7 @@ tools/export-privacy.ts   ← copia la nota de privacidad desde la app
 
 1. Edita el texto en `content/` (son archivos JSON sencillos).
 2. Ejecuta `python3 build.py`.
-3. Sube los cambios. GitHub Pages publica solo.
+3. Haz commit y ejecuta `herramientas/publicar-web.bat`.
 
 Cuando cambie la privacidad de la app:
 
