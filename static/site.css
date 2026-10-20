@@ -11,8 +11,58 @@
 @font-face { font-family: 'Nunito Sans'; font-weight: 900; font-style: normal; font-display: swap; src: url('fonts/nunito-sans-900Black.woff') format('woff'); }
 @font-face { font-family: 'ATG Display'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/atg-display.woff') format('woff'); }
 
+/* Colores generales: los del estudio BryceLz (granate, crema y casi negro).
+   Cada app pone los suyos en su sección con body.theme-<app>. */
 :root {
-  /* Los colores de la app (tema claro). */
+  --paper: #F7F1EA;
+  --surface: #FFFBF7;
+  --surface-hot: #F0E4DE;
+  --ink: #1F1416;
+  --muted: #6A5355;
+  --line: #E2D3CF;
+  --outline: #2A1A1D;
+  --lip: #CDB7B4;
+  --primary: #6E1F2A;
+  --primary-ink: #F7F1EA;
+  --link: #8A2433;
+  --focus: #2D63A6;
+  --gold: #E8B8BF;
+
+  --band: #6E1F2A;
+  --band-lip: #4A1219;
+  --band-ink: #F7F1EA;
+  --band-muted: #EAD3D6;
+
+  --wallpaper: none;
+  --veil: transparent;
+
+  --display: 'Bricolage Grotesque', 'Nunito Sans', sans-serif;
+  --display-weight: 700;
+  --text: 'Nunito Sans', system-ui, sans-serif;
+  --logo: 'Bricolage Grotesque', 'Nunito Sans', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #1A1113;
+    --surface: #2A1A1E;
+    --surface-hot: #3A242A;
+    --ink: #F5EBE8;
+    --muted: #CDB5B6;
+    --line: #523A3F;
+    --outline: #0E0809;
+    --lip: #0B0607;
+    --primary: #D9677A;
+    --primary-ink: #1A1113;
+    --link: #F09AA6;
+    --focus: #F09AA6;
+    --band: #5A1922;
+    --band-lip: #2E0C11;
+  }
+}
+
+.theme-atg {
+  /* AllTheGames: los colores de la app (tema claro). */
   --paper: #F4EBDD;
   --surface: #FFF8EE;
   --surface-hot: #EFE3CF;
@@ -37,12 +87,11 @@
   --veil: rgba(244, 235, 221, 0.55);
 
   --display: 'ATG Display', 'Nunito Sans', sans-serif;
-  --text: 'Nunito Sans', system-ui, sans-serif;
-  --logo: 'Bricolage Grotesque', 'Nunito Sans', sans-serif;
+  --display-weight: 400;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  .theme-atg {
     --paper: #1E1813;
     --surface: #2C231C;
     --surface-hot: #3A2E24;
@@ -104,7 +153,7 @@ h1, h2, h3 { text-wrap: balance; }
 
 .display {
   margin: 0;
-  font-family: var(--display); font-weight: 400; line-height: 1.05; letter-spacing: 0.01em;
+  font-family: var(--display); font-weight: var(--display-weight); line-height: 1.05; letter-spacing: 0.01em;
 }
 .lead { margin: 0 0 18px; font-size: 1.25rem; font-weight: 700; line-height: 1.45; }
 .muted { color: var(--muted); font-size: 0.9375rem; }
@@ -200,7 +249,7 @@ h1, h2, h3 { text-wrap: balance; }
   margin: 0 -20px 18px; padding: 18px 20px 14px;
   border-radius: 21px 21px 0 0;
   background: var(--fill); border-bottom: 5px solid var(--lip);
-  color: #FFF8EE; font-family: var(--display); font-weight: 400;
+  color: #FFF8EE; font-family: var(--display); font-weight: var(--display-weight);
   font-size: clamp(1.75rem, 6vw, 2.25rem); line-height: 1.1; letter-spacing: 0.01em;
 }
 .band-title { border-bottom-color: var(--lip); }
@@ -406,14 +455,14 @@ h1, h2, h3 { text-wrap: balance; }
   background: url('apps/allthegames/check.webp') center / contain no-repeat;
 }
 
-.atg-h2 { margin: 48px 0 18px; font-family: var(--display); font-weight: 400; font-size: clamp(1.875rem, 6vw, 2.5rem); line-height: 1.05; letter-spacing: 0.01em; }
+.atg-h2 { margin: 48px 0 18px; font-family: var(--display); font-weight: var(--display-weight); font-size: clamp(1.875rem, 6vw, 2.5rem); line-height: 1.05; letter-spacing: 0.01em; }
 
 .cat { margin: 0 0 24px; overflow: hidden; border: 3px solid var(--outline); border-radius: 22px; background: var(--surface); box-shadow: 0 6px 0 var(--lip); }
 .cat-band {
   display: flex; align-items: center; gap: 12px; margin: 0;
   padding: 8px 16px 8px 10px;
   background: var(--fill); border-bottom: 5px solid var(--lip);
-  color: #FFF8EE; font-family: var(--display); font-weight: 400; font-size: 1.5rem; line-height: 1.1;
+  color: #FFF8EE; font-family: var(--display); font-weight: var(--display-weight); font-size: 1.5rem; line-height: 1.1;
 }
 .cat-band img { width: 44px; height: 44px; }
 .cat-count { margin-left: auto; font-family: var(--text); font-weight: 700; font-size: 0.9375rem; white-space: nowrap; }

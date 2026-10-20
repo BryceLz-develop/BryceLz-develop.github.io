@@ -262,7 +262,7 @@ def page(
   <meta property="og:url" content="{canonical}">
   <meta property="og:image" content="{base}/static/brand/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#6E1F2A">
+  <meta name="theme-color" content="{"#935127" if theme == "atg" else "#6E1F2A"}">
   <link rel="icon" href="{c.to(icon)}">
   <link rel="apple-touch-icon" href="{c.to('static/brand/apple-touch-icon.png')}">
   <link rel="stylesheet" href="{c.to('static/site.css')}">
@@ -301,6 +301,7 @@ def load() -> dict:
 
 
 PRIMARY = '#C9692E'  # el naranja de la app (botones principales)
+STUDIO = '#6E1F2A'  # el granate del estudio
 
 
 def carousel(c: Ctx, d: dict) -> str:
@@ -419,7 +420,7 @@ def build_home(d: dict) -> None:
 
 <section class="wrap block" id="contacto" aria-labelledby="contacto-h">
   <div class="card sheet-card">
-    <h2 id="contacto-h" class="band-title" style="--fill:{band_fill(PRIMARY)};--lip:{band_lip(PRIMARY)}">Contacto</h2>
+    <h2 id="contacto-h" class="band-title" style="--fill:{band_fill(STUDIO)};--lip:{band_lip(STUDIO)}">Contacto</h2>
     <div class="contact-grid">
       <div>
         <h3>Ayuda con una app</h3>
@@ -435,12 +436,12 @@ def build_home(d: dict) -> None:
   </div>
 </section>'''
     page('', title=f'{BRAND}: apps sencillas para toda la casa', description=SITE['intro'], main=main,
-         theme='app', section='', apps=d['apps'])
+         theme='studio', section='', apps=d['apps'])
 
 
 def build_legal_notice(d: dict) -> None:
     main = f'''<div class="wrap narrow sheet legal">
-  <h1 class="band-title" style="--fill:{band_fill(PRIMARY)};--lip:{band_lip(PRIMARY)}">Aviso legal</h1>
+  <h1 class="band-title" style="--fill:{band_fill(STUDIO)};--lip:{band_lip(STUDIO)}">Aviso legal</h1>
   <h2>Titular</h2>
   <p>Esta web y las apps que aparecen en ella son de {esc(OWNER)} ({esc(SITE['ownerNote'])}), que las publica con el nombre {BRAND}. Contacto: {mail_link()}.</p>
   <h2>Qué es esta web</h2>
@@ -449,17 +450,17 @@ def build_legal_notice(d: dict) -> None:
   <p>Esta web no usa cookies, ni analítica, ni formularios, y no carga nada de otros sitios. La aloja GitHub Pages: GitHub registra la dirección IP de las visitas por motivos de seguridad, como <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">explica en su documentación</a>. Si me escribes, uso tu correo solo para contestarte.</p>
 </div>'''
     page('aviso-legal/', title=f'Aviso legal · {BRAND}', description=f'Titular y datos de la web de {BRAND}.',
-         main=main, theme='app', section=None, apps=d['apps'])
+         main=main, theme='studio', section=None, apps=d['apps'])
 
 
 def build_404(d: dict) -> None:
     main = f'''<div class="wrap narrow sheet">
-  <h1 class="band-title" style="--fill:{band_fill(PRIMARY)};--lip:{band_lip(PRIMARY)}">Esta página no existe</h1>
+  <h1 class="band-title" style="--fill:{band_fill(STUDIO)};--lip:{band_lip(STUDIO)}">Esta página no existe</h1>
   <p class="lead">Puede que la dirección esté mal escrita o que la página haya cambiado de sitio.</p>
   <p><a class="sticker" href="/">Ir al inicio</a></p>
 </div>'''
     page('404.html', title=f'Página no encontrada · {BRAND}', description='Página no encontrada.', main=main,
-         theme='app', section=None, apps=d['apps'], absolute=True)
+         theme='studio', section=None, apps=d['apps'], absolute=True)
 
 
 # ---------------------------------------------------------------------------
@@ -544,7 +545,7 @@ def build_atg_home(d: dict) -> None:
     <a class="sticker sticker-soft" href="terminos/">Términos de las compras</a>
   </div>
 </section>'''
-    page(here, title=f'AllTheGames · {BRAND}', description=app['lead'], main=main, theme='app',
+    page(here, title=f'AllTheGames · {BRAND}', description=app['lead'], main=main, theme='atg',
          section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
 
 
@@ -578,7 +579,7 @@ def build_atg_support(d: dict) -> None:
   window.addEventListener('hashchange', abrirPregunta);
 </script>'''
     page(here, title=f'Soporte de AllTheGames · {BRAND}', description='Preguntas frecuentes de AllTheGames y contacto.',
-         main=main, theme='app', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
+         main=main, theme='atg', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
 
 
 def privacy_paths() -> dict:
@@ -619,11 +620,11 @@ def build_atg_privacy(d: dict) -> None:
         title = p['title'][:1] + p['title'][1:].lower()
         here = paths[lang]
         page(here, title=f'{title} · AllTheGames', description=p['intro'], main=privacy_main(d, lang, here),
-             theme='app', section='apps/allthegames/', apps=d['apps'], lang=lang, alternates=paths,
+             theme='atg', section='apps/allthegames/', apps=d['apps'], lang=lang, alternates=paths,
              pre_main=atg_nav(Ctx(here), current), favicon=ATG_ICON)
     dated = f'apps/allthegames/privacidad/{version}/'
     page(dated, title=f'Privacidad ({version}) · AllTheGames', description=d['privacy']['es']['intro'],
-         main=privacy_main(d, 'es', dated), theme='app', section='apps/allthegames/', apps=d['apps'],
+         main=privacy_main(d, 'es', dated), theme='atg', section='apps/allthegames/', apps=d['apps'],
          pre_main=atg_nav(Ctx(dated), current), favicon=ATG_ICON)
 
 
@@ -643,7 +644,7 @@ def build_atg_terms(d: dict) -> None:
   {sections}
 </div>'''
         page(here, title=f'Términos de las compras · AllTheGames', description=t['intro'], main=main,
-             theme='app', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, current), favicon=ATG_ICON)
+             theme='atg', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, current), favicon=ATG_ICON)
 
 
 # ---------------------------------------------------------------------------
