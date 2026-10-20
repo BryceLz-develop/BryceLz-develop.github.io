@@ -22,7 +22,13 @@
 <header class="banner">
   <div class="wrap banner-row">
     <a class="wordmark" href="../../../.." aria-label="BryceLz, inicio"><img class="wordmark-img" src="../../../../static/brand/logo.webp" alt="BryceLz" width="640" height="188"></a>
-    <nav class="banner-nav" aria-label="Apartados"><a class="banner-tab" href="../../../..">Inicio</a><a class="banner-tab" href="../../" aria-current="page">AllTheGames</a></nav>
+    <div class="banner-end">
+      <nav class="banner-nav" aria-label="Apartados"><a class="banner-tab" href="../../../..">Inicio</a><a class="banner-tab" href="../../" aria-current="page">AllTheGames</a></nav>
+      <details class="lang-menu">
+      <summary aria-label="Idioma: Español"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2.2 2.3 3.2 4.8 3.2 7.5S12.2 15.2 10 17.5M10 2.5C7.8 4.8 6.8 7.3 6.8 10s1 5.2 3.2 7.5"/></svg><span>ES</span></summary>
+      <ul><li><a href="../" hreflang="es" lang="es" aria-current="true">Español</a></li><li><a href="../en/" hreflang="en" lang="en">English</a></li><li><a href="../pt/" hreflang="pt-BR" lang="pt-BR">Português</a></li><li><a href="../it/" hreflang="it" lang="it">Italiano</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li></ul>
+    </details>
+    </div>
   </div>
 </header>
 <div class="appnav">
@@ -38,7 +44,7 @@
 <div class="wrap narrow sheet legal">
   <h1 class="band-title" style="--fill:#3F4B56;--lip:#383B3F">Privacidad</h1>
   <p class="meta">Actualizado 6 de octubre de 2026</p>
-  <nav class="langs" aria-label="Otros idiomas"><a class="chip" href="../" hreflang="es" lang="es">Español</a><a class="chip" href="../en/" hreflang="en" lang="en">English</a><a class="chip" href="../fr/" hreflang="fr" lang="fr">Français</a><a class="chip" href="../de/" hreflang="de" lang="de">Deutsch</a><a class="chip" href="../it/" hreflang="it" lang="it">Italiano</a><a class="chip" href="../pt/" hreflang="pt" lang="pt">Português</a></nav>
+  <nav class="langs" aria-label="Idioma"><a class="chip" href="../" hreflang="es" lang="es">Español</a><a class="chip" href="../en/" hreflang="en" lang="en">English</a><a class="chip" href="../pt/" hreflang="pt-BR" lang="pt-BR">Português</a><a class="chip" href="../it/" hreflang="it" lang="it">Italiano</a><a class="chip" href="../fr/" hreflang="fr" lang="fr">Français</a><a class="chip" href="../de/" hreflang="de" lang="de">Deutsch</a></nav>
   <p class="lead">AllTheGames es un recopilatorio de juegos. Esta nota explica qué datos toca la app y para qué. Está escrita para que se entienda en casa.</p>
   <h2>Qué guarda el teléfono</h2>
   <p>Las monedas, los pases de la tienda, los récords, el volumen y los perfiles locales se guardan en este aparato. No hay un servidor nuestro que lea partidas ni chats. Si desinstalas, ese guardado se pierde.</p>
@@ -61,7 +67,7 @@
   <h2>Menores y familias</h2>
   <p>AllTheGames es para todas las edades. No pedimos datos personales, los anuncios son siempre no personalizados y aptos para menores, y las compras con dinero real las autoriza la cuenta de Google Play o de la App Store, normalmente de un adulto. Si eres madre, padre o tutor y quieres que revisemos o borremos algo, escríbenos a <a href="mailto:bryce.lz.as@gmail.com">bryce.lz.as@gmail.com</a>.</p>
   
-  <p class="legal-links"><a href="../../terminos/">Términos de las compras</a></p>
+  <p class="legal-links"><a href="../../terminos/" hreflang="es">Términos de las compras</a></p>
 </div>
 </main>
 <footer class="site-foot">
@@ -71,8 +77,17 @@
       <a href="../../../../aviso-legal/">Aviso legal</a>
       <a href="mailto:bryce.lz.as@gmail.com">bryce.lz.as@gmail.com</a>
     </nav>
-    <p class="foot-copy">© 2026 Brais López Arias</p>
+    <p class="foot-copy">© 2026 Brais López Arias (particular)</p>
   </div>
 </footer>
+<script>
+  // El selector de idioma se cierra al tocar fuera o con Escape.
+  (function () {
+    var m = document.querySelector('.lang-menu');
+    if (!m) return;
+    document.addEventListener('click', function (e) { if (m.open && !m.contains(e.target)) m.open = false; });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && m.open) { m.open = false; m.querySelector('summary').focus(); } });
+  })();
+</script>
 </body>
 </html>
