@@ -189,7 +189,7 @@ NAV = [('', 'Inicio'), ('apps/allthegames/', 'AllTheGames')]
 def wordmark(c: Ctx) -> str:
     return (
         f'<a class="wordmark" href="{c.to("")}" aria-label="{BRAND}, inicio">'
-        f'{BRAND}<span class="wordmark-dot" aria-hidden="true"></span></a>'
+        f'<img class="wordmark-img" src="{c.to("static/brand/logo.webp")}" alt="{BRAND}" width="640" height="188"></a>'
     )
 
 
@@ -262,7 +262,7 @@ def page(
   <meta property="og:url" content="{canonical}">
   <meta property="og:image" content="{base}/static/brand/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="#141C3D">
+  <meta name="theme-color" content="#6E1F2A">
   <link rel="icon" href="{c.to(icon)}">
   <link rel="apple-touch-icon" href="{c.to('static/brand/apple-touch-icon.png')}">
   <link rel="stylesheet" href="{c.to('static/site.css')}">

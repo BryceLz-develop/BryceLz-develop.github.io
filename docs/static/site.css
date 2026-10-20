@@ -133,7 +133,9 @@ h1, h2, h3 { text-wrap: balance; }
   font-family: var(--logo); font-weight: 700; font-size: 1.625rem; line-height: 1; letter-spacing: -0.02em;
 }
 @media (min-width: 420px) { .wordmark { font-size: 1.875rem; } }
-.wordmark-dot { width: 0.3em; height: 0.3em; margin-left: 0.07em; border-radius: 50%; background: var(--gold); }
+.wordmark-img { display: block; width: auto; height: 38px; }
+@media (min-width: 420px) { .wordmark-img { height: 44px; } }
+.site-foot .wordmark-img { height: 32px; }
 .wordmark:focus-visible { outline-color: var(--gold); border-radius: 6px; }
 
 .banner-nav { display: flex; gap: 6px; }
