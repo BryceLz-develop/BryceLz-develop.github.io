@@ -1,0 +1,33 @@
+{
+  "version": "2026-10-06",
+  "updated": "Aggiornato il 6 ottobre 2026",
+  "title": "Termini degli acquisti",
+  "intro": "AllTheGames si gioca sul telefono. Questi termini riguardano ciò che si paga nello store. Sono scritti per essere capiti da tutta la famiglia.",
+  "sections": [
+    [
+      "Cosa si può comprare",
+      "Pacchetti di monete, la rimozione della pubblicità, un abbonamento mensile a rinnovo automatico, con 40 monete al giorno e senza pubblicità tra le partite, e Premium per sempre (senza pubblicità tra le partite e senza pagare l’ingresso ai giochi). Le pubblicità con premio restano disponibili se il giocatore le sceglie. Il contenuto e il prezzo validi sono quelli che Google Play o l’App Store mostrano prima della conferma; possono cambiare da paese a paese."
+    ],
+    [
+      "Monete",
+      "Le monete valgono solo dentro AllTheGames (ingresso, aiuto, annulla, continua). Non si cambiano in denaro. Se disinstalli l’app, le monete di quel telefono vanno perse; i pass a pagamento si recuperano con Ripristina acquisti sullo stesso account dello store."
+    ],
+    [
+      "Chi riscuote",
+      "Il pagamento lo gestiscono Google Play o Apple, non noi. L’abbonamento si rinnova ogni mese finché non lo annulli dall’account dello store. Dopo l’annullamento, i vantaggi restano fino alla fine del periodo già pagato. I rimborsi si gestiscono con lo store e possono togliere l’accesso."
+    ],
+    [
+      "Minori",
+      "L’app è pensata per giocare in casa. Gli acquisti li autorizza l’account dello store (quasi sempre un adulto). Se un addebito non ti torna, scrivi a {email}."
+    ],
+    [
+      "Titolare",
+      "AllTheGames è pubblicata da Brais López Arias (privato). Contatto: {email}."
+    ],
+    [
+      "Privacy",
+      "Come trattiamo i dati è spiegato nella {privacyLink}."
+    ]
+  ],
+  "privacyLinkText": "nota sulla privacy"
+}

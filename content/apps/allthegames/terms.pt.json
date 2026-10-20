@@ -1,0 +1,33 @@
+{
+  "version": "2026-10-06",
+  "updated": "Atualizado em 6 de outubro de 2026",
+  "title": "Termos das compras",
+  "intro": "O AllTheGames é jogado no celular. Estes termos tratam do que se paga na loja. Foram escritos para que toda a família entenda.",
+  "sections": [
+    [
+      "O que dá para comprar",
+      "Pacotes de moedas, remover anúncios, uma assinatura mensal com renovação automática, com 40 moedas por dia e sem anúncios entre partidas, e o Premium para sempre (sem anúncios entre partidas e sem pagar entrada nos jogos). Os anúncios com prêmio continuam disponíveis se o jogador quiser. O conteúdo e o preço válidos são os que o Google Play ou a App Store mostram antes de você confirmar; podem mudar conforme o país."
+    ],
+    [
+      "Moedas",
+      "As moedas só valem dentro do AllTheGames (entrada, dica, desfazer, continuar). Não podem ser trocadas por dinheiro. Se você desinstalar, as moedas desse celular se perdem; os passes pagos são recuperados com Restaurar compras na mesma conta da loja."
+    ],
+    [
+      "Quem cobra",
+      "Quem faz a cobrança é o Google Play ou a Apple, não nós. A assinatura é renovada todo mês até ser cancelada na conta da loja. Depois de cancelar, as vantagens continuam até o fim do período já pago. Os reembolsos são feitos pela loja e podem retirar o acesso."
+    ],
+    [
+      "Menores",
+      "O app foi pensado para jogar em casa. As compras são autorizadas pela conta da loja (quase sempre de um adulto). Se alguma cobrança não fizer sentido, escreva para {email}."
+    ],
+    [
+      "Titular",
+      "O AllTheGames é publicado por Brais López Arias (pessoa física). Contato: {email}."
+    ],
+    [
+      "Privacidade",
+      "Como tratamos os dados está na {privacyLink}."
+    ]
+  ],
+  "privacyLinkText": "nota de privacidade"
+}

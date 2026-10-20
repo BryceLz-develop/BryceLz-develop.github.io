@@ -20,8 +20,18 @@ tools/export-catalog.ts   ← copia de la app los nombres de juegos y categoría
 ## Idiomas
 
 Español en la raíz y el resto en `/en/`, `/pt/`, `/it/`, `/fr/`, `/de/`. La privacidad mantiene
-`/apps/allthegames/privacidad/<idioma>/`. Los términos de compra solo están en español hasta que
-la app tenga su traducción. Cuando cambien los juegos de la app:
+`/apps/allthegames/privacidad/<idioma>/` y los términos `/apps/allthegames/terminos/<idioma>/`.
+
+Norma: la web no muestra el número de juegos (cambia cada vez que se añade uno) ni los
+juegos que la app tiene ocultos (`"hidden": true` en `games.json`).
+
+Cuando cambien los términos de la app:
+
+```
+python3 tools/export-terms.py RUTA/A/AllTheGames/mobile
+```
+
+Cuando cambien los juegos de la app:
 
 ```
 npx tsx tools/export-catalog.ts RUTA/A/AllTheGames/mobile > content/apps/allthegames/catalog-i18n.json

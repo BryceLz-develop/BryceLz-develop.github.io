@@ -1,0 +1,33 @@
+{
+  "version": "2026-10-06",
+  "updated": "Mis à jour le 6 octobre 2026",
+  "title": "Conditions des achats",
+  "intro": "AllTheGames se joue sur ton téléphone. Ces conditions portent sur ce qui se paie dans la boutique. Elles sont écrites pour être comprises par toute la famille.",
+  "sections": [
+    [
+      "Ce que tu peux acheter",
+      "Des packs de pièces, la suppression des pubs, un abonnement mensuel renouvelé automatiquement, avec 40 pièces par jour et sans pub entre les parties, et Premium pour toujours (sans pub entre les parties et sans payer l’entrée des jeux). Les pubs avec récompense restent disponibles si le joueur les choisit. Le contenu et le prix en vigueur sont ceux que Google Play ou l’App Store t’affichent avant de confirmer ; ils peuvent varier selon le pays."
+    ],
+    [
+      "Pièces",
+      "Les pièces ne servent que dans AllTheGames (entrée, indice, annuler, continuer). Elles ne s’échangent pas contre de l’argent. Si tu désinstalles l’app, les pièces de ce téléphone sont perdues ; les pass payés se récupèrent avec Restaurer les achats sur le même compte de la boutique."
+    ],
+    [
+      "Qui encaisse",
+      "C’est Google Play ou Apple qui encaisse, pas nous. L’abonnement se renouvelle chaque mois jusqu’à ce que tu l’annules depuis ton compte de la boutique. Après l’annulation, les avantages restent jusqu’à la fin de la période déjà payée. Les remboursements se font avec la boutique et peuvent retirer l’accès."
+    ],
+    [
+      "Mineurs",
+      "L’app est pensée pour jouer à la maison. Les achats sont autorisés par le compte de la boutique (presque toujours un adulte). Si un paiement te semble anormal, écris à {email}."
+    ],
+    [
+      "Titulaire",
+      "AllTheGames est publiée par Brais López Arias (particulier). Contact : {email}."
+    ],
+    [
+      "Confidentialité",
+      "La façon dont nous traitons les données est expliquée dans la {privacyLink}."
+    ]
+  ],
+  "privacyLinkText": "note de confidentialité"
+}

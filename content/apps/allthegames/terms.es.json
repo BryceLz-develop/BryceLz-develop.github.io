@@ -28,5 +28,6 @@
       "Privacidad",
       "Cómo tratamos los datos está en la {privacyLink}."
     ]
-  ]
+  ],
+  "privacyLinkText": "nota de privacidad"
 }

@@ -10,8 +10,11 @@ Python 3, sin instalar nada.
 Idiomas: el español va en la raíz (/, /aviso-legal/, /apps/allthegames/...)
 y los demás bajo su código (/en/, /pt/, /it/, /fr/, /de/). La nota de
 privacidad mantiene sus direcciones de siempre (/apps/allthegames/privacidad/<idioma>/),
-que son las que figuran en la tienda. Los términos de compra, de momento, solo
-están en español.
+que son las que figuran en la tienda; los términos de compra siguen el mismo
+esquema (/apps/allthegames/terminos/<idioma>/).
+
+Norma: la web no muestra el número de juegos (cambia cada vez que se añade uno)
+ni los juegos que la app tiene ocultos ("hidden": true en games.json).
 """
 import hashlib
 import html
@@ -42,7 +45,7 @@ LANG_NAMES = {l: UI[l]['langName'] for l in LANGS}
 HTML_LANG = {'es': 'es', 'en': 'en', 'pt': 'pt-BR', 'it': 'it', 'fr': 'fr', 'de': 'de'}
 # Texto de la web alrededor de la nota de privacidad, en cada idioma.
 PRIVACY_CHROME = {
-    l: {'terms': UI[l]['termsLong'] + UI[l]['termsNote'], 'langs': UI[l]['langMenu']} for l in LANGS
+    l: {'terms': UI[l]['termsLong'], 'langs': UI[l]['langMenu']} for l in LANGS
 }
 
 # Enlaces dentro de los textos legales (solo nombres exactos).
@@ -358,9 +361,10 @@ def load() -> dict:
         'app': app,
         'appI18n': app_i18n,
         'catalog': catalog,
-        'games': json.loads((base / 'games.json').read_text('utf-8')),
+        # Los juegos que la app tiene ocultos tampoco salen en la web.
+        'games': [g for g in json.loads((base / 'games.json').read_text('utf-8')) if not g.get('hidden')],
         'privacy': json.loads((base / 'privacy.json').read_text('utf-8')),
-        'terms': json.loads((base / 'terms.es.json').read_text('utf-8')),
+        'terms': {l: json.loads((base / f'terms.{l}.json').read_text('utf-8')) for l in LANGS},
         'faq': faq,
     }
 
@@ -450,9 +454,8 @@ def build_home(d: dict, lang: str) -> None:
     app, games = d['app'], d['games']
     s = lambda p: c.to('static/apps/allthegames/' + p)
     atg = lambda p='': c.to(lp(lang, 'apps/allthegames/' + p))
-    n_games = len(games)
     chips = ''.join(
-        f'<li style="--chip:{cat["accent"]}">{esc(cat_label(d, lang, cat))} <span>{sum(1 for g in games if g["folder"] == cat["id"])}</span></li>'
+        f'<li style="--chip:{cat["accent"]}">{esc(cat_label(d, lang, cat))}</li>'
         for cat in app['categories']
     )
     store = T(lang, 'storeYes') if app.get('storePublished') else T(lang, 'storeSoon')
@@ -468,7 +471,7 @@ def build_home(d: dict, lang: str) -> None:
   </div>
   <div class="hero-art" aria-hidden="true">
     <img class="hero-icon" src="{s('icon.webp')}" alt="" width="384" height="384">
-    <span class="hero-chip chip-a" style="--chip:#2F7A55">{esc(T(lang, 'chipGames', n=n_games))}</span>
+    <span class="hero-chip chip-a" style="--chip:#2F7A55">{esc(T(lang, 'chipGames'))}</span>
     <span class="hero-chip chip-b" style="--chip:#2D63A6">{esc(T(lang, 'chipLangs'))}</span>
     <span class="hero-chip chip-c" style="--chip:#7048A8">{esc(T(lang, 'chipNoAccount'))}</span>
   </div>
@@ -476,7 +479,7 @@ def build_home(d: dict, lang: str) -> None:
 
 <section class="games-wall" aria-labelledby="juegos-h">
   <div class="wrap section-head">
-    <h2 id="juegos-h" class="display">{esc(T(lang, 'wallTitle', n=n_games))}</h2>
+    <h2 id="juegos-h" class="display">{esc(T(lang, 'wallTitle'))}</h2>
     <a href="{atg()}">{esc(T(lang, 'wallLink'))}</a>
   </div>
   {carousel(c, d, lang)}
@@ -560,7 +563,6 @@ def build_404(d: dict) -> None:
 
 PIZARRA = '#4A6076'
 ATG_ICON = 'static/apps/allthegames/favicon.png'
-TERMS_PATH = 'apps/allthegames/terminos/'
 
 
 def atg_tabs(lang: str) -> list[tuple[str, str]]:
@@ -568,7 +570,7 @@ def atg_tabs(lang: str) -> list[tuple[str, str]]:
         (lp(lang, 'apps/allthegames/'), T(lang, 'tabApp')),
         (lp(lang, 'apps/allthegames/soporte/'), T(lang, 'support')),
         (privacy_paths()[lang], T(lang, 'privacy')),
-        (TERMS_PATH, T(lang, 'tabTerms')),
+        (terms_paths()[lang], T(lang, 'tabTerms')),
     ]
 
 
@@ -610,7 +612,6 @@ def build_atg_home(d: dict, lang: str) -> None:
     <h3 class="cat-band" id="cat-{cat['id']}" style="--fill:{band_fill(cat['accent'])};--lip:{band_lip(cat['accent'])}">
       <img src="{s('categories/' + cat['id'] + '.webp')}" alt="" width="44" height="44">
       <span>{esc(cat_label(d, lang, cat))}</span>
-      <span class="cat-count">{esc(T(lang, 'gamesCount', n=len(mine)))}</span>
     </h3>
     <ul class="games">
       {tiles}
@@ -630,7 +631,7 @@ def build_atg_home(d: dict, lang: str) -> None:
   </div>
 </section>
 <section class="wrap catalog" aria-labelledby="los-juegos">
-  <h2 id="los-juegos" class="atg-h2">{esc(T(lang, 'atgGames', n=len(games)))}</h2>
+  <h2 id="los-juegos" class="atg-h2">{esc(T(lang, 'atgGames'))}</h2>
   {''.join(cats)}
 </section>
 <section class="wrap atg-help" aria-labelledby="atg-ayuda">
@@ -638,7 +639,7 @@ def build_atg_home(d: dict, lang: str) -> None:
   <div class="help-row">
     <a class="sticker" href="{c.to(lp(lang, 'apps/allthegames/soporte/'))}">{esc(T(lang, 'support'))}</a>
     <a class="sticker sticker-soft" href="{c.to(privacy_paths()[lang])}">{esc(T(lang, 'privacy'))}</a>
-    <a class="sticker sticker-soft" href="{c.to(TERMS_PATH)}" hreflang="es">{esc(T(lang, 'termsLong') + T(lang, 'termsNote'))}</a>
+    <a class="sticker sticker-soft" href="{c.to(terms_paths()[lang])}">{esc(T(lang, 'termsLong'))}</a>
   </div>
 </section>'''
     page(here, title=f'AllTheGames · {BRAND}', description=app_text(d, lang, 'lead'), main=main, theme='atg',
@@ -686,6 +687,21 @@ def privacy_paths() -> dict:
     return {l: 'apps/allthegames/privacidad/' + ('' if l == 'es' else l + '/') for l in LANGS}
 
 
+def terms_paths() -> dict:
+    return {l: 'apps/allthegames/terminos/' + ('' if l == 'es' else l + '/') for l in LANGS}
+
+
+def lang_chips(c: Ctx, lang: str, here: str, paths: dict) -> str:
+    """Los idiomas de un texto legal, como fichas (la del idioma actual, marcada)."""
+    chips = []
+    for l in LANGS:
+        on = l == lang and here == paths[lang]
+        cls = 'chip chip-on' if on else 'chip'
+        cur = ' aria-current="page"' if on else ''
+        chips.append(f'<a class="{cls}" href="{c.to(paths[l])}" hreflang="{HTML_LANG[l]}" lang="{HTML_LANG[l]}"{cur}>{LANG_NAMES[l]}</a>')
+    return ''.join(chips)
+
+
 def privacy_main(d: dict, lang: str, here: str) -> str:
     c = Ctx(here)
     p = d['privacy'][lang]
@@ -694,20 +710,14 @@ def privacy_main(d: dict, lang: str, here: str) -> str:
     sections = ''.join(
         f'<h2>{esc(p[f"s{i}Title"])}</h2>\n  <p>{rich(p[f"s{i}Body"])}</p>\n  ' for i in range(1, 11)
     )
-    chips = []
-    for l in LANGS:
-        on = l == lang and here == paths[lang]
-        cls = 'chip chip-on' if on else 'chip'
-        cur = ' aria-current="page"' if on else ''
-        chips.append(f'<a class="{cls}" href="{c.to(paths[l])}" hreflang="{HTML_LANG[l]}" lang="{HTML_LANG[l]}"{cur}>{LANG_NAMES[l]}</a>')
     title = p['title'][:1] + p['title'][1:].lower()
     return f'''<div class="wrap narrow sheet legal">
   <h1 class="band-title" style="--fill:{band_fill(PIZARRA)};--lip:{band_lip(PIZARRA)}">{esc(title)}</h1>
   <p class="meta">{esc(p['updated'].replace('{date}', p['date']))}</p>
-  <nav class="langs" aria-label="{esc(chrome['langs'])}">{''.join(chips)}</nav>
+  <nav class="langs" aria-label="{esc(chrome['langs'])}">{lang_chips(c, lang, here, paths)}</nav>
   <p class="lead">{rich(p['intro'])}</p>
   {sections}
-  <p class="legal-links"><a href="{c.to(TERMS_PATH)}" hreflang="es">{esc(chrome['terms'])}</a></p>
+  <p class="legal-links"><a href="{c.to(terms_paths()[lang])}">{esc(chrome['terms'])}</a></p>
 </div>'''
 
 
@@ -728,25 +738,35 @@ def build_atg_privacy(d: dict) -> None:
 
 
 def build_atg_terms(d: dict) -> None:
-    """Los términos de compra, de momento solo en español."""
-    t = d['terms']
-    # En el selector de idioma, los demás idiomas llevan a la ficha de la app en su idioma.
-    links = {l: (TERMS_PATH if l == 'es' else lp(l, 'apps/allthegames/')) for l in LANGS}
-    for here in (TERMS_PATH, f'apps/allthegames/terminos/{t["version"]}/'):
+    """Los términos de compra, en los 6 idiomas (copiados de la app con tools/export-terms.py)."""
+    paths = terms_paths()
+
+    def main_for(lang: str, here: str) -> str:
         c = Ctx(here)
-        priv = f'<a href="{c.to(privacy_paths()["es"])}">nota de privacidad</a>'
+        t = d['terms'][lang]
+        priv = f'<a href="{c.to(privacy_paths()[lang])}">{esc(t.get("privacyLinkText", "nota de privacidad"))}</a>'
         sections = ''.join(
             f'<h2>{esc(h)}</h2>\n  <p>{rich(b, {"privacyLink": priv})}</p>\n  ' for h, b in t['sections']
         )
-        main = f'''<div class="wrap narrow sheet legal">
+        return f'''<div class="wrap narrow sheet legal">
   <h1 class="band-title" style="--fill:{band_fill(PIZARRA)};--lip:{band_lip(PIZARRA)}">{esc(t['title'])}</h1>
   <p class="meta">{esc(t['updated'])}</p>
+  <nav class="langs" aria-label="{esc(T(lang, 'langMenu'))}">{lang_chips(c, lang, here, paths)}</nav>
   <p class="lead">{esc(t['intro'])}</p>
   {sections}
 </div>'''
-        page(here, title=f'Términos de las compras · AllTheGames', description=t['intro'], main=main,
-             theme='atg', section='apps/allthegames/', links=links, hreflang=False,
-             pre_main=atg_nav(c, TERMS_PATH, 'es'), favicon=ATG_ICON)
+
+    for lang in LANGS:
+        here = paths[lang]
+        t = d['terms'][lang]
+        page(here, title=f'{t["title"]} · AllTheGames', description=t['intro'], main=main_for(lang, here),
+             theme='atg', section=lp(lang, 'apps/allthegames/'), lang=lang, links=paths,
+             pre_main=atg_nav(Ctx(here), here, lang), favicon=ATG_ICON)
+    es = d['terms']['es']
+    dated = f'apps/allthegames/terminos/{es["version"]}/'
+    page(dated, title=f'{es["title"]} ({es["version"]}) · AllTheGames', description=es['intro'],
+         main=main_for('es', dated), theme='atg', section='apps/allthegames/', links=paths, hreflang=False,
+         pre_main=atg_nav(Ctx(dated), paths['es'], 'es'), favicon=ATG_ICON)
 
 
 # ---------------------------------------------------------------------------

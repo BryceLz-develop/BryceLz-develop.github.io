@@ -333,6 +333,7 @@
 "id": 55,
 "name": "Lanza canicas",
 "slug": "canicas",
+"hidden": true,
 "type": "accion",
 "playable": true,
 "short": "Tira una canica a la cola. Tres del mismo color saltan.",

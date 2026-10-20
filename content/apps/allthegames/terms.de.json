@@ -1,0 +1,33 @@
+{
+  "version": "2026-10-06",
+  "updated": "Aktualisiert am 6. Oktober 2026",
+  "title": "Bedingungen für Käufe",
+  "intro": "AllTheGames spielst du auf dem Handy. Diese Bedingungen betreffen das, was du im Store bezahlst. Sie sind so geschrieben, dass die ganze Familie sie versteht.",
+  "sections": [
+    [
+      "Was du kaufen kannst",
+      "Münzpakete, das Entfernen der Werbung, ein monatliches Abo mit automatischer Verlängerung, mit 40 Münzen pro Tag und ohne Werbung zwischen den Partien, und Premium für immer (ohne Werbung zwischen den Partien und ohne Eintritt für die Spiele). Werbung mit Belohnung gibt es weiterhin, wenn der Spieler sie auswählt. Es gelten der Inhalt und der Preis, die Google Play oder der App Store vor dem Bestätigen anzeigen; sie können je nach Land unterschiedlich sein."
+    ],
+    [
+      "Münzen",
+      "Münzen gelten nur in AllTheGames (Eintritt, Tipp, Rückgängig, Weiterspielen). Sie lassen sich nicht in Geld umtauschen. Wenn du die App deinstallierst, gehen die Münzen auf diesem Handy verloren; bezahlte Pässe bekommst du mit „Käufe wiederherstellen“ über dasselbe Store-Konto zurück."
+    ],
+    [
+      "Wer abrechnet",
+      "Die Zahlung wickeln Google Play oder Apple ab, nicht wir. Das Abo verlängert sich jeden Monat, bis du es in deinem Store-Konto kündigst. Nach der Kündigung bleiben die Vorteile bis zum Ende des bereits bezahlten Zeitraums. Erstattungen laufen über den Store und können den Zugang entfernen."
+    ],
+    [
+      "Kinder",
+      "Die App ist zum Spielen zu Hause gedacht. Käufe werden über das Store-Konto freigegeben (fast immer von einem Erwachsenen). Wenn dir eine Abbuchung komisch vorkommt, schreib an {email}."
+    ],
+    [
+      "Inhaber",
+      "AllTheGames wird von Brais López Arias (Privatperson) veröffentlicht. Kontakt: {email}."
+    ],
+    [
+      "Datenschutz",
+      "Wie wir mit Daten umgehen, steht im {privacyLink}."
+    ]
+  ],
+  "privacyLinkText": "Datenschutzhinweis"
+}
