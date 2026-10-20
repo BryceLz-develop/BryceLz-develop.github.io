@@ -13,6 +13,7 @@ privacidad mantiene sus direcciones de siempre (/apps/allthegames/privacidad/<id
 que son las que figuran en la tienda. Los términos de compra, de momento, solo
 están en español.
 """
+import hashlib
 import html
 import json
 import math
@@ -32,6 +33,8 @@ BRAND = SITE['brand']
 OWNER = SITE['owner']
 EMAIL = SITE['email']
 YEAR = SITE['year']
+# Huella de la hoja de estilos: cambia la dirección en cada versión para que nadie se quede con la vieja en caché.
+CSS_VER = hashlib.sha1((STATIC / 'site.css').read_bytes()).hexdigest()[:8]
 
 # Orden del selector de idioma (el mismo que la app).
 LANGS = ['es', 'en', 'pt', 'it', 'fr', 'de']
@@ -312,7 +315,7 @@ def page(
   <meta name="theme-color" content="{"#935127" if theme == "atg" else "#6E1F2A"}">
   <link rel="icon" href="{c.to(icon)}">
   <link rel="apple-touch-icon" href="{c.to('static/brand/apple-touch-icon.png')}">
-  <link rel="stylesheet" href="{c.to('static/site.css')}">
+  <link rel="stylesheet" href="{c.to('static/site.css')}?v={CSS_VER}">
 </head>
 <body class="theme-{theme}">
 <a class="skip" href="#contenido">{esc(T(lang, 'skip'))}</a>
