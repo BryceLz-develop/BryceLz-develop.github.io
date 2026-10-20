@@ -1,0 +1,52 @@
+{
+ "en": {
+  "lead": "60 classic games in one app: cards, board games, numbers, words, puzzles and action.",
+  "facts": [
+   "No account or sign-up: everything is saved on your phone.",
+   "Almost everything works offline. Only the flags and three word games need the internet.",
+   "Nine games for two people on the same phone.",
+   "In Spanish, English, French, German, Italian and Portuguese.",
+   "For the whole family: ads are never personalised and are suitable for children."
+  ]
+ },
+ "pt": {
+  "lead": "60 jogos clássicos em um só app: cartas, jogos de tabuleiro, números, letras, quebra-cabeças e ação.",
+  "facts": [
+   "Sem conta nem cadastro: tudo fica salvo no seu celular.",
+   "Quase tudo funciona sem internet. Só as bandeiras e três jogos de palavras precisam de conexão.",
+   "Nove jogos para duas pessoas no mesmo celular.",
+   "Em espanhol, inglês, francês, alemão, italiano e português.",
+   "Para toda a família: os anúncios nunca são personalizados e são adequados para crianças."
+  ]
+ },
+ "it": {
+  "lead": "60 giochi di sempre in un’unica app: carte, giochi da tavolo, numeri, parole, puzzle e azione.",
+  "facts": [
+   "Senza account né registrazione: tutto resta salvato sul tuo telefono.",
+   "Quasi tutto si gioca offline. Solo le bandiere e tre giochi di parole hanno bisogno di internet.",
+   "Nove giochi per due persone sullo stesso telefono.",
+   "In spagnolo, inglese, francese, tedesco, italiano e portoghese.",
+   "Per tutta la famiglia: gli annunci non sono mai personalizzati e sono adatti ai minori."
+  ]
+ },
+ "fr": {
+  "lead": "60 jeux classiques dans une seule appli : cartes, jeux de plateau, chiffres, lettres, puzzles et action.",
+  "facts": [
+   "Sans compte ni inscription : tout est enregistré sur ton téléphone.",
+   "Presque tout se joue hors connexion. Seuls les drapeaux et trois jeux de lettres ont besoin d’internet.",
+   "Neuf jeux à deux sur le même téléphone.",
+   "En espagnol, anglais, français, allemand, italien et portugais.",
+   "Pour toute la famille : les pubs ne sont jamais personnalisées et conviennent aux enfants."
+  ]
+ },
+ "de": {
+  "lead": "60 Spieleklassiker in einer App: Karten, Brettspiele, Zahlen, Wörter, Rätsel und Action.",
+  "facts": [
+   "Ohne Konto und ohne Anmeldung: Alles wird auf deinem Handy gespeichert.",
+   "Fast alles läuft offline. Nur die Flaggen und drei Wortspiele brauchen Internet.",
+   "Neun Spiele für zwei Personen am selben Handy.",
+   "Auf Spanisch, Englisch, Französisch, Deutsch, Italienisch und Portugiesisch.",
+   "Für die ganze Familie: Die Werbung ist nie personalisiert und für Kinder geeignet."
+  ]
+ }
+}

@@ -7,11 +7,24 @@ soporte, nota de privacidad (en 6 idiomas) y términos. Abajo, el aviso legal.
 
 ```
 docs/                     ← lo que publica GitHub Pages (se genera, no se edita a mano)
-content/site.json         ← marca, textos de la portada, correo, dirección de la web, AdMob
-content/apps/allthegames/ ← textos de AllTheGames (ficha, juegos, soporte, legal)
+content/site.json         ← marca, titular, correo, dirección de la web, AdMob
+content/ui.json           ← todos los textos de la web en los 6 idiomas
+content/apps/allthegames/ ← AllTheGames: ficha (app.json + app.i18n.json), juegos,
+                            nombres traducidos (catalog-i18n.json), FAQ por idioma, legal
 static/                   ← estilos, fuentes e imágenes
 build.py                  ← genera docs/ a partir de content/ y static/
 tools/export-privacy.ts   ← copia la nota de privacidad desde la app
+tools/export-catalog.ts   ← copia de la app los nombres de juegos y categorías en 6 idiomas
+```
+
+## Idiomas
+
+Español en la raíz y el resto en `/en/`, `/pt/`, `/it/`, `/fr/`, `/de/`. La privacidad mantiene
+`/apps/allthegames/privacidad/<idioma>/`. Los términos de compra solo están en español hasta que
+la app tenga su traducción. Cuando cambien los juegos de la app:
+
+```
+npx tsx tools/export-catalog.ts RUTA/A/AllTheGames/mobile > content/apps/allthegames/catalog-i18n.json
 ```
 
 ## Publicar

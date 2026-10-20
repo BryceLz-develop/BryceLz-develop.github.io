@@ -4,14 +4,21 @@ Genera la web de BryceLz en docs/ a partir de content/ y static/.
 
     python3 build.py
 
-GitHub Pages publica la carpeta docs/ de la rama main. Solo hace falta
+GitHub Pages publica lo generado en docs/ (rama main). Solo hace falta
 Python 3, sin instalar nada.
+
+Idiomas: el español va en la raíz (/, /aviso-legal/, /apps/allthegames/...)
+y los demás bajo su código (/en/, /pt/, /it/, /fr/, /de/). La nota de
+privacidad mantiene sus direcciones de siempre (/apps/allthegames/privacidad/<idioma>/),
+que son las que figuran en la tienda. Los términos de compra, de momento, solo
+están en español.
 """
 import html
 import json
 import math
 import re
 import shutil
+import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -20,24 +27,19 @@ STATIC = ROOT / 'static'
 OUT = ROOT / 'docs'
 
 SITE = json.loads((CONTENT / 'site.json').read_text('utf-8'))
+UI = json.loads((CONTENT / 'ui.json').read_text('utf-8'))
 BRAND = SITE['brand']
 OWNER = SITE['owner']
 EMAIL = SITE['email']
 YEAR = SITE['year']
 
-LANGS = ['es', 'en', 'fr', 'de', 'it', 'pt']
-LANG_NAMES = {
-    'es': 'Español', 'en': 'English', 'fr': 'Français',
-    'de': 'Deutsch', 'it': 'Italiano', 'pt': 'Português',
-}
+# Orden del selector de idioma (el mismo que la app).
+LANGS = ['es', 'en', 'pt', 'it', 'fr', 'de']
+LANG_NAMES = {l: UI[l]['langName'] for l in LANGS}
+HTML_LANG = {'es': 'es', 'en': 'en', 'pt': 'pt-BR', 'it': 'it', 'fr': 'fr', 'de': 'de'}
 # Texto de la web alrededor de la nota de privacidad, en cada idioma.
 PRIVACY_CHROME = {
-    'es': {'terms': 'Términos de las compras', 'langs': 'Otros idiomas'},
-    'en': {'terms': 'Purchase terms (in Spanish)', 'langs': 'Other languages'},
-    'fr': {'terms': 'Conditions d’achat (en espagnol)', 'langs': 'Autres langues'},
-    'de': {'terms': 'Kaufbedingungen (auf Spanisch)', 'langs': 'Andere Sprachen'},
-    'it': {'terms': 'Termini di acquisto (in spagnolo)', 'langs': 'Altre lingue'},
-    'pt': {'terms': 'Termos de compra (em espanhol)', 'langs': 'Outros idiomas'},
+    l: {'terms': UI[l]['termsLong'] + UI[l]['termsNote'], 'langs': UI[l]['langMenu']} for l in LANGS
 }
 
 # Enlaces dentro de los textos legales (solo nombres exactos).
@@ -152,10 +154,22 @@ def rich(text: str, extra: dict | None = None) -> str:
 
 
 def slug(text: str) -> str:
-    t = text.lower()
-    for a, b in zip('áéíóúüñ', 'aeiouun'):
-        t = t.replace(a, b)
+    t = unicodedata.normalize('NFKD', text.lower())
+    t = ''.join(ch for ch in t if not unicodedata.combining(ch))
     return re.sub(r'[^a-z0-9]+', '-', t).strip('-')
+
+
+def T(lang: str, key: str, **kw) -> str:
+    """Un texto de la web en un idioma, con sus marcadores {x} sustituidos (sin escapar)."""
+    text = UI[lang][key]
+    for k, v in kw.items():
+        text = text.replace('{' + k + '}', str(v))
+    return text
+
+
+def lp(lang: str, path: str) -> str:
+    """La dirección de una página en un idioma: el español en la raíz, el resto bajo su código."""
+    return path if lang == 'es' else f'{lang}/{path}'
 
 
 class Ctx:
@@ -182,24 +196,50 @@ class Ctx:
 # ---------------------------------------------------------------------------
 # Piezas comunes
 
-# Los apartados del banner. De momento: Inicio y AllTheGames.
-NAV = [('', 'Inicio'), ('apps/allthegames/', 'AllTheGames')]
+
+def nav_items(lang: str) -> list[tuple[str, str]]:
+    """Los apartados del banner. De momento: Inicio y AllTheGames."""
+    return [(lp(lang, ''), T(lang, 'home')), (lp(lang, 'apps/allthegames/'), 'AllTheGames')]
 
 
-def wordmark(c: Ctx) -> str:
+def wordmark(c: Ctx, lang: str) -> str:
     return (
-        f'<a class="wordmark" href="{c.to("")}" aria-label="{BRAND}, inicio">'
+        f'<a class="wordmark" href="{c.to(lp(lang, ""))}" aria-label="{esc(T(lang, "homeAria"))}">'
         f'<img class="wordmark-img" src="{c.to("static/brand/logo.webp")}" alt="{BRAND}" width="640" height="188"></a>'
     )
 
 
-def site_header(c: Ctx, section: str | None) -> str:
+GLOBE = (
+    '<svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" '
+    'stroke-width="1.8"><circle cx="10" cy="10" r="7.5"/><path d="M2.5 10h15M10 2.5c2.2 2.3 3.2 4.8 3.2 7.5S12.2 15.2 10 17.5'
+    'M10 2.5C7.8 4.8 6.8 7.3 6.8 10s1 5.2 3.2 7.5"/></svg>'
+)
+
+
+def lang_menu(c: Ctx, lang: str, links: dict) -> str:
+    """Selector de idioma: cada idioma lleva a la misma página en ese idioma."""
+    items = []
+    for l in LANGS:
+        cur = ' aria-current="true"' if l == lang else ''
+        items.append(
+            f'<li><a href="{c.to(links[l])}" hreflang="{HTML_LANG[l]}" lang="{HTML_LANG[l]}"{cur}>{LANG_NAMES[l]}</a></li>'
+        )
+    return f'''<details class="lang-menu">
+      <summary aria-label="{esc(T(lang, 'langMenu'))}: {LANG_NAMES[lang]}">{GLOBE}<span>{lang.upper()}</span></summary>
+      <ul>{''.join(items)}</ul>
+    </details>'''
+
+
+def site_header(c: Ctx, section: str | None, lang: str, links: dict) -> str:
     """El banner de arriba, como los de la app: banda honda con labio y botones dentro."""
-    tabs = ''.join(_nav_link(c, path, label, section) for path, label in NAV)
+    tabs = ''.join(_nav_link(c, path, label, section) for path, label in nav_items(lang))
     return f'''<header class="banner">
   <div class="wrap banner-row">
-    {wordmark(c)}
-    <nav class="banner-nav" aria-label="Apartados">{tabs}</nav>
+    {wordmark(c, lang)}
+    <div class="banner-end">
+      <nav class="banner-nav" aria-label="{esc(T(lang, 'navAria'))}">{tabs}</nav>
+      {lang_menu(c, lang, links)}
+    </div>
   </div>
 </header>'''
 
@@ -209,18 +249,23 @@ def _nav_link(c: Ctx, path: str, label: str, section: str | None) -> str:
     return f'<a class="banner-tab" href="{c.to(path)}"{current}>{label}</a>'
 
 
-def site_footer(c: Ctx, apps: list[dict]) -> str:
+def site_footer(c: Ctx, lang: str) -> str:
     """El pie cierra la página como el banner la abre: banda honda, esquinas de arriba redondas."""
     return f'''<footer class="site-foot">
   <div class="wrap foot-row">
-    {wordmark(c)}
-    <nav class="foot-links" aria-label="Pie">
-      <a href="{c.to('aviso-legal/')}">Aviso legal</a>
+    {wordmark(c, lang)}
+    <nav class="foot-links" aria-label="{esc(T(lang, 'footAria'))}">
+      <a href="{c.to(lp(lang, 'aviso-legal/'))}">{esc(T(lang, 'legalNotice'))}</a>
       {mail_link()}
     </nav>
-    <p class="foot-copy">© {YEAR} {esc(OWNER)}</p>
+    <p class="foot-copy">© {YEAR} {esc(OWNER)} ({esc(T(lang, 'ownerNote'))})</p>
   </div>
 </footer>'''
+
+
+def same_page(path: str) -> dict:
+    """La misma página en los 6 idiomas (para páginas que existen en todos)."""
+    return {l: lp(l, path) for l in LANGS}
 
 
 def page(
@@ -231,25 +276,27 @@ def page(
     main: str,
     theme: str,
     section: str | None,
-    apps: list[dict],
     lang: str = 'es',
+    links: dict | None = None,
+    hreflang: bool = True,
     pre_main: str = '',
-    alternates: dict | None = None,
     absolute: bool = False,
     favicon: str | None = None,
 ) -> None:
+    """Escribe una página. `links` dice dónde está esta misma página en cada idioma."""
     here = path if (path == '' or path.endswith('/')) else (path.rsplit('/', 1)[0] + '/' if '/' in path else '')
     c = Ctx(here, absolute)
     base = SITE['baseUrl'].rstrip('/')
     canonical = base + '/' + (path if path.endswith('/') or path == '' else path)
+    links = links or {l: lp(l, '') for l in LANGS}
     alt = ''
-    if alternates:
+    if hreflang and len(set(links.values())) == len(LANGS):
         alt = ''.join(
-            f'\n  <link rel="alternate" hreflang="{l}" href="{base}/{p}">' for l, p in alternates.items()
-        )
+            f'\n  <link rel="alternate" hreflang="{HTML_LANG[l]}" href="{base}/{p}">' for l, p in links.items()
+        ) + f'\n  <link rel="alternate" hreflang="x-default" href="{base}/{links["es"]}">'
     icon = favicon or 'static/brand/favicon-64.png'
     doc = f'''<!doctype html>
-<html lang="{lang}">
+<html lang="{HTML_LANG[lang]}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -268,13 +315,22 @@ def page(
   <link rel="stylesheet" href="{c.to('static/site.css')}">
 </head>
 <body class="theme-{theme}">
-<a class="skip" href="#contenido">Saltar al contenido</a>
-{site_header(c, section)}
+<a class="skip" href="#contenido">{esc(T(lang, 'skip'))}</a>
+{site_header(c, section, lang, links)}
 {pre_main}
 <main id="contenido">
 {main}
 </main>
-{site_footer(c, apps)}
+{site_footer(c, lang)}
+<script>
+  // El selector de idioma se cierra al tocar fuera o con Escape.
+  (function () {{
+    var m = document.querySelector('.lang-menu');
+    if (!m) return;
+    document.addEventListener('click', function (e) {{ if (m.open && !m.contains(e.target)) m.open = false; }});
+    document.addEventListener('keydown', function (e) {{ if (e.key === 'Escape' && m.open) {{ m.open = false; m.querySelector('summary').focus(); }} }});
+  }})();
+</script>
 </body>
 </html>
 '''
@@ -290,21 +346,41 @@ def page(
 def load() -> dict:
     base = CONTENT / 'apps' / 'allthegames'
     app = json.loads((base / 'app.json').read_text('utf-8'))
+    app_i18n = json.loads((base / 'app.i18n.json').read_text('utf-8'))
+    catalog = json.loads((base / 'catalog-i18n.json').read_text('utf-8'))
+    faq = {'es': json.loads((base / 'faq.es.json').read_text('utf-8'))}
+    for l in LANGS[1:]:
+        faq[l] = json.loads((base / f'faq.{l}.json').read_text('utf-8'))
     return {
         'app': app,
-        'apps': [app],
+        'appI18n': app_i18n,
+        'catalog': catalog,
         'games': json.loads((base / 'games.json').read_text('utf-8')),
         'privacy': json.loads((base / 'privacy.json').read_text('utf-8')),
         'terms': json.loads((base / 'terms.es.json').read_text('utf-8')),
-        'faq': json.loads((base / 'faq.es.json').read_text('utf-8')),
+        'faq': faq,
     }
+
+
+def app_text(d: dict, lang: str, key: str):
+    """Texto de la ficha de AllTheGames (lead, facts) en un idioma."""
+    return d['app'][key] if lang == 'es' else d['appI18n'][lang][key]
+
+
+def game_name(d: dict, lang: str, g: dict) -> str:
+    """Nombre del juego tal como lo dice la app en ese idioma."""
+    return g['name'] if lang == 'es' else d['catalog'][lang]['games'][g['slug']]['name']
+
+
+def cat_label(d: dict, lang: str, cat: dict) -> str:
+    return cat['label'] if lang == 'es' else d['catalog'][lang]['folders'][cat['id']]
 
 
 PRIMARY = '#C9692E'  # el naranja de la app (botones principales)
 STUDIO = '#6E1F2A'  # el granate del estudio
 
 
-def carousel(c: Ctx, d: dict) -> str:
+def carousel(c: Ctx, d: dict, lang: str) -> str:
     """Pared de ladrillos con los juegos: filas desplazadas que van una hacia cada lado."""
     app, games = d['app'], d['games']
     accent = {cat['id']: cat['accent'] for cat in app['categories']}
@@ -315,15 +391,16 @@ def carousel(c: Ctx, d: dict) -> str:
         for cid in order:
             if queues[cid]:
                 mixed.append(queues[cid].pop(0))
+    atg = c.to(lp(lang, 'apps/allthegames/'))
 
     def tile(g: dict, copy: bool) -> str:
         hidden = ' aria-hidden="true" tabindex="-1"' if copy else ''
         cat = accent[g['folder']]
         return (
             f'<li style="--tile:{pastel(cat, 0.14)};--tag:{band_fill(cat)}">'
-            f'<a href="{c.to("apps/allthegames/")}#cat-{g["folder"]}"{hidden}>'
+            f'<a href="{atg}#cat-{g["folder"]}"{hidden}>'
             f'<img src="{c.to("static/apps/allthegames/games/" + g["slug"] + ".webp")}" alt="" width="96" height="96" loading="lazy">'
-            f'<span class="tile-name">{esc(g["name"])}</span>'
+            f'<span class="tile-name">{esc(game_name(d, lang, g))}</span>'
             f'</a></li>'
         )
 
@@ -337,6 +414,7 @@ def carousel(c: Ctx, d: dict) -> str:
         first = ''.join(tile(g, False) for g in part)
         again = ''.join(tile(g, True) for g in part) * 2
         lines.append(f'<ul class="carousel-track">{first}{again}</ul>')
+    pause, resume = json.dumps(T(lang, 'pause')), json.dumps(T(lang, 'resume'))
     return f'''<div class="carousel" data-carousel>
     {''.join(lines)}
   </div>
@@ -344,7 +422,7 @@ def carousel(c: Ctx, d: dict) -> str:
     <button class="carousel-toggle" type="button" data-carousel-toggle aria-pressed="false">
       <svg class="icon-pause" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><rect x="4" y="3" width="4.2" height="14" rx="1.6"/><rect x="11.8" y="3" width="4.2" height="14" rx="1.6"/></svg>
       <svg class="icon-play" viewBox="0 0 20 20" width="18" height="18" aria-hidden="true"><path d="M6 3.6c0-1 1.1-1.6 2-1.1l9 5.9c.8.5.8 1.7 0 2.2l-9 5.9c-.9.5-2-.1-2-1.1z"/></svg>
-      <span data-carousel-label>Pausar</span>
+      <span data-carousel-label>{esc(T(lang, 'pause'))}</span>
     </button>
   </div>
 <script>
@@ -356,63 +434,66 @@ def carousel(c: Ctx, d: dict) -> str:
     btn.addEventListener('click', function () {{
       var paused = box.classList.toggle('is-paused');
       btn.setAttribute('aria-pressed', paused ? 'true' : 'false');
-      label.textContent = paused ? 'Reanudar' : 'Pausar';
+      label.textContent = paused ? {resume} : {pause};
     }});
   }})();
 </script>'''
 
 
-def build_home(d: dict) -> None:
+def build_home(d: dict, lang: str) -> None:
     """Inicio: la portada del estudio, con las mismas piezas que la app."""
-    c = Ctx('')
+    here = lp(lang, '')
+    c = Ctx(here)
     app, games = d['app'], d['games']
     s = lambda p: c.to('static/apps/allthegames/' + p)
+    atg = lambda p='': c.to(lp(lang, 'apps/allthegames/' + p))
     n_games = len(games)
     chips = ''.join(
-        f'<li style="--chip:{cat["accent"]}">{esc(cat["label"])} <span>{sum(1 for g in games if g["folder"] == cat["id"])}</span></li>'
+        f'<li style="--chip:{cat["accent"]}">{esc(cat_label(d, lang, cat))} <span>{sum(1 for g in games if g["folder"] == cat["id"])}</span></li>'
         for cat in app['categories']
     )
-    store = 'Ya está en Google Play.' if app.get('storePublished') else 'Muy pronto en Google Play.'
+    store = T(lang, 'storeYes') if app.get('storePublished') else T(lang, 'storeSoon')
+    subject = T(lang, 'workSubject').replace(' ', '%20')
     main = f'''<section class="wrap hero">
   <div class="hero-copy">
-    <h1 class="display hero-title">{esc(SITE['headline'])}</h1>
-    <p class="lead">{esc(SITE['intro'])}</p>
+    <h1 class="display hero-title">{esc(T(lang, 'headline'))}</h1>
+    <p class="lead">{esc(T(lang, 'intro'))}</p>
     <div class="actions">
-      <a class="sticker" href="apps/allthegames/">Conoce AllTheGames</a>
-      <a class="sticker sticker-soft" href="#contacto">Escríbeme</a>
+      <a class="sticker" href="{atg()}">{esc(T(lang, 'ctaApp'))}</a>
+      <a class="sticker sticker-soft" href="#contacto">{esc(T(lang, 'ctaWrite'))}</a>
     </div>
   </div>
   <div class="hero-art" aria-hidden="true">
     <img class="hero-icon" src="{s('icon.webp')}" alt="" width="384" height="384">
-    <span class="hero-chip chip-a" style="--chip:#2F7A55">{n_games} juegos</span>
-    <span class="hero-chip chip-b" style="--chip:#2D63A6">6 idiomas</span>
-    <span class="hero-chip chip-c" style="--chip:#7048A8">Sin cuenta</span>
+    <span class="hero-chip chip-a" style="--chip:#2F7A55">{esc(T(lang, 'chipGames', n=n_games))}</span>
+    <span class="hero-chip chip-b" style="--chip:#2D63A6">{esc(T(lang, 'chipLangs'))}</span>
+    <span class="hero-chip chip-c" style="--chip:#7048A8">{esc(T(lang, 'chipNoAccount'))}</span>
   </div>
 </section>
 
 <section class="games-wall" aria-labelledby="juegos-h">
   <div class="wrap section-head">
-    <h2 id="juegos-h" class="display">Los {n_games} juegos de AllTheGames</h2>
-    <a href="apps/allthegames/">Verlos por categoría</a>
+    <h2 id="juegos-h" class="display">{esc(T(lang, 'wallTitle', n=n_games))}</h2>
+    <a href="{atg()}">{esc(T(lang, 'wallLink'))}</a>
   </div>
-  {carousel(c, d)}
+  {carousel(c, d, lang)}
 </section>
 
 <section class="wrap block" aria-labelledby="app-h">
-  <h2 id="app-h" class="display">La app</h2>
+  <h2 id="app-h" class="display">{esc(T(lang, 'theApp'))}</h2>
   <article class="feature card">
-    <a class="feature-art" href="apps/allthegames/" tabindex="-1" aria-hidden="true">
+    <a class="feature-art" href="{atg()}" tabindex="-1" aria-hidden="true">
       <img src="{s('logo.webp')}" alt="" width="743" height="500">
     </a>
     <div class="feature-copy">
-      <h3 class="display feature-name"><a href="apps/allthegames/">AllTheGames</a></h3>
-      <p>{esc(app['lead'])}</p>
-      <ul class="chips" aria-label="Juegos por categoría">{chips}</ul>
-      <p class="muted">Para Android. {store}</p>
+      <h3 class="display feature-name"><a href="{atg()}">AllTheGames</a></h3>
+      <p>{esc(app_text(d, lang, 'lead'))}</p>
+      <ul class="chips" aria-label="{esc(T(lang, 'byCategory'))}">{chips}</ul>
+      <p class="muted">{esc(T(lang, 'forAndroid'))} {esc(store)}</p>
       <div class="actions">
-        <a class="sticker" href="apps/allthegames/">Ver la app</a>
-        <a class="sticker sticker-soft" href="apps/allthegames/soporte/">Soporte</a>
-        <a class="sticker sticker-soft" href="apps/allthegames/privacidad/">Privacidad</a>
+        <a class="sticker" href="{atg()}">{esc(T(lang, 'seeApp'))}</a>
+        <a class="sticker sticker-soft" href="{atg('soporte/')}">{esc(T(lang, 'support'))}</a>
+        <a class="sticker sticker-soft" href="{c.to(privacy_paths()[lang])}">{esc(T(lang, 'privacy'))}</a>
       </div>
     </div>
   </article>
@@ -420,67 +501,79 @@ def build_home(d: dict) -> None:
 
 <section class="wrap block" id="contacto" aria-labelledby="contacto-h">
   <div class="card sheet-card">
-    <h2 id="contacto-h" class="band-title" style="--fill:{band_fill(STUDIO)};--lip:{band_lip(STUDIO)}">Contacto</h2>
+    <h2 id="contacto-h" class="band-title" style="--fill:{band_fill(STUDIO)};--lip:{band_lip(STUDIO)}">{esc(T(lang, 'contact'))}</h2>
     <div class="contact-grid">
       <div>
-        <h3>Ayuda con una app</h3>
-        <p>Mira primero sus preguntas frecuentes. Si no está la respuesta, escríbeme con qué móvil usas y qué ha pasado.</p>
-        <a class="sticker" href="apps/allthegames/soporte/">Soporte de AllTheGames</a>
+        <h3>{esc(T(lang, 'helpTitle'))}</h3>
+        <p>{esc(T(lang, 'helpBody'))}</p>
+        <a class="sticker" href="{atg('soporte/')}">{esc(T(lang, 'helpButton'))}</a>
       </div>
       <div>
-        <h3>Trabajo y colaboraciones</h3>
-        <p>Cuéntame la idea, para quién es y los plazos que tienes en mente.</p>
-        <a class="sticker sticker-soft" href="mailto:{EMAIL}?subject=Propuesta%20de%20trabajo">Escribir a {esc(EMAIL)}</a>
+        <h3>{esc(T(lang, 'workTitle'))}</h3>
+        <p>{esc(T(lang, 'workBody'))}</p>
+        <a class="sticker sticker-soft" href="mailto:{EMAIL}?subject={esc(subject)}">{esc(T(lang, 'writeTo', email=EMAIL))}</a>
       </div>
     </div>
   </div>
 </section>'''
-    page('', title=f'{BRAND}: apps sencillas para toda la casa', description=SITE['intro'], main=main,
-         theme='studio', section='', apps=d['apps'])
+    page(here, title=T(lang, 'homeTitle'), description=T(lang, 'intro'), main=main,
+         theme='studio', section=here, lang=lang, links=same_page(''))
 
 
-def build_legal_notice(d: dict) -> None:
+def build_legal_notice(d: dict, lang: str) -> None:
+    here = lp(lang, 'aviso-legal/')
+    docs = ('<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">'
+            f'{esc(T(lang, "legalDocs"))}</a>')
+    owner = esc(T(lang, 'legalOwner')).replace('{owner}', esc(OWNER)).replace(
+        '{note}', esc(T(lang, 'ownerNote'))).replace('{email}', mail_link())
+    data = esc(T(lang, 'legalData')).replace('{docs}', docs)
     main = f'''<div class="wrap narrow sheet legal">
-  <h1 class="band-title" style="--fill:{band_fill(STUDIO)};--lip:{band_lip(STUDIO)}">Aviso legal</h1>
-  <h2>Titular</h2>
-  <p>Esta web y las apps que aparecen en ella son de {esc(OWNER)} ({esc(SITE['ownerNote'])}), que las publica con el nombre {BRAND}. Contacto: {mail_link()}.</p>
-  <h2>Qué es esta web</h2>
-  <p>Presenta las apps de {BRAND} y recoge su ayuda, su nota de privacidad y sus términos. Cada app tiene los suyos en su propia sección.</p>
-  <h2>Datos y cookies</h2>
-  <p>Esta web no usa cookies, ni analítica, ni formularios, y no carga nada de otros sitios. La aloja GitHub Pages: GitHub registra la dirección IP de las visitas por motivos de seguridad, como <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">explica en su documentación</a>. Si me escribes, uso tu correo solo para contestarte.</p>
+  <h1 class="band-title" style="--fill:{band_fill(STUDIO)};--lip:{band_lip(STUDIO)}">{esc(T(lang, 'legalTitle'))}</h1>
+  <h2>{esc(T(lang, 'legalOwnerH'))}</h2>
+  <p>{owner}</p>
+  <h2>{esc(T(lang, 'legalWhatH'))}</h2>
+  <p>{esc(T(lang, 'legalWhat'))}</p>
+  <h2>{esc(T(lang, 'legalDataH'))}</h2>
+  <p>{data}</p>
 </div>'''
-    page('aviso-legal/', title=f'Aviso legal · {BRAND}', description=f'Titular y datos de la web de {BRAND}.',
-         main=main, theme='studio', section=None, apps=d['apps'])
+    page(here, title=f'{T(lang, "legalTitle")} · {BRAND}', description=T(lang, 'legalDescription'),
+         main=main, theme='studio', section=None, lang=lang, links=same_page('aviso-legal/'))
 
 
 def build_404(d: dict) -> None:
+    """Una sola página 404 para toda la web: en español y, debajo, en inglés."""
     main = f'''<div class="wrap narrow sheet">
-  <h1 class="band-title" style="--fill:{band_fill(STUDIO)};--lip:{band_lip(STUDIO)}">Esta página no existe</h1>
-  <p class="lead">Puede que la dirección esté mal escrita o que la página haya cambiado de sitio.</p>
-  <p><a class="sticker" href="/">Ir al inicio</a></p>
+  <h1 class="band-title" style="--fill:{band_fill(STUDIO)};--lip:{band_lip(STUDIO)}">{esc(T('es', 'notFoundTitle'))}</h1>
+  <p class="lead">{esc(T('es', 'notFoundBody'))}</p>
+  <p lang="en">{esc(T('en', 'notFoundTitle'))}. {esc(T('en', 'notFoundBody'))}</p>
+  <p><a class="sticker" href="/">{esc(T('es', 'notFoundHome'))}</a></p>
 </div>'''
-    page('404.html', title=f'Página no encontrada · {BRAND}', description='Página no encontrada.', main=main,
-         theme='studio', section=None, apps=d['apps'], absolute=True)
+    page('404.html', title=f'{T("es", "notFoundMeta")} · {BRAND}', description=T('es', 'notFoundMeta'), main=main,
+         theme='studio', section=None, hreflang=False, absolute=True)
 
 
 # ---------------------------------------------------------------------------
 # AllTheGames
 
-ATG_TABS = [
-    ('apps/allthegames/', 'La app'),
-    ('apps/allthegames/soporte/', 'Soporte'),
-    ('apps/allthegames/privacidad/', 'Privacidad'),
-    ('apps/allthegames/terminos/', 'Términos'),
-]
 PIZARRA = '#4A6076'
 ATG_ICON = 'static/apps/allthegames/favicon.png'
+TERMS_PATH = 'apps/allthegames/terminos/'
 
 
-def atg_nav(c: Ctx, current: str) -> str:
-    tabs = ''.join(_tab(c, p, label, current) for p, label in ATG_TABS)
+def atg_tabs(lang: str) -> list[tuple[str, str]]:
+    return [
+        (lp(lang, 'apps/allthegames/'), T(lang, 'tabApp')),
+        (lp(lang, 'apps/allthegames/soporte/'), T(lang, 'support')),
+        (privacy_paths()[lang], T(lang, 'privacy')),
+        (TERMS_PATH, T(lang, 'tabTerms')),
+    ]
+
+
+def atg_nav(c: Ctx, current: str, lang: str) -> str:
+    tabs = ''.join(_tab(c, p, label, current) for p, label in atg_tabs(lang))
     return f'''<div class="appnav">
   <div class="wrap appnav-row">
-    <a class="appnav-brand" href="{c.to('apps/allthegames/')}">
+    <a class="appnav-brand" href="{c.to(lp(lang, 'apps/allthegames/'))}">
       <img src="{c.to('static/apps/allthegames/icon.webp')}" alt="" width="40" height="40">
       <span>AllTheGames</span>
     </a>
@@ -491,82 +584,85 @@ def atg_nav(c: Ctx, current: str) -> str:
 
 def _tab(c: Ctx, p: str, label: str, current: str) -> str:
     cur = ' aria-current="page"' if p == current else ''
-    return f'<a href="{c.to(p)}"{cur}>{label}</a>'
+    return f'<a href="{c.to(p)}"{cur}>{esc(label)}</a>'
 
 
-def build_atg_home(d: dict) -> None:
+def build_atg_home(d: dict, lang: str) -> None:
     app, games = d['app'], d['games']
-    here = 'apps/allthegames/'
+    here = lp(lang, 'apps/allthegames/')
     c = Ctx(here)
     s = lambda p: c.to('static/apps/allthegames/' + p)
-    facts = ''.join(f'<li>{esc(f)}</li>' for f in app['facts'])
+    facts = ''.join(f'<li>{esc(f)}</li>' for f in app_text(d, lang, 'facts'))
     cats = []
     for cat in app['categories']:
         mine = [g for g in games if g['folder'] == cat['id']]
         tiles = ''.join(
             f'''<li class="game">
         <img src="{s('games/' + g['slug'] + '.webp')}" alt="" width="72" height="72" loading="lazy">
-        <span>{esc(g['name'])}</span>
+        <span>{esc(game_name(d, lang, g))}</span>
       </li>'''
             for g in mine
         )
         cats.append(f'''<section class="cat" aria-labelledby="cat-{cat['id']}">
     <h3 class="cat-band" id="cat-{cat['id']}" style="--fill:{band_fill(cat['accent'])};--lip:{band_lip(cat['accent'])}">
       <img src="{s('categories/' + cat['id'] + '.webp')}" alt="" width="44" height="44">
-      <span>{esc(cat['label'])}</span>
-      <span class="cat-count">{len(mine)} juegos</span>
+      <span>{esc(cat_label(d, lang, cat))}</span>
+      <span class="cat-count">{esc(T(lang, 'gamesCount', n=len(mine)))}</span>
     </h3>
     <ul class="games">
       {tiles}
     </ul>
   </section>''')
     store = (
-        f'<a class="sticker" href="{esc(app["storeUrl"])}">Descargar en Google Play</a>'
-        if app.get('storePublished') else '<p class="soon">Muy pronto en Google Play</p>'
+        f'<a class="sticker" href="{esc(app["storeUrl"])}&amp;hl={HTML_LANG[lang]}">{esc(T(lang, "download"))}</a>'
+        if app.get('storePublished') else f'<p class="soon">{esc(T(lang, "soon"))}</p>'
     )
     main = f'''<section class="wrap atg-hero">
   <img class="atg-logo" src="{s('logo.webp')}" alt="" width="743" height="500">
   <div class="atg-intro">
     <h1 class="visually-hidden">AllTheGames</h1>
-    <p class="lead">{esc(app['lead'])}</p>
+    <p class="lead">{esc(app_text(d, lang, 'lead'))}</p>
     {store}
     <ul class="facts">{facts}</ul>
   </div>
 </section>
 <section class="wrap catalog" aria-labelledby="los-juegos">
-  <h2 id="los-juegos" class="atg-h2">Los {len(games)} juegos</h2>
+  <h2 id="los-juegos" class="atg-h2">{esc(T(lang, 'atgGames', n=len(games)))}</h2>
   {''.join(cats)}
 </section>
 <section class="wrap atg-help" aria-labelledby="atg-ayuda">
-  <h2 id="atg-ayuda" class="atg-h2">Ayuda y textos legales</h2>
+  <h2 id="atg-ayuda" class="atg-h2">{esc(T(lang, 'atgHelp'))}</h2>
   <div class="help-row">
-    <a class="sticker" href="soporte/">Soporte</a>
-    <a class="sticker sticker-soft" href="privacidad/">Privacidad</a>
-    <a class="sticker sticker-soft" href="terminos/">Términos de las compras</a>
+    <a class="sticker" href="{c.to(lp(lang, 'apps/allthegames/soporte/'))}">{esc(T(lang, 'support'))}</a>
+    <a class="sticker sticker-soft" href="{c.to(privacy_paths()[lang])}">{esc(T(lang, 'privacy'))}</a>
+    <a class="sticker sticker-soft" href="{c.to(TERMS_PATH)}" hreflang="es">{esc(T(lang, 'termsLong') + T(lang, 'termsNote'))}</a>
   </div>
 </section>'''
-    page(here, title=f'AllTheGames · {BRAND}', description=app['lead'], main=main, theme='atg',
-         section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
+    page(here, title=f'AllTheGames · {BRAND}', description=app_text(d, lang, 'lead'), main=main, theme='atg',
+         section=here, lang=lang, links=same_page('apps/allthegames/'),
+         pre_main=atg_nav(c, here, lang), favicon=ATG_ICON)
 
 
-def build_atg_support(d: dict) -> None:
-    here = 'apps/allthegames/soporte/'
+def build_atg_support(d: dict, lang: str) -> None:
+    here = lp(lang, 'apps/allthegames/soporte/')
     c = Ctx(here)
     items = ''.join(
         f'''<details class="faq" id="{slug(q)}">
     <summary>{esc(q)}</summary>
     <p>{rich(a)}</p>
   </details>'''
-        for q, a in d['faq']
+        for q, a in d['faq'][lang]
     )
+    subject = T(lang, 'supportSubject').replace(' · ', '%20%C2%B7%20').replace(' ', '%20')
+    write = esc(T(lang, 'supportWrite')).replace('{email}', mail_link())
     main = f'''<div class="wrap narrow sheet">
-  <h1 class="band-title" style="--fill:{band_fill('#C9692E')};--lip:{band_lip('#C9692E')}">Soporte</h1>
-  <p class="lead">Respuestas a lo que más se pregunta. Si no encuentras la tuya, escríbeme y te contesto.</p>
+  <h1 class="band-title" style="--fill:{band_fill(PRIMARY)};--lip:{band_lip(PRIMARY)}">{esc(T(lang, 'supportTitle'))}</h1>
+  <p class="lead">{esc(T(lang, 'supportLead'))}</p>
   {items}
   <section class="contact">
-    <h2>Escribir a soporte</h2>
-    <p>Cuéntame qué pasa, qué móvil usas y, si es un cobro, la fecha. Respondo desde {mail_link()}.</p>
-    <a class="sticker" href="mailto:{esc(EMAIL)}?subject=AllTheGames%20%C2%B7%20Ayuda">Escribir un correo</a>
+    <h2>{esc(T(lang, 'supportWriteH'))}</h2>
+    <p>{write}</p>
+    <a class="sticker" href="mailto:{esc(EMAIL)}?subject={esc(subject)}">{esc(T(lang, 'supportButton'))}</a>
   </section>
 </div>
 <script>
@@ -578,8 +674,9 @@ def build_atg_support(d: dict) -> None:
   abrirPregunta();
   window.addEventListener('hashchange', abrirPregunta);
 </script>'''
-    page(here, title=f'Soporte de AllTheGames · {BRAND}', description='Preguntas frecuentes de AllTheGames y contacto.',
-         main=main, theme='atg', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, here), favicon=ATG_ICON)
+    page(here, title=f'{T(lang, "supportPageTitle")} · {BRAND}', description=T(lang, 'supportDescription'),
+         main=main, theme='atg', section=lp(lang, 'apps/allthegames/'), lang=lang,
+         links=same_page('apps/allthegames/soporte/'), pre_main=atg_nav(c, here, lang), favicon=ATG_ICON)
 
 
 def privacy_paths() -> dict:
@@ -599,7 +696,7 @@ def privacy_main(d: dict, lang: str, here: str) -> str:
         on = l == lang and here == paths[lang]
         cls = 'chip chip-on' if on else 'chip'
         cur = ' aria-current="page"' if on else ''
-        chips.append(f'<a class="{cls}" href="{c.to(paths[l])}" hreflang="{l}" lang="{l}"{cur}>{LANG_NAMES[l]}</a>')
+        chips.append(f'<a class="{cls}" href="{c.to(paths[l])}" hreflang="{HTML_LANG[l]}" lang="{HTML_LANG[l]}"{cur}>{LANG_NAMES[l]}</a>')
     title = p['title'][:1] + p['title'][1:].lower()
     return f'''<div class="wrap narrow sheet legal">
   <h1 class="band-title" style="--fill:{band_fill(PIZARRA)};--lip:{band_lip(PIZARRA)}">{esc(title)}</h1>
@@ -607,33 +704,34 @@ def privacy_main(d: dict, lang: str, here: str) -> str:
   <nav class="langs" aria-label="{esc(chrome['langs'])}">{''.join(chips)}</nav>
   <p class="lead">{rich(p['intro'])}</p>
   {sections}
-  <p class="legal-links"><a href="{c.to('apps/allthegames/terminos/')}">{esc(chrome['terms'])}</a></p>
+  <p class="legal-links"><a href="{c.to(TERMS_PATH)}" hreflang="es">{esc(chrome['terms'])}</a></p>
 </div>'''
 
 
 def build_atg_privacy(d: dict) -> None:
     version = d['app']['policyVersion']
     paths = privacy_paths()
-    current = 'apps/allthegames/privacidad/'
     for lang in LANGS:
         p = d['privacy'][lang]
         title = p['title'][:1] + p['title'][1:].lower()
         here = paths[lang]
         page(here, title=f'{title} · AllTheGames', description=p['intro'], main=privacy_main(d, lang, here),
-             theme='atg', section='apps/allthegames/', apps=d['apps'], lang=lang, alternates=paths,
-             pre_main=atg_nav(Ctx(here), current), favicon=ATG_ICON)
+             theme='atg', section=lp(lang, 'apps/allthegames/'), lang=lang, links=paths,
+             pre_main=atg_nav(Ctx(here), here, lang), favicon=ATG_ICON)
     dated = f'apps/allthegames/privacidad/{version}/'
     page(dated, title=f'Privacidad ({version}) · AllTheGames', description=d['privacy']['es']['intro'],
-         main=privacy_main(d, 'es', dated), theme='atg', section='apps/allthegames/', apps=d['apps'],
-         pre_main=atg_nav(Ctx(dated), current), favicon=ATG_ICON)
+         main=privacy_main(d, 'es', dated), theme='atg', section='apps/allthegames/', links=paths, hreflang=False,
+         pre_main=atg_nav(Ctx(dated), paths['es'], 'es'), favicon=ATG_ICON)
 
 
 def build_atg_terms(d: dict) -> None:
+    """Los términos de compra, de momento solo en español."""
     t = d['terms']
-    current = 'apps/allthegames/terminos/'
-    for here in (current, f'apps/allthegames/terminos/{t["version"]}/'):
+    # En el selector de idioma, los demás idiomas llevan a la ficha de la app en su idioma.
+    links = {l: (TERMS_PATH if l == 'es' else lp(l, 'apps/allthegames/')) for l in LANGS}
+    for here in (TERMS_PATH, f'apps/allthegames/terminos/{t["version"]}/'):
         c = Ctx(here)
-        priv = f'<a href="{c.to("apps/allthegames/privacidad/")}">nota de privacidad</a>'
+        priv = f'<a href="{c.to(privacy_paths()["es"])}">nota de privacidad</a>'
         sections = ''.join(
             f'<h2>{esc(h)}</h2>\n  <p>{rich(b, {"privacyLink": priv})}</p>\n  ' for h, b in t['sections']
         )
@@ -644,7 +742,8 @@ def build_atg_terms(d: dict) -> None:
   {sections}
 </div>'''
         page(here, title=f'Términos de las compras · AllTheGames', description=t['intro'], main=main,
-             theme='atg', section='apps/allthegames/', apps=d['apps'], pre_main=atg_nav(c, current), favicon=ATG_ICON)
+             theme='atg', section='apps/allthegames/', links=links, hreflang=False,
+             pre_main=atg_nav(c, TERMS_PATH, 'es'), favicon=ATG_ICON)
 
 
 # ---------------------------------------------------------------------------
@@ -661,11 +760,12 @@ def build() -> None:
     if SITE.get('domain'):
         (OUT / 'CNAME').write_text(SITE['domain'] + '\n', 'utf-8')
     d = load()
-    build_home(d)
-    build_legal_notice(d)
+    for lang in LANGS:
+        build_home(d, lang)
+        build_legal_notice(d, lang)
+        build_atg_home(d, lang)
+        build_atg_support(d, lang)
     build_404(d)
-    build_atg_home(d)
-    build_atg_support(d)
     build_atg_privacy(d)
     build_atg_terms(d)
     base = SITE['baseUrl'].rstrip('/')

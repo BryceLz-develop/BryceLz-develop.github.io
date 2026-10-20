@@ -1,0 +1,1277 @@
+{
+ "en": {
+  "folders": {
+   "all": "All",
+   "cartas": "Cards",
+   "mesa": "Tabletop",
+   "numeros": "Numbers",
+   "accion": "Action",
+   "puzzle": "Puzzles",
+   "letras": "Words",
+   "favoritos": "Favourites",
+   "multijugador": "Multiplayer"
+  },
+  "games": {
+   "2048": {
+    "name": "2048",
+    "short": "Slide, merge and add points."
+   },
+   "solitario": {
+    "name": "Solitaire",
+    "short": "Classic one-player Klondike."
+   },
+   "spider": {
+    "name": "Spider",
+    "short": "Spider Solitaire with 1, 2 or 4 suits."
+   },
+   "freecell": {
+    "name": "Freecell",
+    "short": "Solitaire with free cells, every card in sight."
+   },
+   "piramide": {
+    "name": "Pyramid",
+    "short": "Take cards off the pyramid by adding to 13."
+   },
+   "siete-y-media": {
+    "name": "Seven and a half",
+    "short": "Get to 7½: Seven and a half (Spain) or Sette e mezzo (Italy)."
+   },
+   "capitales": {
+    "name": "Capitals",
+    "short": "One country, four cities. Tap the capital."
+   },
+   "banderas": {
+    "name": "Flags",
+    "short": "Four flags or four countries. Tap the one that matches."
+   },
+   "ordenar-colores": {
+    "name": "Sort colors",
+    "short": "Move the cubes from tower to tower until each color is together."
+   },
+   "cinquillo": {
+    "name": "Cinquillo",
+    "short": "The 5 leads: Cinquillo (Spain) or Cinque (Italy)."
+   },
+   "escoba": {
+    "name": "Escoba",
+    "short": "Fishing to 15: Escoba (Spain) or Scopa (Italy)."
+   },
+   "basra": {
+    "name": "Basra",
+    "short": "Capture by value: Basra (Egypt) or Xeri (Greece)."
+   },
+   "brisca": {
+    "name": "Brisca",
+    "short": "Trick-taking with trump: Brisca (Spain) or Briscola (Italy)."
+   },
+   "chinchon": {
+    "name": "Chinchón",
+    "short": "Runs and groups with 7 cards."
+   },
+   "gin-rummy": {
+    "name": "Gin Rummy",
+    "short": "Ten cards, melds and knocking."
+   },
+   "scala-40": {
+    "name": "Scala 40",
+    "short": "Thirteen cards and jokers. Open with 40 points."
+   },
+   "conquian": {
+    "name": "Conquian",
+    "short": "Ten cards. Lay down the center card or pass it."
+   },
+   "tute": {
+    "name": "Tute",
+    "short": "Tute and Guiñote (tricks and calls) or Argentine Truco."
+   },
+   "tressette": {
+    "name": "Tressette",
+    "short": "Italian tricks with no trump. The 3 is the strongest."
+   },
+   "domino": {
+    "name": "Dominoes",
+    "short": "Match tiles: in pairs (Caribbean), the draw game or the block game."
+   },
+   "sudoku": {
+    "name": "Sudoku",
+    "short": "9×9: rows, columns and boxes from 1 to 9."
+   },
+   "ahorcado": {
+    "name": "Hangman",
+    "short": "Guess the word letter by letter."
+   },
+   "mahjong": {
+    "name": "Mahjong",
+    "short": "Match free tiles on the board."
+   },
+   "memoria": {
+    "name": "Memory",
+    "short": "Find the pairs."
+   },
+   "memoria-musical": {
+    "name": "Musical memory",
+    "short": "Repeat the color sequence, a little longer each time."
+   },
+   "nonograma": {
+    "name": "Nonogram",
+    "short": "Paint the grid with the clues."
+   },
+   "tres-en-raya": {
+    "name": "Tic-tac-toe",
+    "short": "The classic 3×3: line up three against the phone or a friend."
+   },
+   "trenecito": {
+    "name": "Roll, little train",
+    "short": "Drive the train and pick up little boxes."
+   },
+   "buscaminas": {
+    "name": "Minesweeper",
+    "short": "Open squares and mark the mines."
+   },
+   "avioncito": {
+    "name": "Fly, little plane",
+    "short": "Tap to go up and fly through the gaps."
+   },
+   "bloques": {
+    "name": "Color blocks",
+    "short": "Fit the pieces and clear rows and columns."
+   },
+   "match-3": {
+    "name": "Match fruits",
+    "short": "Join three matching fruits and score points."
+   },
+   "lluvia-de-bloques": {
+    "name": "Block rain",
+    "short": "Rotate the falling pieces and complete rows."
+   },
+   "canicas": {
+    "name": "Launch marbles",
+    "short": "Throw a marble into the line. Three of the same color jump out."
+   },
+   "burbujas": {
+    "name": "Shoot balls",
+    "short": "Throw colored balls at the pile coming down."
+   },
+   "sumas-cruzadas": {
+    "name": "Cross sums",
+    "short": "A square: fill in the missing numbers."
+   },
+   "sopa-de-letras": {
+    "name": "Word search",
+    "short": "Find the hidden words in the grid."
+   },
+   "crucigrama": {
+    "name": "Crossword",
+    "short": "Fill the squares with the words from the clues."
+   },
+   "ranita": {
+    "name": "Jump, little frog",
+    "short": "Jump from platform to platform and climb as high as you can."
+   },
+   "caminos": {
+    "name": "Paths",
+    "short": "Connect the colors and cover the whole board."
+   },
+   "pintar-suelo": {
+    "name": "Paint the floor",
+    "short": "Slide the piece and paint the whole floor."
+   },
+   "marcianito": {
+    "name": "Martian adventures",
+    "short": "Move the ship and shoot the little aliens coming down."
+   },
+   "la-meta": {
+    "name": "The goal",
+    "short": "Slide the piece until you stop on the green square."
+   },
+   "adivina-la-palabra": {
+    "name": "Guess the word",
+    "short": "Guess the secret word, with color clues."
+   },
+   "ajedrez": {
+    "name": "Chess",
+    "short": "Move the pieces and checkmate the other player’s king."
+   },
+   "damas": {
+    "name": "Checkers",
+    "short": "Capture diagonally: Spanish, English or Brazilian draughts."
+   },
+   "blackjack": {
+    "name": "Blackjack",
+    "short": "Reach 21 without going over. The dealer plays after you."
+   },
+   "torre": {
+    "name": "Stack the tower",
+    "short": "Stack blocks. What sticks out gets cut."
+   },
+   "forma-palabras": {
+    "name": "Make words",
+    "short": "Jumbled letters. Find the words they hide."
+   },
+   "palabras-encadenadas": {
+    "name": "Word chain",
+    "short": "Each word starts with the ending letters of the one before."
+   },
+   "bingo": {
+    "name": "Bingo",
+    "short": "Mark the numbers on your card: solo or with friends on one phone."
+   },
+   "parchis": {
+    "name": "Parchís",
+    "short": "Get your pieces home: Parchís, Ludo, Parcheesi or Mensch."
+   },
+   "oca": {
+    "name": "Goose",
+    "short": "Roll the die: Goose, Gioco dell’Oca or Jeu de l’oie."
+   },
+   "cifras": {
+    "name": "Numbers",
+    "short": "Hit the target: Numbers, Countdown or Des chiffres."
+   },
+   "kenken": {
+    "name": "KenKen",
+    "short": "Fill the board: in each cage the math has to add up and numbers cannot be repeated."
+   },
+   "puentes": {
+    "name": "Bridges",
+    "short": "Join the islands with the number of bridges each one asks for."
+   },
+   "suma-x": {
+    "name": "Sum X",
+    "short": "Join pairs of tiles that add up to the target."
+   },
+   "conecta-4": {
+    "name": "Connect 4",
+    "short": "Drop pieces. The one who puts four in a line wins."
+   },
+   "hundir-la-flota": {
+    "name": "Battleship",
+    "short": "Place your ships and shoot at the other player’s sea."
+   },
+   "reversi": {
+    "name": "Reversi",
+    "short": "Surround the other player’s pieces and flip them."
+   }
+  }
+ },
+ "pt": {
+  "folders": {
+   "all": "Todos",
+   "cartas": "Cartas",
+   "mesa": "De mesa",
+   "numeros": "Números",
+   "accion": "Ação",
+   "puzzle": "Puzzles",
+   "letras": "Letras",
+   "favoritos": "Favoritos",
+   "multijugador": "Multijogador"
+  },
+  "games": {
+   "2048": {
+    "name": "2048",
+    "short": "Deslize, junte e some pontos."
+   },
+   "solitario": {
+    "name": "Paciência",
+    "short": "Klondike clássico para um jogador."
+   },
+   "spider": {
+    "name": "Spider",
+    "short": "Spider com 1, 2 ou 4 naipes."
+   },
+   "freecell": {
+    "name": "Freecell",
+    "short": "Paciência com espaços livres, todas as cartas à vista."
+   },
+   "piramide": {
+    "name": "Pirâmide",
+    "short": "Tire cartas da pirâmide somando 13."
+   },
+   "siete-y-media": {
+    "name": "Sete e meio",
+    "short": "Chegue a 7 e meio: Sete e meio (Espanha) ou Sette e mezzo (Itália)."
+   },
+   "capitales": {
+    "name": "Capitais",
+    "short": "Um país, quatro cidades. Toque a capital."
+   },
+   "banderas": {
+    "name": "Bandeiras",
+    "short": "Quatro bandeiras ou quatro países. Toque a que combina."
+   },
+   "ordenar-colores": {
+    "name": "Ordenar cores",
+    "short": "Passe os cubos de uma torre a outra até deixar cada cor junta."
+   },
+   "cinquillo": {
+    "name": "Cinquillo",
+    "short": "Sai o 5: Cinquillo (Espanha) ou Cinque (Itália)."
+   },
+   "escoba": {
+    "name": "Escoba",
+    "short": "Pesca a 15: Escoba (Espanha) ou Scopa (Itália)."
+   },
+   "basra": {
+    "name": "Basra",
+    "short": "Pesca por valor: Basra (Egito) ou Xeri (Grécia)."
+   },
+   "brisca": {
+    "name": "Brisca",
+    "short": "Vazas com trunfo: Brisca (Espanha) ou Briscola (Itália)."
+   },
+   "chinchon": {
+    "name": "Chinchón",
+    "short": "Sequências e grupos com 7 cartas."
+   },
+   "gin-rummy": {
+    "name": "Gin Rummy",
+    "short": "Dez cartas, combinações e batida."
+   },
+   "scala-40": {
+    "name": "Scala 40",
+    "short": "Treze cartas e curingas. Abra com 40 pontos."
+   },
+   "conquian": {
+    "name": "Conquian",
+    "short": "Dez cartas. Baixe a carta do centro ou passe-a."
+   },
+   "tute": {
+    "name": "Tute",
+    "short": "Tute e Guiñote (vazas e cantos) ou o Truco argentino."
+   },
+   "tressette": {
+    "name": "Tressette",
+    "short": "Vazas italianas sem trunfo. O 3 é o mais forte."
+   },
+   "domino": {
+    "name": "Dominó",
+    "short": "Encaixe peças: em duplas (caribenho), com compra ou de bloqueio."
+   },
+   "sudoku": {
+    "name": "Sudoku",
+    "short": "9×9: linhas, colunas e blocos de 1 a 9."
+   },
+   "ahorcado": {
+    "name": "Forca",
+    "short": "Adivinhe a palavra letra a letra."
+   },
+   "mahjong": {
+    "name": "Mahjong",
+    "short": "Emparelhe peças livres do tabuleiro."
+   },
+   "memoria": {
+    "name": "Memória",
+    "short": "Encontre os pares."
+   },
+   "memoria-musical": {
+    "name": "Memória musical",
+    "short": "Repita a sequência de cores, cada vez um pouco mais longa."
+   },
+   "nonograma": {
+    "name": "Nonograma",
+    "short": "Pinte a grade com as dicas."
+   },
+   "tres-en-raya": {
+    "name": "Jogo da velha",
+    "short": "O clássico 3×3: alinhe três contra o celular ou um amigo."
+   },
+   "trenecito": {
+    "name": "Role, trenzinho",
+    "short": "Leve o trem e pegue as caixinhas."
+   },
+   "buscaminas": {
+    "name": "Campo minado",
+    "short": "Abra casas e marque as minas."
+   },
+   "avioncito": {
+    "name": "Voe, aviãozinho",
+    "short": "Toque para subir e passe pelos vãos."
+   },
+   "bloques": {
+    "name": "Blocos coloridos",
+    "short": "Encaixe as peças e limpe linhas e colunas."
+   },
+   "match-3": {
+    "name": "Una frutas",
+    "short": "Junte três frutas iguais e some pontos."
+   },
+   "lluvia-de-bloques": {
+    "name": "Chuva de blocos",
+    "short": "Gire as peças que caem e complete linhas."
+   },
+   "canicas": {
+    "name": "Lance bolinhas",
+    "short": "Lance uma bolinha na fila. Três da mesma cor saltam."
+   },
+   "burbujas": {
+    "name": "Atire bolas",
+    "short": "Lance bolas coloridas no monte que desce."
+   },
+   "sumas-cruzadas": {
+    "name": "Somas cruzadas",
+    "short": "Um quadrado: complete os números que faltam."
+   },
+   "sopa-de-letras": {
+    "name": "Caça-palavras",
+    "short": "Encontre as palavras escondidas na grade."
+   },
+   "crucigrama": {
+    "name": "Palavras cruzadas",
+    "short": "Preencha as casas com as palavras das dicas."
+   },
+   "ranita": {
+    "name": "Pule, rãzinha",
+    "short": "Pule de plataforma em plataforma e suba o máximo que puder."
+   },
+   "caminos": {
+    "name": "Caminhos",
+    "short": "Una as cores e cubra o tabuleiro inteiro."
+   },
+   "pintar-suelo": {
+    "name": "Pintar o chão",
+    "short": "Deslize a peça e pinte o chão inteiro."
+   },
+   "marcianito": {
+    "name": "Aventuras marcianas",
+    "short": "Mova a nave e atire nos marcianinhos que descem."
+   },
+   "la-meta": {
+    "name": "A meta",
+    "short": "Deslize a peça até parar na casa verde."
+   },
+   "adivina-la-palabra": {
+    "name": "Adivinhe a palavra",
+    "short": "Adivinhe a palavra secreta, com cores de dica."
+   },
+   "ajedrez": {
+    "name": "Xadrez",
+    "short": "Mova as peças e dê xeque-mate no rei do outro."
+   },
+   "damas": {
+    "name": "Damas",
+    "short": "Coma na diagonal: damas espanholas, inglesas ou brasileiras."
+   },
+   "blackjack": {
+    "name": "Blackjack",
+    "short": "Chegue a 21 sem passar. A banca joga depois."
+   },
+   "torre": {
+    "name": "Empilhe a torre",
+    "short": "Empilhe blocos. O que sobrar, corta."
+   },
+   "forma-palabras": {
+    "name": "Forme palavras",
+    "short": "Letras embaralhadas. Encontre as palavras que escondem."
+   },
+   "palabras-encadenadas": {
+    "name": "Palavras encadeadas",
+    "short": "Cada palavra começa pela última sílaba da anterior."
+   },
+   "bingo": {
+    "name": "Bingo",
+    "short": "Marque os números da cartela: sozinho ou com mais gente no celular."
+   },
+   "parchis": {
+    "name": "Parchís",
+    "short": "Tire suas peças: Parchís, Ludo, Parcheesi ou Mensch."
+   },
+   "oca": {
+    "name": "Ganso",
+    "short": "Jogue o dado: Ganso, Gioco dell’Oca ou Jeu de l’oie."
+   },
+   "cifras": {
+    "name": "Cifras",
+    "short": "Chegue ao alvo: Cifras, Countdown ou Des chiffres."
+   },
+   "kenken": {
+    "name": "KenKen",
+    "short": "Preencha o tabuleiro: em cada jaula a conta tem que bater e não se podem repetir números."
+   },
+   "puentes": {
+    "name": "Pontes",
+    "short": "Una as ilhas com o número de pontes que cada uma pede."
+   },
+   "suma-x": {
+    "name": "Soma X",
+    "short": "Junte pares de peças que somem o objetivo."
+   },
+   "conecta-4": {
+    "name": "Liga 4",
+    "short": "Deixe cair peças. Ganha quem puser quatro em linha."
+   },
+   "hundir-la-flota": {
+    "name": "Batalha naval",
+    "short": "Coloque seus barcos e atire no mar do outro."
+   },
+   "reversi": {
+    "name": "Reversi",
+    "short": "Cerque as peças do outro e vire-as."
+   }
+  }
+ },
+ "it": {
+  "folders": {
+   "all": "Tutti",
+   "cartas": "Carte",
+   "mesa": "Da tavolo",
+   "numeros": "Numeri",
+   "accion": "Azione",
+   "puzzle": "Puzzle",
+   "letras": "Lettere",
+   "favoritos": "Preferiti",
+   "multijugador": "Multigiocatore"
+  },
+  "games": {
+   "2048": {
+    "name": "2048",
+    "short": "Fai scorrere, unisci e fai punti."
+   },
+   "solitario": {
+    "name": "Solitario",
+    "short": "Klondike classico in solitario."
+   },
+   "spider": {
+    "name": "Spider",
+    "short": "Spider Solitaire con 1, 2 o 4 semi."
+   },
+   "freecell": {
+    "name": "Freecell",
+    "short": "Solitario con spazi liberi, tutte le carte in vista."
+   },
+   "piramide": {
+    "name": "Piramide",
+    "short": "Togli carte dalla piramide sommando 13."
+   },
+   "siete-y-media": {
+    "name": "Sette e mezzo",
+    "short": "Arriva a 7 e mezzo: Siete y media (Spagna) o Sette e mezzo (Italia)."
+   },
+   "capitales": {
+    "name": "Capitali",
+    "short": "Un paese, quattro città. Tocca la capitale."
+   },
+   "banderas": {
+    "name": "Bandiere",
+    "short": "Quattro bandiere o quattro paesi. Tocca quella giusta."
+   },
+   "ordenar-colores": {
+    "name": "Ordina i colori",
+    "short": "Passa i cubi da una torre all’altra finché ogni colore sta insieme."
+   },
+   "cinquillo": {
+    "name": "Cinquillo",
+    "short": "Esce il 5: Cinquillo (Spagna) o Cinque (Italia)."
+   },
+   "escoba": {
+    "name": "Escoba",
+    "short": "Pesca a 15: Escoba (Spagna) o Scopa (Italia)."
+   },
+   "basra": {
+    "name": "Basra",
+    "short": "Pesca per valore: Basra (Egitto) o Xeri (Grecia)."
+   },
+   "brisca": {
+    "name": "Brisca",
+    "short": "Prese con briscola: Brisca (Spagna) o Briscola (Italia)."
+   },
+   "chinchon": {
+    "name": "Chinchón",
+    "short": "Scale e gruppi da 7 carte."
+   },
+   "gin-rummy": {
+    "name": "Gin Rummy",
+    "short": "Dieci carte, combinazioni e bussata."
+   },
+   "scala-40": {
+    "name": "Scala 40",
+    "short": "Tredici carte e jolly. Apri con 40 punti."
+   },
+   "conquian": {
+    "name": "Conquian",
+    "short": "Dieci carte. Cala la carta al centro o passala."
+   },
+   "tute": {
+    "name": "Tute",
+    "short": "Tute e Guiñote (prese e accuse) o il Truco argentino."
+   },
+   "tressette": {
+    "name": "Tressette",
+    "short": "Prese italiane senza briscola. Il 3 è il più forte."
+   },
+   "domino": {
+    "name": "Domino",
+    "short": "Attacca tessere: a coppie (caraibico), a pescare o a blocco."
+   },
+   "sudoku": {
+    "name": "Sudoku",
+    "short": "9×9: righe, colonne e riquadri da 1 a 9."
+   },
+   "ahorcado": {
+    "name": "Impiccato",
+    "short": "Indovina la parola lettera per lettera."
+   },
+   "mahjong": {
+    "name": "Mahjong",
+    "short": "Accoppia le tessere libere del tabellone."
+   },
+   "memoria": {
+    "name": "Memoria",
+    "short": "Trova le coppie."
+   },
+   "memoria-musical": {
+    "name": "Memoria musicale",
+    "short": "Ripeti la sequenza di colori, ogni volta un po’ più lunga."
+   },
+   "nonograma": {
+    "name": "Nonogramma",
+    "short": "Colora la griglia con i numeri."
+   },
+   "tres-en-raya": {
+    "name": "Tris",
+    "short": "Il classico 3×3: allinea tre contro il telefono o un amico."
+   },
+   "trenecito": {
+    "name": "Corri, trenino",
+    "short": "Guida il treno e raccogli le scatoline."
+   },
+   "buscaminas": {
+    "name": "Campo minato",
+    "short": "Apri le caselle e segna le mine."
+   },
+   "avioncito": {
+    "name": "Vola, aeroplanino",
+    "short": "Tocca per salire e passa negli spazi."
+   },
+   "bloques": {
+    "name": "Blocchi colorati",
+    "short": "Incastra i pezzi e pulisci righe e colonne."
+   },
+   "match-3": {
+    "name": "Unisci la frutta",
+    "short": "Unisci tre frutti uguali e fai punti."
+   },
+   "lluvia-de-bloques": {
+    "name": "Pioggia di blocchi",
+    "short": "Gira i pezzi che cadono e completa le righe."
+   },
+   "canicas": {
+    "name": "Lancia le biglie",
+    "short": "Tira una biglia nella fila. Tre dello stesso colore saltano via."
+   },
+   "burbujas": {
+    "name": "Spara le palle",
+    "short": "Lancia palle colorate sul mucchio che scende."
+   },
+   "sumas-cruzadas": {
+    "name": "Somme incrociate",
+    "short": "Un quadrato: completa i numeri che mancano."
+   },
+   "sopa-de-letras": {
+    "name": "Cerca parole",
+    "short": "Trova le parole nascoste nella griglia."
+   },
+   "crucigrama": {
+    "name": "Cruciverba",
+    "short": "Riempi le caselle con le parole delle definizioni."
+   },
+   "ranita": {
+    "name": "Salta, ranocchia",
+    "short": "Salta di piattaforma in piattaforma e sali più che puoi."
+   },
+   "caminos": {
+    "name": "Percorsi",
+    "short": "Unisci i colori e copri tutto il tabellone."
+   },
+   "pintar-suelo": {
+    "name": "Dipingi il pavimento",
+    "short": "Fai scorrere la pedina e dipingi tutto il pavimento."
+   },
+   "marcianito": {
+    "name": "Avventure marziane",
+    "short": "Muovi la nave e spara ai marzianini che scendono."
+   },
+   "la-meta": {
+    "name": "La meta",
+    "short": "Fai scorrere la pedina finché non ti fermi sulla casella verde."
+   },
+   "adivina-la-palabra": {
+    "name": "Indovina la parola",
+    "short": "Indovina la parola segreta, con i colori guida."
+   },
+   "ajedrez": {
+    "name": "Scacchi",
+    "short": "Muovi i pezzi e dai scacco matto al re dell’altro."
+   },
+   "damas": {
+    "name": "Dama",
+    "short": "Mangia in diagonale: dama spagnola, inglese o brasiliana."
+   },
+   "blackjack": {
+    "name": "Blackjack",
+    "short": "Arriva a 21 senza sballare. Il banco gioca dopo."
+   },
+   "torre": {
+    "name": "Impila la torre",
+    "short": "Impila i blocchi. Quello che sporge, si taglia."
+   },
+   "forma-palabras": {
+    "name": "Forma parole",
+    "short": "Lettere mescolate. Tira fuori le parole che nascondono."
+   },
+   "palabras-encadenadas": {
+    "name": "Parole in catena",
+    "short": "Ogni parola inizia con l’ultima sillaba di quella prima."
+   },
+   "bingo": {
+    "name": "Bingo",
+    "short": "Segna i numeri della cartella: da solo o con altri sullo stesso telefono."
+   },
+   "parchis": {
+    "name": "Parchís",
+    "short": "Porta fuori le pedine: Parchís, Ludo, Parcheesi o Mensch."
+   },
+   "oca": {
+    "name": "Oca",
+    "short": "Tira il dado: Oca, Gioco dell’Oca o Jeu de l’oie."
+   },
+   "cifras": {
+    "name": "Cifre",
+    "short": "Raggiungi l’obiettivo: Cifre, Countdown o Des chiffres."
+   },
+   "kenken": {
+    "name": "KenKen",
+    "short": "Riempi il tabellone: in ogni gabbia il conto deve tornare e non si possono ripetere numeri."
+   },
+   "puentes": {
+    "name": "Ponti",
+    "short": "Unisci le isole con il numero di ponti che chiede ognuna."
+   },
+   "suma-x": {
+    "name": "Somma X",
+    "short": "Unisci coppie di tessere che sommano l’obiettivo."
+   },
+   "conecta-4": {
+    "name": "Forza 4",
+    "short": "Fai cadere le pedine. Vince chi ne mette quattro in fila."
+   },
+   "hundir-la-flota": {
+    "name": "Battaglia navale",
+    "short": "Piazza le tue navi e spara nel mare dell’altro."
+   },
+   "reversi": {
+    "name": "Reversi",
+    "short": "Circonda le pedine dell’altro e girale."
+   }
+  }
+ },
+ "fr": {
+  "folders": {
+   "all": "Tous",
+   "cartas": "Cartes",
+   "mesa": "Plateau",
+   "numeros": "Nombres",
+   "accion": "Action",
+   "puzzle": "Puzzle",
+   "letras": "Lettres",
+   "favoritos": "Favoris",
+   "multijugador": "Multijoueur"
+  },
+  "games": {
+   "2048": {
+    "name": "2048",
+    "short": "Glisse, fusionne et marque des points."
+   },
+   "solitario": {
+    "name": "Solitaire",
+    "short": "Klondike classique en solo."
+   },
+   "spider": {
+    "name": "Spider",
+    "short": "Spider Solitaire avec 1, 2 ou 4 couleurs."
+   },
+   "freecell": {
+    "name": "Freecell",
+    "short": "Solitaire avec des cellules libres, toutes les cartes visibles."
+   },
+   "piramide": {
+    "name": "Pyramide",
+    "short": "Enlève des cartes de la pyramide en faisant 13."
+   },
+   "siete-y-media": {
+    "name": "Sept et demi",
+    "short": "Atteins 7 et demi : Sept et demi (Espagne) ou Sette e mezzo (Italie)."
+   },
+   "capitales": {
+    "name": "Capitales",
+    "short": "Un pays, quatre villes. Touche la capitale."
+   },
+   "banderas": {
+    "name": "Drapeaux",
+    "short": "Quatre drapeaux ou quatre pays. Touche le bon."
+   },
+   "ordenar-colores": {
+    "name": "Ranger les couleurs",
+    "short": "Passe les cubes d’une tour à l’autre jusqu’à laisser chaque couleur ensemble."
+   },
+   "cinquillo": {
+    "name": "Cinquillo",
+    "short": "Le 5 ouvre le jeu : Cinquillo (Espagne) ou Cinque (Italie)."
+   },
+   "escoba": {
+    "name": "Escoba",
+    "short": "Pêche à 15 : Escoba (Espagne) ou Scopa (Italie)."
+   },
+   "basra": {
+    "name": "Basra",
+    "short": "Pêche par valeur : Basra (Égypte) ou Xeri (Grèce)."
+   },
+   "brisca": {
+    "name": "Brisca",
+    "short": "Plis avec atout : Brisca (Espagne) ou Briscola (Italie)."
+   },
+   "chinchon": {
+    "name": "Chinchón",
+    "short": "Suites et groupes à 7 cartes."
+   },
+   "gin-rummy": {
+    "name": "Gin Rummy",
+    "short": "Dix cartes, combinaisons et frappe."
+   },
+   "scala-40": {
+    "name": "Scala 40",
+    "short": "Treize cartes et des jokers. Ouvre avec 40 points."
+   },
+   "conquian": {
+    "name": "Conquian",
+    "short": "Dix cartes. Pose la carte du centre ou passe-la."
+   },
+   "tute": {
+    "name": "Tute",
+    "short": "Tute et Guiñote (plis et annonces) ou le Truco argentin."
+   },
+   "tressette": {
+    "name": "Tressette",
+    "short": "Jeu de plis italien sans atout. Le 3 est le plus fort."
+   },
+   "domino": {
+    "name": "Domino",
+    "short": "Pose des dominos : en équipes (caribéen), avec pioche ou en blocage."
+   },
+   "sudoku": {
+    "name": "Sudoku",
+    "short": "9×9 : lignes, colonnes et carrés de 1 à 9."
+   },
+   "ahorcado": {
+    "name": "Pendu",
+    "short": "Devine le mot lettre par lettre."
+   },
+   "mahjong": {
+    "name": "Mahjong",
+    "short": "Associe les tuiles libres du plateau."
+   },
+   "memoria": {
+    "name": "Mémoire",
+    "short": "Trouve les paires."
+   },
+   "memoria-musical": {
+    "name": "Mémoire musicale",
+    "short": "Répète la séquence de couleurs, un peu plus longue à chaque fois."
+   },
+   "nonograma": {
+    "name": "Nonogramme",
+    "short": "Peins la grille avec les chiffres."
+   },
+   "tres-en-raya": {
+    "name": "Morpion",
+    "short": "Le classique 3×3 : aligne trois contre le téléphone ou un ami."
+   },
+   "trenecito": {
+    "name": "Roule, petit train",
+    "short": "Conduis le train et ramasse les petites boîtes."
+   },
+   "buscaminas": {
+    "name": "Démineur",
+    "short": "Ouvre les cases et marque les mines."
+   },
+   "avioncito": {
+    "name": "Vole, petit avion",
+    "short": "Touche pour monter et passe dans les trous."
+   },
+   "bloques": {
+    "name": "Blocs de couleurs",
+    "short": "Emboîte les pièces et vide lignes et colonnes."
+   },
+   "match-3": {
+    "name": "Relie les fruits",
+    "short": "Réunis trois fruits pareils et marque des points."
+   },
+   "lluvia-de-bloques": {
+    "name": "Pluie de blocs",
+    "short": "Tourne les pièces qui tombent et complète des lignes."
+   },
+   "canicas": {
+    "name": "Lance les billes",
+    "short": "Lance une bille dans la file. Trois de la même couleur sautent."
+   },
+   "burbujas": {
+    "name": "Tire des balles",
+    "short": "Lance des balles de couleurs sur le tas qui descend."
+   },
+   "sumas-cruzadas": {
+    "name": "Sommes croisées",
+    "short": "Un carré : complète les chiffres qui manquent."
+   },
+   "sopa-de-letras": {
+    "name": "Mots mêlés",
+    "short": "Trouve les mots cachés dans la grille."
+   },
+   "crucigrama": {
+    "name": "Mots croisés",
+    "short": "Remplis les cases avec les mots des définitions."
+   },
+   "ranita": {
+    "name": "Saute, petite grenouille",
+    "short": "Saute de plateforme en plateforme et monte aussi haut que tu peux."
+   },
+   "caminos": {
+    "name": "Chemins",
+    "short": "Relie les couleurs et couvre tout le plateau."
+   },
+   "pintar-suelo": {
+    "name": "Peindre le sol",
+    "short": "Fais glisser le pion et peins tout le sol."
+   },
+   "marcianito": {
+    "name": "Aventures martiennes",
+    "short": "Bouge le vaisseau et tire sur les petits martiens qui descendent."
+   },
+   "la-meta": {
+    "name": "L’arrivée",
+    "short": "Fais glisser le pion jusqu’à t’arrêter sur la case verte."
+   },
+   "adivina-la-palabra": {
+    "name": "Devine le mot",
+    "short": "Devine le mot secret, avec des couleurs d’indice."
+   },
+   "ajedrez": {
+    "name": "Échecs",
+    "short": "Bouge les pièces et mets échec et mat au roi de l’autre."
+   },
+   "damas": {
+    "name": "Dames",
+    "short": "Prends en diagonale : dames espagnoles, anglaises ou brésiliennes."
+   },
+   "blackjack": {
+    "name": "Blackjack",
+    "short": "Arrive à 21 sans dépasser. La banque joue après."
+   },
+   "torre": {
+    "name": "Empile la tour",
+    "short": "Empile des blocs. Ce qui dépasse, on le coupe."
+   },
+   "forma-palabras": {
+    "name": "Forme des mots",
+    "short": "Lettres en vrac. Trouve les mots qu’elles cachent."
+   },
+   "palabras-encadenadas": {
+    "name": "Mots enchaînés",
+    "short": "Chaque mot commence par les lettres de la fin du précédent."
+   },
+   "bingo": {
+    "name": "Bingo",
+    "short": "Coche les numéros de ton carton : seul ou à plusieurs sur le téléphone."
+   },
+   "parchis": {
+    "name": "Parchís",
+    "short": "Sors tes pions : Parchís, Ludo, Parcheesi ou Mensch."
+   },
+   "oca": {
+    "name": "Oie",
+    "short": "Lance le dé : Oie, Gioco dell’Oca ou Jeu de l’oie."
+   },
+   "cifras": {
+    "name": "Chiffres",
+    "short": "Atteins la cible : Chiffres, Countdown ou Des chiffres."
+   },
+   "kenken": {
+    "name": "KenKen",
+    "short": "Remplis le plateau : dans chaque cage le calcul doit coller et on ne peut pas répéter de chiffres."
+   },
+   "puentes": {
+    "name": "Ponts",
+    "short": "Relie les îles avec le nombre de ponts que chacune demande."
+   },
+   "suma-x": {
+    "name": "Somme X",
+    "short": "Réunis des paires de tuiles qui font l’objectif."
+   },
+   "conecta-4": {
+    "name": "Puissance 4",
+    "short": "Fais tomber des pions. Gagne celui qui en aligne quatre."
+   },
+   "hundir-la-flota": {
+    "name": "Bataille navale",
+    "short": "Place tes bateaux et tire dans la mer de l’autre."
+   },
+   "reversi": {
+    "name": "Reversi",
+    "short": "Entoure les pions de l’autre et retourne-les."
+   }
+  }
+ },
+ "de": {
+  "folders": {
+   "all": "Alle",
+   "cartas": "Karten",
+   "mesa": "Brett",
+   "numeros": "Zahlen",
+   "accion": "Action",
+   "puzzle": "Puzzle",
+   "letras": "Buchstaben",
+   "favoritos": "Favoriten",
+   "multijugador": "Mehrspieler"
+  },
+  "games": {
+   "2048": {
+    "name": "2048",
+    "short": "Wische, verschmelze und sammle Punkte."
+   },
+   "solitario": {
+    "name": "Solitär",
+    "short": "Klassisches Klondike für eine Person."
+   },
+   "spider": {
+    "name": "Spider",
+    "short": "Spider Solitaire mit 1, 2 oder 4 Farben."
+   },
+   "freecell": {
+    "name": "Freecell",
+    "short": "Solitär mit freien Zellen, alle Karten sichtbar."
+   },
+   "piramide": {
+    "name": "Pyramide",
+    "short": "Nimm Karten von der Pyramide, die 13 ergeben."
+   },
+   "siete-y-media": {
+    "name": "Siebeneinhalb",
+    "short": "Komm auf siebeneinhalb: Siebeneinhalb (Spanien) oder Sette e mezzo (Italien)."
+   },
+   "capitales": {
+    "name": "Hauptstädte",
+    "short": "Ein Land, vier Städte. Tippe die Hauptstadt."
+   },
+   "banderas": {
+    "name": "Flaggen",
+    "short": "Vier Flaggen oder vier Länder. Tippe die passende."
+   },
+   "ordenar-colores": {
+    "name": "Farben sortieren",
+    "short": "Lege die Würfel von Turm zu Turm, bis jede Farbe zusammen ist."
+   },
+   "cinquillo": {
+    "name": "Cinquillo",
+    "short": "Die 5 eröffnet: Cinquillo (Spanien) oder Cinque (Italien)."
+   },
+   "escoba": {
+    "name": "Escoba",
+    "short": "Fischen auf 15: Escoba (Spanien) oder Scopa (Italien)."
+   },
+   "basra": {
+    "name": "Basra",
+    "short": "Fangen nach Wert: Basra (Ägypten) oder Xeri (Griechenland)."
+   },
+   "brisca": {
+    "name": "Brisca",
+    "short": "Stiche mit Trumpf: Brisca (Spanien) oder Briscola (Italien)."
+   },
+   "chinchon": {
+    "name": "Chinchón",
+    "short": "Folgen und Gruppen mit 7 Karten."
+   },
+   "gin-rummy": {
+    "name": "Gin Rummy",
+    "short": "Zehn Karten, Kombinationen und Klopfen."
+   },
+   "scala-40": {
+    "name": "Scala 40",
+    "short": "Dreizehn Karten und Joker. Eröffne mit 40 Punkten."
+   },
+   "conquian": {
+    "name": "Conquian",
+    "short": "Zehn Karten. Lege die Karte in der Mitte ab oder passe."
+   },
+   "tute": {
+    "name": "Tute",
+    "short": "Tute und Guiñote (Stiche und Ansagen) oder argentinisches Truco."
+   },
+   "tressette": {
+    "name": "Tressette",
+    "short": "Italienische Stiche ohne Trumpf. Die 3 ist die stärkste."
+   },
+   "domino": {
+    "name": "Domino",
+    "short": "Steine anlegen: in Paaren (karibisch), mit Nachziehen oder als Blockspiel."
+   },
+   "sudoku": {
+    "name": "Sudoku",
+    "short": "9×9: Reihen, Spalten und Blöcke von 1 bis 9."
+   },
+   "ahorcado": {
+    "name": "Galgenmännchen",
+    "short": "Rate das Wort Buchstabe für Buchstabe."
+   },
+   "mahjong": {
+    "name": "Mahjong",
+    "short": "Paare freie Steine auf dem Brett."
+   },
+   "memoria": {
+    "name": "Memory",
+    "short": "Finde die Paare."
+   },
+   "memoria-musical": {
+    "name": "Musik-Memory",
+    "short": "Wiederhole die Farbfolge, jedes Mal ein bisschen länger."
+   },
+   "nonograma": {
+    "name": "Nonogramm",
+    "short": "Male das Gitter mit den Hinweisen."
+   },
+   "tres-en-raya": {
+    "name": "Tic-Tac-Toe",
+    "short": "Das klassische 3×3: drei in einer Reihe gegen das Handy oder einen Freund."
+   },
+   "trenecito": {
+    "name": "Roll, kleiner Zug",
+    "short": "Fahr den Zug und sammle Kistchen."
+   },
+   "buscaminas": {
+    "name": "Minesweeper",
+    "short": "Öffne Felder und markiere die Minen."
+   },
+   "avioncito": {
+    "name": "Flieg, kleines Flugzeug",
+    "short": "Tippe zum Steigen und flieg durch die Lücken."
+   },
+   "bloques": {
+    "name": "Farbblöcke",
+    "short": "Setze die Teile ein und räume Reihen und Spalten."
+   },
+   "match-3": {
+    "name": "Früchte verbinden",
+    "short": "Verbinde drei gleiche Früchte und sammle Punkte."
+   },
+   "lluvia-de-bloques": {
+    "name": "Blockregen",
+    "short": "Drehe die fallenden Teile und fülle Reihen."
+   },
+   "canicas": {
+    "name": "Murmeln schießen",
+    "short": "Schieß eine Murmel in die Schlange. Drei derselben Farbe springen raus."
+   },
+   "burbujas": {
+    "name": "Kugeln schießen",
+    "short": "Schieß bunte Kugeln auf den Haufen, der runterkommt."
+   },
+   "sumas-cruzadas": {
+    "name": "Kreuzsummen",
+    "short": "Ein Quadrat: Fülle die fehlenden Zahlen."
+   },
+   "sopa-de-letras": {
+    "name": "Wörter suchen",
+    "short": "Finde die versteckten Wörter im Gitter."
+   },
+   "crucigrama": {
+    "name": "Kreuzworträtsel",
+    "short": "Fülle die Felder mit den Wörtern der Hinweise."
+   },
+   "ranita": {
+    "name": "Spring, kleiner Frosch",
+    "short": "Spring von Plattform zu Plattform und steig so hoch du kannst."
+   },
+   "caminos": {
+    "name": "Wege",
+    "short": "Verbinde die Farben und bedecke das ganze Brett."
+   },
+   "pintar-suelo": {
+    "name": "Boden malen",
+    "short": "Schiebe den Stein und male den ganzen Boden."
+   },
+   "marcianito": {
+    "name": "Mars-Abenteuer",
+    "short": "Bewege das Schiff und schieß auf die kleinen Marsmenschen, die runterkommen."
+   },
+   "la-meta": {
+    "name": "Das Ziel",
+    "short": "Schiebe den Stein, bis du auf dem grünen Feld stehst."
+   },
+   "adivina-la-palabra": {
+    "name": "Wort erraten",
+    "short": "Rate das geheime Wort, mit Farb-Tipps."
+   },
+   "ajedrez": {
+    "name": "Schach",
+    "short": "Zieh die Figuren und setze den König des anderen matt."
+   },
+   "damas": {
+    "name": "Dame",
+    "short": "Diagonal schlagen: spanische, englische oder brasilianische Dame."
+   },
+   "blackjack": {
+    "name": "Blackjack",
+    "short": "Komm auf 21, ohne drüber zu gehen. Die Bank spielt danach."
+   },
+   "torre": {
+    "name": "Turm stapeln",
+    "short": "Staple Blöcke. Was übersteht, wird abgeschnitten."
+   },
+   "forma-palabras": {
+    "name": "Wörter bilden",
+    "short": "Buchstaben durcheinander. Finde die Wörter, die sie verstecken."
+   },
+   "palabras-encadenadas": {
+    "name": "Wortkette",
+    "short": "Jedes Wort fängt mit den Endbuchstaben des vorigen an."
+   },
+   "bingo": {
+    "name": "Bingo",
+    "short": "Markiere die Zahlen auf deiner Karte: allein oder mit anderen am selben Handy."
+   },
+   "parchis": {
+    "name": "Parchís",
+    "short": "Bring deine Figuren raus: Parchís, Ludo, Parcheesi oder Mensch."
+   },
+   "oca": {
+    "name": "Gänsespiel",
+    "short": "Würfle: Gänsespiel, Gioco dell’Oca oder Jeu de l’oie."
+   },
+   "cifras": {
+    "name": "Zahlen",
+    "short": "Triff die Zielzahl: Zahlen, Countdown oder Des chiffres."
+   },
+   "kenken": {
+    "name": "KenKen",
+    "short": "Fülle das Brett: In jedem Käfig muss die Rechnung aufgehen und Zahlen dürfen nicht doppelt vorkommen."
+   },
+   "puentes": {
+    "name": "Brücken",
+    "short": "Verbinde die Inseln mit so vielen Brücken, wie jede verlangt."
+   },
+   "suma-x": {
+    "name": "Summe X",
+    "short": "Verbinde Paare von Steinen, die das Ziel ergeben."
+   },
+   "conecta-4": {
+    "name": "Vier gewinnt",
+    "short": "Lass Steine fallen. Gewonnen hat, wer vier in einer Linie legt."
+   },
+   "hundir-la-flota": {
+    "name": "Schiffe versenken",
+    "short": "Stelle deine Schiffe und schieß ins Meer des anderen."
+   },
+   "reversi": {
+    "name": "Reversi",
+    "short": "Umschließe Steine des anderen und drehe sie um."
+   }
+  }
+ }
+}

@@ -187,7 +187,31 @@ h1, h2, h3 { text-wrap: balance; }
 .site-foot .wordmark-img { height: 32px; }
 .wordmark:focus-visible { outline-color: var(--gold); border-radius: 6px; }
 
+.banner-end { display: flex; align-items: center; gap: 6px; }
 .banner-nav { display: flex; gap: 6px; }
+
+/* Selector de idioma: ficha pequeña con el globo y el código; la lista cae debajo. */
+.lang-menu { position: relative; }
+.lang-menu > summary {
+  display: inline-flex; align-items: center; gap: 5px; min-height: 42px; padding: 0 10px;
+  border: 2px solid transparent; border-radius: 14px; cursor: pointer; list-style: none;
+  color: var(--band-ink); font-weight: 900; font-size: 0.875rem; letter-spacing: 0.02em;
+}
+.lang-menu > summary::-webkit-details-marker { display: none; }
+.lang-menu > summary:hover, .lang-menu[open] > summary { background: rgba(255, 248, 238, 0.12); }
+.lang-menu > summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.lang-menu ul {
+  position: absolute; right: 0; top: calc(100% + 8px); z-index: 10;
+  min-width: 11rem; margin: 0; padding: 6px; list-style: none;
+  background: var(--surface); border: 2px solid var(--outline); border-radius: 16px;
+  box-shadow: 0 5px 0 var(--outline);
+}
+.lang-menu a {
+  display: block; padding: 9px 12px; border-radius: 10px;
+  color: var(--ink); font-weight: 700; text-decoration: none;
+}
+.lang-menu a:hover { background: var(--surface-hot); }
+.lang-menu a[aria-current="true"] { background: var(--primary); color: var(--primary-ink); }
 .banner-tab {
   display: inline-flex; align-items: center; min-height: 42px; padding: 0 12px;
   border: 2px solid transparent; border-radius: 14px;
