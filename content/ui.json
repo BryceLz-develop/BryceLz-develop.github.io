@@ -74,7 +74,11 @@
   "adultsTitle": "Para mayores de edad",
   "appSupportTitle": "Soporte de {app}",
   "appSupportDesc": "Preguntas frecuentes de {app} y contacto.",
-  "appSupportSubject": "{app} · Ayuda"
+  "appSupportSubject": "{app} · Ayuda",
+  "theApps": "Las apps",
+  "wallAll": "Los juegos",
+  "ctaApps": "Ver las apps",
+  "chipAndroid": "Para Android"
  },
  "en": {
   "langName": "English",
@@ -151,7 +155,11 @@
   "adultsTitle": "For adults only",
   "appSupportTitle": "{app} support",
   "appSupportDesc": "{app} frequently asked questions and contact.",
-  "appSupportSubject": "{app} · Help"
+  "appSupportSubject": "{app} · Help",
+  "theApps": "The apps",
+  "wallAll": "The games",
+  "ctaApps": "See the apps",
+  "chipAndroid": "For Android"
  },
  "pt": {
   "langName": "Português",
@@ -228,7 +236,11 @@
   "adultsTitle": "Para maiores de idade",
   "appSupportTitle": "Suporte do {app}",
   "appSupportDesc": "Perguntas frequentes do {app} e contato.",
-  "appSupportSubject": "{app} · Ajuda"
+  "appSupportSubject": "{app} · Ajuda",
+  "theApps": "Os apps",
+  "wallAll": "Os jogos",
+  "ctaApps": "Ver os apps",
+  "chipAndroid": "Para Android"
  },
  "it": {
   "langName": "Italiano",
@@ -305,7 +317,11 @@
   "adultsTitle": "Per maggiorenni",
   "appSupportTitle": "Assistenza di {app}",
   "appSupportDesc": "Domande frequenti di {app} e contatti.",
-  "appSupportSubject": "{app} · Aiuto"
+  "appSupportSubject": "{app} · Aiuto",
+  "theApps": "Le app",
+  "wallAll": "I giochi",
+  "ctaApps": "Vedi le app",
+  "chipAndroid": "Per Android"
  },
  "fr": {
   "langName": "Français",
@@ -382,7 +398,11 @@
   "adultsTitle": "Réservé aux adultes",
   "appSupportTitle": "Aide d’{app}",
   "appSupportDesc": "Foire aux questions d’{app} et contact.",
-  "appSupportSubject": "{app} · Aide"
+  "appSupportSubject": "{app} · Aide",
+  "theApps": "Les applis",
+  "wallAll": "Les jeux",
+  "ctaApps": "Voir les applis",
+  "chipAndroid": "Pour Android"
  },
  "de": {
   "langName": "Deutsch",
@@ -459,6 +479,10 @@
   "adultsTitle": "Nur für Erwachsene",
   "appSupportTitle": "Hilfe zu {app}",
   "appSupportDesc": "Häufige Fragen zu {app} und Kontakt.",
-  "appSupportSubject": "{app} · Hilfe"
+  "appSupportSubject": "{app} · Hilfe",
+  "theApps": "Die Apps",
+  "wallAll": "Die Spiele",
+  "ctaApps": "Zu den Apps",
+  "chipAndroid": "Für Android"
  }
 }

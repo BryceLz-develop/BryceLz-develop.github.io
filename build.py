@@ -207,7 +207,8 @@ class Ctx:
 
 def nav_items(lang: str) -> list[tuple[str, str]]:
     """Los apartados del banner. De momento: Inicio y AllTheGames."""
-    return [(lp(lang, ''), T(lang, 'home')), (lp(lang, 'apps/allthegames/'), 'AllTheGames')]
+    return [(lp(lang, ''), T(lang, 'home')), (lp(lang, 'apps/allthegames/'), 'AllTheGames'),
+            (lp(lang, PARTY), 'AllThePartyGames')]
 
 
 def wordmark(c: Ctx, lang: str) -> str:
@@ -264,7 +265,6 @@ def site_footer(c: Ctx, lang: str) -> str:
     {wordmark(c, lang)}
     <nav class="foot-links" aria-label="{esc(T(lang, 'footAria'))}">
       <a href="{c.to(lp(lang, 'aviso-legal/'))}">{esc(T(lang, 'legalNotice'))}</a>
-      <a href="{c.to(lp(lang, PARTY))}">AllThePartyGames (+18)</a>
       {mail_link()}
     </nav>
     <p class="foot-copy">© {YEAR} {esc(OWNER)} ({esc(T(lang, 'ownerNote'))})</p>
@@ -390,39 +390,28 @@ PRIMARY = '#C9692E'  # el naranja de la app (botones principales)
 STUDIO = '#6E1F2A'  # el granate del estudio
 
 
-def carousel(c: Ctx, d: dict, lang: str) -> str:
-    """Pared de ladrillos con los juegos: filas desplazadas que van una hacia cada lado."""
-    app, games = d['app'], d['games']
-    accent = {cat['id']: cat['accent'] for cat in app['categories']}
-    order = [cat['id'] for cat in app['categories']]
-    queues = {cid: [g for g in games if g['folder'] == cid] for cid in order}
-    mixed = []
-    while any(queues.values()):
-        for cid in order:
-            if queues[cid]:
-                mixed.append(queues[cid].pop(0))
-    atg = c.to(lp(lang, 'apps/allthegames/'))
+def carousel(c: Ctx, tiles: list[dict], lang: str) -> str:
+    """Pared de ladrillos con los juegos de todas las apps: filas desplazadas que van una hacia cada lado."""
 
-    def tile(g: dict, copy: bool) -> str:
+    def tile(t: dict, copy: bool) -> str:
         hidden = ' aria-hidden="true" tabindex="-1"' if copy else ''
-        cat = accent[g['folder']]
         return (
-            f'<li style="--tile:{pastel(cat, 0.14)};--tag:{band_fill(cat)}">'
-            f'<a href="{atg}#cat-{g["folder"]}"{hidden}>'
-            f'<img src="{c.to("static/apps/allthegames/games/" + g["slug"] + ".webp")}" alt="" width="96" height="96" loading="lazy">'
-            f'<span class="tile-name">{esc(game_name(d, lang, g))}</span>'
+            f'<li style="--tile:{pastel(t["accent"], 0.14)};--tag:{band_fill(t["accent"])}">'
+            f'<a href="{t["href"]}"{hidden}>'
+            f'<img src="{t["img"]}" alt="" width="96" height="96" loading="lazy">'
+            f'<span class="tile-name">{esc(t["name"])}</span>'
             f'</a></li>'
         )
 
     rows = SITE.get('carouselRows', 4)
-    per = math.ceil(len(mixed) / rows)
+    per = math.ceil(len(tiles) / rows)
     lines = []
     for r in range(rows):
-        part = mixed[r * per:(r + 1) * per]
+        part = tiles[r * per:(r + 1) * per]
         k = (r * 2) % max(1, len(part))
         part = part[k:] + part[:k]
-        first = ''.join(tile(g, False) for g in part)
-        again = ''.join(tile(g, True) for g in part) * 2
+        first = ''.join(tile(t, False) for t in part)
+        again = ''.join(tile(t, True) for t in part) * 2
         lines.append(f'<ul class="carousel-track">{first}{again}</ul>')
     pause, resume = json.dumps(T(lang, 'pause')), json.dumps(T(lang, 'resume'))
     return f'''<div class="carousel" data-carousel>
@@ -450,31 +439,98 @@ def carousel(c: Ctx, d: dict, lang: str) -> str:
 </script>'''
 
 
-def build_home(d: dict, lang: str) -> None:
-    """Inicio: la portada del estudio, con las mismas piezas que la app."""
+def mixed_by_category(categories: list[dict], games: list[dict]) -> list[dict]:
+    """Los juegos de una app, alternando categorías (uno de cada en cada vuelta)."""
+    queues = {cat['id']: [g for g in games if g['folder'] == cat['id']] for cat in categories}
+    out = []
+    while any(queues.values()):
+        for cat in categories:
+            if queues[cat['id']]:
+                out.append(queues[cat['id']].pop(0))
+    return out
+
+
+def home_tiles(c: Ctx, d: dict, p: dict, lang: str) -> list[dict]:
+    """Las fichas del carrusel: juegos de AllTheGames y de AllThePartyGames, intercalados."""
+    atg_acc = {cat['id']: cat['accent'] for cat in d['app']['categories']}
+    atg = [{
+        'img': c.to(f'static/apps/allthegames/games/{g["slug"]}.webp'), 'name': game_name(d, lang, g),
+        'href': c.to(lp(lang, 'apps/allthegames/')) + f'#cat-{g["folder"]}', 'accent': atg_acc[g['folder']],
+    } for g in mixed_by_category(d['app']['categories'], d['games'])]
+    if not p:
+        return atg
+    p_acc = {cat['id']: cat['accent'] for cat in p['app']['categories']}
+    party = [{
+        'img': c.to(f'static/apps/allthepartygames/games/{g["slug"]}.webp'), 'name': p['i18n'][lang]['games'][g['slug']],
+        'href': c.to(lp(lang, PARTY)) + f'#cat-{g["folder"]}', 'accent': p_acc[g['folder']],
+    } for g in mixed_by_category(p['app']['categories'], p['app']['games'])]
+    # Reparto proporcional: cada cierto número de juegos de una app, uno de la otra.
+    out, step = [], max(1, round(len(atg) / max(1, len(party))))
+    for i, t in enumerate(atg):
+        out.append(t)
+        if (i + 1) % step == 0 and party:
+            out.append(party.pop(0))
+    return out + party
+
+
+def app_feature(c: Ctx, lang: str, *, name: str, here: str, logo: str, logo_size: tuple, lead: str,
+                chips: list[tuple[str, str]], store_published: bool, privacy: str, badge: str = '') -> str:
+    """La tarjeta de una app en la portada (todas iguales)."""
+    chip_html = ''.join(f'<li style="--chip:{acc}">{esc(label)}</li>' for label, acc in chips)
+    store = T(lang, 'storeYes') if store_published else T(lang, 'storeSoon')
+    badge_html = f' <span class="age-badge">{badge}</span>' if badge else ''
+    return f'''<article class="feature card">
+    <a class="feature-art" href="{c.to(here)}" tabindex="-1" aria-hidden="true">
+      <img src="{c.to(logo)}" alt="" width="{logo_size[0]}" height="{logo_size[1]}" loading="lazy">
+    </a>
+    <div class="feature-copy">
+      <h3 class="display feature-name"><a href="{c.to(here)}">{name}</a>{badge_html}</h3>
+      <p>{esc(lead)}</p>
+      <ul class="chips" aria-label="{esc(T(lang, 'byCategory'))}">{chip_html}</ul>
+      <p class="muted">{esc(T(lang, 'forAndroid'))} {esc(store)}</p>
+      <div class="actions">
+        <a class="sticker" href="{c.to(here)}">{esc(T(lang, 'seeApp'))}</a>
+        <a class="sticker sticker-soft" href="{c.to(here + 'soporte/')}">{esc(T(lang, 'support'))}</a>
+        <a class="sticker sticker-soft" href="{c.to(privacy)}">{esc(T(lang, 'privacy'))}</a>
+      </div>
+    </div>
+  </article>'''
+
+
+def build_home(d: dict, p: dict, lang: str) -> None:
+    """Inicio: la portada del estudio, con todas sus apps en pie de igualdad."""
     here = lp(lang, '')
     c = Ctx(here)
-    app, games = d['app'], d['games']
-    s = lambda p: c.to('static/apps/allthegames/' + p)
-    atg = lambda p='': c.to(lp(lang, 'apps/allthegames/' + p))
-    chips = ''.join(
-        f'<li style="--chip:{cat["accent"]}">{esc(cat_label(d, lang, cat))}</li>'
-        for cat in app['categories']
+    features = [app_feature(
+        c, lang, name='AllTheGames', here=lp(lang, 'apps/allthegames/'), logo='static/apps/allthegames/logo.webp',
+        logo_size=(743, 500), lead=app_text(d, lang, 'lead'),
+        chips=[(cat_label(d, lang, cat), cat['accent']) for cat in d['app']['categories']],
+        store_published=d['app'].get('storePublished', False), privacy=privacy_paths()[lang])]
+    supports = [('AllTheGames', lp(lang, 'apps/allthegames/soporte/'))]
+    if p:
+        features.append(app_feature(
+            c, lang, name='AllThePartyGames', here=lp(lang, PARTY), logo='static/apps/allthepartygames/logo.webp',
+            logo_size=(760, 541), lead=p['i18n'][lang]['tagline'],
+            chips=[(p['i18n'][lang]['categories'][cat['id']], cat['accent']) for cat in p['app']['categories']],
+            store_published=p['app'].get('storePublished', False), privacy=party_paths('privacy')[lang], badge='+18'))
+        supports.append(('AllThePartyGames', lp(lang, PARTY + 'soporte/')))
+    support_buttons = ''.join(
+        f'<a class="sticker{"" if i == 0 else " sticker-soft"}" href="{c.to(path)}">{esc(T(lang, "appSupportTitle", app=name))}</a>'
+        for i, (name, path) in enumerate(supports)
     )
-    store = T(lang, 'storeYes') if app.get('storePublished') else T(lang, 'storeSoon')
     subject = T(lang, 'workSubject').replace(' ', '%20')
     main = f'''<section class="wrap hero">
   <div class="hero-copy">
     <h1 class="display hero-title">{esc(T(lang, 'headline'))}</h1>
     <p class="lead">{esc(T(lang, 'intro'))}</p>
     <div class="actions">
-      <a class="sticker" href="{atg()}">{esc(T(lang, 'ctaApp'))}</a>
+      <a class="sticker" href="#apps">{esc(T(lang, 'ctaApps'))}</a>
       <a class="sticker sticker-soft" href="#contacto">{esc(T(lang, 'ctaWrite'))}</a>
     </div>
   </div>
   <div class="hero-art" aria-hidden="true">
-    <img class="hero-icon" src="{s('icon.webp')}" alt="" width="384" height="384">
-    <span class="hero-chip chip-a" style="--chip:#2F7A55">{esc(T(lang, 'chipGames'))}</span>
+    <img class="hero-icon" src="{c.to('static/brand/mark-512.png')}" alt="" width="384" height="384">
+    <span class="hero-chip chip-a" style="--chip:#2F7A55">{esc(T(lang, 'chipAndroid'))}</span>
     <span class="hero-chip chip-b" style="--chip:#2D63A6">{esc(T(lang, 'chipLangs'))}</span>
     <span class="hero-chip chip-c" style="--chip:#7048A8">{esc(T(lang, 'chipNoAccount'))}</span>
   </div>
@@ -482,33 +538,16 @@ def build_home(d: dict, lang: str) -> None:
 
 <section class="games-wall" aria-labelledby="juegos-h">
   <div class="wrap section-head">
-    <h2 id="juegos-h" class="display">{esc(T(lang, 'wallTitle'))}</h2>
-    <a href="{atg()}">{esc(T(lang, 'wallLink'))}</a>
+    <h2 id="juegos-h" class="display">{esc(T(lang, 'wallAll'))}</h2>
   </div>
-  {carousel(c, d, lang)}
+  {carousel(c, home_tiles(c, d, p, lang), lang)}
 </section>
 
-<section class="wrap block" aria-labelledby="app-h">
-  <h2 id="app-h" class="display">{esc(T(lang, 'theApp'))}</h2>
-  <article class="feature card">
-    <a class="feature-art" href="{atg()}" tabindex="-1" aria-hidden="true">
-      <img src="{s('logo.webp')}" alt="" width="743" height="500">
-    </a>
-    <div class="feature-copy">
-      <h3 class="display feature-name"><a href="{atg()}">AllTheGames</a></h3>
-      <p>{esc(app_text(d, lang, 'lead'))}</p>
-      <ul class="chips" aria-label="{esc(T(lang, 'byCategory'))}">{chips}</ul>
-      <p class="muted">{esc(T(lang, 'forAndroid'))} {esc(store)}</p>
-      <div class="actions">
-        <a class="sticker" href="{atg()}">{esc(T(lang, 'seeApp'))}</a>
-        <a class="sticker sticker-soft" href="{atg('soporte/')}">{esc(T(lang, 'support'))}</a>
-        <a class="sticker sticker-soft" href="{c.to(privacy_paths()[lang])}">{esc(T(lang, 'privacy'))}</a>
-      </div>
-    </div>
-  </article>
+<section class="wrap block apps-list" id="apps" aria-labelledby="app-h">
+  <h2 id="app-h" class="display">{esc(T(lang, 'theApps'))}</h2>
+  {''.join(features)}
 </section>
 
-{party_card(c, load_party(), lang)}
 <section class="wrap block" id="contacto" aria-labelledby="contacto-h">
   <div class="card sheet-card">
     <h2 id="contacto-h" class="band-title" style="--fill:{band_fill(STUDIO)};--lip:{band_lip(STUDIO)}">{esc(T(lang, 'contact'))}</h2>
@@ -516,7 +555,7 @@ def build_home(d: dict, lang: str) -> None:
       <div>
         <h3>{esc(T(lang, 'helpTitle'))}</h3>
         <p>{esc(T(lang, 'helpBody'))}</p>
-        <a class="sticker" href="{atg('soporte/')}">{esc(T(lang, 'helpButton'))}</a>
+        <div class="actions">{support_buttons}</div>
       </div>
       <div>
         <h3>{esc(T(lang, 'workTitle'))}</h3>
@@ -920,7 +959,7 @@ def build_party_home(p: dict, lang: str) -> None:
   </div>
 </section>'''
     page(here, title=f'AllThePartyGames · {BRAND}', description=tx['tagline'], main=main, theme='party',
-         section=None, lang=lang, links=same_page(PARTY), pre_main=party_nav(c, here, lang), favicon=PARTY_ICON)
+         section=here, lang=lang, links=same_page(PARTY), pre_main=party_nav(c, here, lang), favicon=PARTY_ICON)
 
 
 def build_party_support(p: dict, lang: str) -> None:
@@ -948,7 +987,7 @@ def build_party_support(p: dict, lang: str) -> None:
   </section>
 </div>'''
     page(here, title=f'{T(lang, "appSupportTitle", app="AllThePartyGames")} · {BRAND}',
-         description=T(lang, 'appSupportDesc', app='AllThePartyGames'), main=main, theme='party', section=None,
+         description=T(lang, 'appSupportDesc', app='AllThePartyGames'), main=main, theme='party', section=lp(lang, PARTY),
          lang=lang, links=same_page(PARTY + 'soporte/'), pre_main=party_nav(c, here, lang), favicon=PARTY_ICON)
 
 
@@ -978,32 +1017,13 @@ def build_party_legal(p: dict, kind: str) -> None:
         here = paths[lang]
         t = p[kind][lang]
         page(here, title=f'{t["title"]} · AllThePartyGames', description=t['intro'], main=main_for(lang, here),
-             theme='party', section=None, lang=lang, links=paths,
+             theme='party', section=lp(lang, PARTY), lang=lang, links=paths,
              pre_main=party_nav(Ctx(here), here, lang), favicon=PARTY_ICON)
     es = p[kind]['es']
     dated = paths['es'] + es['version'] + '/'
     page(dated, title=f'{es["title"]} ({es["version"]}) · AllThePartyGames', description=es['intro'],
-         main=main_for('es', dated), theme='party', section=None, links=paths, hreflang=False,
+         main=main_for('es', dated), theme='party', section=PARTY, links=paths, hreflang=False,
          pre_main=party_nav(Ctx(dated), paths['es'], 'es'), favicon=PARTY_ICON)
-
-
-def party_card(c: Ctx, p: dict, lang: str) -> str:
-    """Tarjeta discreta en la portada: fuera del carrusel y marcada +18."""
-    if not p:
-        return ''
-    tx = p['i18n'][lang]
-    href = c.to(lp(lang, PARTY))
-    return f'''
-<section class="wrap block" aria-labelledby="adultos-h">
-  <h2 id="adultos-h" class="display">{esc(T(lang, 'adultsTitle'))}</h2>
-  <a class="card adult-card" href="{href}">
-    <img src="{c.to('static/apps/allthepartygames/icon.webp')}" alt="" width="96" height="96" loading="lazy">
-    <span class="adult-copy">
-      <span class="adult-name">AllThePartyGames <span class="age-badge">+18</span></span>
-      <span>{esc(tx['tagline'])}</span>
-    </span>
-  </a>
-</section>'''
 
 
 # ---------------------------------------------------------------------------
@@ -1020,15 +1040,15 @@ def build() -> None:
     if SITE.get('domain'):
         (OUT / 'CNAME').write_text(SITE['domain'] + '\n', 'utf-8')
     d = load()
+    party = load_party()
     for lang in LANGS:
-        build_home(d, lang)
+        build_home(d, party, lang)
         build_legal_notice(d, lang)
         build_atg_home(d, lang)
         build_atg_support(d, lang)
     build_404(d)
     build_atg_privacy(d)
     build_atg_terms(d)
-    party = load_party()
     if party:
         for lang in LANGS:
             build_party_home(party, lang)
