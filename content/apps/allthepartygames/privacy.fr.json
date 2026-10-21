@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-19",
-  "updated": "Mis à jour 19 octobre 2026",
+  "version": "2026-10-21",
+  "updated": "Mis à jour 21 octobre 2026",
   "title": "Confidentialité",
   "intro": "AllThePartyGames est une collection de jeux de soirée pour les 18 ans et plus. Cette note explique quelles données l’app utilise et pourquoi.",
   "sections": [
@@ -14,7 +14,7 @@
     ],
     [
       "Publicités",
-      "Sur Android, Google AdMob affiche de courtes publicités : de temps en temps entre les parties et, si tu le choisis, une pour ouvrir Épicé et Chaos pendant 2 heures. Nous demandons toujours des publicités non personnalisées pour un public adulte. Malgré cela, pour diffuser, mesurer et protéger les annonces, Google peut collecter l’adresse IP (qui permet d’estimer une localisation approximative), les interactions avec l’app et les annonces, des diagnostics et des identifiants de l’appareil. Dans l’Espace économique européen et au Royaume-Uni, nous demandons ton consentement avec le formulaire de Google, et tu peux le modifier dans Réglages > Options de confidentialité. Si aucune pub n’est disponible, tu peux jouer quand même."
+      "Sur Android, Google AdMob affiche de courtes publicités : de temps en temps entre les parties et, si tu le choisis, une pour ouvrir Épicé et Chaos pendant un moment. Nous demandons toujours des publicités non personnalisées pour un public adulte. Malgré cela, pour diffuser, mesurer et protéger les annonces, Google peut collecter l’adresse IP (qui permet d’estimer une localisation approximative), les interactions avec l’app et les annonces, des diagnostics et des identifiants de l’appareil. Dans l’Espace économique européen et au Royaume-Uni, nous demandons ton consentement avec le formulaire de Google, et tu peux le modifier dans Réglages > Options de confidentialité. Si aucune pub n’est disponible, tu peux jouer quand même."
     ],
     [
       "Achats",

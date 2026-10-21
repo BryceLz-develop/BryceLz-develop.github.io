@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-19",
-  "updated": "Updated October 19, 2026",
+  "version": "2026-10-21",
+  "updated": "Updated October 21, 2026",
   "title": "Privacy",
   "intro": "AllThePartyGames is a collection of party games for adults aged 18 and over. This note explains what data the app touches and why.",
   "sections": [
@@ -14,7 +14,7 @@
     ],
     [
       "Ads",
-      "On Android, Google AdMob shows short ads: now and then between games and, if you choose, one to open Spicy and Chaos for 2 hours. We always request non-personalized ads for an adult audience. Even so, to deliver, measure and protect ads, Google may collect the IP address (which allows an approximate location), interactions with the app and ads, diagnostics and device identifiers. In the European Economic Area and the UK we ask for consent with Google’s form, and you can change it in Settings > Privacy options. If no ad is available, you can play anyway."
+      "On Android, Google AdMob shows short ads: now and then between games and, if you choose, one to open Spicy and Chaos for a while. We always request non-personalized ads for an adult audience. Even so, to deliver, measure and protect ads, Google may collect the IP address (which allows an approximate location), interactions with the app and ads, diagnostics and device identifiers. In the European Economic Area and the UK we ask for consent with Google’s form, and you can change it in Settings > Privacy options. If no ad is available, you can play anyway."
     ],
     [
       "Purchases",
