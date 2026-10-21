@@ -119,7 +119,7 @@
   "s5Title": "Cosa non facciamo",
   "s5Body": "Non vendiamo dati, non creiamo profili pubblicitari e non accediamo al GPS né chiediamo una posizione precisa. Non ci sono scatole a sorpresa di acquisti. Non c’è chat tra giocatori.",
   "s6Title": "Chi risponde",
-  "s6Body": "Il titolare di AllTheGames e di questi dati è Brais López Arias (persona fisica). Per una domanda di privacy scrivi a {email}. Se un annuncio o un addebito non sta bene per un bambino, diccelo e lo controlliamo.",
+  "s6Body": "Il titolare di AllTheGames e di questi dati è Brais López Arias (privato). Per una domanda di privacy scrivi a {email}. Se un annuncio o un addebito non sta bene per un bambino, diccelo e lo controlliamo.",
   "s7Title": "Altri siti",
   "s7Body": "I giochi di parole (Indovina la parola, Forma parole e Parole in catena) controllano online le parole che non sono incluse nell’app: in spagnolo inviano la parola a rae-api.com, che usa l’indirizzo IP per limitare gli abusi; nelle altre lingue la inviano a Wiktionary (Wikimedia Foundation), che riceve l’indirizzo IP. Le bandiere sono caricate da flagcdn.com, il cui server riceve l’indirizzo IP e il codice dell’immagine richiesta. Per sapere se c’è connessione, l’app invia di tanto in tanto una richiesta vuota a Google (connectivitycheck.gstatic.com), che riceve l’indirizzo IP. Sono richieste tecniche tramite HTTPS. Google gestisce annunci e acquisti; non inviamo a questi servizi il nome del profilo locale, il PIN né la tua email. Se l’app si blocca, invia a Sentry (server nell’UE) un rapporto tecnico dell’errore: cosa non ha funzionato, la versione dell’app e il modello e sistema del telefono, senza IP, nome del profilo né altri dati personali.",
   "s8Title": "Perché e per quanto tempo",
