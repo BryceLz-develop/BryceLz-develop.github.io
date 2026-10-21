@@ -534,3 +534,20 @@ h1, h2, h3 { text-wrap: balance; }
 .faq:target { border-color: var(--primary); }
 .contact { margin-top: 28px; }
 .contact .sticker { margin-top: 8px; }
+
+/* ------------------------------------------------------------------- */
+/* Galería de capturas de la ficha (las de Google Play, en cada idioma). */
+
+.shots-strip {
+  display: flex; gap: 14px; margin: 0; padding: 4px 4px 18px; list-style: none;
+  overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+}
+.shots-strip li { flex: 0 0 auto; scroll-snap-align: start; }
+.shots-strip img {
+  width: 168px; height: auto; aspect-ratio: 9 / 16;
+  border: 2px solid var(--outline); border-radius: 18px;
+  box-shadow: 0 5px 0 var(--outline); background: var(--surface);
+}
+@media (min-width: 720px) { .shots-strip img { width: 200px; } }
+.shots-strip:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; border-radius: 12px; }

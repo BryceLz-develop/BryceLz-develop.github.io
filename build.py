@@ -592,6 +592,41 @@ def _tab(c: Ctx, p: str, label: str, current: str) -> str:
     return f'<a href="{c.to(p)}"{cur}>{esc(label)}</a>'
 
 
+# Capturas que de momento no se muestran: enseñan recuentos de juegos dentro de la app
+# (norma: ningún número de juegos fuera de la app). Quitar de aquí cuando se rehagan.
+SCREEN_SKIP = {'01-inicio', '08-juegos'}
+
+SCREEN_CATS = {'cartas': 'cartas', 'mesa': 'mesa', 'numeros': 'numeros', 'letras': 'letras',
+               'accion': 'accion', 'puzzles': 'puzzle'}
+
+
+def screens(c: Ctx, d: dict, lang: str) -> str:
+    """Galería con las capturas de Google Play en el idioma de la página (tools/export-screens.py)."""
+    folder = STATIC / 'apps' / 'allthegames' / 'screens' / lang
+    files = sorted(f for f in folder.glob('*.webp') if f.stem not in SCREEN_SKIP) if folder.exists() else []
+    if not files:
+        return ''
+    cats = {cat['id']: cat for cat in d['app']['categories']}
+    items = []
+    for f in files:
+        key = f.stem.split('-', 1)[1]
+        if key == 'inicio':
+            alt = T(lang, 'screenHome')
+        elif key == 'juegos':
+            alt = T(lang, 'screenGames')
+        elif key in SCREEN_CATS and SCREEN_CATS[key] in cats:
+            alt = T(lang, 'screenCat', cat=cat_label(d, lang, cats[SCREEN_CATS[key]]))
+        else:
+            alt = 'AllTheGames'
+        src = c.to(f'static/apps/allthegames/screens/{lang}/{f.name}')
+        items.append(f'<li><img src="{src}" alt="{esc(alt)}" width="540" height="960" loading="lazy"></li>')
+    return f'''<section class="wrap shots" aria-labelledby="capturas">
+  <h2 id="capturas" class="atg-h2">{esc(T(lang, 'screensTitle'))}</h2>
+  <ul class="shots-strip" tabindex="0" aria-label="{esc(T(lang, 'screensAria'))}">{''.join(items)}</ul>
+</section>
+'''
+
+
 def build_atg_home(d: dict, lang: str) -> None:
     app, games = d['app'], d['games']
     here = lp(lang, 'apps/allthegames/')
@@ -630,7 +665,7 @@ def build_atg_home(d: dict, lang: str) -> None:
     <ul class="facts">{facts}</ul>
   </div>
 </section>
-<section class="wrap catalog" aria-labelledby="los-juegos">
+{screens(c, d, lang)}<section class="wrap catalog" aria-labelledby="los-juegos">
   <h2 id="los-juegos" class="atg-h2">{esc(T(lang, 'atgGames'))}</h2>
   {''.join(cats)}
 </section>

@@ -65,7 +65,12 @@
   "supportWriteH": "Escribir a soporte",
   "supportWrite": "Cuéntame qué pasa, qué móvil usas y, si es un cobro, la fecha. Respondo desde {email}.",
   "supportButton": "Escribir un correo",
-  "supportSubject": "AllTheGames · Ayuda"
+  "supportSubject": "AllTheGames · Ayuda",
+  "screensTitle": "Así es la app",
+  "screensAria": "Capturas de AllTheGames",
+  "screenHome": "Pantalla de inicio",
+  "screenGames": "Todos los juegos",
+  "screenCat": "Categoría: {cat}"
  },
  "en": {
   "langName": "English",
@@ -133,7 +138,12 @@
   "supportWriteH": "Write to support",
   "supportWrite": "Tell me what’s happening, which phone you use and, if it’s about a charge, the date. I reply from {email}.",
   "supportButton": "Send an email",
-  "supportSubject": "AllTheGames · Help"
+  "supportSubject": "AllTheGames · Help",
+  "screensTitle": "A look at the app",
+  "screensAria": "AllTheGames screenshots",
+  "screenHome": "Home screen",
+  "screenGames": "All the games",
+  "screenCat": "Category: {cat}"
  },
  "pt": {
   "langName": "Português",
@@ -201,7 +211,12 @@
   "supportWriteH": "Escrever para o suporte",
   "supportWrite": "Conte o que está acontecendo, qual celular você usa e, se for uma cobrança, a data. Respondo pelo {email}.",
   "supportButton": "Enviar um e-mail",
-  "supportSubject": "AllTheGames · Ajuda"
+  "supportSubject": "AllTheGames · Ajuda",
+  "screensTitle": "Veja como é o app",
+  "screensAria": "Capturas de tela do AllTheGames",
+  "screenHome": "Tela inicial",
+  "screenGames": "Todos os jogos",
+  "screenCat": "Categoria: {cat}"
  },
  "it": {
   "langName": "Italiano",
@@ -269,7 +284,12 @@
   "supportWriteH": "Scrivi all’assistenza",
   "supportWrite": "Raccontami cosa succede, che telefono usi e, se si tratta di un addebito, la data. Rispondo da {email}.",
   "supportButton": "Scrivi un’email",
-  "supportSubject": "AllTheGames · Aiuto"
+  "supportSubject": "AllTheGames · Aiuto",
+  "screensTitle": "Uno sguardo all’app",
+  "screensAria": "Screenshot di AllTheGames",
+  "screenHome": "Schermata iniziale",
+  "screenGames": "Tutti i giochi",
+  "screenCat": "Categoria: {cat}"
  },
  "fr": {
   "langName": "Français",
@@ -337,7 +357,12 @@
   "supportWriteH": "Écrire à l’aide",
   "supportWrite": "Raconte-moi ce qui se passe, quel téléphone tu utilises et, s’il s’agit d’un paiement, la date. Je réponds depuis {email}.",
   "supportButton": "Envoyer un e-mail",
-  "supportSubject": "AllTheGames · Aide"
+  "supportSubject": "AllTheGames · Aide",
+  "screensTitle": "Aperçu de l’appli",
+  "screensAria": "Captures d’écran d’AllTheGames",
+  "screenHome": "Écran d’accueil",
+  "screenGames": "Tous les jeux",
+  "screenCat": "Catégorie : {cat}"
  },
  "de": {
   "langName": "Deutsch",
@@ -405,6 +430,11 @@
   "supportWriteH": "An den Support schreiben",
   "supportWrite": "Erzähl mir, was passiert, welches Handy du benutzt und, wenn es um eine Abbuchung geht, das Datum. Ich antworte von {email}.",
   "supportButton": "E-Mail schreiben",
-  "supportSubject": "AllTheGames · Hilfe"
+  "supportSubject": "AllTheGames · Hilfe",
+  "screensTitle": "So sieht die App aus",
+  "screensAria": "Screenshots von AllTheGames",
+  "screenHome": "Startbildschirm",
+  "screenGames": "Alle Spiele",
+  "screenCat": "Kategorie: {cat}"
  }
 }
