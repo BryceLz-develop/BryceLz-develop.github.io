@@ -9,6 +9,9 @@
 @font-face { font-family: 'Nunito Sans'; font-weight: 400; font-style: italic; font-display: swap; src: url('fonts/nunito-sans-400Regular_Italic.woff') format('woff'); }
 @font-face { font-family: 'Nunito Sans'; font-weight: 700; font-style: normal; font-display: swap; src: url('fonts/nunito-sans-700Bold.woff') format('woff'); }
 @font-face { font-family: 'Nunito Sans'; font-weight: 900; font-style: normal; font-display: swap; src: url('fonts/nunito-sans-900Black.woff') format('woff'); }
+@font-face { font-family: 'Lilita One'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/lilita-one.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/nunito-400Regular.ttf') format('truetype'); }
+@font-face { font-family: 'Nunito'; font-weight: 800; font-style: normal; font-display: swap; src: url('fonts/nunito-800ExtraBold.ttf') format('truetype'); }
 @font-face { font-family: 'ATG Display'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/atg-display.woff') format('woff'); }
 
 /* Colores generales: los del estudio BryceLz (granate, crema y casi negro).
@@ -551,3 +554,61 @@ h1, h2, h3 { text-wrap: balance; }
 }
 @media (min-width: 720px) { .shots-strip img { width: 200px; } }
 .shots-strip:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; border-radius: 12px; }
+
+/* ------------------------------------------------------------------- */
+/* AllThePartyGames: piel After Dark de la app (solo tema oscuro).      */
+
+.theme-party {
+  color-scheme: dark;
+  --paper: #0B0A0F;
+  --surface: #16121A;
+  --surface-hot: #241A22;
+  --ink: #F5EDE6;
+  --muted: #A89B96;
+  --line: #3A2A33;
+  --outline: #000000;
+  --lip: #000000;
+  --primary: #FF4D6D;
+  --primary-ink: #0B0A0F;
+  --link: #FF8FA3;
+  --focus: #F0D9A0;
+  --gold: #F0D9A0;
+  --band: #2A0F1A;
+  --band-lip: #12060B;
+  --band-ink: #F5EDE6;
+  --band-muted: #E9CFC8;
+  --wallpaper: none;
+  --veil: transparent;
+  --display: 'Lilita One', 'Nunito', sans-serif;
+  --display-weight: 400;
+  --text: 'Nunito', 'Nunito Sans', system-ui, sans-serif;
+  background-image: radial-gradient(ellipse at 50% -10%, rgba(184, 35, 63, 0.28), transparent 60%);
+  background-size: auto;
+}
+.theme-party .facts li::before { background: none; content: '♥'; color: var(--primary); font-size: 1.1rem; line-height: 1.5; }
+.theme-party .soon { border-color: var(--gold); color: var(--gold); }
+
+.age-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-left: 8px; padding: 2px 8px; border-radius: 999px;
+  background: #B8233F; color: #FFF; font-family: var(--text, sans-serif); font-weight: 900; font-size: 0.8125rem;
+  line-height: 1.3; letter-spacing: 0.02em; vertical-align: middle;
+}
+.age-badge-big { margin: 0; padding: 10px 14px; font-size: 1.375rem; border-radius: 16px; flex: 0 0 auto; }
+.age-notice {
+  display: flex; gap: 16px; align-items: flex-start; margin: 20px 0 8px; padding: 18px 20px;
+  background: var(--surface); border: 2px solid #B8233F; border-radius: 20px;
+}
+.age-notice p { margin: 0 0 6px; }
+.age-title { font-family: var(--display); font-size: 1.375rem; }
+.age-strip { margin: 0 0 16px; font-weight: 700; color: var(--muted); }
+.age-strip .age-badge { margin: 0 6px 0 0; }
+
+.adult-card {
+  display: flex; gap: 16px; align-items: center; padding: 16px 18px;
+  color: var(--ink); text-decoration: none;
+}
+.adult-card img { width: 72px; height: 72px; border-radius: 16px; border: 2px solid var(--outline); flex: 0 0 auto; }
+.adult-copy { display: flex; flex-direction: column; gap: 4px; }
+.adult-name { font-weight: 900; font-size: 1.125rem; }
+.adult-card:hover .adult-name { text-decoration: underline; }
