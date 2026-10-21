@@ -1,0 +1,48 @@
+{
+  "version": "2026-10-19",
+  "updated": "Stand 19. Oktober 2026",
+  "title": "Datenschutz",
+  "intro": "AllThePartyGames ist eine Sammlung von Partyspielen für Erwachsene ab 18 Jahren. Hier steht, welche Daten die App nutzt und wozu.",
+  "sections": [
+    [
+      "Was auf dem Handy bleibt",
+      "Die Spielernamen, die du eingibst, die gewählte Intensität pro Spiel, Favoriten, Shop-Pässe, Lautstärke und Sprache werden nur auf diesem Gerät gespeichert. Es gibt keine Konten und keinen eigenen Server, der deine Runden liest. Wenn du die App deinstallierst, wird alles gelöscht."
+    ],
+    [
+      "Nur für Erwachsene",
+      "Beim Öffnen fragen wir, ob du mindestens 18 Jahre alt bist. Wir speichern nur die Antwort auf dem Handy; wir fragen nie nach Geburtsdatum, Ausweis, Adresse oder Telefonnummer. Manche Spiele enthalten Alkohol und gewagte Inhalte (nie explizit): Spiel mit Verstand und trink verantwortungsvoll."
+    ],
+    [
+      "Werbung",
+      "Unter Android zeigt Google AdMob kurze Anzeigen: ab und zu zwischen den Runden und, wenn du willst, eine, um Scharf und Chaos für 2 Stunden zu öffnen. Wir fordern immer nicht personalisierte Anzeigen für ein erwachsenes Publikum an. Trotzdem kann Google zum Ausliefern, Messen und Schützen der Anzeigen die IP-Adresse (die einen ungefähren Standort erlaubt), Interaktionen mit App und Anzeigen, Diagnosedaten und Gerätekennungen erfassen. Im Europäischen Wirtschaftsraum und im Vereinigten Königreich fragen wir mit dem Formular von Google nach deiner Einwilligung; du kannst sie unter Einstellungen > Datenschutzoptionen ändern. Ist keine Anzeige verfügbar, kannst du trotzdem spielen."
+    ],
+    [
+      "Käufe",
+      "Werbung entfernen und Premium werden über Google Play oder den App Store bezahlt. Der Store wickelt die Zahlung ab und teilt der App Produkt und Kaufstatus mit, damit sie ihn liefern oder wiederherstellen kann. Wir sehen deine Zahlungsdaten nie und senden sie an keinen eigenen Server."
+    ],
+    [
+      "Was wir nicht tun",
+      "Wir verkaufen keine Daten, erstellen keine Werbeprofile und greifen weder auf GPS, Kamera, Mikrofon noch auf deine Kontakte zu. Es gibt keinen Chat zwischen Spielern und keine kostenpflichtigen Lootboxen."
+    ],
+    [
+      "Wer verantwortlich ist",
+      "Verantwortlich für AllThePartyGames und diese Daten ist Brais López Arias (Privatperson). Bei Fragen zum Datenschutz schreib an {email}."
+    ],
+    [
+      "Andere Dienste",
+      "Die Flaggen in der Sprachauswahl werden von flagcdn.com geladen, das die IP und den Bildcode erhält. Um die Verbindung zu prüfen, sendet die App gelegentlich eine leere Anfrage an Google (connectivitycheck.gstatic.com), das die IP erhält. Stürzt die App ab, sendet sie an Sentry (Server in der EU) einen technischen Fehlerbericht: was schiefging, die App-Version sowie Modell und System des Handys, ohne IP, ohne Spielernamen und ohne andere personenbezogene Daten."
+    ],
+    [
+      "Warum und wie lange",
+      "Die Werbung hält die App kostenlos, scharfe Inhalte inklusive (berechtigtes Interesse und, wo nötig, deine Einwilligung). Käufe werden verarbeitet, um das Gekaufte zu liefern (Vertrag). Was auf dem Handy gespeichert ist, bleibt, bis du die App-Daten löschst oder die App deinstallierst; Google speichert seine Daten nach eigenen Richtlinien."
+    ],
+    [
+      "Deine Rechte",
+      "Du kannst Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung oder Übertragbarkeit deiner Daten verlangen, indem du an {email} schreibst. Da fast alles nur auf deinem Handy liegt, genügt meist das Löschen der App-Daten oder die Deinstallation. Wenn du meinst, dass deine Rechte nicht gewahrt werden, kannst du dich bei der spanischen Datenschutzbehörde (aepd.es) beschweren."
+    ],
+    [
+      "Minderjährige",
+      "AllThePartyGames ist nicht für Personen unter 18 Jahren gedacht, und wir erfassen wissentlich keine Daten von Minderjährigen. Wenn du Elternteil oder Vormund bist und glaubst, dass ein Minderjähriger die App genutzt hat, schreib an {email} und wir prüfen das."
+    ]
+  ]
+}

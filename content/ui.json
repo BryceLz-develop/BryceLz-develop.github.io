@@ -70,7 +70,11 @@
   "screensAria": "Capturas de AllTheGames",
   "screenHome": "Pantalla de inicio",
   "screenGames": "Todos los juegos",
-  "screenCat": "Categoría: {cat}"
+  "screenCat": "Categoría: {cat}",
+  "adultsTitle": "Para mayores de edad",
+  "appSupportTitle": "Soporte de {app}",
+  "appSupportDesc": "Preguntas frecuentes de {app} y contacto.",
+  "appSupportSubject": "{app} · Ayuda"
  },
  "en": {
   "langName": "English",
@@ -143,7 +147,11 @@
   "screensAria": "AllTheGames screenshots",
   "screenHome": "Home screen",
   "screenGames": "All the games",
-  "screenCat": "Category: {cat}"
+  "screenCat": "Category: {cat}",
+  "adultsTitle": "For adults only",
+  "appSupportTitle": "{app} support",
+  "appSupportDesc": "{app} frequently asked questions and contact.",
+  "appSupportSubject": "{app} · Help"
  },
  "pt": {
   "langName": "Português",
@@ -216,7 +224,11 @@
   "screensAria": "Capturas de tela do AllTheGames",
   "screenHome": "Tela inicial",
   "screenGames": "Todos os jogos",
-  "screenCat": "Categoria: {cat}"
+  "screenCat": "Categoria: {cat}",
+  "adultsTitle": "Para maiores de idade",
+  "appSupportTitle": "Suporte do {app}",
+  "appSupportDesc": "Perguntas frequentes do {app} e contato.",
+  "appSupportSubject": "{app} · Ajuda"
  },
  "it": {
   "langName": "Italiano",
@@ -289,7 +301,11 @@
   "screensAria": "Screenshot di AllTheGames",
   "screenHome": "Schermata iniziale",
   "screenGames": "Tutti i giochi",
-  "screenCat": "Categoria: {cat}"
+  "screenCat": "Categoria: {cat}",
+  "adultsTitle": "Per maggiorenni",
+  "appSupportTitle": "Assistenza di {app}",
+  "appSupportDesc": "Domande frequenti di {app} e contatti.",
+  "appSupportSubject": "{app} · Aiuto"
  },
  "fr": {
   "langName": "Français",
@@ -362,7 +378,11 @@
   "screensAria": "Captures d’écran d’AllTheGames",
   "screenHome": "Écran d’accueil",
   "screenGames": "Tous les jeux",
-  "screenCat": "Catégorie : {cat}"
+  "screenCat": "Catégorie : {cat}",
+  "adultsTitle": "Réservé aux adultes",
+  "appSupportTitle": "Aide d’{app}",
+  "appSupportDesc": "Foire aux questions d’{app} et contact.",
+  "appSupportSubject": "{app} · Aide"
  },
  "de": {
   "langName": "Deutsch",
@@ -435,6 +455,10 @@
   "screensAria": "Screenshots von AllTheGames",
   "screenHome": "Startbildschirm",
   "screenGames": "Alle Spiele",
-  "screenCat": "Kategorie: {cat}"
+  "screenCat": "Kategorie: {cat}",
+  "adultsTitle": "Nur für Erwachsene",
+  "appSupportTitle": "Hilfe zu {app}",
+  "appSupportDesc": "Häufige Fragen zu {app} und Kontakt.",
+  "appSupportSubject": "{app} · Hilfe"
  }
 }

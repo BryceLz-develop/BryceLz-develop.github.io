@@ -1,0 +1,37 @@
+{
+  "version": "2026-10-21",
+  "updated": "Atualizado em 21 de outubro de 2026",
+  "title": "Termos das compras",
+  "intro": "AllThePartyGames é uma coleção de jogos de festa para maiores de 18 anos. Estes termos explicam o que se paga na loja e como funciona.",
+  "sections": [
+    [
+      "O que dá para comprar",
+      "Tirar anúncios: um pagamento único que remove os anúncios entre partidas. Premium: um pagamento único que remove os anúncios entre partidas e deixa Picante e Caos abertos para sempre em todos os jogos. Sem comprar nada, Picante e Caos abrem de graça por 2 horas assistindo a um anúncio curto. O conteúdo e o preço válidos são os que o Google Play ou a App Store mostram antes de confirmar; podem mudar conforme o país."
+    ],
+    [
+      "Quem cobra",
+      "A cobrança é feita pelo Google Play ou pela Apple, não por nós. Os reembolsos são pedidos à loja conforme as regras dela, e um reembolso pode retirar o que foi comprado."
+    ],
+    [
+      "Restaurar compras",
+      "As compras ficam ligadas à sua conta da loja. Se você trocar de celular ou reinstalar o app, use Restaurar compras na Loja do app com a mesma conta."
+    ],
+    [
+      "Somente para maiores de idade",
+      "O app é para maiores de 18 anos e as compras devem ser feitas por um adulto. Se um menor fez uma compra, escreva para {email} e nós verificamos."
+    ],
+    [
+      "Jogue com bom senso",
+      "Alguns jogos envolvem bebida. Ninguém é obrigado a beber nem a cumprir um desafio: dá para jogar com água ou com prendas. Beba com moderação."
+    ],
+    [
+      "Responsável",
+      "AllThePartyGames é publicado por Brais López Arias (pessoa física). Contato: {email}."
+    ],
+    [
+      "Privacidade",
+      "Como tratamos os dados está na {privacyLink}."
+    ]
+  ],
+  "privacyLinkText": "nota de privacidade"
+}

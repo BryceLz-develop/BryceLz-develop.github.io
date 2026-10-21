@@ -1,0 +1,37 @@
+{
+  "version": "2026-10-21",
+  "updated": "Mis à jour le 21 octobre 2026",
+  "title": "Conditions des achats",
+  "intro": "AllThePartyGames est une collection de jeux de soirée pour les 18 ans et plus. Ces conditions expliquent ce qui se paie dans la boutique et comment cela fonctionne.",
+  "sections": [
+    [
+      "Ce qu’on peut acheter",
+      "Enlever les pubs : un paiement unique qui supprime les publicités entre les parties. Premium : un paiement unique qui supprime les publicités entre les parties et laisse Épicé et Chaos ouverts pour toujours dans tous les jeux. Sans rien acheter, Épicé et Chaos s’ouvrent gratuitement pendant 2 heures en regardant une courte publicité. Le contenu et le prix en vigueur sont ceux qu’affiche Google Play ou l’App Store avant de confirmer ; ils peuvent varier selon le pays."
+    ],
+    [
+      "Qui encaisse",
+      "Le paiement est géré par Google Play ou Apple, pas par nous. Les remboursements se demandent à la boutique selon ses règles, et un remboursement peut retirer ce qui a été acheté."
+    ],
+    [
+      "Restaurer les achats",
+      "Les achats sont liés à ton compte de la boutique. Si tu changes de téléphone ou réinstalles l’appli, utilise Restaurer les achats dans la Boutique de l’appli avec le même compte."
+    ],
+    [
+      "Réservé aux adultes",
+      "L’appli est réservée aux 18 ans et plus, et les achats doivent être faits par un adulte. Si un mineur a fait un achat, écris-nous à {email} et nous vérifions."
+    ],
+    [
+      "Joue avec modération",
+      "Certains jeux impliquent de l’alcool. Personne n’est obligé de boire ni de faire un défi : on peut jouer avec de l’eau ou des gages. L’abus d’alcool est dangereux pour la santé, à consommer avec modération."
+    ],
+    [
+      "Éditeur",
+      "AllThePartyGames est publiée par Brais López Arias (particulier). Contact : {email}."
+    ],
+    [
+      "Confidentialité",
+      "La façon dont nous traitons les données est expliquée dans la {privacyLink}."
+    ]
+  ],
+  "privacyLinkText": "note de confidentialité"
+}

@@ -1,0 +1,114 @@
+{
+  "slug": "allthepartygames",
+  "name": "AllThePartyGames",
+  "package": "com.allthepartygames.app",
+  "version": "0.1.0",
+  "storePublished": false,
+  "storeUrl": "https://play.google.com/store/apps/details?id=com.allthepartygames.app",
+  "privacyVersion": "2026-10-19",
+  "termsVersion": "2026-10-21",
+  "categories": [
+    {
+      "id": "preguntas",
+      "label": "Preguntas",
+      "accent": "#B8325A"
+    },
+    {
+      "id": "retos",
+      "label": "Retos y azar",
+      "accent": "#C2462E"
+    },
+    {
+      "id": "adivinar",
+      "label": "Adivinar",
+      "accent": "#7A3FA8"
+    },
+    {
+      "id": "cartas",
+      "label": "Cartas y bebida",
+      "accent": "#2C7A62"
+    }
+  ],
+  "games": [
+    {
+      "slug": "yo-nunca",
+      "name": "Yo Nunca",
+      "folder": "preguntas"
+    },
+    {
+      "slug": "verdad-o-reto",
+      "name": "Verdad o Reto",
+      "folder": "preguntas"
+    },
+    {
+      "slug": "quien-es-mas-probable",
+      "name": "¿Quién es más probable?",
+      "folder": "preguntas"
+    },
+    {
+      "slug": "preferirias",
+      "name": "Preferirías…",
+      "folder": "preguntas"
+    },
+    {
+      "slug": "la-botella",
+      "name": "La Botella",
+      "folder": "retos"
+    },
+    {
+      "slug": "ruleta-loca",
+      "name": "Ruleta Loca",
+      "folder": "retos"
+    },
+    {
+      "slug": "dados-picantes",
+      "name": "Dados Picantes",
+      "folder": "retos"
+    },
+    {
+      "slug": "bomba",
+      "name": "Bomba",
+      "folder": "retos"
+    },
+    {
+      "slug": "charadas-calientes",
+      "name": "Charadas Calientes",
+      "folder": "adivinar"
+    },
+    {
+      "slug": "verdadero-o-falso",
+      "name": "Verdadero o Falso",
+      "folder": "adivinar"
+    },
+    {
+      "slug": "palabra-prohibida",
+      "name": "Palabra Prohibida",
+      "folder": "adivinar"
+    },
+    {
+      "slug": "quien-soy",
+      "name": "¿Quién soy?",
+      "folder": "adivinar"
+    },
+    {
+      "slug": "piramide",
+      "name": "Pirámide",
+      "folder": "cartas"
+    },
+    {
+      "slug": "anillo-de-fuego",
+      "name": "Anillo de Fuego",
+      "folder": "cartas"
+    },
+    {
+      "slug": "mayor-o-menor",
+      "name": "Mayor o Menor",
+      "folder": "cartas"
+    },
+    {
+      "slug": "el-impostor",
+      "name": "El Impostor",
+      "folder": "cartas"
+    }
+  ]
+}

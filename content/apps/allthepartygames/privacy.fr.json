@@ -1,0 +1,48 @@
+{
+  "version": "2026-10-19",
+  "updated": "Mis à jour 19 octobre 2026",
+  "title": "Confidentialité",
+  "intro": "AllThePartyGames est une collection de jeux de soirée pour les 18 ans et plus. Cette note explique quelles données l’app utilise et pourquoi.",
+  "sections": [
+    [
+      "Ce qui reste sur le téléphone",
+      "Les noms des joueurs que tu saisis, l’intensité choisie dans chaque jeu, les favoris, les pass de la boutique, le volume et la langue sont enregistrés uniquement sur cet appareil. Il n’y a pas de compte ni de serveur à nous qui lise tes parties. Si tu désinstalles l’app, tout est effacé."
+    ],
+    [
+      "Réservé aux adultes",
+      "À l’ouverture, nous te demandons si tu as 18 ans ou plus. Nous n’enregistrons que la réponse sur le téléphone ; nous ne demandons ni date de naissance, ni pièce d’identité, ni adresse, ni numéro de téléphone. Certains jeux impliquent de l’alcool et du contenu osé (jamais explicite) : joue malin et bois avec modération."
+    ],
+    [
+      "Publicités",
+      "Sur Android, Google AdMob affiche de courtes publicités : de temps en temps entre les parties et, si tu le choisis, une pour ouvrir Épicé et Chaos pendant 2 heures. Nous demandons toujours des publicités non personnalisées pour un public adulte. Malgré cela, pour diffuser, mesurer et protéger les annonces, Google peut collecter l’adresse IP (qui permet d’estimer une localisation approximative), les interactions avec l’app et les annonces, des diagnostics et des identifiants de l’appareil. Dans l’Espace économique européen et au Royaume-Uni, nous demandons ton consentement avec le formulaire de Google, et tu peux le modifier dans Réglages > Options de confidentialité. Si aucune pub n’est disponible, tu peux jouer quand même."
+    ],
+    [
+      "Achats",
+      "Supprimer les pubs et Premium se paient à Google Play ou à l’App Store. La boutique traite le paiement et indique à l’app le produit et l’état de l’achat pour le livrer ou le restaurer. Nous ne voyons jamais tes données de paiement et ne les envoyons à aucun serveur à nous."
+    ],
+    [
+      "Ce que nous ne faisons pas",
+      "Nous ne vendons pas de données, ne créons pas de profils publicitaires et n’accédons ni au GPS, ni à l’appareil photo, ni au micro, ni à tes contacts. Il n’y a pas de chat entre joueurs ni de coffres payants."
+    ],
+    [
+      "Qui est responsable",
+      "Le responsable d’AllThePartyGames et de ces données est Brais López Arias (particulier). Pour toute question de confidentialité, écris à {email}."
+    ],
+    [
+      "Autres services",
+      "Les drapeaux du sélecteur de langue sont chargés depuis flagcdn.com, qui reçoit l’IP et le code de l’image. Pour vérifier la connexion, l’app envoie de temps en temps une requête vide à Google (connectivitycheck.gstatic.com), qui reçoit l’IP. Si l’app plante, elle envoie à Sentry (serveurs dans l’UE) un rapport technique de l’erreur : ce qui a échoué, la version de l’app et le modèle et système du téléphone, sans IP, sans noms de joueurs ni autres données personnelles."
+    ],
+    [
+      "Pourquoi et combien de temps",
+      "Les publicités gardent l’app gratuite, contenu épicé compris (intérêt légitime et, si nécessaire, ton consentement). Les achats sont traités pour fournir ce que tu achètes (contrat). Ce qui est stocké sur le téléphone reste jusqu’à ce que tu effaces les données de l’app ou la désinstalles ; Google conserve ses données selon ses propres règles."
+    ],
+    [
+      "Tes droits",
+      "Tu peux demander l’accès, la rectification, l’effacement, l’opposition, la limitation ou la portabilité de tes données en écrivant à {email}. Comme presque tout est stocké uniquement sur ton téléphone, il suffit généralement d’effacer les données de l’app ou de la désinstaller. Si tu estimes que tes droits ne sont pas respectés, tu peux saisir l’Agence espagnole de protection des données (aepd.es)."
+    ],
+    [
+      "Mineurs",
+      "AllThePartyGames n’est pas destinée aux moins de 18 ans et nous ne collectons pas sciemment de données de mineurs. Si tu es parent ou tuteur et penses qu’un mineur l’a utilisée, écris-nous à {email} et nous vérifierons."
+    ]
+  ]
+}

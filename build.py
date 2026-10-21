@@ -48,6 +48,8 @@ PRIVACY_CHROME = {
     l: {'terms': UI[l]['termsLong'], 'langs': UI[l]['langMenu']} for l in LANGS
 }
 
+THEME_COLOR = {'studio': '#6E1F2A', 'atg': '#935127', 'party': '#2A0F1A'}
+
 # Enlaces dentro de los textos legales (solo nombres exactos).
 AUTO_LINKS = {
     'rae-api.com': 'https://rae-api.com',
@@ -262,6 +264,7 @@ def site_footer(c: Ctx, lang: str) -> str:
     {wordmark(c, lang)}
     <nav class="foot-links" aria-label="{esc(T(lang, 'footAria'))}">
       <a href="{c.to(lp(lang, 'aviso-legal/'))}">{esc(T(lang, 'legalNotice'))}</a>
+      <a href="{c.to(lp(lang, PARTY))}">AllThePartyGames (+18)</a>
       {mail_link()}
     </nav>
     <p class="foot-copy">© {YEAR} {esc(OWNER)} ({esc(T(lang, 'ownerNote'))})</p>
@@ -315,7 +318,7 @@ def page(
   <meta property="og:url" content="{canonical}">
   <meta property="og:image" content="{base}/static/brand/og.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="theme-color" content="{"#935127" if theme == "atg" else "#6E1F2A"}">
+  <meta name="theme-color" content="{THEME_COLOR.get(theme, '#6E1F2A')}">
   <link rel="icon" href="{c.to(icon)}">
   <link rel="apple-touch-icon" href="{c.to('static/brand/apple-touch-icon.png')}">
   <link rel="stylesheet" href="{c.to('static/site.css')}?v={CSS_VER}">
@@ -505,6 +508,7 @@ def build_home(d: dict, lang: str) -> None:
   </article>
 </section>
 
+{party_card(c, load_party(), lang)}
 <section class="wrap block" id="contacto" aria-labelledby="contacto-h">
   <div class="card sheet-card">
     <h2 id="contacto-h" class="band-title" style="--fill:{band_fill(STUDIO)};--lip:{band_lip(STUDIO)}">{esc(T(lang, 'contact'))}</h2>
@@ -805,6 +809,204 @@ def build_atg_terms(d: dict) -> None:
 
 
 # ---------------------------------------------------------------------------
+# AllThePartyGames (+18). Sus datos los copia tools/export-party.py desde la app.
+
+PARTY = 'apps/allthepartygames/'
+PARTY_ICON = 'static/apps/allthepartygames/favicon.png'
+PARTY_ACCENT = '#B8233F'
+
+
+def load_party() -> dict:
+    base = CONTENT / 'apps' / 'allthepartygames'
+    if not (base / 'app.json').exists():
+        return {}
+    d = {
+        'app': json.loads((base / 'app.json').read_text('utf-8')),
+        'i18n': json.loads((base / 'i18n.json').read_text('utf-8')),
+    }
+    for kind in ('privacy', 'terms'):
+        d[kind] = {l: json.loads((base / f'{kind}.{l}.json').read_text('utf-8')) for l in LANGS}
+    return d
+
+
+def party_paths(kind: str) -> dict:
+    folder = {'privacy': 'privacidad/', 'terms': 'terminos/'}[kind]
+    return {l: PARTY + folder + ('' if l == 'es' else l + '/') for l in LANGS}
+
+
+def party_nav(c: Ctx, current: str, lang: str) -> str:
+    tabs = [
+        (lp(lang, PARTY), T(lang, 'tabApp')),
+        (lp(lang, PARTY + 'soporte/'), T(lang, 'support')),
+        (party_paths('privacy')[lang], T(lang, 'privacy')),
+        (party_paths('terms')[lang], T(lang, 'tabTerms')),
+    ]
+    links = ''.join(_tab(c, p, label, current) for p, label in tabs)
+    return f'''<div class="appnav">
+  <div class="wrap appnav-row">
+    <a class="appnav-brand" href="{c.to(lp(lang, PARTY))}">
+      <img src="{c.to('static/apps/allthepartygames/icon.webp')}" alt="" width="40" height="40">
+      <span>AllThePartyGames</span><span class="age-badge" aria-label="{esc(T(lang, 'adultsTitle'))}">+18</span>
+    </a>
+    <nav class="appnav-tabs" aria-label="AllThePartyGames">{links}</nav>
+  </div>
+</div>'''
+
+
+def age_notice(p: dict, lang: str, compact: bool = False) -> str:
+    """El aviso de edad, con el texto de la puerta de edad de la app tal cual."""
+    g = p['i18n'][lang]['ageGate']
+    if compact:
+        return f'<p class="age-strip"><span class="age-badge">+18</span> {esc(g["body"])}</p>'
+    return f'''<aside class="age-notice" aria-label="{esc(T(lang, 'adultsTitle'))}">
+    <span class="age-badge age-badge-big">+18</span>
+    <div>
+      <p class="age-title">{esc(g['title'])}</p>
+      <p>{esc(g['body'])}</p>
+      <p class="muted">{esc(g['drinkResponsibly'])}</p>
+    </div>
+  </aside>'''
+
+
+def build_party_home(p: dict, lang: str) -> None:
+    app, tx = p['app'], p['i18n'][lang]
+    here = lp(lang, PARTY)
+    c = Ctx(here)
+    s = lambda f: c.to('static/apps/allthepartygames/' + f)
+    perks = ''.join(f'<li>{esc(x)}</li>' for x in tx['perks'])
+    cats = []
+    for cat in app['categories']:
+        mine = [g for g in app['games'] if g['folder'] == cat['id']]
+        tiles = ''.join(
+            f'''<li class="game">
+        <img src="{s('games/' + g['slug'] + '.webp')}" alt="" width="72" height="72" loading="lazy">
+        <span>{esc(tx['games'][g['slug']])}</span>
+      </li>'''
+            for g in mine
+        )
+        cats.append(f'''<section class="cat" aria-labelledby="cat-{cat['id']}">
+    <h3 class="cat-band" id="cat-{cat['id']}" style="--fill:{band_fill(cat['accent'])};--lip:{band_lip(cat['accent'])}">
+      <img src="{s('categories/' + cat['id'] + '.webp')}" alt="" width="44" height="44">
+      <span>{esc(tx['categories'][cat['id']])}</span>
+    </h3>
+    <ul class="games">
+      {tiles}
+    </ul>
+  </section>''')
+    store = (
+        f'<a class="sticker" href="{esc(app["storeUrl"])}&amp;hl={HTML_LANG[lang]}">{esc(T(lang, "download"))}</a>'
+        if app.get('storePublished') else f'<p class="soon">{esc(T(lang, "soon"))}</p>'
+    )
+    main = f'''<section class="wrap atg-hero">
+  <img class="atg-logo" src="{s('logo.webp')}" alt="" width="760" height="541">
+  <div class="atg-intro">
+    <h1 class="visually-hidden">AllThePartyGames</h1>
+    <p class="lead">{esc(tx['tagline'])}</p>
+    {store}
+    <ul class="facts">{perks}</ul>
+  </div>
+</section>
+<div class="wrap">{age_notice(p, lang)}</div>
+<section class="wrap catalog" aria-labelledby="los-juegos">
+  <h2 id="los-juegos" class="atg-h2">{esc(T(lang, 'atgGames'))}</h2>
+  {''.join(cats)}
+</section>
+<section class="wrap atg-help" aria-labelledby="ayuda">
+  <h2 id="ayuda" class="atg-h2">{esc(T(lang, 'atgHelp'))}</h2>
+  <div class="help-row">
+    <a class="sticker" href="{c.to(lp(lang, PARTY + 'soporte/'))}">{esc(T(lang, 'support'))}</a>
+    <a class="sticker sticker-soft" href="{c.to(party_paths('privacy')[lang])}">{esc(T(lang, 'privacy'))}</a>
+    <a class="sticker sticker-soft" href="{c.to(party_paths('terms')[lang])}">{esc(T(lang, 'termsLong'))}</a>
+  </div>
+</section>'''
+    page(here, title=f'AllThePartyGames · {BRAND}', description=tx['tagline'], main=main, theme='party',
+         section=None, lang=lang, links=same_page(PARTY), pre_main=party_nav(c, here, lang), favicon=PARTY_ICON)
+
+
+def build_party_support(p: dict, lang: str) -> None:
+    tx = p['i18n'][lang]
+    here = lp(lang, PARTY + 'soporte/')
+    c = Ctx(here)
+    items = ''.join(
+        f'''<details class="faq" id="{slug(q)}">
+    <summary>{esc(q)}</summary>
+    <p>{rich(a)}</p>
+  </details>'''
+        for q, a in tx['faq']
+    )
+    subject = T(lang, 'appSupportSubject', app='AllThePartyGames').replace(' · ', '%20%C2%B7%20').replace(' ', '%20')
+    write = esc(T(lang, 'supportWrite')).replace('{email}', mail_link())
+    main = f'''<div class="wrap narrow sheet">
+  <h1 class="band-title" style="--fill:{band_fill(PARTY_ACCENT)};--lip:{band_lip(PARTY_ACCENT)}">{esc(T(lang, 'supportTitle'))}</h1>
+  {age_notice(p, lang, compact=True)}
+  <p class="lead">{esc(T(lang, 'supportLead'))}</p>
+  {items}
+  <section class="contact">
+    <h2>{esc(T(lang, 'supportWriteH'))}</h2>
+    <p>{write}</p>
+    <a class="sticker" href="mailto:{esc(EMAIL)}?subject={esc(subject)}">{esc(T(lang, 'supportButton'))}</a>
+  </section>
+</div>'''
+    page(here, title=f'{T(lang, "appSupportTitle", app="AllThePartyGames")} · {BRAND}',
+         description=T(lang, 'appSupportDesc', app='AllThePartyGames'), main=main, theme='party', section=None,
+         lang=lang, links=same_page(PARTY + 'soporte/'), pre_main=party_nav(c, here, lang), favicon=PARTY_ICON)
+
+
+def build_party_legal(p: dict, kind: str) -> None:
+    """Privacidad o términos de AllThePartyGames, en los 6 idiomas, copiados de la app."""
+    paths = party_paths(kind)
+
+    def main_for(lang: str, here: str) -> str:
+        c = Ctx(here)
+        t = p[kind][lang]
+        priv = f'<a href="{c.to(party_paths("privacy")[lang])}">{esc(t.get("privacyLinkText", "nota de privacidad"))}</a>'
+        sections = ''.join(
+            f'<h2>{esc(h)}</h2>\n  <p>{rich(b, {"privacyLink": priv})}</p>\n  ' for h, b in t['sections']
+        )
+        other = 'terms' if kind == 'privacy' else 'privacy'
+        other_label = T(lang, 'termsLong') if other == 'terms' else T(lang, 'privacy')
+        return f'''<div class="wrap narrow sheet legal">
+  <h1 class="band-title" style="--fill:{band_fill(PIZARRA)};--lip:{band_lip(PIZARRA)}">{esc(t['title'])}</h1>
+  <p class="meta">{esc(t['updated'])}</p>
+  <nav class="langs" aria-label="{esc(T(lang, 'langMenu'))}">{lang_chips(c, lang, here, paths)}</nav>
+  <p class="lead">{rich(t['intro'])}</p>
+  {sections}
+  <p class="legal-links"><a href="{c.to(party_paths(other)[lang])}">{esc(other_label)}</a></p>
+</div>'''
+
+    for lang in LANGS:
+        here = paths[lang]
+        t = p[kind][lang]
+        page(here, title=f'{t["title"]} · AllThePartyGames', description=t['intro'], main=main_for(lang, here),
+             theme='party', section=None, lang=lang, links=paths,
+             pre_main=party_nav(Ctx(here), here, lang), favicon=PARTY_ICON)
+    es = p[kind]['es']
+    dated = paths['es'] + es['version'] + '/'
+    page(dated, title=f'{es["title"]} ({es["version"]}) · AllThePartyGames', description=es['intro'],
+         main=main_for('es', dated), theme='party', section=None, links=paths, hreflang=False,
+         pre_main=party_nav(Ctx(dated), paths['es'], 'es'), favicon=PARTY_ICON)
+
+
+def party_card(c: Ctx, p: dict, lang: str) -> str:
+    """Tarjeta discreta en la portada: fuera del carrusel y marcada +18."""
+    if not p:
+        return ''
+    tx = p['i18n'][lang]
+    href = c.to(lp(lang, PARTY))
+    return f'''
+<section class="wrap block" aria-labelledby="adultos-h">
+  <h2 id="adultos-h" class="display">{esc(T(lang, 'adultsTitle'))}</h2>
+  <a class="card adult-card" href="{href}">
+    <img src="{c.to('static/apps/allthepartygames/icon.webp')}" alt="" width="96" height="96" loading="lazy">
+    <span class="adult-copy">
+      <span class="adult-name">AllThePartyGames <span class="age-badge">+18</span></span>
+      <span>{esc(tx['tagline'])}</span>
+    </span>
+  </a>
+</section>'''
+
+
+# ---------------------------------------------------------------------------
 
 
 def build() -> None:
@@ -826,6 +1028,13 @@ def build() -> None:
     build_404(d)
     build_atg_privacy(d)
     build_atg_terms(d)
+    party = load_party()
+    if party:
+        for lang in LANGS:
+            build_party_home(party, lang)
+            build_party_support(party, lang)
+        build_party_legal(party, 'privacy')
+        build_party_legal(party, 'terms')
     base = SITE['baseUrl'].rstrip('/')
     urls = sorted(
         p.parent.relative_to(OUT).as_posix() for p in OUT.rglob('index.html') if 'static' not in p.parts

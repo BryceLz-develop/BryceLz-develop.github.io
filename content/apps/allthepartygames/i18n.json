@@ -1,0 +1,560 @@
+{
+ "es": {
+  "tagline": "Juegos de fiesta para mayores de 18: un móvil en el centro de la mesa y a jugar.",
+  "perks": [
+   "Sin cuenta",
+   "Para jugar en grupo",
+   "Cuatro niveles, de Suave a Caos",
+   "Añade tus propias frases",
+   "En 6 idiomas"
+  ],
+  "faq": [
+   [
+    "¿Es gratis?",
+    "Sí. La app es gratis y se mantiene con anuncios cortos entre partidas. Puedes quitar los anuncios o comprar Premium si quieres, pero no hace falta para jugar."
+   ],
+   [
+    "¿Cómo abro Picante y Caos?",
+    "Al elegir Picante o Caos en un juego, mira un anuncio corto y quedan abiertos 2 horas en todos los juegos. Con Premium están siempre abiertos."
+   ],
+   [
+    "¿Cómo quito los anuncios?",
+    "En la Tienda de la app, compra Quitar anuncios (un solo pago) o Premium, que además deja Picante y Caos siempre abiertos. El pago lo hace Google Play."
+   ],
+   [
+    "¿Qué incluye Premium?",
+    "Un solo pago, para siempre: sin anuncios entre partidas y Picante y Caos abiertos en todos los juegos."
+   ],
+   [
+    "He cambiado de móvil, ¿cómo recupero mis compras?",
+    "Instala la app con la misma cuenta de Google Play, abre la Tienda y pulsa Restaurar compras."
+   ],
+   [
+    "¿Puedo añadir mis propias frases o quitar las que no nos gustan?",
+    "Sí. En la ficha de cada juego, pulsa Frases para añadir las tuyas o recuperar las ocultas. Durante la partida, toca No volver a mostrar para ocultar una carta."
+   ],
+   [
+    "¿Tengo que crear una cuenta?",
+    "No. No hay cuentas ni registro. Los nombres de los jugadores, tus frases y tus ajustes se guardan solo en tu teléfono."
+   ],
+   [
+    "¿Cómo borro mis datos?",
+    "Como todo se guarda en el teléfono, basta con borrar los datos de la app desde los ajustes de Android o desinstalarla. Las compras se pueden restaurar después con la misma cuenta."
+   ],
+   [
+    "¿Funciona sin internet?",
+    "Sí, los juegos funcionan sin conexión. Hace falta internet para ver anuncios y para comprar o restaurar compras."
+   ],
+   [
+    "¿Hay que beber para jugar?",
+    "No. Algunos juegos usan tragos, pero se puede jugar con agua o con prendas, y nadie está obligado a nada. Bebe con responsabilidad."
+   ],
+   [
+    "¿Cómo cambio el idioma?",
+    "En Ajustes, toca el idioma y elige entre español, inglés, portugués, italiano, francés y alemán."
+   ],
+   [
+    "¿Cómo cambio el consentimiento de los anuncios?",
+    "En el Espacio Económico Europeo y el Reino Unido, entra en Ajustes > Opciones de privacidad."
+   ],
+   [
+    "Tengo otra duda",
+    "Escríbenos a bryce.lz.as@gmail.com."
+   ]
+  ],
+  "ageGate": {
+   "title": "¿Eres mayor de edad?",
+   "body": "AllThePartyGames tiene contenido para adultos: alcohol e insinuaciones. Solo para mayores de 18 años.",
+   "drinkResponsibly": "Bebe con responsabilidad. Nadie está obligado a beber ni a cumplir un reto."
+  },
+  "games": {
+   "yo-nunca": "Yo Nunca",
+   "verdad-o-reto": "Verdad o Reto",
+   "quien-es-mas-probable": "¿Quién es más probable?",
+   "preferirias": "Preferirías…",
+   "la-botella": "La Botella",
+   "ruleta-loca": "Ruleta Loca",
+   "dados-picantes": "Dados Picantes",
+   "bomba": "Bomba",
+   "charadas-calientes": "Charadas Calientes",
+   "verdadero-o-falso": "Verdadero o Falso",
+   "palabra-prohibida": "Palabra Prohibida",
+   "quien-soy": "¿Quién soy?",
+   "piramide": "Pirámide",
+   "anillo-de-fuego": "Anillo de Fuego",
+   "mayor-o-menor": "Mayor o Menor",
+   "el-impostor": "El Impostor"
+  },
+  "categories": {
+   "preguntas": "Preguntas",
+   "retos": "Retos y azar",
+   "adivinar": "Adivinar",
+   "cartas": "Cartas y bebida"
+  }
+ },
+ "en": {
+  "tagline": "Party games for adults 18+: one phone in the middle of the table and you’re ready to play.",
+  "perks": [
+   "No account",
+   "Made for groups",
+   "Four levels, from Mild to Chaos",
+   "Add your own prompts",
+   "In 6 languages"
+  ],
+  "faq": [
+   [
+    "Is it free?",
+    "Yes. The app is free and supported by short ads between games. You can remove the ads or buy Premium if you want, but you don’t need to in order to play."
+   ],
+   [
+    "How do I open Spicy and Chaos?",
+    "When you pick Spicy or Chaos in a game, watch a short ad and they stay open for 2 hours in every game. With Premium they are always open."
+   ],
+   [
+    "How do I remove the ads?",
+    "In the app’s Shop, buy Remove ads (one payment) or Premium, which also keeps Spicy and Chaos always open. Payment is handled by Google Play."
+   ],
+   [
+    "What does Premium include?",
+    "One payment, forever: no ads between games and Spicy and Chaos open in every game."
+   ],
+   [
+    "I changed phones. How do I get my purchases back?",
+    "Install the app with the same Google Play account, open the Shop and tap Restore purchases."
+   ],
+   [
+    "Can I add my own prompts or remove the ones we don’t like?",
+    "Yes. On each game’s page, tap Phrases to add your own or bring back hidden ones. During a game, tap Don’t show again to hide a card."
+   ],
+   [
+    "Do I need an account?",
+    "No. There are no accounts and no sign-up. Player names, your prompts and your settings are stored only on your phone."
+   ],
+   [
+    "How do I delete my data?",
+    "Since everything is stored on the phone, just clear the app’s data in Android settings or uninstall it. Purchases can be restored later with the same account."
+   ],
+   [
+    "Does it work offline?",
+    "Yes, the games work offline. You need an internet connection to watch ads and to buy or restore purchases."
+   ],
+   [
+    "Do we have to drink to play?",
+    "No. Some games use sips, but you can play with water or forfeits, and nobody has to do anything. Please drink responsibly."
+   ],
+   [
+    "How do I change the language?",
+    "In Settings, tap the language and choose English, Spanish, Portuguese, Italian, French or German."
+   ],
+   [
+    "How do I change my ad consent?",
+    "In the European Economic Area and the UK, go to Settings > Privacy options."
+   ],
+   [
+    "I have another question",
+    "Write to us at bryce.lz.as@gmail.com."
+   ]
+  ],
+  "ageGate": {
+   "title": "Are you of legal age?",
+   "body": "AllThePartyGames has adult content: drinking and innuendo. 18+ only.",
+   "drinkResponsibly": "Drink responsibly. Nobody has to drink or do a dare."
+  },
+  "games": {
+   "yo-nunca": "Never Have I Ever",
+   "verdad-o-reto": "Truth or Dare",
+   "quien-es-mas-probable": "Most Likely To",
+   "preferirias": "Would You Rather…",
+   "la-botella": "Spin the Bottle",
+   "ruleta-loca": "Crazy Wheel",
+   "dados-picantes": "Spicy Dice",
+   "bomba": "Bomb",
+   "charadas-calientes": "Hot Charades",
+   "verdadero-o-falso": "True or False",
+   "palabra-prohibida": "Forbidden Word",
+   "quien-soy": "Who Am I?",
+   "piramide": "Pyramid",
+   "anillo-de-fuego": "Ring of Fire",
+   "mayor-o-menor": "Higher or Lower",
+   "el-impostor": "The Impostor"
+  },
+  "categories": {
+   "preguntas": "Questions",
+   "retos": "Dares",
+   "adivinar": "Guessing",
+   "cartas": "Drinking"
+  }
+ },
+ "pt": {
+  "tagline": "Jogos de festa para maiores de 18: um celular no meio da mesa e bora jogar.",
+  "perks": [
+   "Sem conta",
+   "Para jogar em grupo",
+   "Quatro níveis, de Leve a Caos",
+   "Adicione suas próprias frases",
+   "Em 6 idiomas"
+  ],
+  "faq": [
+   [
+    "É grátis?",
+    "Sim. O app é gratuito e mantido por anúncios curtos entre partidas. Você pode tirar os anúncios ou comprar o Premium se quiser, mas não precisa para jogar."
+   ],
+   [
+    "Como abro Picante e Caos?",
+    "Ao escolher Picante ou Caos em um jogo, assista a um anúncio curto e eles ficam abertos por 2 horas em todos os jogos. Com o Premium ficam sempre abertos."
+   ],
+   [
+    "Como tiro os anúncios?",
+    "Na Loja do app, compre Tirar anúncios (pagamento único) ou o Premium, que também deixa Picante e Caos sempre abertos. O pagamento é feito pelo Google Play."
+   ],
+   [
+    "O que o Premium inclui?",
+    "Um pagamento único, para sempre: sem anúncios entre partidas e Picante e Caos abertos em todos os jogos."
+   ],
+   [
+    "Troquei de celular. Como recupero minhas compras?",
+    "Instale o app com a mesma conta do Google Play, abra a Loja e toque em Restaurar compras."
+   ],
+   [
+    "Posso adicionar minhas próprias frases ou tirar as que não gostamos?",
+    "Sim. Na página de cada jogo, toque em Frases para adicionar as suas ou recuperar as ocultas. Durante a partida, toque em Não voltar a mostrar para esconder uma carta."
+   ],
+   [
+    "Preciso criar uma conta?",
+    "Não. Não há contas nem cadastro. Os nomes dos jogadores, suas frases e seus ajustes ficam só no seu celular."
+   ],
+   [
+    "Como apago meus dados?",
+    "Como tudo fica no celular, basta limpar os dados do app nas configurações do Android ou desinstalá-lo. As compras podem ser restauradas depois com a mesma conta."
+   ],
+   [
+    "Funciona sem internet?",
+    "Sim, os jogos funcionam sem conexão. É preciso internet para ver anúncios e para comprar ou restaurar compras."
+   ],
+   [
+    "Tem que beber para jogar?",
+    "Não. Alguns jogos usam goles, mas dá para jogar com água ou com prendas, e ninguém é obrigado a nada. Beba com moderação."
+   ],
+   [
+    "Como mudo o idioma?",
+    "Em Ajustes, toque no idioma e escolha entre português, espanhol, inglês, italiano, francês e alemão."
+   ],
+   [
+    "Como mudo o consentimento dos anúncios?",
+    "No Espaço Econômico Europeu e no Reino Unido, entre em Ajustes > Opções de privacidade."
+   ],
+   [
+    "Tenho outra dúvida",
+    "Escreva para bryce.lz.as@gmail.com."
+   ]
+  ],
+  "ageGate": {
+   "title": "Você é maior de idade?",
+   "body": "AllThePartyGames tem conteúdo adulto: álcool e insinuações. Só para maiores de 18 anos.",
+   "drinkResponsibly": "Beba com responsabilidade. Ninguém é obrigado a beber nem a cumprir um desafio."
+  },
+  "games": {
+   "yo-nunca": "Eu Nunca",
+   "verdad-o-reto": "Verdade ou Desafio",
+   "quien-es-mas-probable": "Quem é mais provável?",
+   "preferirias": "Você Prefere…",
+   "la-botella": "Jogo da Garrafa",
+   "ruleta-loca": "Roleta Louca",
+   "dados-picantes": "Dados Picantes",
+   "bomba": "Bomba",
+   "charadas-calientes": "Mímica Quente",
+   "verdadero-o-falso": "Verdadeiro ou Falso",
+   "palabra-prohibida": "Palavra Proibida",
+   "quien-soy": "Quem Sou Eu?",
+   "piramide": "Pirâmide",
+   "anillo-de-fuego": "Anel de Fogo",
+   "mayor-o-menor": "Maior ou Menor",
+   "el-impostor": "O Impostor"
+  },
+  "categories": {
+   "preguntas": "Perguntas",
+   "retos": "Desafios",
+   "adivinar": "Adivinhar",
+   "cartas": "Bebida"
+  }
+ },
+ "it": {
+  "tagline": "Giochi di società per maggiorenni: un telefono al centro del tavolo e si gioca.",
+  "perks": [
+   "Nessun account",
+   "Pensato per il gruppo",
+   "Quattro livelli, da Soft a Caos",
+   "Aggiungi le tue frasi",
+   "In 6 lingue"
+  ],
+  "faq": [
+   [
+    "È gratis?",
+    "Sì. L’app è gratuita ed è sostenuta da brevi annunci tra una partita e l’altra. Puoi togliere gli annunci o comprare Premium se vuoi, ma non serve per giocare."
+   ],
+   [
+    "Come apro Piccante e Caos?",
+    "Quando scegli Piccante o Caos in un gioco, guarda un breve annuncio e restano aperti per 2 ore in tutti i giochi. Con Premium sono sempre aperti."
+   ],
+   [
+    "Come tolgo gli annunci?",
+    "Nel Negozio dell’app, compra Togli gli annunci (un solo pagamento) oppure Premium, che lascia anche Piccante e Caos sempre aperti. Il pagamento lo gestisce Google Play."
+   ],
+   [
+    "Cosa include Premium?",
+    "Un solo pagamento, per sempre: niente annunci tra le partite e Piccante e Caos aperti in tutti i giochi."
+   ],
+   [
+    "Ho cambiato telefono: come recupero gli acquisti?",
+    "Installa l’app con lo stesso account Google Play, apri il Negozio e tocca Ripristina acquisti."
+   ],
+   [
+    "Posso aggiungere frasi mie o togliere quelle che non ci piacciono?",
+    "Sì. Nella scheda di ogni gioco, tocca Frasi per aggiungere le tue o recuperare quelle nascoste. Durante la partita, tocca Non mostrare più per nascondere una carta."
+   ],
+   [
+    "Devo creare un account?",
+    "No. Niente account né registrazioni. I nomi dei giocatori, le tue frasi e le impostazioni restano solo sul telefono."
+   ],
+   [
+    "Come cancello i miei dati?",
+    "Visto che tutto resta sul telefono, basta cancellare i dati dell’app dalle impostazioni di Android o disinstallarla. Gli acquisti si possono ripristinare dopo con lo stesso account."
+   ],
+   [
+    "Funziona senza internet?",
+    "Sì, i giochi funzionano offline. Serve internet per vedere gli annunci e per acquistare o ripristinare gli acquisti."
+   ],
+   [
+    "Bisogna bere per giocare?",
+    "No. Alcuni giochi usano i sorsi, ma si può giocare con l’acqua o con le penitenze, e nessuno è obbligato a niente. Bevi responsabilmente."
+   ],
+   [
+    "Come cambio la lingua?",
+    "In Impostazioni, tocca la lingua e scegli tra italiano, spagnolo, inglese, portoghese, francese e tedesco."
+   ],
+   [
+    "Come cambio il consenso agli annunci?",
+    "Nello Spazio economico europeo e nel Regno Unito, vai in Impostazioni > Opzioni privacy."
+   ],
+   [
+    "Ho un’altra domanda",
+    "Scrivici a bryce.lz.as@gmail.com."
+   ]
+  ],
+  "ageGate": {
+   "title": "Sei maggiorenne?",
+   "body": "AllThePartyGames ha contenuti per adulti: alcol e allusioni. Solo per maggiori di 18 anni.",
+   "drinkResponsibly": "Bevi responsabilmente. Nessuno è obbligato a bere o a fare un obbligo."
+  },
+  "games": {
+   "yo-nunca": "Non Ho Mai",
+   "verdad-o-reto": "Obbligo o Verità",
+   "quien-es-mas-probable": "Chi è più probabile?",
+   "preferirias": "Preferiresti…",
+   "la-botella": "Gioco della Bottiglia",
+   "ruleta-loca": "Ruota Pazza",
+   "dados-picantes": "Dadi Piccanti",
+   "bomba": "Bomba",
+   "charadas-calientes": "Mimo Hot",
+   "verdadero-o-falso": "Vero o Falso",
+   "palabra-prohibida": "Parola Proibita",
+   "quien-soy": "Chi Sono?",
+   "piramide": "Piramide",
+   "anillo-de-fuego": "Anello di Fuoco",
+   "mayor-o-menor": "Più Alta o Più Bassa",
+   "el-impostor": "L'Impostore"
+  },
+  "categories": {
+   "preguntas": "Domande",
+   "retos": "Sfide",
+   "adivinar": "Indovinare",
+   "cartas": "Drink"
+  }
+ },
+ "fr": {
+  "tagline": "Des jeux de soirée pour les 18 ans et plus : un téléphone au milieu de la table et c’est parti.",
+  "perks": [
+   "Sans compte",
+   "Fait pour jouer en groupe",
+   "Quatre niveaux, de Doux à Chaos",
+   "Ajoute tes propres phrases",
+   "En 6 langues"
+  ],
+  "faq": [
+   [
+    "C’est gratuit ?",
+    "Oui. L’appli est gratuite et financée par de courtes publicités entre les parties. Tu peux enlever les pubs ou acheter Premium si tu veux, mais ce n’est pas nécessaire pour jouer."
+   ],
+   [
+    "Comment ouvrir Épicé et Chaos ?",
+    "Quand tu choisis Épicé ou Chaos dans un jeu, regarde une courte publicité et ils restent ouverts 2 heures dans tous les jeux. Avec Premium, ils sont toujours ouverts."
+   ],
+   [
+    "Comment enlever les pubs ?",
+    "Dans la Boutique de l’appli, achète Enlever les pubs (un seul paiement) ou Premium, qui laisse aussi Épicé et Chaos toujours ouverts. Le paiement est géré par Google Play."
+   ],
+   [
+    "Que comprend Premium ?",
+    "Un seul paiement, pour toujours : pas de pub entre les parties et Épicé et Chaos ouverts dans tous les jeux."
+   ],
+   [
+    "J’ai changé de téléphone, comment récupérer mes achats ?",
+    "Installe l’appli avec le même compte Google Play, ouvre la Boutique et touche Restaurer les achats."
+   ],
+   [
+    "Puis-je ajouter mes propres phrases ou retirer celles qu’on n’aime pas ?",
+    "Oui. Sur la fiche de chaque jeu, touche Phrases pour ajouter les tiennes ou récupérer celles qui sont masquées. Pendant la partie, touche Ne plus afficher pour masquer une carte."
+   ],
+   [
+    "Faut-il créer un compte ?",
+    "Non. Pas de compte ni d’inscription. Les prénoms des joueurs, tes phrases et tes réglages restent uniquement sur ton téléphone."
+   ],
+   [
+    "Comment effacer mes données ?",
+    "Comme tout est stocké sur le téléphone, il suffit d’effacer les données de l’appli dans les paramètres d’Android ou de la désinstaller. Les achats peuvent être restaurés ensuite avec le même compte."
+   ],
+   [
+    "Ça marche sans internet ?",
+    "Oui, les jeux fonctionnent hors ligne. Il faut internet pour regarder les publicités et pour acheter ou restaurer des achats."
+   ],
+   [
+    "Faut-il boire pour jouer ?",
+    "Non. Certains jeux utilisent des gorgées, mais on peut jouer avec de l’eau ou des gages, et personne n’est obligé de rien. L’abus d’alcool est dangereux pour la santé, à consommer avec modération."
+   ],
+   [
+    "Comment changer la langue ?",
+    "Dans Paramètres, touche la langue et choisis entre français, espagnol, anglais, portugais, italien et allemand."
+   ],
+   [
+    "Comment modifier mon consentement aux pubs ?",
+    "Dans l’Espace économique européen et au Royaume-Uni, va dans Paramètres > Options de confidentialité."
+   ],
+   [
+    "J’ai une autre question",
+    "Écris-nous à bryce.lz.as@gmail.com."
+   ]
+  ],
+  "ageGate": {
+   "title": "Es-tu majeur ?",
+   "body": "AllThePartyGames contient du contenu pour adultes : alcool et sous-entendus. Réservé aux 18 ans et plus.",
+   "drinkResponsibly": "L’abus d’alcool est dangereux. Personne n’est obligé de boire ni de relever un défi."
+  },
+  "games": {
+   "yo-nunca": "Je n'ai jamais",
+   "verdad-o-reto": "Action ou Vérité",
+   "quien-es-mas-probable": "Qui serait le plus… ?",
+   "preferirias": "Tu préfères…",
+   "la-botella": "Jeu de la bouteille",
+   "ruleta-loca": "Roue folle",
+   "dados-picantes": "Dés coquins",
+   "bomba": "Bombe",
+   "charadas-calientes": "Mimes coquins",
+   "verdadero-o-falso": "Vrai ou Faux",
+   "palabra-prohibida": "Mot Interdit",
+   "quien-soy": "Qui suis-je ?",
+   "piramide": "Pyramide",
+   "anillo-de-fuego": "Cercle de feu",
+   "mayor-o-menor": "Plus ou Moins",
+   "el-impostor": "L'Imposteur"
+  },
+  "categories": {
+   "preguntas": "Questions",
+   "retos": "Défis",
+   "adivinar": "Deviner",
+   "cartas": "Apéro"
+  }
+ },
+ "de": {
+  "tagline": "Partyspiele für Erwachsene ab 18: ein Handy in die Mitte des Tisches und los geht’s.",
+  "perks": [
+   "Kein Konto",
+   "Für Gruppen gemacht",
+   "Vier Stufen, von Sanft bis Chaos",
+   "Eigene Sätze hinzufügen",
+   "In 6 Sprachen"
+  ],
+  "faq": [
+   [
+    "Ist die App kostenlos?",
+    "Ja. Die App ist kostenlos und wird durch kurze Werbung zwischen den Spielen finanziert. Du kannst die Werbung entfernen oder Premium kaufen, musst es aber nicht, um zu spielen."
+   ],
+   [
+    "Wie schalte ich Scharf und Chaos frei?",
+    "Wenn du in einem Spiel Scharf oder Chaos wählst, schau eine kurze Werbung an – dann bleiben sie 2 Stunden lang in allen Spielen offen. Mit Premium sind sie immer offen."
+   ],
+   [
+    "Wie entferne ich die Werbung?",
+    "Kauf im Shop der App „Werbung aus“ (eine Einmalzahlung) oder Premium, das außerdem Scharf und Chaos dauerhaft freischaltet. Die Zahlung läuft über Google Play."
+   ],
+   [
+    "Was enthält Premium?",
+    "Eine Einmalzahlung, für immer: keine Werbung zwischen den Spielen und Scharf und Chaos in allen Spielen offen."
+   ],
+   [
+    "Ich habe ein neues Handy. Wie bekomme ich meine Käufe zurück?",
+    "Installiere die App mit demselben Google-Play-Konto, öffne den Shop und tippe auf Käufe wiederherstellen."
+   ],
+   [
+    "Kann ich eigene Sätze hinzufügen oder welche entfernen, die uns nicht gefallen?",
+    "Ja. Tippe auf der Seite jedes Spiels auf Sätze, um eigene hinzuzufügen oder ausgeblendete zurückzuholen. Während des Spiels blendest du mit Nicht mehr zeigen eine Karte aus."
+   ],
+   [
+    "Brauche ich ein Konto?",
+    "Nein. Es gibt keine Konten und keine Anmeldung. Spielernamen, deine Sätze und deine Einstellungen werden nur auf deinem Handy gespeichert."
+   ],
+   [
+    "Wie lösche ich meine Daten?",
+    "Da alles auf dem Handy gespeichert ist, reicht es, die App-Daten in den Android-Einstellungen zu löschen oder die App zu deinstallieren. Käufe kannst du danach mit demselben Konto wiederherstellen."
+   ],
+   [
+    "Funktioniert die App offline?",
+    "Ja, die Spiele funktionieren ohne Internet. Für Werbung sowie zum Kaufen oder Wiederherstellen von Käufen brauchst du eine Verbindung."
+   ],
+   [
+    "Muss man zum Spielen trinken?",
+    "Nein. Manche Spiele nutzen Schlucke, aber ihr könnt auch mit Wasser oder Pfändern spielen, und niemand muss etwas tun. Bitte trinkt verantwortungsvoll."
+   ],
+   [
+    "Wie ändere ich die Sprache?",
+    "Tippe in den Einstellungen auf die Sprache und wähle zwischen Deutsch, Spanisch, Englisch, Portugiesisch, Italienisch und Französisch."
+   ],
+   [
+    "Wie ändere ich meine Werbe-Einwilligung?",
+    "Im Europäischen Wirtschaftsraum und im Vereinigten Königreich unter Einstellungen > Datenschutzoptionen."
+   ],
+   [
+    "Ich habe eine andere Frage",
+    "Schreib uns an bryce.lz.as@gmail.com."
+   ]
+  ],
+  "ageGate": {
+   "title": "Bist du volljährig?",
+   "body": "AllThePartyGames enthält Inhalte für Erwachsene: Alkohol und Anspielungen. Nur ab 18.",
+   "drinkResponsibly": "Trink verantwortungsvoll. Niemand muss trinken oder eine Aufgabe machen."
+  },
+  "games": {
+   "yo-nunca": "Ich hab noch nie",
+   "verdad-o-reto": "Wahrheit oder Pflicht",
+   "quien-es-mas-probable": "Wer würde eher?",
+   "preferirias": "Würdest du lieber…",
+   "la-botella": "Flaschendrehen",
+   "ruleta-loca": "Verrücktes Glücksrad",
+   "dados-picantes": "Scharfe Würfel",
+   "bomba": "Bombe",
+   "charadas-calientes": "Heiße Pantomime",
+   "verdadero-o-falso": "Wahr oder Falsch",
+   "palabra-prohibida": "Verbotenes Wort",
+   "quien-soy": "Wer bin ich?",
+   "piramide": "Pyramide",
+   "anillo-de-fuego": "Feuerring",
+   "mayor-o-menor": "Höher oder Tiefer",
+   "el-impostor": "Der Hochstapler"
+  },
+  "categories": {
+   "preguntas": "Fragen",
+   "retos": "Mutproben",
+   "adivinar": "Raten",
+   "cartas": "Trinken"
+  }
+ }
+}

@@ -1,0 +1,37 @@
+{
+  "version": "2026-10-21",
+  "updated": "Aktualisiert am 21. Oktober 2026",
+  "title": "Kaufbedingungen",
+  "intro": "AllThePartyGames ist eine Sammlung von Partyspielen für Erwachsene ab 18 Jahren. Diese Bedingungen erklären, was man im Store bezahlt und wie es funktioniert.",
+  "sections": [
+    [
+      "Was man kaufen kann",
+      "„Werbung aus“: eine Einmalzahlung, die die Werbung zwischen den Spielen entfernt. Premium: eine Einmalzahlung, die die Werbung zwischen den Spielen entfernt und Scharf und Chaos in allen Spielen dauerhaft freischaltet. Ohne Kauf werden Scharf und Chaos nach einer kurzen Werbung 2 Stunden lang kostenlos freigeschaltet. Es gelten Inhalt und Preis, die Google Play oder der App Store vor der Bestätigung anzeigt; sie können je nach Land abweichen."
+    ],
+    [
+      "Wer abrechnet",
+      "Die Zahlung wickelt Google Play oder Apple ab, nicht wir. Erstattungen beantragst du beim Store nach dessen Regeln; eine Erstattung kann das Gekaufte wieder entfernen."
+    ],
+    [
+      "Käufe wiederherstellen",
+      "Käufe sind an dein Store-Konto gebunden. Wenn du das Handy wechselst oder die App neu installierst, nutze Käufe wiederherstellen im Shop der App mit demselben Konto."
+    ],
+    [
+      "Nur für Erwachsene",
+      "Die App ist für Erwachsene ab 18 Jahren, und Käufe muss ein Erwachsener tätigen. Hat ein Minderjähriger etwas gekauft, schreib uns an {email}, und wir prüfen es."
+    ],
+    [
+      "Mit Verstand spielen",
+      "Einige Spiele beinhalten Alkohol. Niemand muss trinken oder eine Aufgabe erfüllen: Ihr könnt auch mit Wasser oder Pfändern spielen. Bitte trinkt verantwortungsvoll."
+    ],
+    [
+      "Anbieter",
+      "AllThePartyGames wird von Brais López Arias (Privatperson) veröffentlicht. Kontakt: {email}."
+    ],
+    [
+      "Datenschutz",
+      "Wie wir mit Daten umgehen, steht im {privacyLink}."
+    ]
+  ],
+  "privacyLinkText": "Datenschutzhinweis"
+}

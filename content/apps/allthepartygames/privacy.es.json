@@ -1,0 +1,48 @@
+{
+  "version": "2026-10-19",
+  "updated": "Actualizado 19 de octubre de 2026",
+  "title": "Privacidad",
+  "intro": "AllThePartyGames es una colección de juegos de fiesta para mayores de 18 años. Esta nota explica qué datos toca la app y para qué.",
+  "sections": [
+    [
+      "Qué guarda el teléfono",
+      "Los nombres de los jugadores que escribes, la intensidad elegida en cada juego, los favoritos, los pases de la tienda, el volumen y el idioma se guardan solo en este aparato. No hay cuentas ni un servidor nuestro que lea tus partidas. Si desinstalas la app, todo eso se borra."
+    ],
+    [
+      "Solo para mayores de edad",
+      "Al abrir la app te preguntamos si tienes 18 años o más. Guardamos solo la respuesta en el teléfono; no pedimos fecha de nacimiento, documento, dirección ni teléfono. Algunos juegos incluyen alcohol y contenido atrevido (nunca explícito): juega con cabeza y bebe con responsabilidad."
+    ],
+    [
+      "Anuncios",
+      "En Android, Google AdMob muestra anuncios cortos: de vez en cuando entre partidas y, si tú lo eliges, uno para abrir Picante y Caos durante 2 horas. Pedimos siempre anuncios no personalizados y para público adulto. Aun así, para entregar, medir y proteger los anuncios, Google puede recoger la dirección IP (que permite estimar la ubicación aproximada), interacciones con la app y los anuncios, diagnósticos e identificadores del dispositivo. En el Espacio Económico Europeo y el Reino Unido te pedimos el consentimiento con el formulario de Google, y puedes cambiarlo en Ajustes > Opciones de privacidad. Si no hay anuncio disponible, puedes jugar igualmente."
+    ],
+    [
+      "Compras",
+      "Quitar anuncios y Premium se pagan a Google Play o a la App Store. La tienda procesa el pago y comunica a la app el producto y el estado de la compra para entregarla o restaurarla. No vemos tus datos de pago ni los enviamos a un servidor nuestro."
+    ],
+    [
+      "Qué no hacemos",
+      "No vendemos datos, no hacemos perfiles publicitarios, no accedemos al GPS, a la cámara, al micrófono ni a tus contactos. No hay chat entre jugadores ni cajas sorpresa de pago."
+    ],
+    [
+      "Quién responde",
+      "El responsable de AllThePartyGames y de estos datos es Brais López Arias (particular). Para cualquier duda de privacidad escribe a {email}."
+    ],
+    [
+      "Otros servicios",
+      "Las banderas del selector de idioma se cargan desde flagcdn.com, que recibe la IP y el código de la imagen. Para saber si hay conexión, la app hace de vez en cuando una petición vacía a Google (connectivitycheck.gstatic.com), que recibe la IP. Si la app falla, envía a Sentry (servidores en la UE) un informe técnico del error: qué falló, la versión de la app y el modelo y sistema del teléfono, sin IP, sin nombres de jugadores ni otros datos personales."
+    ],
+    [
+      "Por qué y cuánto tiempo",
+      "Los anuncios mantienen gratis la app, incluido el contenido picante (interés legítimo y, donde se pide, tu consentimiento). Las compras se tratan para cumplir lo que compras (contrato). Lo que se guarda en el teléfono dura hasta que borras los datos de la app o la desinstalas; Google conserva sus datos según sus propias políticas."
+    ],
+    [
+      "Tus derechos",
+      "Puedes pedir acceso, rectificación, supresión, oposición, limitación o portabilidad de tus datos escribiendo a {email}. Como casi todo se guarda solo en tu teléfono, normalmente basta con borrar los datos de la app o desinstalarla. Si crees que no se respetan tus derechos, puedes reclamar ante la Agencia Española de Protección de Datos (aepd.es)."
+    ],
+    [
+      "Menores",
+      "AllThePartyGames no está pensada para menores de 18 años y no recogemos a sabiendas datos de menores. Si eres madre, padre o tutor y crees que un menor la ha usado, escríbenos a {email} y lo revisamos."
+    ]
+  ]
+}
