@@ -635,9 +635,9 @@ def _tab(c: Ctx, p: str, label: str, current: str) -> str:
     return f'<a href="{c.to(p)}"{cur}>{esc(label)}</a>'
 
 
-# Capturas que de momento no se muestran: enseñan recuentos de juegos dentro de la app
-# (norma: ningún número de juegos fuera de la app). Quitar de aquí cuando se rehagan.
-SCREEN_SKIP = {'01-inicio', '08-juegos'}
+# Capturas que no se muestran en la galería (ninguna de momento). Que la propia app
+# enseñe un recuento en su pantalla no cuenta: la norma es para textos y titulares.
+SCREEN_SKIP: set[str] = set()
 
 SCREEN_CATS = {'cartas': 'cartas', 'mesa': 'mesa', 'numeros': 'numeros', 'letras': 'letras',
                'accion': 'accion', 'puzzles': 'puzzle'}
