@@ -30,7 +30,7 @@ def text(fragment: str, marks: dict) -> str:
         return inner
     s = re.sub(r'<a\s+[^>]*href="([^"]+)"[^>]*>(.*?)</a>', link, fragment, flags=re.S)
     s = re.sub(r'<[^>]+>', '', s)
-    return re.sub(r'\s+', ' ', html.unescape(s)).strip()
+    return re.sub(r'[ \t\r\n]+', ' ', html.unescape(s)).strip(' \t\r\n')
 
 
 def convert(src: Path, version: str) -> dict:
