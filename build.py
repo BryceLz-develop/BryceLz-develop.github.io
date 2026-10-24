@@ -810,10 +810,16 @@ def build_atg_privacy(d: dict) -> None:
         page(here, title=f'{title} · AllTheGames', description=p['intro'], main=privacy_main(d, lang, here),
              theme='atg', section=lp(lang, 'apps/allthegames/'), lang=lang, links=paths,
              pre_main=atg_nav(Ctx(here), here, lang), favicon=ATG_ICON)
-    dated = f'apps/allthegames/privacidad/{version}/'
-    page(dated, title=f'Privacidad ({version}) · AllTheGames', description=d['privacy']['es']['intro'],
-         main=privacy_main(d, 'es', dated), theme='atg', section='apps/allthegames/', links=paths, hreflang=False,
-         pre_main=atg_nav(Ctx(dated), paths['es'], 'es'), favicon=ATG_ICON)
+    # Versión vigente y versiones anteriores (content/apps/allthegames/privacy-archive/<fecha>.json),
+    # cada una en su URL con fecha y en español.
+    versions = {version: d}
+    for f in sorted((CONTENT / 'apps' / 'allthegames' / 'privacy-archive').glob('*.json')):
+        versions.setdefault(f.stem, {**d, 'privacy': json.loads(f.read_text('utf-8'))})
+    for ver, dv in versions.items():
+        dated = f'apps/allthegames/privacidad/{ver}/'
+        page(dated, title=f'Privacidad ({ver}) · AllTheGames', description=dv['privacy']['es']['intro'],
+             main=privacy_main(dv, 'es', dated), theme='atg', section='apps/allthegames/', links=paths,
+             hreflang=False, pre_main=atg_nav(Ctx(dated), paths['es'], 'es'), favicon=ATG_ICON)
 
 
 def build_atg_terms(d: dict) -> None:
