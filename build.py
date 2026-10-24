@@ -55,6 +55,7 @@ AUTO_LINKS = {
     'rae-api.com': 'https://rae-api.com',
     'flagcdn.com': 'https://flagcdn.com',
     'aepd.es': 'https://www.aepd.es',
+    'reportaproblem.apple.com': 'https://reportaproblem.apple.com',
 }
 
 # ---------------------------------------------------------------------------
