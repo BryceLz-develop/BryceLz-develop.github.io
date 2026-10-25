@@ -370,6 +370,8 @@ def load() -> dict:
         'privacy': json.loads((base / 'privacy.json').read_text('utf-8')),
         'terms': {l: json.loads((base / f'terms.{l}.json').read_text('utf-8')) for l in LANGS},
         'faq': faq,
+        # Cómo borrar la cuenta en la nube (Google Play exige una página pública).
+        'deleteAccount': json.loads((base / 'delete-account.json').read_text('utf-8')),
     }
 
 
@@ -770,6 +772,10 @@ def terms_paths() -> dict:
     return {l: 'apps/allthegames/terminos/' + ('' if l == 'es' else l + '/') for l in LANGS}
 
 
+def delete_paths() -> dict:
+    return {l: 'apps/allthegames/borrar-cuenta/' + ('' if l == 'es' else l + '/') for l in LANGS}
+
+
 def lang_chips(c: Ctx, lang: str, here: str, paths: dict) -> str:
     """Los idiomas de un texto legal, como fichas (la del idioma actual, marcada)."""
     chips = []
@@ -786,18 +792,50 @@ def privacy_main(d: dict, lang: str, here: str) -> str:
     p = d['privacy'][lang]
     chrome = PRIVACY_CHROME[lang]
     paths = privacy_paths()
+    count = 1
+    while f's{count + 1}Title' in p:
+        count += 1
     sections = ''.join(
-        f'<h2>{esc(p[f"s{i}Title"])}</h2>\n  <p>{rich(p[f"s{i}Body"])}</p>\n  ' for i in range(1, 11)
+        f'<h2>{esc(p[f"s{i}Title"])}</h2>\n  <p>{rich(p[f"s{i}Body"])}</p>\n  ' for i in range(1, count + 1)
     )
     title = p['title'][:1] + p['title'][1:].lower()
+    delete = d.get('deleteAccount', {}).get(lang)
+    delete_link = (
+        f' · <a href="{c.to(delete_paths()[lang])}">{esc(delete["linkText"])}</a>' if delete else ''
+    )
     return f'''<div class="wrap narrow sheet legal">
   <h1 class="band-title" style="--fill:{band_fill(PIZARRA)};--lip:{band_lip(PIZARRA)}">{esc(title)}</h1>
   <p class="meta">{esc(p['updated'].replace('{date}', p['date']))}</p>
   <nav class="langs" aria-label="{esc(chrome['langs'])}">{lang_chips(c, lang, here, paths)}</nav>
   <p class="lead">{rich(p['intro'])}</p>
   {sections}
-  <p class="legal-links"><a href="{c.to(terms_paths()[lang])}">{esc(chrome['terms'])}</a></p>
+  <p class="legal-links"><a href="{c.to(terms_paths()[lang])}">{esc(chrome['terms'])}</a>{delete_link}</p>
 </div>'''
+
+
+def build_atg_delete_account(d: dict) -> None:
+    """Cómo borrar la cuenta en la nube, en los 6 idiomas (la URL que pide Google Play)."""
+    paths = delete_paths()
+
+    def main_for(lang: str, here: str) -> str:
+        c = Ctx(here)
+        t = d['deleteAccount'][lang]
+        sections = ''.join(f'<h2>{esc(h)}</h2>\n  <p>{rich(b)}</p>\n  ' for h, b in t['sections'])
+        return f'''<div class="wrap narrow sheet legal">
+  <h1 class="band-title" style="--fill:{band_fill(PIZARRA)};--lip:{band_lip(PIZARRA)}">{esc(t['title'])}</h1>
+  <p class="meta">{esc(t['updated'])}</p>
+  <nav class="langs" aria-label="{esc(T(lang, 'langMenu'))}">{lang_chips(c, lang, here, paths)}</nav>
+  <p class="lead">{rich(t['lead'])}</p>
+  {sections}
+  <p class="legal-links"><a href="{c.to(privacy_paths()[lang])}">{esc(T(lang, 'privacy'))}</a></p>
+</div>'''
+
+    for lang in LANGS:
+        here = paths[lang]
+        t = d['deleteAccount'][lang]
+        page(here, title=f'{t["title"]} · AllTheGames', description=t['lead'], main=main_for(lang, here),
+             theme='atg', section=lp(lang, 'apps/allthegames/'), lang=lang, links=paths,
+             pre_main=atg_nav(Ctx(here), here, lang), favicon=ATG_ICON)
 
 
 def build_atg_privacy(d: dict) -> None:
@@ -1056,6 +1094,7 @@ def build() -> None:
     build_404(d)
     build_atg_privacy(d)
     build_atg_terms(d)
+    build_atg_delete_account(d)
     if party:
         for lang in LANGS:
             build_party_home(party, lang)

@@ -1,0 +1,146 @@
+{
+ "es": {
+  "title": "Borrar tu cuenta",
+  "linkText": "Borrar tu cuenta",
+  "updated": "Actualizado 25 de octubre de 2026",
+  "lead": "Cómo borrar tu cuenta en la nube de AllTheGames y todo lo que guarda. La cuenta es opcional: si nunca iniciaste sesión, no hay nada tuyo fuera del teléfono.",
+  "sections": [
+   [
+    "Desde la app",
+    "Abre AllTheGames y ve a Ajustes, Cuenta en la nube, Borrar cuenta. Para confirmar, la app te pide iniciar sesión otra vez con Google o con Apple. Se borra al momento."
+   ],
+   [
+    "Sin la app",
+    "Si ya no tienes la app o no puedes entrar, escribe a {email} desde el correo de tu cuenta de Google o Apple, con el asunto «Borrar mi cuenta de AllTheGames» y tu nombre del ranking. La borramos en un plazo máximo de 30 días y te avisamos al terminar."
+   ],
+   [
+    "Qué se borra",
+    "Tu perfil en la nube (nombre del ranking, avatar, color, monedas, cosméticos, nivel y récords), tu nombre reservado, tus puestos en el ranking mundial y la propia cuenta de inicio de sesión. Si la borras desde la app, también se borra el perfil de esa cuenta en ese teléfono. No hay copias de seguridad, así que no se puede recuperar."
+   ],
+   [
+    "Qué no se borra",
+    "Los pases que compraste (quitar anuncios, el mes o Premium) son de tu cuenta de Google Play o de la App Store y vuelven con «Restaurar compras». Lo que jugaste sin cuenta sigue en tu teléfono hasta que borres los datos de la app o la desinstales. Si usaste Apple, al borrar desde la app también se retira el permiso que diste a la app; si no, puedes quitarlo tú en los ajustes de tu ID de Apple."
+   ]
+  ]
+ },
+ "en": {
+  "title": "Delete your account",
+  "linkText": "Delete your account",
+  "updated": "Updated October 25, 2026",
+  "lead": "How to delete your AllTheGames cloud account and everything it keeps. The account is optional: if you never signed in, nothing of yours is stored outside your phone.",
+  "sections": [
+   [
+    "From the app",
+    "Open AllTheGames and go to Settings, Cloud account, Delete account. To confirm, the app asks you to sign in again with Google or Apple. It is deleted at once."
+   ],
+   [
+    "Without the app",
+    "If you no longer have the app or cannot get in, write to {email} from the email of your Google or Apple account, with the subject “Delete my AllTheGames account” and your ranking name. We delete it within 30 days at most and let you know when it is done."
+   ],
+   [
+    "What is deleted",
+    "Your cloud profile (ranking name, avatar, color, coins, cosmetics, level and records), your reserved name, your places in the world ranking and the sign-in account itself. If you delete it from the app, that account’s profile on that phone is deleted too. There are no backups, so it cannot be recovered."
+   ],
+   [
+    "What is not deleted",
+    "The passes you bought (remove ads, the month or Premium) belong to your Google Play or App Store account and come back with “Restore purchases”. What you played without an account stays on your phone until you clear the app’s data or uninstall it. If you used Apple, deleting from the app also removes the permission you gave the app; otherwise you can remove it yourself in your Apple ID settings."
+   ]
+  ]
+ },
+ "pt": {
+  "title": "Excluir sua conta",
+  "linkText": "Excluir sua conta",
+  "updated": "Atualizado em 25 de outubro de 2026",
+  "lead": "Como excluir sua conta na nuvem do AllTheGames e tudo o que ela guarda. A conta é opcional: se você nunca entrou, não há nada seu fora do celular.",
+  "sections": [
+   [
+    "Pelo app",
+    "Abra o AllTheGames e vá em Ajustes, Conta na nuvem, Excluir conta. Para confirmar, o app pede que você entre de novo com o Google ou com a Apple. A exclusão é na hora."
+   ],
+   [
+    "Sem o app",
+    "Se você não tem mais o app ou não consegue entrar, escreva para {email} pelo e-mail da sua conta do Google ou da Apple, com o assunto “Excluir minha conta do AllTheGames” e seu nome no ranking. Excluímos em no máximo 30 dias e avisamos quando terminar."
+   ],
+   [
+    "O que é excluído",
+    "Seu perfil na nuvem (nome no ranking, avatar, cor, moedas, cosméticos, nível e recordes), seu nome reservado, suas posições no ranking mundial e a própria conta de login. Se você excluir pelo app, o perfil dessa conta nesse celular também é apagado. Não há cópias de segurança, então não dá para recuperar."
+   ],
+   [
+    "O que não é excluído",
+    "Os passes que você comprou (remover anúncios, o mês ou Premium) são da sua conta do Google Play ou da App Store e voltam com “Restaurar compras”. O que você jogou sem conta continua no celular até você apagar os dados do app ou desinstalá-lo. Se você usou a Apple, ao excluir pelo app também é retirada a permissão que você deu ao app; se não, você mesmo pode retirá-la nos ajustes do seu ID Apple."
+   ]
+  ]
+ },
+ "it": {
+  "title": "Elimina il tuo account",
+  "linkText": "Elimina il tuo account",
+  "updated": "Aggiornato il 25 ottobre 2026",
+  "lead": "Come eliminare il tuo account cloud di AllTheGames e tutto ciò che conserva. L’account è facoltativo: se non hai mai fatto l’accesso, non c’è niente di tuo fuori dal telefono.",
+  "sections": [
+   [
+    "Dall’app",
+    "Apri AllTheGames e vai in Impostazioni, Account cloud, Elimina account. Per confermare, l’app ti chiede di accedere di nuovo con Google o con Apple. L’eliminazione è immediata."
+   ],
+   [
+    "Senza l’app",
+    "Se non hai più l’app o non riesci ad accedere, scrivi a {email} dall’email del tuo account Google o Apple, con oggetto «Elimina il mio account AllTheGames» e il tuo nome in classifica. Lo eliminiamo entro 30 giorni al massimo e ti avvisiamo quando è fatto."
+   ],
+   [
+    "Cosa viene eliminato",
+    "Il tuo profilo nel cloud (nome in classifica, avatar, colore, monete, cosmetici, livello e record), il tuo nome riservato, i tuoi posti nella classifica mondiale e lo stesso account di accesso. Se lo elimini dall’app, viene cancellato anche il profilo di quell’account su quel telefono. Non ci sono copie di sicurezza, quindi non si può recuperare."
+   ],
+   [
+    "Cosa non viene eliminato",
+    "I pass che hai comprato (rimuovi annunci, il mese o Premium) sono del tuo account Google Play o App Store e tornano con «Ripristina acquisti». Ciò che hai giocato senza account resta sul telefono finché non cancelli i dati dell’app o la disinstalli. Se hai usato Apple, eliminando dall’app si ritira anche il permesso che avevi dato all’app; altrimenti puoi toglierlo tu nelle impostazioni del tuo ID Apple."
+   ]
+  ]
+ },
+ "fr": {
+  "title": "Supprimer ton compte",
+  "linkText": "Supprimer ton compte",
+  "updated": "Mis à jour le 25 octobre 2026",
+  "lead": "Comment supprimer ton compte en ligne AllTheGames et tout ce qu’il garde. Le compte est facultatif : si tu ne t’es jamais connecté, rien de toi n’est gardé hors de ton téléphone.",
+  "sections": [
+   [
+    "Depuis l’app",
+    "Ouvre AllTheGames et va dans Paramètres, Compte en ligne, Supprimer le compte. Pour confirmer, l’app te demande de te reconnecter avec Google ou Apple. La suppression est immédiate."
+   ],
+   [
+    "Sans l’app",
+    "Si tu n’as plus l’app ou ne peux pas te connecter, écris à {email} depuis l’e-mail de ton compte Google ou Apple, avec l’objet « Supprimer mon compte AllTheGames » et ton nom au classement. On le supprime en 30 jours au maximum et on te prévient quand c’est fait."
+   ],
+   [
+    "Ce qui est supprimé",
+    "Ton profil en ligne (nom au classement, avatar, couleur, pièces, cosmétiques, niveau et records), ton nom réservé, tes places au classement mondial et le compte de connexion lui-même. Si tu le supprimes depuis l’app, le profil de ce compte sur ce téléphone est aussi effacé. Il n’y a pas de sauvegarde, donc on ne peut pas le récupérer."
+   ],
+   [
+    "Ce qui n’est pas supprimé",
+    "Les pass que tu as achetés (supprimer les pubs, le mois ou Premium) appartiennent à ton compte Google Play ou App Store et reviennent avec « Restaurer les achats ». Ce que tu as joué sans compte reste sur ton téléphone jusqu’à ce que tu effaces les données de l’app ou la désinstalles. Si tu as utilisé Apple, supprimer depuis l’app retire aussi l’autorisation donnée à l’app ; sinon, tu peux la retirer toi-même dans les réglages de ton identifiant Apple."
+   ]
+  ]
+ },
+ "de": {
+  "title": "Dein Konto löschen",
+  "linkText": "Dein Konto löschen",
+  "updated": "Stand 25. Oktober 2026",
+  "lead": "So löschst du dein AllTheGames-Cloud-Konto und alles, was es speichert. Das Konto ist freiwillig. Wenn du dich nie angemeldet hast, liegt nichts von dir außerhalb deines Handys.",
+  "sections": [
+   [
+    "In der App",
+    "Öffne AllTheGames und geh zu Einstellungen, Cloud-Konto, Konto löschen. Zur Bestätigung bittet dich die App, dich noch einmal mit Google oder Apple anzumelden. Das Konto wird sofort gelöscht."
+   ],
+   [
+    "Ohne die App",
+    "Wenn du die App nicht mehr hast oder nicht hineinkommst, schreib an {email} von der E-Mail-Adresse deines Google- oder Apple-Kontos, mit dem Betreff „Mein AllTheGames-Konto löschen“ und deinem Ranglistennamen. Wir löschen es innerhalb von höchstens 30 Tagen und sagen dir Bescheid, wenn es erledigt ist."
+   ],
+   [
+    "Was gelöscht wird",
+    "Dein Cloud-Profil (Ranglistenname, Avatar, Farbe, Münzen, Kosmetik, Level und Rekorde), dein reservierter Name, deine Plätze in der Weltrangliste und das Anmeldekonto selbst. Wenn du es in der App löschst, wird auch das Profil dieses Kontos auf diesem Handy gelöscht. Es gibt keine Sicherungskopien, daher lässt es sich nicht wiederherstellen."
+   ],
+   [
+    "Was nicht gelöscht wird",
+    "Die Pässe, die du gekauft hast (Werbung entfernen, der Monat oder Premium), gehören zu deinem Google-Play- oder App-Store-Konto und kommen mit „Käufe wiederherstellen“ zurück. Was du ohne Konto gespielt hast, bleibt auf deinem Handy, bis du die App-Daten löschst oder die App deinstallierst. Wenn du Apple benutzt hast, wird beim Löschen in der App auch die Erlaubnis entzogen, die du der App gegeben hast; sonst kannst du sie selbst in den Einstellungen deiner Apple-ID entfernen."
+   ]
+  ]
+ }
+}
