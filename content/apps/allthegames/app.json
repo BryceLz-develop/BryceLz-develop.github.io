@@ -3,7 +3,7 @@
   "name": "AllTheGames",
   "package": "com.allthegames.app",
   "storeUrl": "https://play.google.com/store/apps/details?id=com.allthegames.app",
-  "storePublished": false,
+  "storePublished": true,
   "lead": "Juegos de siempre en una sola app: cartas, juegos de mesa, números, letras, puzzles y acción.",
   "facts": [
     "Sin cuenta ni registro: todo se guarda en tu teléfono.",
