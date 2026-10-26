@@ -1,15 +1,27 @@
 [
   [
+    "O que é a conta na nuvem?",
+    "Desde a versão 1.3 você pode entrar com o Google (ou com a Apple no iPhone e no iPad) em Ajustes › Conta na nuvem. Ela guarda suas moedas, seu nível, seus recordes e seus cosméticos, recupera tudo em outro celular e coloca você no ranking mundial de cada jogo com o nome que escolher. É opcional: sem conta, você joga do mesmo jeito."
+  ],
+  [
+    "Por que o app pergunta o ano em que nasci?",
+    "A conta na nuvem é para maiores de 16 anos. Antes de entrar pela primeira vez, o app pergunta o ano; a resposta fica no celular. Se você não tiver a idade, continua jogando do mesmo jeito, sem conta."
+  ],
+  [
+    "Como apareço no ranking mundial?",
+    "Entre em Ajustes › Conta na nuvem e escolha seu nome. Na página de cada jogo, o troféu ao lado da estrela abre «Seus recordes» e «Mundial»: os 100 melhores de cada dificuldade e a sua posição. Seu e-mail nunca aparece."
+  ],
+  [
     "Como recupero o que comprei?",
-    "Abra a Loja e toque em «Restaurar compras» com a mesma conta do Google Play que você usou para pagar. Os passes voltam: tirar anúncios, a assinatura mensal e o Premium. As moedas não são recuperadas, porque ficam salvas só no celular."
+    "Abra a Loja e toque em «Restaurar compras» com a mesma conta do Google Play que você usou para pagar. Os passes voltam: tirar anúncios, a assinatura mensal e o Premium. As moedas não voltam com a compra: se você usa a conta na nuvem, elas ficam guardadas nela; sem conta, ficam só no celular."
   ],
   [
     "Como recupero minhas compras no iPhone ou iPad?",
-    "Abra a Loja e toque em «Restaurar compras» com o mesmo Apple ID usado no pagamento. Voltam o Tirar anúncios, o Premium e o passe mensal ativo. As moedas não são restauradas: elas são gastas no jogo."
+    "Abra a Loja e toque em «Restaurar compras» com o mesmo Apple ID usado no pagamento. Voltam o Tirar anúncios, o Premium e o passe mensal ativo. As moedas não são restauradas com a compra: se você usa a conta na nuvem, elas voltam ao entrar."
   ],
   [
     "Perco as moedas se desinstalar o app?",
-    "Sim. As moedas, os recordes e os perfis ficam salvos no celular, não na internet. Ao desinstalar o app ou apagar os dados dele, eles se perdem."
+    "Sem conta, sim: as moedas, os recordes e os perfis ficam salvos no celular e se perdem ao desinstalar o app ou apagar os dados dele. Com a conta na nuvem, eles voltam quando você entra de novo."
   ],
   [
     "Como cancelo a assinatura mensal?",
@@ -28,15 +40,15 @@
     "Na Loja você pode comprar «Tirar anúncios», a assinatura mensal ou o Premium. Com qualquer um deles, os anúncios entre as partidas desaparecem. Os anúncios com prêmio, por exemplo para ganhar moedas, só aparecem se você escolher."
   ],
   [
-    "Esqueci o PIN de um perfil",
-    "O perfil e o PIN existem só naquele celular: não é uma conta na internet e não dá para recuperar. Você pode criar um perfil novo."
+    "E os perfis com PIN?",
+    "Os perfis com nome e PIN de versões anteriores existem só naquele celular e não dá para recuperar. Desde a 1.3 não se criam mais perfis com PIN: para guardar seu progresso, use a conta na nuvem."
   ],
   [
     "Quais jogos precisam de internet?",
-    "Adivinhe a palavra, Forme palavras e Palavras encadeadas verificam na internet as palavras que não vêm no app, e Bandeiras baixa as imagens das bandeiras. O resto funciona sem conexão."
+    "Adivinhe a palavra, Forme palavras e Palavras encadeadas verificam na internet as palavras que não vêm no app, e Bandeiras baixa as imagens das bandeiras. A conta na nuvem e o ranking mundial também precisam de conexão. O resto funciona sem conexão."
   ],
   [
     "Como apago meus dados?",
-    "Quase tudo fica só no seu celular. Para apagar, abra as configurações do celular, vá em Apps › AllTheGames › Armazenamento e toque em «Limpar dados» (os nomes mudam um pouco de um celular para outro), ou desinstale o app. Para qualquer outro pedido sobre seus dados, me escreva."
+    "Para excluir a conta na nuvem, vá em Ajustes › Conta na nuvem › Excluir conta, ou siga a página «Excluir sua conta» deste site. O que fica só no celular se apaga nas configurações do celular: Apps › AllTheGames › Armazenamento › «Limpar dados» (os nomes mudam um pouco de um celular para outro), ou desinstalando o app. Para qualquer outro pedido sobre seus dados, me escreva."
   ]
 ]

@@ -1,15 +1,27 @@
 [
   [
+    "C’est quoi, le compte en ligne ?",
+    "Depuis la version 1.3, tu peux te connecter avec Google (ou avec Apple sur iPhone et iPad) dans Paramètres › Compte en ligne. Il garde tes pièces, ton niveau, tes records et tes cosmétiques, les retrouve sur un autre téléphone et te place dans le classement mondial de chaque jeu sous le nom de ton choix. C’est facultatif : sans compte, tu joues pareil."
+  ],
+  [
+    "Pourquoi l’appli me demande mon année de naissance ?",
+    "Le compte en ligne est réservé aux 16 ans et plus. Avant ta première connexion, l’appli te demande l’année ; la réponse reste sur le téléphone. Si tu n’as pas l’âge, tu continues à jouer pareil, sans compte."
+  ],
+  [
+    "Comment apparaître dans le classement mondial ?",
+    "Connecte-toi dans Paramètres › Compte en ligne et choisis ton nom. Sur la fiche de chaque jeu, le trophée à côté de l’étoile ouvre « Tes records » et « Monde » : les 100 meilleurs de chaque difficulté et ta place. Ton e-mail n’est jamais affiché."
+  ],
+  [
     "Comment récupérer ce que j’ai acheté ?",
-    "Ouvre la Boutique et touche « Restaurer les achats » avec le même compte Google Play que celui utilisé pour payer. Tes pass reviennent : enlever les pubs, l’abonnement mensuel et Premium. Les pièces ne se récupèrent pas, car elles sont enregistrées uniquement sur le téléphone."
+    "Ouvre la Boutique et touche « Restaurer les achats » avec le même compte Google Play que celui utilisé pour payer. Tes pass reviennent : enlever les pubs, l’abonnement mensuel et Premium. Les pièces ne reviennent pas avec l’achat : si tu utilises le compte en ligne, elles y sont enregistrées ; sans compte, elles sont uniquement sur le téléphone."
   ],
   [
     "Comment récupérer mes achats sur iPhone ou iPad ?",
-    "Ouvre la Boutique et touche « Restaurer les achats » avec le même identifiant Apple que pour le paiement. Enlever les pubs, Premium et le pass mensuel actif reviennent. Les pièces ne sont pas restaurées : elles se dépensent dans le jeu."
+    "Ouvre la Boutique et touche « Restaurer les achats » avec le même identifiant Apple que pour le paiement. Enlever les pubs, Premium et le pass mensuel actif reviennent. Les pièces ne sont pas restaurées avec l’achat : si tu utilises le compte en ligne, elles reviennent quand tu te connectes."
   ],
   [
     "Est-ce que je perds mes pièces si je désinstalle l’appli ?",
-    "Oui. Les pièces, les records et les profils sont enregistrés sur le téléphone, pas sur internet. Si tu désinstalles l’appli ou effaces ses données, ils sont perdus."
+    "Sans compte, oui : les pièces, les records et les profils sont enregistrés sur le téléphone et sont perdus si tu désinstalles l’appli ou effaces ses données. Avec le compte en ligne, ils reviennent quand tu te reconnectes."
   ],
   [
     "Comment résilier l’abonnement mensuel ?",
@@ -28,15 +40,15 @@
     "Dans la Boutique, tu peux acheter « Enlever les pubs », l’abonnement mensuel ou Premium. Avec n’importe lequel, les pubs entre les parties disparaissent. Les pubs avec récompense, par exemple pour gagner des pièces, n’apparaissent que si tu les choisis."
   ],
   [
-    "J’ai oublié le PIN d’un profil",
-    "Le profil et son PIN n’existent que sur ce téléphone : ce n’est pas un compte en ligne et on ne peut pas le récupérer. Tu peux créer un nouveau profil."
+    "Et les profils avec PIN ?",
+    "Les profils avec nom et PIN des versions précédentes n’existent que sur ce téléphone et ne peuvent pas être récupérés. Depuis la 1.3, on ne crée plus de profils avec PIN : pour garder ta progression, utilise le compte en ligne."
   ],
   [
     "Quels jeux ont besoin d’internet ?",
-    "Devine le mot, Forme des mots et Mots enchaînés vérifient sur internet les mots qui ne sont pas dans l’appli, et Drapeaux télécharge les images des drapeaux. Tout le reste se joue hors connexion."
+    "Devine le mot, Forme des mots et Mots enchaînés vérifient sur internet les mots qui ne sont pas dans l’appli, et Drapeaux télécharge les images des drapeaux. Le compte en ligne et le classement mondial ont aussi besoin d’une connexion. Tout le reste se joue hors connexion."
   ],
   [
     "Comment effacer mes données ?",
-    "Presque tout est uniquement sur ton téléphone. Pour l’effacer, ouvre les paramètres du téléphone, va dans Applications › AllTheGames › Stockage et touche « Effacer les données » (les noms varient un peu selon le téléphone), ou désinstalle l’appli. Pour toute autre demande concernant tes données, écris-moi."
+    "Pour supprimer le compte en ligne, va dans Paramètres › Compte en ligne › Supprimer le compte, ou suis la page « Supprimer ton compte » de ce site. Ce qui est uniquement sur le téléphone s’efface dans les paramètres du téléphone : Applications › AllTheGames › Stockage › « Effacer les données » (les noms varient un peu selon le téléphone), ou en désinstallant l’appli. Pour toute autre demande concernant tes données, écris-moi."
   ]
 ]

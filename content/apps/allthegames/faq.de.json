@@ -1,15 +1,27 @@
 [
   [
+    "Was ist das Cloud-Konto?",
+    "Seit Version 1.3 kannst du dich unter Einstellungen › Cloud-Konto mit Google anmelden (auf iPhone und iPad auch mit Apple). Es speichert deine Münzen, dein Level, deine Rekorde und deine Designs, holt sie auf ein anderes Handy zurück und bringt dich mit einem Namen deiner Wahl in die Weltrangliste jedes Spiels. Es ist freiwillig: Ohne Konto spielst du genauso."
+  ],
+  [
+    "Warum fragt die App nach meinem Geburtsjahr?",
+    "Das Cloud-Konto gibt es ab 16 Jahren. Vor der ersten Anmeldung fragt die App nach dem Jahr; die Antwort bleibt auf dem Handy. Bist du jünger, spielst du einfach ohne Konto weiter."
+  ],
+  [
+    "Wie komme ich in die Weltrangliste?",
+    "Melde dich unter Einstellungen › Cloud-Konto an und wähle deinen Namen. Auf der Seite jedes Spiels öffnet der Pokal neben dem Stern «Deine Rekorde» und «Welt»: die besten 100 jeder Schwierigkeit und deinen Platz. Deine E-Mail wird nie angezeigt."
+  ],
+  [
     "Wie bekomme ich meine Käufe zurück?",
-    "Öffne den Shop und tippe auf «Käufe wiederherstellen», mit demselben Google-Play-Konto, mit dem du bezahlt hast. Deine Pässe kommen zurück: Werbung aus, das Monatsabo und Premium. Münzen lassen sich nicht wiederherstellen, weil sie nur auf dem Handy gespeichert sind."
+    "Öffne den Shop und tippe auf «Käufe wiederherstellen», mit demselben Google-Play-Konto, mit dem du bezahlt hast. Deine Pässe kommen zurück: Werbung aus, das Monatsabo und Premium. Münzen kommen mit dem Kauf nicht zurück: Mit dem Cloud-Konto sind sie dort gespeichert, ohne Konto nur auf dem Handy."
   ],
   [
     "Wie stelle ich meine Käufe auf iPhone oder iPad wieder her?",
-    "Öffne den Shop und tippe auf «Käufe wiederherstellen» mit derselben Apple-ID, mit der du bezahlt hast. Werbung aus, Premium und ein aktiver Monatspass kommen zurück. Münzen werden nicht wiederhergestellt: sie werden im Spiel verbraucht."
+    "Öffne den Shop und tippe auf «Käufe wiederherstellen» mit derselben Apple-ID, mit der du bezahlt hast. Werbung aus, Premium und ein aktiver Monatspass kommen zurück. Münzen werden mit dem Kauf nicht wiederhergestellt: Mit dem Cloud-Konto kommen sie bei der Anmeldung zurück."
   ],
   [
     "Verliere ich meine Münzen, wenn ich die App deinstalliere?",
-    "Ja. Münzen, Rekorde und Profile werden auf dem Handy gespeichert, nicht im Internet. Wenn du die App deinstallierst oder ihre Daten löschst, sind sie weg."
+    "Ohne Konto ja: Münzen, Rekorde und Profile werden auf dem Handy gespeichert und sind weg, wenn du die App deinstallierst oder ihre Daten löschst. Mit dem Cloud-Konto kommen sie zurück, sobald du dich wieder anmeldest."
   ],
   [
     "Wie kündige ich das Monatsabo?",
@@ -28,15 +40,15 @@
     "Im Shop kannst du «Werbung aus», das Monatsabo oder Premium kaufen. Mit jedem davon verschwindet die Werbung zwischen den Partien. Werbung mit Belohnung, zum Beispiel um Münzen zu verdienen, erscheint nur, wenn du sie selbst auswählst."
   ],
   [
-    "Ich habe die PIN eines Profils vergessen",
-    "Das Profil und seine PIN gibt es nur auf diesem Handy: Es ist kein Online-Konto und lässt sich nicht wiederherstellen. Du kannst ein neues Profil anlegen."
+    "Was ist mit den PIN-Profilen?",
+    "Profile mit Name und PIN aus früheren Versionen gibt es nur auf diesem Handy, und sie lassen sich nicht wiederherstellen. Seit 1.3 werden keine neuen PIN-Profile mehr angelegt: Um deinen Fortschritt zu speichern, nutze das Cloud-Konto."
   ],
   [
     "Welche Spiele brauchen Internet?",
-    "Wort erraten, Wörter bilden und Wortkette prüfen online die Wörter, die nicht in der App enthalten sind, und Flaggen lädt die Bilder der Flaggen herunter. Alles andere läuft offline."
+    "Wort erraten, Wörter bilden und Wortkette prüfen online die Wörter, die nicht in der App enthalten sind, und Flaggen lädt die Bilder der Flaggen herunter. Auch das Cloud-Konto und die Weltrangliste brauchen eine Verbindung. Alles andere läuft offline."
   ],
   [
     "Wie lösche ich meine Daten?",
-    "Fast alles ist nur auf deinem Handy. Zum Löschen öffne die Einstellungen des Handys, geh zu Apps › AllTheGames › Speicher und tippe auf «Daten löschen» (die Bezeichnungen sind je nach Handy etwas anders), oder deinstalliere die App. Für alle anderen Anliegen zu deinen Daten schreib mir."
+    "Um das Cloud-Konto zu löschen, geh zu Einstellungen › Cloud-Konto › Konto löschen oder folge der Seite «Dein Konto löschen» auf dieser Website. Was nur auf dem Handy ist, löschst du in den Einstellungen des Handys: Apps › AllTheGames › Speicher › «Daten löschen» (die Bezeichnungen sind je nach Handy etwas anders), oder indem du die App deinstallierst. Für alle anderen Anliegen zu deinen Daten schreib mir."
   ]
 ]

@@ -1,15 +1,27 @@
 [
   [
+    "What is the cloud account?",
+    "Since version 1.3 you can sign in with Google (or with Apple on iPhone and iPad) in Settings › Cloud account. It keeps your coins, level, records and cosmetics, brings them back on another phone and puts you in the world ranking of every game under the name you choose. It’s optional: without an account you play just the same."
+  ],
+  [
+    "Why does it ask for my year of birth?",
+    "The cloud account is for people aged 16 and over. Before you sign in for the first time, the app asks for the year; the answer stays on the phone. If you’re younger, you keep playing just the same, without an account."
+  ],
+  [
+    "How do I appear in the world ranking?",
+    "Sign in in Settings › Cloud account and choose your name. On each game’s page, the trophy next to the star opens «Your records» and «World»: the top 100 for each difficulty and your place. Your email is never shown."
+  ],
+  [
     "How do I get back what I bought?",
-    "Open the Shop and tap «Restore purchases» with the same Google Play account you paid with. Your passes come back: Remove ads, the monthly subscription and Premium. Coins can’t be recovered, because they are only stored on the phone."
+    "Open the Shop and tap «Restore purchases» with the same Google Play account you paid with. Your passes come back: Remove ads, the monthly subscription and Premium. Coins don’t come back with the purchase: if you use the cloud account, they are kept there; without an account, they are only on the phone."
   ],
   [
     "How do I restore my purchases on iPhone or iPad?",
-    "Open the Shop and tap «Restore purchases» with the same Apple ID you paid with. Remove ads, Premium and an active monthly pass come back. Coins are not restored: they are spent in the game."
+    "Open the Shop and tap «Restore purchases» with the same Apple ID you paid with. Remove ads, Premium and an active monthly pass come back. Coins are not restored with the purchase: if you use the cloud account, they come back when you sign in."
   ],
   [
     "Do I lose my coins if I uninstall the app?",
-    "Yes. Coins, records and profiles are stored on the phone, not online. Uninstalling the app or clearing its data deletes them."
+    "Without an account, yes: coins, records and profiles are stored on the phone and are lost if you uninstall the app or clear its data. With the cloud account, they come back when you sign in again."
   ],
   [
     "How do I cancel the monthly subscription?",
@@ -28,15 +40,15 @@
     "In the Shop you can buy «Remove ads», the monthly subscription or Premium. Any of them removes the ads between games. Rewarded ads, for example to earn coins, only appear if you choose them."
   ],
   [
-    "I’ve forgotten a profile’s PIN",
-    "The profile and its PIN only exist on that phone: it isn’t an online account and can’t be recovered. You can create a new profile."
+    "What about PIN profiles?",
+    "Name-and-PIN profiles from earlier versions only exist on that phone and can’t be recovered. Since 1.3, new PIN profiles are no longer created: to keep your progress, use the cloud account."
   ],
   [
     "Which games need the internet?",
-    "Guess the word, Make words and Word chain check online any words that don’t come with the app, and Flags downloads the flag images. Everything else works offline."
+    "Guess the word, Make words and Word chain check online any words that don’t come with the app, and Flags downloads the flag images. The cloud account and the world ranking also need a connection. Everything else works offline."
   ],
   [
     "How do I delete my data?",
-    "Almost everything is only on your phone. To delete it, open your phone’s settings, go to Apps › AllTheGames › Storage and tap «Clear data» (the names vary a little between phones), or uninstall the app. For any other request about your data, write to me."
+    "To delete the cloud account, go to Settings › Cloud account › Delete account, or follow the «Delete your account» page on this site. What is only on the phone is deleted in your phone’s settings: Apps › AllTheGames › Storage › «Clear data» (the names vary a little between phones), or by uninstalling the app. For any other request about your data, write to me."
   ]
 ]
