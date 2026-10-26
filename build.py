@@ -277,28 +277,40 @@ SOCIAL_ICONS = {
 }
 
 
-def social_links(lang: str) -> str:
-    """Los perfiles del estudio en redes (content/site.json › social)."""
-    items = ''.join(
+def site_footer(c: Ctx, lang: str) -> str:
+    """El pie cierra la página como el banner la abre: marca, apps, contacto y redes en columnas, y el titular abajo."""
+    apps = ''.join(f'<li><a href="{c.to(path)}">{esc(label)}</a></li>' for path, label in nav_items(lang)[1:])
+    social = ''.join(
         f'<li><a href="{esc(s["url"])}" rel="me noopener" target="_blank" '
-        f'aria-label="{esc(T(lang, "socialOn", red=s["name"]))}" title="{esc(T(lang, "socialOn", red=s["name"]))}">'
-        f'<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">{SOCIAL_ICONS[s["id"]]}</svg></a></li>'
+        f'aria-label="{esc(T(lang, "socialOn", red=s["name"]))}">'
+        f'<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">{SOCIAL_ICONS[s["id"]]}</svg>'
+        f'<span>{esc(s["name"])}</span></a></li>'
         for s in SITE.get('social', [])
     )
-    return f'<ul class="foot-social" aria-label="{esc(T(lang, "socialAria"))}">{items}</ul>' if items else ''
-
-
-def site_footer(c: Ctx, lang: str) -> str:
-    """El pie cierra la página como el banner la abre: banda honda, esquinas de arriba redondas."""
     return f'''<footer class="site-foot">
-  <div class="wrap foot-row">
-    {wordmark(c, lang)}
-    <nav class="foot-links" aria-label="{esc(T(lang, 'footAria'))}">
-      <a href="{c.to(lp(lang, 'aviso-legal/'))}">{esc(T(lang, 'legalNotice'))}</a>
-      {mail_link()}
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      {wordmark(c, lang)}
+      <p>{esc(T(lang, 'headline'))}.</p>
+    </div>
+    <nav class="foot-col" aria-labelledby="foot-apps">
+      <h2 class="foot-h" id="foot-apps">{esc(T(lang, 'theApps'))}</h2>
+      <ul class="foot-list">{apps}</ul>
     </nav>
-    {social_links(lang)}
-    <p class="foot-copy">© {YEAR} {esc(OWNER)} ({esc(T(lang, 'ownerNote'))})</p>
+    <nav class="foot-col" aria-labelledby="foot-contact">
+      <h2 class="foot-h" id="foot-contact">{esc(T(lang, 'footContact'))}</h2>
+      <ul class="foot-list">
+        <li>{mail_link()}</li>
+        <li><a href="{c.to(lp(lang, 'aviso-legal/'))}">{esc(T(lang, 'legalNotice'))}</a></li>
+      </ul>
+    </nav>
+    <div class="foot-col">
+      <h2 class="foot-h" id="foot-follow">{esc(T(lang, 'footFollow'))}</h2>
+      <ul class="foot-social" aria-labelledby="foot-follow">{social}</ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <p class="wrap foot-copy">© {YEAR} {esc(OWNER)} ({esc(T(lang, 'ownerNote'))})</p>
   </div>
 </footer>'''
 

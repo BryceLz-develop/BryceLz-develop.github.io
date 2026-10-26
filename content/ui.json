@@ -84,7 +84,9 @@
     "crumbs": "Dónde estás",
     "inDev": "En desarrollo",
     "socialAria": "Redes sociales",
-    "socialOn": "BryceLz en {red}"
+    "socialOn": "BryceLz en {red}",
+    "footContact": "Contacto",
+    "footFollow": "Síguenos"
   },
   "en": {
     "langName": "English",
@@ -171,7 +173,9 @@
     "crumbs": "You are here",
     "inDev": "In development",
     "socialAria": "Social media",
-    "socialOn": "BryceLz on {red}"
+    "socialOn": "BryceLz on {red}",
+    "footContact": "Contact",
+    "footFollow": "Follow us"
   },
   "pt": {
     "langName": "Português",
@@ -258,7 +262,9 @@
     "crumbs": "Onde você está",
     "inDev": "Em desenvolvimento",
     "socialAria": "Redes sociais",
-    "socialOn": "BryceLz no {red}"
+    "socialOn": "BryceLz no {red}",
+    "footContact": "Contato",
+    "footFollow": "Siga-nos"
   },
   "it": {
     "langName": "Italiano",
@@ -345,7 +351,9 @@
     "crumbs": "Dove sei",
     "inDev": "In sviluppo",
     "socialAria": "Social",
-    "socialOn": "BryceLz su {red}"
+    "socialOn": "BryceLz su {red}",
+    "footContact": "Contatti",
+    "footFollow": "Seguici"
   },
   "fr": {
     "langName": "Français",
@@ -432,7 +440,9 @@
     "crumbs": "Où tu es",
     "inDev": "En développement",
     "socialAria": "Réseaux sociaux",
-    "socialOn": "BryceLz sur {red}"
+    "socialOn": "BryceLz sur {red}",
+    "footContact": "Contact",
+    "footFollow": "Suis-nous"
   },
   "de": {
     "langName": "Deutsch",
@@ -519,6 +529,8 @@
     "crumbs": "Wo du bist",
     "inDev": "In Entwicklung",
     "socialAria": "Soziale Netzwerke",
-    "socialOn": "BryceLz auf {red}"
+    "socialOn": "BryceLz auf {red}",
+    "footContact": "Kontakt",
+    "footFollow": "Folge uns"
   }
 }
