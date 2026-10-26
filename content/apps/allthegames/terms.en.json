@@ -1,6 +1,6 @@
 {
-  "version": "2026-10-26",
-  "updated": "Updated 26 October 2026",
+  "version": "2026-10-27",
+  "updated": "Updated 27 October 2026",
   "title": "Purchase terms",
   "intro": "AllTheGames is played on your phone. These terms are about what you pay for in the store. They are written so the whole family can understand them.",
   "sections": [
@@ -10,7 +10,7 @@
     ],
     [
       "Coins",
-      "Coins only work inside AllTheGames (entry, hint, undo, continue). They cannot be exchanged for money. If you uninstall, the coins on that phone are lost; paid passes come back with Restore purchases on the same store account."
+      "Coins only work inside AllTheGames (entry, hint and undo). They cannot be exchanged for money. Continuing a lost game does not cost coins: you watch an ad, once per game. If you uninstall, the coins on that phone are lost; paid passes come back with Restore purchases on the same store account."
     ],
     [
       "Who charges you",
