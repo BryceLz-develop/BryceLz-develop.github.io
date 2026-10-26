@@ -892,9 +892,9 @@ def build_atg_terms(d: dict) -> None:
     """Los términos de compra, en los 6 idiomas (copiados de la app con tools/export-terms.py)."""
     paths = terms_paths()
 
-    def main_for(lang: str, here: str) -> str:
+    def main_for_d(dd: dict, lang: str, here: str) -> str:
         c = Ctx(here)
-        t = d['terms'][lang]
+        t = dd['terms'][lang]
         priv = f'<a href="{c.to(privacy_paths()[lang])}">{esc(t.get("privacyLinkText", "nota de privacidad"))}</a>'
         sections = ''.join(
             f'<h2>{esc(h)}</h2>\n  <p>{rich(b, {"privacyLink": priv})}</p>\n  ' for h, b in t['sections']
@@ -910,14 +910,19 @@ def build_atg_terms(d: dict) -> None:
     for lang in LANGS:
         here = paths[lang]
         t = d['terms'][lang]
-        page(here, title=f'{t["title"]} · AllTheGames', description=t['intro'], main=main_for(lang, here),
+        page(here, title=f'{t["title"]} · AllTheGames', description=t['intro'], main=main_for_d(d, lang, here),
              theme='atg', section=lp(lang, 'apps/allthegames/'), lang=lang, links=paths,
              pre_main=atg_nav(Ctx(here), here, lang), favicon=ATG_ICON)
-    es = d['terms']['es']
-    dated = f'apps/allthegames/terminos/{es["version"]}/'
-    page(dated, title=f'{es["title"]} ({es["version"]}) · AllTheGames', description=es['intro'],
-         main=main_for('es', dated), theme='atg', section='apps/allthegames/', links=paths, hreflang=False,
-         pre_main=atg_nav(Ctx(dated), paths['es'], 'es'), favicon=ATG_ICON)
+    # Versión vigente y anteriores (content/apps/allthegames/terms-archive/<fecha>.json, en español), cada una en su URL.
+    versions = {d['terms']['es']['version']: d['terms']['es']}
+    for f in sorted((CONTENT / 'apps' / 'allthegames' / 'terms-archive').glob('*.json')):
+        versions.setdefault(f.stem, json.loads(f.read_text('utf-8')))
+    for ver, es in versions.items():
+        dated = f'apps/allthegames/terminos/{ver}/'
+        dv = {**d, 'terms': {**d['terms'], 'es': es}}
+        page(dated, title=f'{es["title"]} ({ver}) · AllTheGames', description=es['intro'],
+             main=main_for_d(dv, 'es', dated), theme='atg', section='apps/allthegames/', links=paths,
+             hreflang=False, pre_main=atg_nav(Ctx(dated), paths['es'], 'es'), favicon=ATG_ICON)
 
 
 # ---------------------------------------------------------------------------
