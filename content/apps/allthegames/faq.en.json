@@ -1,7 +1,7 @@
 [
   [
     "What is the cloud account?",
-    "Since version 1.3 you can sign in with Google (or with Apple on iPhone and iPad) in Settings › Cloud account. It keeps your coins, level, records and cosmetics, brings them back on another phone and puts you in the world ranking of every game under the name you choose. It’s optional: without an account you play just the same."
+    "Since version 1.4 you can sign in with Google (or with Apple on iPhone and iPad) in Settings › Cloud account. It keeps your coins, level, records and cosmetics, brings them back on another phone and puts you in the world ranking of every game under the name you choose. It’s optional: without an account you play just the same."
   ],
   [
     "Why does it ask for my year of birth?",
@@ -41,7 +41,7 @@
   ],
   [
     "What about PIN profiles?",
-    "Name-and-PIN profiles from earlier versions only exist on that phone and can’t be recovered. Since 1.3, new PIN profiles are no longer created: to keep your progress, use the cloud account."
+    "Name-and-PIN profiles from earlier versions only exist on that phone and can’t be recovered. Since 1.4, new PIN profiles are no longer created: to keep your progress, use the cloud account."
   ],
   [
     "Which games need the internet?",

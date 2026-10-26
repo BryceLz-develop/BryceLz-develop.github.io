@@ -19,6 +19,7 @@ ni los juegos que la app tiene ocultos ("hidden": true en games.json).
 import hashlib
 import html
 import json
+from typing import Callable
 import math
 import re
 import shutil
@@ -372,6 +373,8 @@ def load() -> dict:
         'faq': faq,
         # Cómo borrar la cuenta en la nube (Google Play exige una página pública).
         'deleteAccount': json.loads((base / 'delete-account.json').read_text('utf-8')),
+        # Nombre y descripciones de cada juego en los 6 idiomas, copiados de la app (tools/export-games.mts).
+        'gameText': json.loads((base / 'games-text.json').read_text('utf-8')),
     }
 
 
@@ -458,14 +461,14 @@ def home_tiles(c: Ctx, d: dict, p: dict, lang: str) -> list[dict]:
     atg_acc = {cat['id']: cat['accent'] for cat in d['app']['categories']}
     atg = [{
         'img': c.to(f'static/apps/allthegames/games/{g["slug"]}.webp'), 'name': game_name(d, lang, g),
-        'href': c.to(lp(lang, 'apps/allthegames/')) + f'#cat-{g["folder"]}', 'accent': atg_acc[g['folder']],
+        'href': c.to(game_path('allthegames', g['slug'], lang)), 'accent': atg_acc[g['folder']],
     } for g in mixed_by_category(d['app']['categories'], d['games'])]
     if not p:
         return atg
     p_acc = {cat['id']: cat['accent'] for cat in p['app']['categories']}
     party = [{
         'img': c.to(f'static/apps/allthepartygames/games/{g["slug"]}.webp'), 'name': p['i18n'][lang]['games'][g['slug']],
-        'href': c.to(lp(lang, PARTY)) + f'#cat-{g["folder"]}', 'accent': p_acc[g['folder']],
+        'href': c.to(game_path('allthepartygames', g['slug'], lang)), 'accent': p_acc[g['folder']],
     } for g in mixed_by_category(p['app']['categories'], p['app']['games'])]
     # Reparto proporcional: cada cierto número de juegos de una app, uno de la otra.
     out, step = [], max(1, round(len(atg) / max(1, len(party))))
@@ -683,10 +686,10 @@ def build_atg_home(d: dict, lang: str) -> None:
     for cat in app['categories']:
         mine = [g for g in games if g['folder'] == cat['id']]
         tiles = ''.join(
-            f'''<li class="game">
+            f'''<li class="game"><a href="{c.to(game_path('allthegames', g['slug'], lang))}">
         <img src="{s('games/' + g['slug'] + '.webp')}" alt="" width="72" height="72" loading="lazy">
         <span>{esc(game_name(d, lang, g))}</span>
-      </li>'''
+      </a></li>'''
             for g in mine
         )
         cats.append(f'''<section class="cat" aria-labelledby="cat-{cat['id']}">
@@ -962,10 +965,10 @@ def build_party_home(p: dict, lang: str) -> None:
     for cat in app['categories']:
         mine = [g for g in app['games'] if g['folder'] == cat['id']]
         tiles = ''.join(
-            f'''<li class="game">
+            f'''<li class="game"><a href="{c.to(game_path('allthepartygames', g['slug'], lang))}">
         <img src="{s('games/' + g['slug'] + '.webp')}" alt="" width="72" height="72" loading="lazy">
         <span>{esc(tx['games'][g['slug']])}</span>
-      </li>'''
+      </a></li>'''
             for g in mine
         )
         cats.append(f'''<section class="cat" aria-labelledby="cat-{cat['id']}">
@@ -1073,6 +1076,92 @@ def build_party_legal(p: dict, kind: str) -> None:
 
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Ficha de cada juego: descripción (la de la app) y la app en la que se juega.
+
+
+def game_path(app_id: str, game_slug: str, lang: str) -> str:
+    return lp(lang, f'apps/{app_id}/juegos/{game_slug}/')
+
+
+def build_game_pages(*, app_id: str, app_name: str, theme: str, favicon: str, logo: str, logo_size: tuple,
+                     lead: Callable[[str], str], store_published: bool, store_url: str,
+                     categories: list[dict], cat_name: Callable[[str, str], str], games: list[dict],
+                     text: Callable[[str, str], dict], nav: Callable, notice: Callable[[str], str] = lambda l: '') -> None:
+    """Una página por juego y por idioma. Los textos vienen de la app; aquí no se escribe ninguno."""
+    accents = {cat['id']: cat['accent'] for cat in categories}
+    app_home = f'apps/{app_id}/'
+    for lang in LANGS:
+        for g in games:
+            here = game_path(app_id, g['slug'], lang)
+            c = Ctx(here)
+            t = text(lang, g['slug'])
+            acc, cat = accents[g['folder']], cat_name(lang, g['folder'])
+            store = (
+                f'<a class="sticker" href="{esc(store_url)}&amp;hl={HTML_LANG[lang]}">{esc(T(lang, "download"))}</a>'
+                if store_published else f'<p class="soon">{esc(T(lang, "soon"))}</p>'
+            )
+            others = ''.join(
+                f'''<li class="game"><a href="{c.to(game_path(app_id, o['slug'], lang))}">
+        <img src="{c.to(f'static/apps/{app_id}/games/{o["slug"]}.webp')}" alt="" width="72" height="72" loading="lazy">
+        <span>{esc(text(lang, o['slug'])['name'])}</span>
+      </a></li>'''
+                for o in games if o['folder'] == g['folder'] and o['slug'] != g['slug']
+            )
+            more = f'''<section class="game-more" aria-labelledby="mas">
+    <h2 id="mas" class="game-h2">{esc(T(lang, 'moreGames', cat=cat))}</h2>
+    <ul class="games">{others}</ul>
+  </section>''' if others else ''
+            main = f'''<div class="wrap narrow sheet game-page">
+  <h1 class="band-title" style="--fill:{band_fill(acc)};--lip:{band_lip(acc)}">{esc(t['name'])}</h1>
+  <nav class="crumbs" aria-label="{esc(T(lang, 'crumbs'))}">
+    <a href="{c.to(lp(lang, app_home))}">{app_name}</a> <span aria-hidden="true">›</span>
+    <a href="{c.to(lp(lang, app_home))}#cat-{g['folder']}">{esc(cat)}</a>
+  </nav>
+  {notice(lang)}
+  <div class="game-hero">
+    <img src="{c.to(f'static/apps/{app_id}/games/{g["slug"]}.webp')}" alt="" width="144" height="144">
+    <div>
+      <p class="lead">{esc(t['short'])}</p>
+      <p>{esc(t['long'])}</p>
+    </div>
+  </div>
+  <section class="play-in" aria-labelledby="donde">
+    <h2 id="donde" class="game-h2">{esc(T(lang, 'playIn'))}</h2>
+    <div class="play-card">
+      <a href="{c.to(lp(lang, app_home))}" tabindex="-1" aria-hidden="true"><img src="{c.to(logo)}" alt="" width="{logo_size[0]}" height="{logo_size[1]}" loading="lazy"></a>
+      <div>
+        <p class="play-card-name display">{app_name}</p>
+        <p>{esc(lead(lang))}</p>
+        <div class="actions">{store}<a class="sticker sticker-soft" href="{c.to(lp(lang, app_home))}">{esc(T(lang, 'seeApp'))}</a></div>
+      </div>
+    </div>
+  </section>
+  {more}
+</div>'''
+            page(here, title=f"{t['name']} · {app_name}", description=t['short'], main=main, theme=theme,
+                 section=lp(lang, app_home), lang=lang, links=same_page(f'apps/{app_id}/juegos/{g["slug"]}/'),
+                 pre_main=nav(c, lp(lang, app_home), lang), favicon=favicon)
+
+
+def build_all_game_pages(d: dict, p: dict) -> None:
+    build_game_pages(
+        app_id='allthegames', app_name='AllTheGames', theme='atg', favicon=ATG_ICON,
+        logo='static/apps/allthegames/logo.webp', logo_size=(743, 500), lead=lambda l: app_text(d, l, 'lead'),
+        store_published=d['app'].get('storePublished', False), store_url=d['app']['storeUrl'],
+        categories=d['app']['categories'], cat_name=lambda l, f: cat_label(d, l, next(x for x in d['app']['categories'] if x['id'] == f)),
+        games=d['games'], text=lambda l, g: d['gameText'][l][g], nav=atg_nav)
+    if not p:
+        return
+    build_game_pages(
+        app_id='allthepartygames', app_name='AllThePartyGames', theme='party', favicon=PARTY_ICON,
+        logo='static/apps/allthepartygames/logo.webp', logo_size=(760, 541), lead=lambda l: p['i18n'][l]['tagline'],
+        store_published=p['app'].get('storePublished', False), store_url=p['app']['storeUrl'],
+        categories=p['app']['categories'], cat_name=lambda l, f: p['i18n'][l]['categories'][f],
+        games=p['app']['games'],
+        text=lambda l, g: {'name': p['i18n'][l]['games'][g], **p['i18n'][l]['gameText'][g]},
+        nav=party_nav, notice=lambda l: age_notice(p, l, compact=True))
+
 
 def build() -> None:
     if OUT.exists():
@@ -1101,6 +1190,7 @@ def build() -> None:
             build_party_support(party, lang)
         build_party_legal(party, 'privacy')
         build_party_legal(party, 'terms')
+    build_all_game_pages(d, party)
     base = SITE['baseUrl'].rstrip('/')
     urls = sorted(
         p.parent.relative_to(OUT).as_posix() for p in OUT.rglob('index.html') if 'static' not in p.parts

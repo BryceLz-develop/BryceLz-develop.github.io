@@ -93,7 +93,12 @@ def main() -> None:
     for m in re.finditer(r"name:\s*'([^']+)',\s*slug:\s*'([^']+)'.*?gameType:\s*'([^']+)'(.*?)\n  \}", block, re.S):
         if 'hidden: true' in m.group(4):
             continue
-        games.append({'slug': m.group(2), 'name': m.group(1), 'folder': m.group(3)})
+        body = m.group(0)
+        short = re.search(r"shortDescription:\s*'([^']*)'", body)
+        long_ = re.search(r"longDescription:\s*'([^']*)'", body)
+        games.append({'slug': m.group(2), 'name': m.group(1), 'folder': m.group(3),
+                      'short': short.group(1) if short else '',
+                      'long': long_.group(1) if long_ else (short.group(1) if short else '')})
     folders = (mobile / 'src' / 'games' / 'catalogFolders.ts').read_text('utf-8')
     cats = []
     for m in re.finditer(r"\{ id: '([a-z]+)', label: '([^']+)', accent: '(#[0-9A-Fa-f]{6})' \}", folders):
@@ -109,7 +114,7 @@ def main() -> None:
         'version': app['version'], 'storePublished': False,
         'storeUrl': f"https://play.google.com/store/apps/details?id={app['android']['package']}",
         'privacyVersion': manifest['privacy']['version'], 'termsVersion': manifest['terms']['version'],
-        'categories': cats, 'games': games,
+        'categories': cats, 'games': [{k: g[k] for k in ('slug', 'name', 'folder')} for g in games],
     }
     old = CONTENT / 'app.json'
     if old.exists():  # lo que se decide en la web (publicada o no) no se pisa
@@ -128,6 +133,8 @@ def main() -> None:
             'faq': [[q['q'], q['a']] for q in d['faq']],
             'ageGate': {k: ts_string(gate, k) for k in ('title', 'body', 'drinkResponsibly')},
             'games': {g['slug']: tr(g['name']) for g in games},
+            # Descripciones de cada juego (las de la app), para su ficha en la web.
+            'gameText': {g['slug']: {'short': tr(g['short']), 'long': tr(g['long'])} for g in games},
             'categories': {c['id']: tr(c['label']) for c in cats},
         }
         for kind in ('privacy', 'terms'):

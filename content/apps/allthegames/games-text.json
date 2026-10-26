@@ -1,0 +1,1814 @@
+{
+ "es": {
+  "2048": {
+   "name": "2048",
+   "short": "Desliza, fusiona y suma puntos.",
+   "long": "Desliza el tablero. Si juntas dos fichas iguales, se unen y sumas puntos. Llega lo más lejos que puedas."
+  },
+  "solitario": {
+   "name": "Solitario",
+   "short": "Klondike clásico a un jugador.",
+   "long": "Reparte el tablero y ve montando las cartas. El objetivo es hacer cuatro montones, del as al rey."
+  },
+  "spider": {
+   "name": "Spider",
+   "short": "Spider Solitaire con 1, 2 o 4 palos.",
+   "long": "Junta series del rey al as del mismo palo. Cuando una está completa, desaparece sola."
+  },
+  "freecell": {
+   "name": "Freecell",
+   "short": "Solitario con huecos libres, todas las cartas a la vista.",
+   "long": "Reparte las 52 cartas en ocho columnas. Aparcas una carta en un hueco libre o la subes a su palo, del as al rey."
+  },
+  "piramide": {
+   "name": "Pirámide",
+   "short": "Quita cartas de la pirámide sumando 13.",
+   "long": "Toca dos cartas libres que sumen 13, o un rey él solo. Una carta no vale si todavía tiene otra encima, aunque sumen 13. Cuando no queda ninguna en la pirámide, has ganado."
+  },
+  "siete-y-media": {
+   "name": "Siete y media",
+   "short": "Llega a 7 y media: Siete y media (España) o Sette e mezzo (Italia).",
+   "long": "Tú y la banca recibís una carta española. Puedes pedir otra o plantarte. Gana quien se acerca a 7 y media sin pasarse."
+  },
+  "capitales": {
+   "name": "Capitales",
+   "short": "Un país, cuatro ciudades. Toca la capital.",
+   "long": "Sale un país y cuatro ciudades. Toca la que es su capital. Si fallas, pierdes una vida. Ganas al terminar todas las preguntas."
+  },
+  "banderas": {
+   "name": "Banderas",
+   "short": "Cuatro banderas o cuatro países. Toca la que toca.",
+   "long": "Puedes jugar con banderas o con nombres. En Banderas te sale un país y tocas su bandera; en Nombres te sale una bandera y tocas el país. Si fallas, pierdes una vida. Ganas al terminar todas las preguntas."
+  },
+  "ordenar-colores": {
+   "name": "Ordenar colores",
+   "short": "Pasa los cubos de una torre a otra hasta dejar cada color junto.",
+   "long": "Toca una torre para coger los cubos de arriba del mismo color y suéltalos en una torre vacía o que tenga ese color arriba. Ganas cuando cada color llena una torre."
+  },
+  "cinquillo": {
+   "name": "Cinquillo",
+   "short": "Sale el 5: Cinquillo (España) o Cinque (Italia).",
+   "long": "Sale quien tenga el 5 de oros. Encaja cartas del mismo palo, una al lado de la otra, hasta quedarte sin ninguna."
+  },
+  "escoba": {
+   "name": "Escoba",
+   "short": "Pesca a 15: Escoba (España) o Scopa (Italia).",
+   "long": "Tira una carta y recoge las de la mesa que sumen 15 contigo. Elige Escoba o Scopa en Normas. Si dejas la mesa vacía, haces escoba."
+  },
+  "basra": {
+   "name": "Basra",
+   "short": "Pesca por valor: Basra (Egipto) o Xeri (Grecia).",
+   "long": "Baraja francesa de 52. Captura por el mismo valor o sumando (as–10). Elige Basra o Xeri en Normas. Si dejas la mesa vacía, haces Basra."
+  },
+  "brisca": {
+   "name": "Brisca",
+   "short": "Bazas con triunfo: Brisca (España) o Briscola (Italia).",
+   "long": "Tres cartas, un palo de triunfo y cada ronda cuenta. Elige Brisca o Briscola en Normas. Gana quien (o la pareja que) sume más puntos."
+  },
+  "chinchon": {
+   "name": "Chinchón",
+   "short": "Escaleras y grupos a 7 cartas.",
+   "long": "Siete cartas: haz grupos o escaleras y cierra cuando te queden pocas sueltas. Si haces una escalera de siete, es chinchón y ganas la partida."
+  },
+  "gin-rummy": {
+   "name": "Gin Rummy",
+   "short": "Diez cartas, combinaciones y toque.",
+   "long": "Diez cartas francesas. Haz tríos o escaleras y toca cuando te queden pocas sueltas. Si no te queda ninguna, es gin."
+  },
+  "scala-40": {
+   "name": "Scala 40",
+   "short": "Trece cartas y comodines. Abre con 40 puntos.",
+   "long": "Dos barajas francesas con 4 comodines. Baja tríos o escaleras a la mesa; la primera bajada tiene que sumar 40. Cierra quien tira su última carta."
+  },
+  "conquian": {
+   "name": "Conquian",
+   "short": "Diez cartas. Baja la carta del centro o pásala.",
+   "long": "Baraja española. La carta del centro nunca va a la mano: la bajas al momento en tus combinaciones o la pasas. Gana quien tenga 11 cartas en la mesa."
+  },
+  "tute": {
+   "name": "Tute",
+   "short": "Tute y Guiñote (bazas y cantes) o el Truco argentino.",
+   "long": "Bazas con triunfo y cantes de rey y caballo. Sin mazo, sigue el palo y monta. Gana quien sume más puntos."
+  },
+  "tressette": {
+   "name": "Tressette",
+   "short": "Bazas italianas sin triunfo. El 3 es el más fuerte.",
+   "long": "Hay que seguir el palo. No hay triunfo. El 3 gana al 2 y el 2 gana al as. Gana quien sume más puntos."
+  },
+  "domino": {
+   "name": "Dominó",
+   "short": "Encaja fichas: por parejas (caribeño), con robo o de bloqueo.",
+   "long": "El dominó con robo: coloca una ficha que encaje en un extremo. Si no tienes, robas del pozo hasta poder. Gana quien se quede sin fichas."
+  },
+  "sudoku": {
+   "name": "Sudoku",
+   "short": "9×9: filas, columnas y recuadros del 1 al 9.",
+   "long": "Rellena el tablero para que en cada fila, columna y recuadro de 3×3 estén los números del 1 al 9, sin repetir."
+  },
+  "ahorcado": {
+   "name": "Ahorcado",
+   "short": "Adivina la palabra letra a letra.",
+   "long": "Adivina la palabra letra a letra. Si fallas, pierdes una vida. Siempre ves de qué tema es."
+  },
+  "mahjong": {
+   "name": "Mahjong",
+   "short": "Empareja fichas libres del tablero.",
+   "long": "Toca dos fichas iguales que estén libres: sin nada encima y con un lado abierto. Vacía el tablero."
+  },
+  "memoria": {
+   "name": "Memoria",
+   "short": "Encuentra las parejas.",
+   "long": "Voltea dos cartas. Si son iguales, se quitan del tablero. Encuentra todas las parejas."
+  },
+  "memoria-musical": {
+   "name": "Memoria musical",
+   "short": "Repite la secuencia de colores, cada vez un poco más larga.",
+   "long": "Los pads se encienden en un orden. Tócalos igual. Cada ronda añade un color más. Ganas al llegar al final de la cadena."
+  },
+  "nonograma": {
+   "name": "Nonograma",
+   "short": "Pinta la cuadrícula con pistas.",
+   "long": "Los números de cada fila y columna te dicen qué pintar. Completa el dibujo sin quedarte sin vidas."
+  },
+  "tres-en-raya": {
+   "name": "Tres en raya",
+   "short": "El clásico 3×3: alinea tres contra el móvil o un amigo.",
+   "long": "Pon tres en raya: fila, columna o diagonal. Juega contra el móvil o con un amigo en el mismo teléfono."
+  },
+  "trenecito": {
+   "name": "Rueda, trenecito",
+   "short": "Lleva el tren y recoge cajitas.",
+   "long": "Desliza para girar. Recoge las cajas de herramientas y se engancha un vagón. No choques con el borde ni con tu tren."
+  },
+  "buscaminas": {
+   "name": "Buscaminas",
+   "short": "Abre casillas y marca las minas.",
+   "long": "El primer toque es seguro. El número dice cuántas minas hay alrededor. Abre todas las casillas que no tienen mina."
+  },
+  "avioncito": {
+   "name": "Vuela, avioncito",
+   "short": "Toca para subir y pasa por los huecos.",
+   "long": "Toca para que el avioncito suba. Cae solo: pasa por los huecos entre las lámparas y los juguetes, como si volara por una habitación."
+  },
+  "bloques": {
+   "name": "Bloques de colores",
+   "short": "Encaja las piezas y limpia filas y columnas.",
+   "long": "Arrastra las piezas al tablero. Si llenas una fila o una columna, desaparece y sumas puntos. Encaja tantas como puedas."
+  },
+  "match-3": {
+   "name": "Conecta frutas",
+   "short": "Junta tres frutas iguales y suma puntos.",
+   "long": "Arrastra una fruta a otra de al lado. Si juntas tres o más iguales, desaparecen y en su sitio salen frutas nuevas. Con cuatro se va toda la línea; con cinco, esa fruta de todo el tablero. Sigue hasta que no quede ningún trío."
+  },
+  "lluvia-de-bloques": {
+   "name": "Lluvia de bloques",
+   "short": "Gira las piezas que caen y completa filas.",
+   "long": "Las piezas van cayendo. Muévelas y gíralas para llenar filas. Cada fila llena desaparece y sumas puntos. Aguanta hasta que el pozo se llene."
+  },
+  "canicas": {
+   "name": "Lanza canicas",
+   "short": "Tira una canica a la cola. Tres del mismo color saltan.",
+   "long": "Las canicas avanzan por el camino hacia el hoyo. Apunta y suelta para tirar la tuya: si juntas tres o más del mismo color, desaparecen. Cuando se acaba la cola, has ganado. Si llegan al hoyo, se acaba."
+  },
+  "burbujas": {
+   "name": "Dispara bolas",
+   "short": "Lanza bolas de colores al montón que baja.",
+   "long": "Apunta y lanza. Si juntas tres o más del mismo color, desaparecen. El montón baja de vez en cuando: si llega a la raya de abajo, se acaba. En normal, limpiar el montón es ganar; en infinito sigue otra oleada."
+  },
+  "sumas-cruzadas": {
+   "name": "Sumas cruzadas",
+   "short": "Un cuadrado: completa los números que faltan.",
+   "long": "Es un cuadrado con algunos números ya puestos. Arriba ves lo que suma cada columna y a la izquierda lo que suma cada fila. Tú rellenas los huecos."
+  },
+  "sopa-de-letras": {
+   "name": "Sopa de letras",
+   "short": "Encuentra las palabras escondidas en la cuadrícula.",
+   "long": "Hay palabras escondidas entre las letras, todas del mismo tema. Arrastra de la primera a la última letra de cada una hasta encontrarlas todas."
+  },
+  "crucigrama": {
+   "name": "Crucigrama",
+   "short": "Rellena las casillas con las palabras de las pistas.",
+   "long": "Cada pista es una palabra. Las horizontales van a la derecha y las verticales hacia abajo, y se cruzan en las letras que comparten."
+  },
+  "ranita": {
+   "name": "Salta, ranita",
+   "short": "Salta de plataforma en plataforma y sube todo lo que puedas.",
+   "long": "La ranita salta sola de una plataforma a otra. Tú la mueves a los lados para que no se caiga. Cuanto más alto llegue, mejor."
+  },
+  "caminos": {
+   "name": "Caminos",
+   "short": "Une los colores y cubre todo el tablero.",
+   "long": "Une cada par del mismo color con una línea. Tienes que cubrir todas las casillas, sin cruzar líneas ni atravesar los puntos de otro color."
+  },
+  "pintar-suelo": {
+   "name": "Pintar el suelo",
+   "short": "Desliza la ficha y pinta todo el suelo.",
+   "long": "Arrastra el dedo: la ficha se desliza en esa dirección hasta un bloqueo. Pinta el suelo al pasar. Puede volver a pasar por lo ya pintado. Tienes que cubrir todas las casillas claras."
+  },
+  "marcianito": {
+   "name": "Aventuras marcianas",
+   "short": "Mueve la nave y dispara a los marcianitos que bajan.",
+   "long": "Pon el dedo donde quieras: la nave va ahí. El marcianito dispara solo, una bala cada vez. Cuantos más bichos tires, más fuerte se pone la nave."
+  },
+  "la-meta": {
+   "name": "La meta",
+   "short": "Desliza la ficha hasta pararte en la casilla verde.",
+   "long": "Arrastra el dedo: la ficha se desliza hasta un bloqueo. Tienes que pararte justo en el verde. Pasar por encima no vale."
+  },
+  "adivina-la-palabra": {
+   "name": "Adivina la palabra",
+   "short": "Adivina la palabra secreta, con colores de pista.",
+   "long": "Escribes una palabra. Verde: esa letra va ahí. Amarillo: la letra está, pero en otro sitio. Gris: no está. Tienes unos pocos intentos."
+  },
+  "ajedrez": {
+   "name": "Ajedrez",
+   "short": "Mueve las piezas y da jaque mate al rey del otro.",
+   "long": "Tú juegas con las piezas claras. Toca una pieza y luego la casilla donde quieres ir. Ganas cuando el rey oscuro está en jaque y no puede escapar."
+  },
+  "damas": {
+   "name": "Damas",
+   "short": "Come en diagonal: damas españolas, inglesas o brasileñas.",
+   "long": "Tú juegas con las fichas claras. Toca una ficha y luego la casilla oscura donde quieres ir. Si puedes comer, tienes que comer. Al otro lado, la ficha se corona y se vuelve dama."
+  },
+  "blackjack": {
+   "name": "Blackjack",
+   "short": "Llega a 21 sin pasarte. La banca juega después.",
+   "long": "Tú y la banca recibís dos cartas. Puedes pedir otra o plantarte. Gana quien se acerca a 21 sin pasarse."
+  },
+  "torre": {
+   "name": "Apila la torre",
+   "short": "Apila bloques. Lo que sobresale, se corta.",
+   "long": "Un bloque va de lado a lado. Toca para dejarlo caer encima de la torre. Lo que no apoya se corta, y la torre se va haciendo más estrecha. Llega tan alto como puedas."
+  },
+  "forma-palabras": {
+   "name": "Forma palabras",
+   "short": "Letras desordenadas. Saca las palabras que escondan.",
+   "long": "Te damos las letras de una palabra, pero mezcladas. Hay que encontrar un número fijo de palabras válidas (según la dificultad): cualquiera que se pueda formar vale, y una de ellas tiene que usar todas las letras. Ganas cuando las tienes."
+  },
+  "palabras-encadenadas": {
+   "name": "Palabras encadenadas",
+   "short": "Cada palabra empieza por la última sílaba de la anterior.",
+   "long": "Te damos la primera palabra. El siguiente jugador escribe otra que empiece por su última sílaba — esa sílaba ya aparece escrita. Se juega contra un bot o contra un amigo en el mismo teléfono. En normal hay meta de longitud; en infinito seguís hasta que uno no pueda continuar."
+  },
+  "bingo": {
+   "name": "Bingo",
+   "short": "Marca los números del cartón: solo o con más gente en el móvil.",
+   "long": "Te dan cartones y marcas los números que van saliendo. Contra rivales eliges uno y ellos marcan solos; en multijugador cada persona tiene el suyo. Si haces línea, ganas monedas (contra rivales); si completas el cartón, bingo."
+  },
+  "parchis": {
+   "name": "Parchís",
+   "short": "Saca las fichas: Parchís, Ludo, Parcheesi o Mensch.",
+   "long": "El parchís español: un dado y cuatro fichas. Con un 5 sales de casa y con un 6 tiras otra vez. Si caes en una ficha de otro, la comes y cuentas 20. El primero que mete las cuatro en la meta gana."
+  },
+  "oca": {
+   "name": "Oca",
+   "short": "Tira el dado: Oca, Gioco dell’Oca o Jeu de l’oie.",
+   "long": "El juego de la oca de 63 casillas: tiráis el dado y avanzáis. De oca a oca y tiro porque me toca; los puentes y los dados te llevan y vuelves a tirar; la calavera te manda al inicio. Gana quien llega justo al jardín."
+  },
+  "cifras": {
+   "name": "Cifras",
+   "short": "Llega al objetivo: Cifras, Countdown o Des chiffres.",
+   "long": "Te dan unos números y un objetivo. Juntas dos, les aplicas una operación y el resultado se queda. Ganas cuando consigues exactamente el objetivo."
+  },
+  "kenken": {
+   "name": "KenKen",
+   "short": "Rellena el tablero: en cada jaula la cuenta tiene que cuadrar y no se pueden repetir números.",
+   "long": "Rellenas el tablero con números que no se pueden repetir en la misma fila ni en la misma columna. Las líneas gruesas marcan jaulas: en cada una, los números tienen que sumar, restar, multiplicar o dividir hasta el objetivo de la esquina."
+  },
+  "puentes": {
+   "name": "Puentes",
+   "short": "Une las islas con el número de puentes que pide cada una.",
+   "long": "Toca dos islas de la misma fila o columna para poner un puente. Toca un puente para romperlo. Cada isla pide un número de puentes. No se pueden cruzar, y al final todas tienen que quedar unidas."
+  },
+  "suma-x": {
+   "name": "Suma X",
+   "short": "Junta parejas de fichas que sumen el objetivo.",
+   "long": "Tocas dos fichas. Si suman el objetivo, desaparecen. En Normal ganas al limpiar el tablero; en Infinito salen dos nuevas al azar y sigues hasta que no quede ningún par."
+  },
+  "conecta-4": {
+   "name": "Conecta 4",
+   "short": "Deja caer fichas. Gana quien pone cuatro en línea.",
+   "long": "Tú juegas con las fichas rojas. Toca una columna y la ficha cae hasta abajo. Ganas si juntas cuatro seguidas, en fila, columna o diagonal. En cada revancha empieza el otro."
+  },
+  "hundir-la-flota": {
+   "name": "Hundir la flota",
+   "short": "Coloca tus barcos y dispara al mar del otro.",
+   "long": "Cada uno coloca cinco barcos y dispara al mar del otro. En fácil el mar es de 8 por 8, en normal de 9 por 9 y en difícil de 10 por 10. Toca una casilla: agua, tocado o hundido. Gana quien hunde toda la flota del otro."
+  },
+  "reversi": {
+   "name": "Reversi",
+   "short": "Rodea fichas del otro y dales la vuelta.",
+   "long": "Tú llevas las negras y empiezas. Toca una casilla vacía que deje fichas del otro entre dos tuyas: esas fichas se vuelven negras. Gana quien tiene más fichas al final."
+  }
+ },
+ "en": {
+  "2048": {
+   "name": "2048",
+   "short": "Slide, merge and add points.",
+   "long": "Swipe the board. If you join two matching tiles, they merge and you score points. Go as far as you can."
+  },
+  "solitario": {
+   "name": "Solitaire",
+   "short": "Classic one-player Klondike.",
+   "long": "Deal the board and keep stacking the cards. The goal is to make four piles, from ace to king."
+  },
+  "spider": {
+   "name": "Spider",
+   "short": "Spider Solitaire with 1, 2 or 4 suits.",
+   "long": "Build runs from king down to ace of the same suit. When one is complete, it disappears on its own."
+  },
+  "freecell": {
+   "name": "Freecell",
+   "short": "Solitaire with free cells, every card in sight.",
+   "long": "Deal the 52 cards into eight columns. You park a card in a free cell or send it up to its suit, from ace to king."
+  },
+  "piramide": {
+   "name": "Pyramid",
+   "short": "Take cards off the pyramid by adding to 13.",
+   "long": "Tap two free cards that add to 13, or a king by itself. A card does not count if another is still on top, even if they add to 13. When none are left on the pyramid, you win."
+  },
+  "siete-y-media": {
+   "name": "Seven and a half",
+   "short": "Get to 7½: Seven and a half (Spain) or Sette e mezzo (Italy).",
+   "long": "You and the dealer get one Spanish card. You can hit or stand. The one who gets closer to 7 and a half without going over wins."
+  },
+  "capitales": {
+   "name": "Capitals",
+   "short": "One country, four cities. Tap the capital.",
+   "long": "A country and four cities appear. Tap the one that is its capital. If you miss, you lose a life. You win when you finish every question."
+  },
+  "banderas": {
+   "name": "Flags",
+   "short": "Four flags or four countries. Tap the one that matches.",
+   "long": "You can play with flags or with names. In Flags a country appears and you tap its flag; in Names a flag appears and you tap the country. If you miss, you lose a life. You win when you finish every question."
+  },
+  "ordenar-colores": {
+   "name": "Sort colors",
+   "short": "Move the cubes from tower to tower until each color is together.",
+   "long": "Tap a tower to pick up the cubes on top of the same color and drop them on an empty tower or one that has that color on top. You win when each color fills a tower."
+  },
+  "cinquillo": {
+   "name": "Cinquillo",
+   "short": "The 5 leads: Cinquillo (Spain) or Cinque (Italy).",
+   "long": "The player with the 5 of coins goes first. Play cards of the same suit, one next to the other, until you have none left."
+  },
+  "escoba": {
+   "name": "Escoba",
+   "short": "Fishing to 15: Escoba (Spain) or Scopa (Italy).",
+   "long": "Play a card and take table cards that add to 15 with it. Pick Escoba or Scopa in Rules. If you clear the table, you score a sweep."
+  },
+  "basra": {
+   "name": "Basra",
+   "short": "Capture by value: Basra (Egypt) or Xeri (Greece).",
+   "long": "52-card French deck. Capture by matching rank or summing (ace–10). Pick Basra or Xeri in Rules. If you clear the table, you score a Basra."
+  },
+  "brisca": {
+   "name": "Brisca",
+   "short": "Trick-taking with trump: Brisca (Spain) or Briscola (Italy).",
+   "long": "Three cards, a trump suit, and every round counts. Pick Brisca or Briscola in Rules. The player (or pair) with more points wins."
+  },
+  "chinchon": {
+   "name": "Chinchón",
+   "short": "Runs and groups with 7 cards.",
+   "long": "Seven cards: make sets or runs and close when few loose cards remain. A seven-card run is a chinchón and wins the match."
+  },
+  "gin-rummy": {
+   "name": "Gin Rummy",
+   "short": "Ten cards, melds and knocking.",
+   "long": "Ten French cards. Make threes or runs and knock when you have few loose ones left. If you have none loose, it is gin."
+  },
+  "scala-40": {
+   "name": "Scala 40",
+   "short": "Thirteen cards and jokers. Open with 40 points.",
+   "long": "Two French decks with 4 jokers. Lay sets or runs on the table; your first lay must add up to 40. Whoever discards their last card closes."
+  },
+  "conquian": {
+   "name": "Conquian",
+   "short": "Ten cards. Lay down the center card or pass it.",
+   "long": "Spanish deck. The center card never goes into your hand: lay it down at once in your melds or pass it. Whoever has 11 cards on the table wins."
+  },
+  "tute": {
+   "name": "Tute",
+   "short": "Tute and Guiñote (tricks and calls) or Argentine Truco.",
+   "long": "Tricks with trumps and king-and-knight calls. Once the stock is gone, follow suit and beat. Most points wins."
+  },
+  "tressette": {
+   "name": "Tressette",
+   "short": "Italian tricks with no trump. The 3 is the strongest.",
+   "long": "You have to follow suit. There is no trump. The 3 beats the 2 and the 2 beats the ace. Whoever scores more points wins."
+  },
+  "domino": {
+   "name": "Dominoes",
+   "short": "Match tiles: in pairs (Caribbean), the draw game or the block game.",
+   "long": "The draw game: play a tile that matches one end. If you have none, draw from the boneyard until you can. First to run out of tiles wins."
+  },
+  "sudoku": {
+   "name": "Sudoku",
+   "short": "9×9: rows, columns and boxes from 1 to 9.",
+   "long": "Fill the board so that in each row, column and 3×3 box the numbers 1 to 9 are there, with no repeats."
+  },
+  "ahorcado": {
+   "name": "Hangman",
+   "short": "Guess the word letter by letter.",
+   "long": "Guess the word letter by letter. If you miss, you lose a life. You always see the topic."
+  },
+  "mahjong": {
+   "name": "Mahjong",
+   "short": "Match free tiles on the board.",
+   "long": "Tap two matching tiles that are free: nothing on top and one open side. Empty the board."
+  },
+  "memoria": {
+   "name": "Memory",
+   "short": "Find the pairs.",
+   "long": "Flip two cards. If they match, they leave the board. Find every pair."
+  },
+  "memoria-musical": {
+   "name": "Musical memory",
+   "short": "Repeat the color sequence, a little longer each time.",
+   "long": "The pads light up in an order. Tap them the same way. Each round adds one more color. You win when you reach the end of the chain."
+  },
+  "nonograma": {
+   "name": "Nonogram",
+   "short": "Paint the grid with the clues.",
+   "long": "The numbers on each row and column tell you what to paint. Finish the picture without running out of lives."
+  },
+  "tres-en-raya": {
+   "name": "Tic-tac-toe",
+   "short": "The classic 3×3: line up three against the phone or a friend.",
+   "long": "Make three in a row: row, column or diagonal. Play against the phone or with a friend on the same phone."
+  },
+  "trenecito": {
+   "name": "Roll, little train",
+   "short": "Drive the train and pick up little boxes.",
+   "long": "Swipe to turn. Pick up the toolboxes and a wagon hooks on. Do not crash into the edge or into your train."
+  },
+  "buscaminas": {
+   "name": "Minesweeper",
+   "short": "Open squares and mark the mines.",
+   "long": "The first tap is safe. The number says how many mines are around it. Open every square that has no mine."
+  },
+  "avioncito": {
+   "name": "Fly, little plane",
+   "short": "Tap to go up and fly through the gaps.",
+   "long": "Tap so the little plane goes up. It falls on its own: fly through the gaps between the lamps and the toys, as if it were flying around a room."
+  },
+  "bloques": {
+   "name": "Color blocks",
+   "short": "Fit the pieces and clear rows and columns.",
+   "long": "Drag the pieces onto the board. If you fill a row or a column, it disappears and you score points. Fit as many as you can."
+  },
+  "match-3": {
+   "name": "Match fruits",
+   "short": "Join three matching fruits and score points.",
+   "long": "Drag a fruit onto one next to it. If you join three or more matching ones, they disappear and new fruits appear in their place. With four the whole line goes; with five, that fruit from the whole board. Keep going until no three are left."
+  },
+  "lluvia-de-bloques": {
+   "name": "Block rain",
+   "short": "Rotate the falling pieces and complete rows.",
+   "long": "The pieces keep falling. Move them and rotate them to fill rows. Each full row disappears and you score points. Hold on until the well fills up."
+  },
+  "canicas": {
+   "name": "Launch marbles",
+   "short": "Throw a marble into the line. Three of the same color jump out.",
+   "long": "The marbles move along the path toward the hole. Aim and let go to throw yours: if you join three or more of the same color, they disappear. When the line is gone, you win. If they reach the hole, it is over."
+  },
+  "burbujas": {
+   "name": "Shoot balls",
+   "short": "Throw colored balls at the pile coming down.",
+   "long": "Aim and throw. If you join three or more of the same color, they disappear. The pile comes down now and then: if it reaches the bottom line, it is over. In normal mode, clearing the pile wins; in endless another wave follows."
+  },
+  "sumas-cruzadas": {
+   "name": "Cross sums",
+   "short": "A square: fill in the missing numbers.",
+   "long": "It is a square with some numbers already filled in. At the top you see what each column adds up to and on the left what each row adds up to. You fill the gaps."
+  },
+  "sopa-de-letras": {
+   "name": "Word search",
+   "short": "Find the hidden words in the grid.",
+   "long": "There are words hidden among the letters, all on the same topic. Drag from the first to the last letter of each one until you find them all."
+  },
+  "crucigrama": {
+   "name": "Crossword",
+   "short": "Fill the squares with the words from the clues.",
+   "long": "Each clue is a word. Across goes to the right and down goes down, and they cross on the letters they share."
+  },
+  "ranita": {
+   "name": "Jump, little frog",
+   "short": "Jump from platform to platform and climb as high as you can.",
+   "long": "The little frog jumps on its own from one platform to another. You move it sideways so it does not fall. The higher it goes, the better."
+  },
+  "caminos": {
+   "name": "Paths",
+   "short": "Connect the colors and cover the whole board.",
+   "long": "Join each pair of the same color with a line. You have to cover every square, without crossing lines or going through dots of another color."
+  },
+  "pintar-suelo": {
+   "name": "Paint the floor",
+   "short": "Slide the piece and paint the whole floor.",
+   "long": "Drag your finger: the piece slides that way until a block. It paints the floor as it goes. It can pass again over what is already painted. You have to cover every light square."
+  },
+  "marcianito": {
+   "name": "Martian adventures",
+   "short": "Move the ship and shoot the little aliens coming down.",
+   "long": "Put your finger where you want: the ship goes there. The little alien shoots on its own, one bullet at a time. The more bugs you shoot, the stronger the ship gets."
+  },
+  "la-meta": {
+   "name": "The goal",
+   "short": "Slide the piece until you stop on the green square.",
+   "long": "Drag your finger: the piece slides until a block. You have to stop right on the green. Passing over it does not count."
+  },
+  "adivina-la-palabra": {
+   "name": "Guess the word",
+   "short": "Guess the secret word, with color clues.",
+   "long": "You type a word. Green: that letter goes there. Yellow: the letter is in, but somewhere else. Gray: it is not. You have a few tries."
+  },
+  "ajedrez": {
+   "name": "Chess",
+   "short": "Move the pieces and checkmate the other player’s king.",
+   "long": "You play with the light pieces. Tap a piece and then the square you want to go to. You win when the dark king is in check and cannot get away."
+  },
+  "damas": {
+   "name": "Checkers",
+   "short": "Capture diagonally: Spanish, English or Brazilian draughts.",
+   "long": "You play with the light pieces. Tap a piece and then the dark square you want to go to. If you can capture, you have to capture. On the other side, the piece is crowned and becomes a king."
+  },
+  "blackjack": {
+   "name": "Blackjack",
+   "short": "Reach 21 without going over. The dealer plays after you.",
+   "long": "You and the dealer get two cards. You can hit or stand. The one who gets closer to 21 without going over wins."
+  },
+  "torre": {
+   "name": "Stack the tower",
+   "short": "Stack blocks. What sticks out gets cut.",
+   "long": "A block goes from side to side. Tap to drop it on the tower. What does not rest on it is cut, and the tower gets narrower. Go as high as you can."
+  },
+  "forma-palabras": {
+   "name": "Make words",
+   "short": "Jumbled letters. Find the words they hide.",
+   "long": "We give you the letters of a word, but scrambled. You have to find a set number of valid words (depending on difficulty): any word you can make counts, and one of them must use all the letters. You win when you have them all."
+  },
+  "palabras-encadenadas": {
+   "name": "Word chain",
+   "short": "Each word starts with the ending letters of the one before.",
+   "long": "We give you the first word. The next player writes another that starts with its ending letters — those letters already appear written. You play against a bot or against a friend on the same phone. In normal there is a length goal; in endless you keep going until one cannot continue."
+  },
+  "bingo": {
+   "name": "Bingo",
+   "short": "Mark the numbers on your card: solo or with friends on one phone.",
+   "long": "You get cards and mark the numbers as they’re called. Against rivals you pick one and they mark their own; in multiplayer everyone has their own card. Get a line and you win coins (against rivals); fill the card and it’s bingo."
+  },
+  "parchis": {
+   "name": "Parchís",
+   "short": "Get your pieces home: Parchís, Ludo, Parcheesi or Mensch.",
+   "long": "Spanish parchís: one die and four pieces. With a 5 you leave home and with a 6 you roll again. If you land on someone else’s piece, you capture it and count 20. The first to get all four into the goal wins."
+  },
+  "oca": {
+   "name": "Goose",
+   "short": "Roll the die: Goose, Gioco dell’Oca or Jeu de l’oie.",
+   "long": "The 63-square game of the goose: you roll the die and move. Goose to goose, and roll again; the bridges and the dice carry you along and you roll again; the skull sends you back to the start. Whoever lands exactly on the garden wins."
+  },
+  "cifras": {
+   "name": "Numbers",
+   "short": "Hit the target: Numbers, Countdown or Des chiffres.",
+   "long": "You get some numbers and a target. You join two, apply an operation, and the result stays. You win when you get exactly the target."
+  },
+  "kenken": {
+   "name": "KenKen",
+   "short": "Fill the board: in each cage the math has to add up and numbers cannot be repeated.",
+   "long": "You fill the board with numbers that cannot be repeated in the same row or the same column. The thick lines mark cages: in each one, the numbers have to add, subtract, multiply or divide up to the target in the corner."
+  },
+  "puentes": {
+   "name": "Bridges",
+   "short": "Join the islands with the number of bridges each one asks for.",
+   "long": "Tap two islands in the same row or column to put a bridge. Tap a bridge to break it. Each island asks for a number of bridges. They cannot cross, and at the end they all have to be joined."
+  },
+  "suma-x": {
+   "name": "Sum X",
+   "short": "Join pairs of tiles that add up to the target.",
+   "long": "You tap two tiles. If they add up to the target, they disappear. In Normal you win by clearing the board; in Endless mode two random new ones appear and you keep going until no pair is left."
+  },
+  "conecta-4": {
+   "name": "Connect 4",
+   "short": "Drop pieces. The one who puts four in a line wins.",
+   "long": "You play the red pieces. Tap a column and the piece falls to the bottom. You win if you line up four: across, down or diagonally. Each rematch, the other player starts."
+  },
+  "hundir-la-flota": {
+   "name": "Battleship",
+   "short": "Place your ships and shoot at the other player’s sea.",
+   "long": "Each player places five ships and shoots at the other player’s sea. On Easy the sea is 8 by 8, on Normal 9 by 9 and on Hard 10 by 10. Tap a square: water, hit or sunk. The one who sinks the other player’s whole fleet wins."
+  },
+  "reversi": {
+   "name": "Reversi",
+   "short": "Surround the other player’s pieces and flip them.",
+   "long": "You play black and start. Tap an empty square that leaves the other player’s pieces between two of yours: those pieces turn black. The one with more pieces at the end wins."
+  }
+ },
+ "pt": {
+  "2048": {
+   "name": "2048",
+   "short": "Deslize, junte e some pontos.",
+   "long": "Deslize o tabuleiro. Se juntar duas peças iguais, elas se unem e você soma pontos. Chegue o mais longe que puder."
+  },
+  "solitario": {
+   "name": "Paciência",
+   "short": "Klondike clássico para um jogador.",
+   "long": "Distribua o tabuleiro e vá montando as cartas. O objetivo é fazer quatro montes, do ás ao rei."
+  },
+  "spider": {
+   "name": "Spider",
+   "short": "Spider com 1, 2 ou 4 naipes.",
+   "long": "Monte sequências do rei ao ás do mesmo naipe. Quando uma estiver completa, some sozinha."
+  },
+  "freecell": {
+   "name": "Freecell",
+   "short": "Paciência com espaços livres, todas as cartas à vista.",
+   "long": "Distribua as 52 cartas em oito colunas. Estacione uma carta num espaço livre ou suba-a ao naipe, do ás ao rei."
+  },
+  "piramide": {
+   "name": "Pirâmide",
+   "short": "Tire cartas da pirâmide somando 13.",
+   "long": "Toque duas cartas livres que somem 13, ou um rei sozinho. Uma carta não vale se ainda tiver outra em cima, mesmo que somem 13. Quando não restar nenhuma na pirâmide, você ganhou."
+  },
+  "siete-y-media": {
+   "name": "Sete e meio",
+   "short": "Chegue a 7 e meio: Sete e meio (Espanha) ou Sette e mezzo (Itália).",
+   "long": "Você e a banca recebem uma carta espanhola. Pode pedir outra ou parar. Ganha quem chega mais perto de 7 e meio sem passar."
+  },
+  "capitales": {
+   "name": "Capitais",
+   "short": "Um país, quatro cidades. Toque a capital.",
+   "long": "Sai um país e quatro cidades. Toque a que é a capital. Se errar, perde uma vida. Você ganha ao terminar todas as perguntas."
+  },
+  "banderas": {
+   "name": "Bandeiras",
+   "short": "Quatro bandeiras ou quatro países. Toque a que combina.",
+   "long": "Você pode jogar com bandeiras ou com nomes. Em Bandeiras aparece um país e você toca a bandeira; em Nomes aparece uma bandeira e você toca o país. Se errar, perde uma vida. Ganha ao terminar todas as perguntas."
+  },
+  "ordenar-colores": {
+   "name": "Ordenar cores",
+   "short": "Passe os cubos de uma torre a outra até deixar cada cor junta.",
+   "long": "Toque uma torre para pegar os cubos de cima da mesma cor e solte-os numa torre vazia ou que tenha essa cor em cima. Você ganha quando cada cor preencher uma torre."
+  },
+  "cinquillo": {
+   "name": "Cinquillo",
+   "short": "Sai o 5: Cinquillo (Espanha) ou Cinque (Itália).",
+   "long": "Sai quem tiver o 5 de ouros. Encaixe cartas do mesmo naipe, uma ao lado da outra, até ficar sem nenhuma."
+  },
+  "escoba": {
+   "name": "Escoba",
+   "short": "Pesca a 15: Escoba (Espanha) ou Scopa (Itália).",
+   "long": "Jogue uma carta e pegue as da mesa que somem 15 com ela. Escolha Escoba ou Scopa em Regras. Se deixar a mesa vazia, faz escoba."
+  },
+  "basra": {
+   "name": "Basra",
+   "short": "Pesca por valor: Basra (Egito) ou Xeri (Grécia).",
+   "long": "Baralho francês de 52. Captura pelo mesmo valor ou somando (ás–10). Escolha Basra ou Xeri em Regras. Se deixar a mesa vazia, faz Basra."
+  },
+  "brisca": {
+   "name": "Brisca",
+   "short": "Vazas com trunfo: Brisca (Espanha) ou Briscola (Itália).",
+   "long": "Três cartas, um naipe de trunfo, e cada rodada conta. Escolha Brisca ou Briscola em Regras. Ganha quem (ou a dupla que) somar mais pontos."
+  },
+  "chinchon": {
+   "name": "Chinchón",
+   "short": "Sequências e grupos com 7 cartas.",
+   "long": "Sete cartas: faça grupos ou sequências e feche quando restarem poucas soltas. Uma sequência de sete é chinchón e ganha a partida."
+  },
+  "gin-rummy": {
+   "name": "Gin Rummy",
+   "short": "Dez cartas, combinações e batida.",
+   "long": "Dez cartas francesas. Faça trios ou sequências e bata quando restarem poucas soltas. Se não restar nenhuma, é gin."
+  },
+  "scala-40": {
+   "name": "Scala 40",
+   "short": "Treze cartas e curingas. Abra com 40 pontos.",
+   "long": "Dois baralhos franceses com 4 curingas. Baixe trincas ou sequências na mesa; a primeira baixada tem que somar 40. Fecha quem descarta a última carta."
+  },
+  "conquian": {
+   "name": "Conquian",
+   "short": "Dez cartas. Baixe a carta do centro ou passe-a.",
+   "long": "Baralho espanhol. A carta do centro nunca vai para a mão: você a baixa na hora nas suas combinações ou passa. Ganha quem tiver 11 cartas na mesa."
+  },
+  "tute": {
+   "name": "Tute",
+   "short": "Tute e Guiñote (vazas e cantos) ou o Truco argentino.",
+   "long": "Vazas com trunfo e cantos de rei e cavalo. Sem baralho, siga o naipe e supere. Ganha quem somar mais pontos."
+  },
+  "tressette": {
+   "name": "Tressette",
+   "short": "Vazas italianas sem trunfo. O 3 é o mais forte.",
+   "long": "Tem que seguir o naipe. Não há trunfo. O 3 ganha do 2 e o 2 ganha do ás. Ganha quem somar mais pontos."
+  },
+  "domino": {
+   "name": "Dominó",
+   "short": "Encaixe peças: em duplas (caribenho), com compra ou de bloqueio.",
+   "long": "O dominó de compra: coloque uma peça que encaixe numa ponta. Se não tiver, compre do poço até poder. Ganha quem ficar sem peças."
+  },
+  "sudoku": {
+   "name": "Sudoku",
+   "short": "9×9: linhas, colunas e blocos de 1 a 9.",
+   "long": "Preencha o tabuleiro para que em cada linha, coluna e bloco 3×3 estejam os números de 1 a 9, sem repetir."
+  },
+  "ahorcado": {
+   "name": "Forca",
+   "short": "Adivinhe a palavra letra a letra.",
+   "long": "Adivinhe a palavra letra a letra. Se errar, perde uma vida. Você sempre vê de que tema é."
+  },
+  "mahjong": {
+   "name": "Mahjong",
+   "short": "Emparelhe peças livres do tabuleiro.",
+   "long": "Toque duas peças iguais que estejam livres: sem nada em cima e com um lado aberto. Esvazie o tabuleiro."
+  },
+  "memoria": {
+   "name": "Memória",
+   "short": "Encontre os pares.",
+   "long": "Vire duas cartas. Se forem iguais, saem da mesa. Encontre todos os pares."
+  },
+  "memoria-musical": {
+   "name": "Memória musical",
+   "short": "Repita a sequência de cores, cada vez um pouco mais longa.",
+   "long": "Os botões acendem numa ordem. Toque-os igual. Cada rodada adiciona mais uma cor. Você ganha ao chegar ao final da corrente."
+  },
+  "nonograma": {
+   "name": "Nonograma",
+   "short": "Pinte a grade com as dicas.",
+   "long": "Os números de cada linha e coluna dizem o que pintar. Complete o desenho sem ficar sem vidas."
+  },
+  "tres-en-raya": {
+   "name": "Jogo da velha",
+   "short": "O clássico 3×3: alinhe três contra o celular ou um amigo.",
+   "long": "Faça três em linha: linha, coluna ou diagonal. Jogue contra o celular ou com um amigo no mesmo telefone."
+  },
+  "trenecito": {
+   "name": "Role, trenzinho",
+   "short": "Leve o trem e pegue as caixinhas.",
+   "long": "Deslize para virar. Pegue as caixas de ferramentas e se engata um vagão. Não bata na borda nem no seu trem."
+  },
+  "buscaminas": {
+   "name": "Campo minado",
+   "short": "Abra casas e marque as minas.",
+   "long": "O primeiro toque é seguro. O número diz quantas minas há ao redor. Abra todas as casas que não têm mina."
+  },
+  "avioncito": {
+   "name": "Voe, aviãozinho",
+   "short": "Toque para subir e passe pelos vãos.",
+   "long": "Toque para o aviãozinho subir. Ele cai sozinho: passe pelos vãos entre as lâmpadas e os brinquedos, como se voasse por um quarto."
+  },
+  "bloques": {
+   "name": "Blocos coloridos",
+   "short": "Encaixe as peças e limpe linhas e colunas.",
+   "long": "Arraste as peças para o tabuleiro. Se encher uma linha ou uma coluna, desaparece e você soma pontos. Encaixe quantas puder."
+  },
+  "match-3": {
+   "name": "Una frutas",
+   "short": "Junte três frutas iguais e some pontos.",
+   "long": "Arraste uma fruta para outra do lado. Se juntar três ou mais iguais, desaparecem e no lugar delas aparecem frutas novas. Com quatro vai a linha inteira; com cinco, essa fruta do tabuleiro inteiro. Siga até não restar nenhum trio."
+  },
+  "lluvia-de-bloques": {
+   "name": "Chuva de blocos",
+   "short": "Gire as peças que caem e complete linhas.",
+   "long": "As peças vão caindo. Mova e gire para encher linhas. Cada linha cheia desaparece e você soma pontos. Aguente até o poço encher."
+  },
+  "canicas": {
+   "name": "Lance bolinhas",
+   "short": "Lance uma bolinha na fila. Três da mesma cor saltam.",
+   "long": "As bolinhas avançam pelo caminho rumo ao buraco. Mire e solte para atirar a sua: se juntar três ou mais da mesma cor, desaparecem. Quando a fila acabar, você ganhou. Se chegarem ao buraco, acaba."
+  },
+  "burbujas": {
+   "name": "Atire bolas",
+   "short": "Lance bolas coloridas no monte que desce.",
+   "long": "Mire e lance. Se juntar três ou mais da mesma cor, desaparecem. O monte desce de vez em quando: se chegar à linha de baixo, acaba. No normal, limpar o monte é ganhar; no infinito segue outra onda."
+  },
+  "sumas-cruzadas": {
+   "name": "Somas cruzadas",
+   "short": "Um quadrado: complete os números que faltam.",
+   "long": "É um quadrado com alguns números já preenchidos. Em cima você vê o que soma cada coluna e à esquerda o que soma cada linha. Você preenche os espaços."
+  },
+  "sopa-de-letras": {
+   "name": "Caça-palavras",
+   "short": "Encontre as palavras escondidas na grade.",
+   "long": "Há palavras escondidas entre as letras, todas do mesmo tema. Arraste da primeira à última letra de cada uma até encontrá-las todas."
+  },
+  "crucigrama": {
+   "name": "Palavras cruzadas",
+   "short": "Preencha as casas com as palavras das dicas.",
+   "long": "Cada dica é uma palavra. As horizontais vão para a direita e as verticais para baixo, e se cruzam nas letras que compartilham."
+  },
+  "ranita": {
+   "name": "Pule, rãzinha",
+   "short": "Pule de plataforma em plataforma e suba o máximo que puder.",
+   "long": "A rãzinha pula sozinha de uma plataforma a outra. Você a move para os lados para que não caia. Quanto mais alto chegar, melhor."
+  },
+  "caminos": {
+   "name": "Caminhos",
+   "short": "Una as cores e cubra o tabuleiro inteiro.",
+   "long": "Una cada par da mesma cor com uma linha. Você tem que cobrir todas as casas, sem cruzar linhas nem atravessar os pontos de outra cor."
+  },
+  "pintar-suelo": {
+   "name": "Pintar o chão",
+   "short": "Deslize a peça e pinte o chão inteiro.",
+   "long": "Arraste o dedo: a peça desliza nessa direção até um bloqueio. Pinta o chão ao passar. Pode voltar a passar pelo que já está pintado. Você tem que cobrir todas as casas claras."
+  },
+  "marcianito": {
+   "name": "Aventuras marcianas",
+   "short": "Mova a nave e atire nos marcianinhos que descem.",
+   "long": "Ponha o dedo onde quiser: a nave vai até lá. O marcianinho atira sozinho, uma bala de cada vez. Quanto mais bichos derrubar, mais forte fica a nave."
+  },
+  "la-meta": {
+   "name": "A meta",
+   "short": "Deslize a peça até parar na casa verde.",
+   "long": "Arraste o dedo: a peça desliza até um bloqueio. Você tem que parar exatamente no verde. Passar por cima não vale."
+  },
+  "adivina-la-palabra": {
+   "name": "Adivinhe a palavra",
+   "short": "Adivinhe a palavra secreta, com cores de dica.",
+   "long": "Você escreve uma palavra. Verde: essa letra vai ali. Amarelo: a letra está, mas em outro lugar. Cinza: não está. Você tem umas poucas tentativas."
+  },
+  "ajedrez": {
+   "name": "Xadrez",
+   "short": "Mova as peças e dê xeque-mate no rei do outro.",
+   "long": "Você joga com as peças claras. Toque uma peça e depois a casa para onde quer ir. Você ganha quando o rei escuro está em xeque e não pode escapar."
+  },
+  "damas": {
+   "name": "Damas",
+   "short": "Coma na diagonal: damas espanholas, inglesas ou brasileiras.",
+   "long": "Você joga com as peças claras. Toque uma peça e depois a casa escura para onde quer ir. Se puder comer, tem que comer. Do outro lado, a peça é coroada e vira dama."
+  },
+  "blackjack": {
+   "name": "Blackjack",
+   "short": "Chegue a 21 sem passar. A banca joga depois.",
+   "long": "Você e a banca recebem duas cartas. Pode pedir outra ou parar. Ganha quem chega mais perto de 21 sem passar."
+  },
+  "torre": {
+   "name": "Empilhe a torre",
+   "short": "Empilhe blocos. O que sobrar, corta.",
+   "long": "Um bloco vai de lado a lado. Toque para deixá-lo cair em cima da torre. O que não apoiar se corta, e a torre vai ficando mais estreita. Chegue o mais alto que puder."
+  },
+  "forma-palabras": {
+   "name": "Forme palavras",
+   "short": "Letras embaralhadas. Encontre as palavras que escondem.",
+   "long": "Damos as letras de uma palavra, mas embaralhadas. É preciso achar um número fixo de palavras válidas (conforme a dificuldade): vale qualquer uma que se possa formar, e uma delas tem de usar todas as letras. Você ganha quando tiver todas."
+  },
+  "palabras-encadenadas": {
+   "name": "Palavras encadeadas",
+   "short": "Cada palavra começa pela última sílaba da anterior.",
+   "long": "Damos a primeira palavra. O jogador seguinte escreve outra que comece pela última sílaba — essa sílaba já aparece escrita. Joga contra um bot ou contra um amigo no mesmo telefone. No normal há meta de comprimento; no infinito continuam até que um não possa continuar."
+  },
+  "bingo": {
+   "name": "Bingo",
+   "short": "Marque os números da cartela: sozinho ou com mais gente no celular.",
+   "long": "Você recebe cartelas e marca os números que vão saindo. Contra rivais você escolhe uma e eles marcam sozinhos; no multijogador cada pessoa tem a sua. Se fizer linha, ganha moedas (contra rivais); se completar a cartela, bingo."
+  },
+  "parchis": {
+   "name": "Parchís",
+   "short": "Tire suas peças: Parchís, Ludo, Parcheesi ou Mensch.",
+   "long": "O parchís espanhol: um dado e quatro peças. Com um 5 você sai de casa e com um 6 joga outra vez. Se cair numa peça de outro, você a come e conta 20. O primeiro que levar as quatro à meta ganha."
+  },
+  "oca": {
+   "name": "Ganso",
+   "short": "Jogue o dado: Ganso, Gioco dell’Oca ou Jeu de l’oie.",
+   "long": "O jogo do ganso de 63 casas: vocês jogam o dado e avançam. De ganso em ganso e jogo outra vez; as pontes e os dados levam você e você joga de novo; a caveira manda você para o início. Ganha quem cai exatamente no jardim."
+  },
+  "cifras": {
+   "name": "Cifras",
+   "short": "Chegue ao alvo: Cifras, Countdown ou Des chiffres.",
+   "long": "Você recebe uns números e um objetivo. Junta dois, aplica uma operação e o resultado fica. Ganha quando conseguir exatamente o objetivo."
+  },
+  "kenken": {
+   "name": "KenKen",
+   "short": "Preencha o tabuleiro: em cada jaula a conta tem que bater e não se podem repetir números.",
+   "long": "Você preenche o tabuleiro com números que não se podem repetir na mesma linha nem na mesma coluna. As linhas grossas marcam jaulas: em cada uma, os números têm que somar, subtrair, multiplicar ou dividir até o objetivo do canto."
+  },
+  "puentes": {
+   "name": "Pontes",
+   "short": "Una as ilhas com o número de pontes que cada uma pede.",
+   "long": "Toque duas ilhas da mesma linha ou coluna para pôr uma ponte. Toque uma ponte para quebrá-la. Cada ilha pede um número de pontes. Não se podem cruzar, e no final todas têm que ficar unidas."
+  },
+  "suma-x": {
+   "name": "Soma X",
+   "short": "Junte pares de peças que somem o objetivo.",
+   "long": "Você toca duas peças. Se somarem o objetivo, desaparecem. No Normal você ganha ao limpar o tabuleiro; no Infinito saem duas novas ao acaso e você segue até não restar nenhum par."
+  },
+  "conecta-4": {
+   "name": "Liga 4",
+   "short": "Deixe cair peças. Ganha quem puser quatro em linha.",
+   "long": "Você joga com as peças vermelhas. Toque uma coluna e a peça cai até embaixo. Você ganha se juntar quatro seguidas, em linha, coluna ou diagonal. Em cada revanche começa o outro."
+  },
+  "hundir-la-flota": {
+   "name": "Batalha naval",
+   "short": "Coloque seus barcos e atire no mar do outro.",
+   "long": "Cada um coloca cinco barcos e atira no mar do outro. No fácil o mar é 8 por 8, no normal 9 por 9 e no difícil 10 por 10. Toque uma casa: água, atingido ou afundado. Ganha quem afundar toda a frota do outro."
+  },
+  "reversi": {
+   "name": "Reversi",
+   "short": "Cerque as peças do outro e vire-as.",
+   "long": "Você leva as pretas e começa. Toque uma casa vazia que deixe peças do outro entre duas suas: essas peças viram pretas. Ganha quem tem mais peças no final."
+  }
+ },
+ "it": {
+  "2048": {
+   "name": "2048",
+   "short": "Fai scorrere, unisci e fai punti.",
+   "long": "Fai scorrere il tabellone. Se unisci due tessere uguali, si fondono e fai punti. Arriva più lontano che puoi."
+  },
+  "solitario": {
+   "name": "Solitario",
+   "short": "Klondike classico in solitario.",
+   "long": "Distribuisci il tabellone e vai impilando le carte. L’obiettivo è fare quattro mazzi, dall’asso al re."
+  },
+  "spider": {
+   "name": "Spider",
+   "short": "Spider Solitaire con 1, 2 o 4 semi.",
+   "long": "Fai scale dal re all’asso dello stesso seme. Quando una è completa, sparisce da sola."
+  },
+  "freecell": {
+   "name": "Freecell",
+   "short": "Solitario con spazi liberi, tutte le carte in vista.",
+   "long": "Distribuisci le 52 carte in otto colonne. Parcheggi una carta in uno spazio libero o la sposti sulla pila del suo seme, dall’asso al re."
+  },
+  "piramide": {
+   "name": "Piramide",
+   "short": "Togli carte dalla piramide sommando 13.",
+   "long": "Tocca due carte libere che sommano 13, o un re da solo. Una carta non vale se ne ha ancora un’altra sopra, anche se sommano 13. Quando non ne resta nessuna sulla piramide, hai vinto."
+  },
+  "siete-y-media": {
+   "name": "Sette e mezzo",
+   "short": "Arriva a 7 e mezzo: Siete y media (Spagna) o Sette e mezzo (Italia).",
+   "long": "Tu e il banco ricevete una carta spagnola. Puoi chiederne un’altra o stare. Vince chi si avvicina a 7 e mezzo senza sballare."
+  },
+  "capitales": {
+   "name": "Capitali",
+   "short": "Un paese, quattro città. Tocca la capitale.",
+   "long": "Esce un paese e quattro città. Tocca quella che è la sua capitale. Se sbagli, perdi una vita. Vinci finendo tutte le domande."
+  },
+  "banderas": {
+   "name": "Bandiere",
+   "short": "Quattro bandiere o quattro paesi. Tocca quella giusta.",
+   "long": "Puoi giocare con le bandiere o con i nomi. In Bandiere esce un paese e tocchi la sua bandiera; in Nomi esce una bandiera e tocchi il paese. Se sbagli, perdi una vita. Vinci finendo tutte le domande."
+  },
+  "ordenar-colores": {
+   "name": "Ordina i colori",
+   "short": "Passa i cubi da una torre all’altra finché ogni colore sta insieme.",
+   "long": "Tocca una torre per prendere i cubi sopra dello stesso colore e lasciali su una torre vuota o che ha quel colore sopra. Vinci quando ogni colore riempie una torre."
+  },
+  "cinquillo": {
+   "name": "Cinquillo",
+   "short": "Esce il 5: Cinquillo (Spagna) o Cinque (Italia).",
+   "long": "Esce chi ha il 5 di ori. Incastra carte dello stesso seme, una accanto all’altra, finché non ne hai più nessuna."
+  },
+  "escoba": {
+   "name": "Escoba",
+   "short": "Pesca a 15: Escoba (Spagna) o Scopa (Italia).",
+   "long": "Gioca una carta e prendi quelle del tavolo che con lei fanno 15. Scegli Escoba o Scopa in Regole. Se lasci il tavolo vuoto, fai escoba."
+  },
+  "basra": {
+   "name": "Basra",
+   "short": "Pesca per valore: Basra (Egitto) o Xeri (Grecia).",
+   "long": "Mazzo francese da 52. Cattura con lo stesso valore o sommando (asso–10). Scegli Basra o Xeri in Regole. Se lasci il tavolo vuoto, fai Basra."
+  },
+  "brisca": {
+   "name": "Brisca",
+   "short": "Prese con briscola: Brisca (Spagna) o Briscola (Italia).",
+   "long": "Tre carte, un seme di briscola, e ogni mano conta. Scegli Brisca o Briscola in Regole. Vince chi (o la coppia che) ha più punti."
+  },
+  "chinchon": {
+   "name": "Chinchón",
+   "short": "Scale e gruppi da 7 carte.",
+   "long": "Sette carte: fai gruppi o scale e chiudi quando ti restano poche sciolte. Una scala di sette è chinchón e vinci la partita."
+  },
+  "gin-rummy": {
+   "name": "Gin Rummy",
+   "short": "Dieci carte, combinazioni e bussata.",
+   "long": "Dieci carte francesi. Fai tris o scale e bussa quando ti restano poche sciolte. Se non ne hai nessuna, è gin."
+  },
+  "scala-40": {
+   "name": "Scala 40",
+   "short": "Tredici carte e jolly. Apri con 40 punti.",
+   "long": "Due mazzi francesi con 4 jolly. Cala tris o scale in tavola; la prima calata deve fare 40. Chiude chi scarta l’ultima carta."
+  },
+  "conquian": {
+   "name": "Conquian",
+   "short": "Dieci carte. Cala la carta al centro o passala.",
+   "long": "Mazzo spagnolo. La carta al centro non va mai in mano: la cali subito nelle tue combinazioni o la passi. Vince chi ha 11 carte in tavola."
+  },
+  "tute": {
+   "name": "Tute",
+   "short": "Tute e Guiñote (prese e accuse) o il Truco argentino.",
+   "long": "Prese con briscola e accuse di re e cavallo. Senza mazzo, rispondi al seme e supera. Vince chi fa più punti."
+  },
+  "tressette": {
+   "name": "Tressette",
+   "short": "Prese italiane senza briscola. Il 3 è il più forte.",
+   "long": "Devi seguire il seme. Non c’è briscola. Il 3 batte il 2 e il 2 batte l’asso. Vince chi fa più punti."
+  },
+  "domino": {
+   "name": "Domino",
+   "short": "Attacca tessere: a coppie (caraibico), a pescare o a blocco.",
+   "long": "Il domino a pescare: metti una tessera che si attacchi a un’estremità. Se non ne hai, peschi dal pozzo finché puoi giocare. Vince chi resta senza tessere."
+  },
+  "sudoku": {
+   "name": "Sudoku",
+   "short": "9×9: righe, colonne e riquadri da 1 a 9.",
+   "long": "Riempi il tabellone così che in ogni riga, colonna e riquadro 3×3 ci siano i numeri da 1 a 9, senza ripetere."
+  },
+  "ahorcado": {
+   "name": "Impiccato",
+   "short": "Indovina la parola lettera per lettera.",
+   "long": "Indovina la parola lettera per lettera. Se sbagli, perdi una vita. Vedi sempre di che tema è."
+  },
+  "mahjong": {
+   "name": "Mahjong",
+   "short": "Accoppia le tessere libere del tabellone.",
+   "long": "Tocca due tessere uguali che sono libere: senza niente sopra e con un lato aperto. Svuota il tabellone."
+  },
+  "memoria": {
+   "name": "Memoria",
+   "short": "Trova le coppie.",
+   "long": "Gira due carte. Se sono uguali, spariscono dal tavolo. Trova tutte le coppie."
+  },
+  "memoria-musical": {
+   "name": "Memoria musicale",
+   "short": "Ripeti la sequenza di colori, ogni volta un po’ più lunga.",
+   "long": "I tasti si illuminano in un ordine. Toccali allo stesso modo. Ogni giro aggiunge un colore in più. Vinci arrivando in fondo alla catena."
+  },
+  "nonograma": {
+   "name": "Nonogramma",
+   "short": "Colora la griglia con i numeri.",
+   "long": "I numeri di ogni riga e colonna ti dicono cosa colorare. Completa il disegno senza restare senza vite."
+  },
+  "tres-en-raya": {
+   "name": "Tris",
+   "short": "Il classico 3×3: allinea tre contro il telefono o un amico.",
+   "long": "Fai tris: riga, colonna o diagonale. Gioca contro il telefono o con un amico sullo stesso telefono."
+  },
+  "trenecito": {
+   "name": "Corri, trenino",
+   "short": "Guida il treno e raccogli le scatoline.",
+   "long": "Scorri per girare. Raccogli le cassette degli attrezzi e si aggancia un vagone. Non urtare il bordo né il tuo treno."
+  },
+  "buscaminas": {
+   "name": "Campo minato",
+   "short": "Apri le caselle e segna le mine.",
+   "long": "Il primo tocco è sicuro. Il numero dice quante mine ci sono intorno. Apri tutte le caselle che non hanno mina."
+  },
+  "avioncito": {
+   "name": "Vola, aeroplanino",
+   "short": "Tocca per salire e passa negli spazi.",
+   "long": "Tocca perché l’aeroplanino salga. Cade da solo: passa negli spazi tra le lampade e i giocattoli, come se volasse per una stanza."
+  },
+  "bloques": {
+   "name": "Blocchi colorati",
+   "short": "Incastra i pezzi e pulisci righe e colonne.",
+   "long": "Trascina i pezzi sul tabellone. Se riempi una riga o una colonna, sparisce e fai punti. Incastrane quante puoi."
+  },
+  "match-3": {
+   "name": "Unisci la frutta",
+   "short": "Unisci tre frutti uguali e fai punti.",
+   "long": "Trascina un frutto su un altro accanto. Se unisci tre o più uguali, spariscono e al loro posto compaiono frutti nuovi. Con quattro se ne va tutta la linea; con cinque, quel frutto da tutto il tabellone. Continua finché non resta nessun trio."
+  },
+  "lluvia-de-bloques": {
+   "name": "Pioggia di blocchi",
+   "short": "Gira i pezzi che cadono e completa le righe.",
+   "long": "I pezzi cadono. Muovili e girali per riempire le righe. Ogni riga piena sparisce e fai punti. Tieni duro finché il pozzo si riempie."
+  },
+  "canicas": {
+   "name": "Lancia le biglie",
+   "short": "Tira una biglia nella fila. Tre dello stesso colore saltano via.",
+   "long": "Le biglie avanzano sul percorso verso il buco. Mira e lascia per tirare la tua: se unisci tre o più dello stesso colore, spariscono. Quando la fila è finita, hai vinto. Se arrivano al buco, è finita."
+  },
+  "burbujas": {
+   "name": "Spara le palle",
+   "short": "Lancia palle colorate sul mucchio che scende.",
+   "long": "Mira e lancia. Se unisci tre o più dello stesso colore, spariscono. Il mucchio scende ogni tanto: se arriva alla riga in basso, è finita. In normale, pulire il mucchio è vincere; in infinito segue un’altra ondata."
+  },
+  "sumas-cruzadas": {
+   "name": "Somme incrociate",
+   "short": "Un quadrato: completa i numeri che mancano.",
+   "long": "È un quadrato con alcuni numeri già messi. In alto vedi quanto somma ogni colonna e a sinistra quanto somma ogni riga. Tu riempi gli spazi."
+  },
+  "sopa-de-letras": {
+   "name": "Cerca parole",
+   "short": "Trova le parole nascoste nella griglia.",
+   "long": "Ci sono parole nascoste tra le lettere, tutte dello stesso tema. Trascina dalla prima all’ultima lettera di ognuna finché non le trovi tutte."
+  },
+  "crucigrama": {
+   "name": "Cruciverba",
+   "short": "Riempi le caselle con le parole delle definizioni.",
+   "long": "Ogni definizione è una parola. Le orizzontali vanno a destra e le verticali in basso, e si incrociano sulle lettere che condividono."
+  },
+  "ranita": {
+   "name": "Salta, ranocchia",
+   "short": "Salta di piattaforma in piattaforma e sali più che puoi.",
+   "long": "La ranocchia salta da sola da una piattaforma all’altra. Tu la muovi di lato perché non cada. Più in alto arriva, meglio è."
+  },
+  "caminos": {
+   "name": "Percorsi",
+   "short": "Unisci i colori e copri tutto il tabellone.",
+   "long": "Unisci ogni coppia dello stesso colore con una linea. Devi coprire tutte le caselle, senza incrociare linee né attraversare i punti di un altro colore."
+  },
+  "pintar-suelo": {
+   "name": "Dipingi il pavimento",
+   "short": "Fai scorrere la pedina e dipingi tutto il pavimento.",
+   "long": "Trascina il dito: la pedina scorre in quella direzione fino a un blocco. Dipinge il pavimento passando. Può passare di nuovo su quello già dipinto. Devi coprire tutte le caselle chiare."
+  },
+  "marcianito": {
+   "name": "Avventure marziane",
+   "short": "Muovi la nave e spara ai marzianini che scendono.",
+   "long": "Metti il dito dove vuoi: la nave va lì. Il marzianino spara da solo, un colpo per volta. Più mostri tiri, più forte diventa la nave."
+  },
+  "la-meta": {
+   "name": "La meta",
+   "short": "Fai scorrere la pedina finché non ti fermi sulla casella verde.",
+   "long": "Trascina il dito: la pedina scorre fino a un blocco. Devi fermarti proprio sul verde. Passare sopra non vale."
+  },
+  "adivina-la-palabra": {
+   "name": "Indovina la parola",
+   "short": "Indovina la parola segreta, con i colori guida.",
+   "long": "Scrivi una parola. Verde: quella lettera va lì. Giallo: la lettera c’è, ma in un altro posto. Grigio: non c’è. Hai pochi tentativi."
+  },
+  "ajedrez": {
+   "name": "Scacchi",
+   "short": "Muovi i pezzi e dai scacco matto al re dell’altro.",
+   "long": "Tu giochi con i pezzi chiari. Tocca un pezzo e poi la casella dove vuoi andare. Vinci quando il re scuro è sotto scacco e non può scappare."
+  },
+  "damas": {
+   "name": "Dama",
+   "short": "Mangia in diagonale: dama spagnola, inglese o brasiliana.",
+   "long": "Tu giochi con le pedine chiare. Tocca una pedina e poi la casella scura dove vuoi andare. Se puoi mangiare, devi mangiare. Dall’altra parte, la pedina si incorona e diventa dama."
+  },
+  "blackjack": {
+   "name": "Blackjack",
+   "short": "Arriva a 21 senza sballare. Il banco gioca dopo.",
+   "long": "Tu e il banco ricevete due carte. Puoi chiederne un’altra o stare. Vince chi si avvicina a 21 senza sballare."
+  },
+  "torre": {
+   "name": "Impila la torre",
+   "short": "Impila i blocchi. Quello che sporge, si taglia.",
+   "long": "Un blocco va da un lato all’altro. Tocca per lasciarlo cadere sulla torre. Quello che non appoggia si taglia, e la torre si fa sempre più stretta. Arriva più in alto che puoi."
+  },
+  "forma-palabras": {
+   "name": "Forma parole",
+   "short": "Lettere mescolate. Tira fuori le parole che nascondono.",
+   "long": "Ti diamo le lettere di una parola, ma mescolate. Devi trovare un numero fisso di parole valide (secondo la difficoltà): vale qualsiasi parola che si possa formare, e una deve usare tutte le lettere. Vinci quando le hai trovate."
+  },
+  "palabras-encadenadas": {
+   "name": "Parole in catena",
+   "short": "Ogni parola inizia con l’ultima sillaba di quella prima.",
+   "long": "Ti diamo la prima parola. Il giocatore successivo scrive un’altra che inizia con l’ultima sillaba — quella sillaba compare già scritta. Si gioca contro un bot o contro un amico sullo stesso telefono. Nel normale c’è un obiettivo di lunghezza; nell’infinito continuate finché uno non può più."
+  },
+  "bingo": {
+   "name": "Bingo",
+   "short": "Segna i numeri della cartella: da solo o con altri sullo stesso telefono.",
+   "long": "Ricevi delle cartelle e segni i numeri che escono. Contro i rivali ne scegli una e loro segnano da soli; in multigiocatore ognuno ha la sua. Se fai linea vinci monete (contro i rivali); se completi la cartella, bingo."
+  },
+  "parchis": {
+   "name": "Parchís",
+   "short": "Porta fuori le pedine: Parchís, Ludo, Parcheesi o Mensch.",
+   "long": "Il parchís spagnolo: un dado e quattro pedine. Con un 5 esci di casa e con un 6 tiri di nuovo. Se finisci su una pedina di un altro, la mangi e conti 20. Il primo che porta le quattro al traguardo vince."
+  },
+  "oca": {
+   "name": "Oca",
+   "short": "Tira il dado: Oca, Gioco dell’Oca o Jeu de l’oie.",
+   "long": "Il gioco dell’oca di 63 caselle: tirate il dado e avanzate. Di oca in oca e tiro ancora; i ponti e i dadi ti portano avanti e tiri di nuovo; il teschio ti rimanda all’inizio. Vince chi arriva esattamente al giardino."
+  },
+  "cifras": {
+   "name": "Cifre",
+   "short": "Raggiungi l’obiettivo: Cifre, Countdown o Des chiffres.",
+   "long": "Ti danno dei numeri e un obiettivo. Ne unisci due, gli applichi un’operazione e il risultato resta. Vinci quando ottieni esattamente l’obiettivo."
+  },
+  "kenken": {
+   "name": "KenKen",
+   "short": "Riempi il tabellone: in ogni gabbia il conto deve tornare e non si possono ripetere numeri.",
+   "long": "Riempi il tabellone con numeri che non si possono ripetere nella stessa riga né nella stessa colonna. Le linee spesse segnano gabbie: in ognuna, i numeri devono sommare, sottrarre, moltiplicare o dividere fino all’obiettivo dell’angolo."
+  },
+  "puentes": {
+   "name": "Ponti",
+   "short": "Unisci le isole con il numero di ponti che chiede ognuna.",
+   "long": "Tocca due isole della stessa riga o colonna per mettere un ponte. Tocca un ponte per romperlo. Ogni isola chiede un numero di ponti. Non si possono incrociare, e alla fine tutte devono restare unite."
+  },
+  "suma-x": {
+   "name": "Somma X",
+   "short": "Unisci coppie di tessere che sommano l’obiettivo.",
+   "long": "Tocchi due tessere. Se sommano l’obiettivo, spariscono. In Normale vinci svuotando il tabellone; in Infinito ne escono due nuove a caso e continui finché non resta nessuna coppia."
+  },
+  "conecta-4": {
+   "name": "Forza 4",
+   "short": "Fai cadere le pedine. Vince chi ne mette quattro in fila.",
+   "long": "Tu giochi con le pedine rosse. Tocca una colonna e la pedina cade fino in fondo. Vinci se unisci quattro di seguito, in riga, colonna o diagonale. A ogni rivincita inizia l’altro."
+  },
+  "hundir-la-flota": {
+   "name": "Battaglia navale",
+   "short": "Piazza le tue navi e spara nel mare dell’altro.",
+   "long": "Ognuno piazza cinque navi e spara nel mare dell’altro. A facile il mare è 8 per 8, a normale 9 per 9 e a difficile 10 per 10. Tocca una casella: acqua, colpito o affondato. Vince chi affonda tutta la flotta dell’altro."
+  },
+  "reversi": {
+   "name": "Reversi",
+   "short": "Circonda le pedine dell’altro e girale.",
+   "long": "Tu hai le nere e inizi. Tocca una casella vuota che lasci pedine dell’altro tra due tue: quelle pedine diventano nere. Vince chi ha più pedine alla fine."
+  }
+ },
+ "fr": {
+  "2048": {
+   "name": "2048",
+   "short": "Glisse, fusionne et marque des points.",
+   "long": "Glisse le plateau. Si tu réunis deux tuiles pareilles, elles fusionnent et tu marques des points. Va aussi loin que tu peux."
+  },
+  "solitario": {
+   "name": "Solitaire",
+   "short": "Klondike classique en solo.",
+   "long": "Donne le plateau et empile les cartes. L’objectif, c’est de faire quatre tas, de l’as au roi."
+  },
+  "spider": {
+   "name": "Spider",
+   "short": "Spider Solitaire avec 1, 2 ou 4 couleurs.",
+   "long": "Fais des suites du roi à l’as de la même couleur. Quand une est complète, elle disparaît toute seule."
+  },
+  "freecell": {
+   "name": "Freecell",
+   "short": "Solitaire avec des cellules libres, toutes les cartes visibles.",
+   "long": "Donne les 52 cartes en huit colonnes. Tu gares une carte dans une cellule libre ou tu la montes sur sa couleur, de l’as au roi."
+  },
+  "piramide": {
+   "name": "Pyramide",
+   "short": "Enlève des cartes de la pyramide en faisant 13.",
+   "long": "Touche deux cartes libres qui font 13, ou un roi tout seul. Une carte ne compte pas si elle en a encore une autre dessus, même si elles font 13. Quand il n’en reste aucune sur la pyramide, tu as gagné."
+  },
+  "siete-y-media": {
+   "name": "Sept et demi",
+   "short": "Atteins 7 et demi : Sept et demi (Espagne) ou Sette e mezzo (Italie).",
+   "long": "Toi et la banque vous recevez une carte espagnole. Tu peux en tirer une autre ou rester. Gagne celui qui s’approche de 7 et demi sans dépasser."
+  },
+  "capitales": {
+   "name": "Capitales",
+   "short": "Un pays, quatre villes. Touche la capitale.",
+   "long": "Un pays et quatre villes sortent. Touche celle qui est sa capitale. Si tu rates, tu perds une vie. Tu gagnes en finissant toutes les questions."
+  },
+  "banderas": {
+   "name": "Drapeaux",
+   "short": "Quatre drapeaux ou quatre pays. Touche le bon.",
+   "long": "Tu peux jouer avec des drapeaux ou avec des noms. En Drapeaux un pays sort et tu touches son drapeau ; en Noms un drapeau sort et tu touches le pays. Si tu rates, tu perds une vie. Tu gagnes en finissant toutes les questions."
+  },
+  "ordenar-colores": {
+   "name": "Ranger les couleurs",
+   "short": "Passe les cubes d’une tour à l’autre jusqu’à laisser chaque couleur ensemble.",
+   "long": "Touche une tour pour prendre les cubes du haut de la même couleur et lâche-les sur une tour vide ou qui a cette couleur en haut. Tu gagnes quand chaque couleur remplit une tour."
+  },
+  "cinquillo": {
+   "name": "Cinquillo",
+   "short": "Le 5 ouvre le jeu : Cinquillo (Espagne) ou Cinque (Italie).",
+   "long": "C’est celui qui a le 5 de deniers qui commence. Pose des cartes de la même couleur, l’une à côté de l’autre, jusqu’à n’en plus avoir."
+  },
+  "escoba": {
+   "name": "Escoba",
+   "short": "Pêche à 15 : Escoba (Espagne) ou Scopa (Italie).",
+   "long": "Joue une carte et prends celles de la table qui font 15 avec la tienne. Choisis Escoba ou Scopa dans Règles. Si tu laisses la table vide, tu fais escoba."
+  },
+  "basra": {
+   "name": "Basra",
+   "short": "Pêche par valeur : Basra (Égypte) ou Xeri (Grèce).",
+   "long": "Jeu français de 52. Capture par la même valeur ou en additionnant (as–10). Choisis Basra ou Xeri dans Règles. Si tu laisses la table vide, tu fais Basra."
+  },
+  "brisca": {
+   "name": "Brisca",
+   "short": "Plis avec atout : Brisca (Espagne) ou Briscola (Italie).",
+   "long": "Trois cartes, une couleur d’atout, et chaque tour compte. Choisis Brisca ou Briscola dans Règles. Gagne celui (ou la paire) qui a le plus de points."
+  },
+  "chinchon": {
+   "name": "Chinchón",
+   "short": "Suites et groupes à 7 cartes.",
+   "long": "Sept cartes : fais des groupes ou des suites et ferme quand il te reste peu d’isolées. Une suite de sept est un chinchón et gagne la partie."
+  },
+  "gin-rummy": {
+   "name": "Gin Rummy",
+   "short": "Dix cartes, combinaisons et frappe.",
+   "long": "Dix cartes françaises. Fais des brelans ou des suites et frappe quand il te reste peu d’isolées. Si tu n’en as plus, c’est gin."
+  },
+  "scala-40": {
+   "name": "Scala 40",
+   "short": "Treize cartes et des jokers. Ouvre avec 40 points.",
+   "long": "Deux jeux français avec 4 jokers. Pose des brelans ou des suites sur la table ; la première pose doit faire 40. Ferme celui qui jette sa dernière carte."
+  },
+  "conquian": {
+   "name": "Conquian",
+   "short": "Dix cartes. Pose la carte du centre ou passe-la.",
+   "long": "Jeu espagnol. La carte du centre ne va jamais dans ta main : tu la poses tout de suite dans tes combinaisons ou tu la passes. Celui qui a 11 cartes sur la table gagne."
+  },
+  "tute": {
+   "name": "Tute",
+   "short": "Tute et Guiñote (plis et annonces) ou le Truco argentin.",
+   "long": "Des plis avec atout et des annonces roi-cavalier. Sans pioche, fournis et monte. Le plus de points gagne."
+  },
+  "tressette": {
+   "name": "Tressette",
+   "short": "Jeu de plis italien sans atout. Le 3 est le plus fort.",
+   "long": "Il faut suivre la couleur. Il n’y a pas d’atout. Le 3 bat le 2 et le 2 bat l’as. Gagne celui qui fait plus de points."
+  },
+  "domino": {
+   "name": "Domino",
+   "short": "Pose des dominos : en équipes (caribéen), avec pioche ou en blocage.",
+   "long": "Le domino avec pioche : pose un domino qui correspond à un bout. Si tu n’en as pas, tu pioches jusqu’à pouvoir jouer. Le premier qui n’a plus de dominos gagne."
+  },
+  "sudoku": {
+   "name": "Sudoku",
+   "short": "9×9 : lignes, colonnes et carrés de 1 à 9.",
+   "long": "Remplis le plateau pour que dans chaque ligne, colonne et carré de 3×3 il y ait les chiffres de 1 à 9, sans répéter."
+  },
+  "ahorcado": {
+   "name": "Pendu",
+   "short": "Devine le mot lettre par lettre.",
+   "long": "Devine le mot lettre par lettre. Si tu rates, tu perds une vie. Tu vois toujours le thème."
+  },
+  "mahjong": {
+   "name": "Mahjong",
+   "short": "Associe les tuiles libres du plateau.",
+   "long": "Touche deux tuiles pareilles qui sont libres : rien dessus et un côté ouvert. Vide le plateau."
+  },
+  "memoria": {
+   "name": "Mémoire",
+   "short": "Trouve les paires.",
+   "long": "Retourne deux cartes. Si elles sont pareilles, elles quittent le plateau. Trouve toutes les paires."
+  },
+  "memoria-musical": {
+   "name": "Mémoire musicale",
+   "short": "Répète la séquence de couleurs, un peu plus longue à chaque fois.",
+   "long": "Les pads s’allument dans un ordre. Touche-les pareil. Chaque tour ajoute une couleur de plus. Tu gagnes en arrivant au bout de la chaîne."
+  },
+  "nonograma": {
+   "name": "Nonogramme",
+   "short": "Peins la grille avec les chiffres.",
+   "long": "Les chiffres de chaque ligne et colonne te disent quoi peindre. Finis le dessin sans te retrouver sans vies."
+  },
+  "tres-en-raya": {
+   "name": "Morpion",
+   "short": "Le classique 3×3 : aligne trois contre le téléphone ou un ami.",
+   "long": "Fais un morpion : ligne, colonne ou diagonale. Joue contre le téléphone ou avec un ami sur le même téléphone."
+  },
+  "trenecito": {
+   "name": "Roule, petit train",
+   "short": "Conduis le train et ramasse les petites boîtes.",
+   "long": "Glisse pour tourner. Ramasse les boîtes à outils et un wagon s’accroche. Ne cogne pas le bord ni ton train."
+  },
+  "buscaminas": {
+   "name": "Démineur",
+   "short": "Ouvre les cases et marque les mines.",
+   "long": "Le premier toucher est sûr. Le chiffre dit combien de mines il y a autour. Ouvre toutes les cases qui n’ont pas de mine."
+  },
+  "avioncito": {
+   "name": "Vole, petit avion",
+   "short": "Touche pour monter et passe dans les trous.",
+   "long": "Touche pour que le petit avion monte. Il tombe tout seul : passe dans les trous entre les lampes et les jouets, comme s’il volait dans une chambre."
+  },
+  "bloques": {
+   "name": "Blocs de couleurs",
+   "short": "Emboîte les pièces et vide lignes et colonnes.",
+   "long": "Glisse les pièces sur le plateau. Si tu remplis une ligne ou une colonne, elle disparaît et tu marques des points. Emboîte-en autant que tu peux."
+  },
+  "match-3": {
+   "name": "Relie les fruits",
+   "short": "Réunis trois fruits pareils et marque des points.",
+   "long": "Glisse un fruit sur un autre à côté. Si tu réunis trois ou plus de pareils, ils disparaissent et de nouveaux fruits apparaissent à leur place. Avec quatre, toute la ligne s’en va ; avec cinq, ce fruit de tout le plateau. Continue jusqu’à ce qu’il ne reste plus aucun trio."
+  },
+  "lluvia-de-bloques": {
+   "name": "Pluie de blocs",
+   "short": "Tourne les pièces qui tombent et complète des lignes.",
+   "long": "Les pièces tombent. Bouge-les et tourne-les pour remplir des lignes. Chaque ligne pleine disparaît et tu marques des points. Tiens jusqu’à ce que le puits se remplisse."
+  },
+  "canicas": {
+   "name": "Lance les billes",
+   "short": "Lance une bille dans la file. Trois de la même couleur sautent.",
+   "long": "Les billes avancent sur le chemin vers le trou. Vise et lâche pour lancer la tienne : si tu réunis trois ou plus de la même couleur, elles disparaissent. Quand la file est finie, tu as gagné. Si elles arrivent au trou, c’est fini."
+  },
+  "burbujas": {
+   "name": "Tire des balles",
+   "short": "Lance des balles de couleurs sur le tas qui descend.",
+   "long": "Vise et lance. Si tu réunis trois ou plus de la même couleur, elles disparaissent. Le tas descend de temps en temps : s’il arrive à la ligne du bas, c’est fini. En normal, vider le tas fait gagner ; en infini une autre vague suit."
+  },
+  "sumas-cruzadas": {
+   "name": "Sommes croisées",
+   "short": "Un carré : complète les chiffres qui manquent.",
+   "long": "C’est un carré avec quelques chiffres déjà placés. En haut tu vois ce que fait chaque colonne et à gauche ce que fait chaque ligne. Toi, tu remplis les trous."
+  },
+  "sopa-de-letras": {
+   "name": "Mots mêlés",
+   "short": "Trouve les mots cachés dans la grille.",
+   "long": "Il y a des mots cachés parmi les lettres, tous du même thème. Glisse de la première à la dernière lettre de chacun jusqu’à les trouver tous."
+  },
+  "crucigrama": {
+   "name": "Mots croisés",
+   "short": "Remplis les cases avec les mots des définitions.",
+   "long": "Chaque définition est un mot. Les horizontales vont à droite et les verticales vers le bas, et elles se croisent sur les lettres qu’elles partagent."
+  },
+  "ranita": {
+   "name": "Saute, petite grenouille",
+   "short": "Saute de plateforme en plateforme et monte aussi haut que tu peux.",
+   "long": "La petite grenouille saute toute seule d’une plateforme à l’autre. Toi, tu la bouges sur les côtés pour qu’elle ne tombe pas. Plus elle va haut, mieux c’est."
+  },
+  "caminos": {
+   "name": "Chemins",
+   "short": "Relie les couleurs et couvre tout le plateau.",
+   "long": "Relie chaque paire de la même couleur avec une ligne. Tu dois couvrir toutes les cases, sans croiser de lignes ni traverser les points d’une autre couleur."
+  },
+  "pintar-suelo": {
+   "name": "Peindre le sol",
+   "short": "Fais glisser le pion et peins tout le sol.",
+   "long": "Glisse le doigt : le pion glisse dans cette direction jusqu’à un blocage. Il peint le sol en passant. Il peut repasser sur ce qui est déjà peint. Tu dois couvrir toutes les cases claires."
+  },
+  "marcianito": {
+   "name": "Aventures martiennes",
+   "short": "Bouge le vaisseau et tire sur les petits martiens qui descendent.",
+   "long": "Pose le doigt où tu veux : le vaisseau y va. Le petit martien tire tout seul, une balle à la fois. Plus tu abats de bêtes, plus le vaisseau devient fort."
+  },
+  "la-meta": {
+   "name": "L’arrivée",
+   "short": "Fais glisser le pion jusqu’à t’arrêter sur la case verte.",
+   "long": "Glisse le doigt : le pion glisse jusqu’à un blocage. Tu dois t’arrêter pile sur le vert. Passer par-dessus ne compte pas."
+  },
+  "adivina-la-palabra": {
+   "name": "Devine le mot",
+   "short": "Devine le mot secret, avec des couleurs d’indice.",
+   "long": "Tu écris un mot. Vert : cette lettre va là. Jaune : la lettre est là, mais ailleurs. Gris : elle n’y est pas. Tu as quelques essais."
+  },
+  "ajedrez": {
+   "name": "Échecs",
+   "short": "Bouge les pièces et mets échec et mat au roi de l’autre.",
+   "long": "Toi, tu joues avec les pièces claires. Touche une pièce puis la case où tu veux aller. Tu gagnes quand le roi sombre est en échec et ne peut pas s’échapper."
+  },
+  "damas": {
+   "name": "Dames",
+   "short": "Prends en diagonale : dames espagnoles, anglaises ou brésiliennes.",
+   "long": "Toi, tu joues avec les pions clairs. Touche un pion puis la case sombre où tu veux aller. Si tu peux manger, tu dois manger. De l’autre côté, le pion se couronne et devient dame."
+  },
+  "blackjack": {
+   "name": "Blackjack",
+   "short": "Arrive à 21 sans dépasser. La banque joue après.",
+   "long": "Toi et la banque vous recevez deux cartes. Tu peux en tirer une autre ou rester. Gagne celui qui s’approche de 21 sans dépasser."
+  },
+  "torre": {
+   "name": "Empile la tour",
+   "short": "Empile des blocs. Ce qui dépasse, on le coupe.",
+   "long": "Un bloc va d’un côté à l’autre. Touche pour le laisser tomber sur la tour. Ce qui n’appuie pas se coupe, et la tour se fait plus étroite. Va aussi haut que tu peux."
+  },
+  "forma-palabras": {
+   "name": "Forme des mots",
+   "short": "Lettres en vrac. Trouve les mots qu’elles cachent.",
+   "long": "On te donne les lettres d’un mot, mais mélangées. Il faut trouver un nombre fixe de mots valides (selon la difficulté) : tout mot qu’on peut former compte, et l’un d’eux doit utiliser toutes les lettres. Tu gagnes quand tu les as trouvés."
+  },
+  "palabras-encadenadas": {
+   "name": "Mots enchaînés",
+   "short": "Chaque mot commence par les lettres de la fin du précédent.",
+   "long": "On te donne le premier mot. Le joueur suivant en écrit un autre qui commence par ses lettres de la fin — ces lettres apparaissent déjà écrites. Tu joues contre un bot ou contre un ami sur le même téléphone. En normal il y a un objectif de longueur ; en infini vous continuez jusqu’à ce que l’un ne puisse plus."
+  },
+  "bingo": {
+   "name": "Bingo",
+   "short": "Coche les numéros de ton carton : seul ou à plusieurs sur le téléphone.",
+   "long": "Tu reçois des cartons et tu coches les numéros qui sortent. Contre des rivaux, tu en choisis un et ils cochent tout seuls ; en multijoueur, chacun a le sien. Si tu fais une ligne, tu gagnes des pièces (contre des rivaux) ; si tu remplis le carton, bingo."
+  },
+  "parchis": {
+   "name": "Parchís",
+   "short": "Sors tes pions : Parchís, Ludo, Parcheesi ou Mensch.",
+   "long": "Le parchís espagnol : un dé et quatre pions. Avec un 5 tu sors de la maison et avec un 6 tu rejoues. Si tu tombes sur le pion d’un autre, tu le manges et tu comptes 20. Le premier qui fait entrer les quatre à l’arrivée gagne."
+  },
+  "oca": {
+   "name": "Oie",
+   "short": "Lance le dé : Oie, Gioco dell’Oca ou Jeu de l’oie.",
+   "long": "Le jeu de l’oie en 63 cases : vous lancez le dé et avancez. D’oie en oie et je rejoue ; les ponts et les dés t’emmènent et tu rejoues ; la tête de mort te renvoie au départ. Gagne celui qui tombe pile sur le jardin."
+  },
+  "cifras": {
+   "name": "Chiffres",
+   "short": "Atteins la cible : Chiffres, Countdown ou Des chiffres.",
+   "long": "On te donne des chiffres et un objectif. Tu en joins deux, tu leur appliques une opération et le résultat reste. Tu gagnes quand tu obtiens exactement l’objectif."
+  },
+  "kenken": {
+   "name": "KenKen",
+   "short": "Remplis le plateau : dans chaque cage le calcul doit coller et on ne peut pas répéter de chiffres.",
+   "long": "Tu remplis le plateau avec des chiffres qu’on ne peut pas répéter dans la même ligne ni la même colonne. Les traits épais marquent des cages : dans chacune, les chiffres doivent additionner, soustraire, multiplier ou diviser jusqu’à l’objectif du coin."
+  },
+  "puentes": {
+   "name": "Ponts",
+   "short": "Relie les îles avec le nombre de ponts que chacune demande.",
+   "long": "Touche deux îles de la même ligne ou colonne pour poser un pont. Touche un pont pour le casser. Chaque île demande un nombre de ponts. Ils ne peuvent pas se croiser, et à la fin toutes doivent rester unies."
+  },
+  "suma-x": {
+   "name": "Somme X",
+   "short": "Réunis des paires de tuiles qui font l’objectif.",
+   "long": "Tu touches deux tuiles. Si elles font l’objectif, elles disparaissent. En Normal tu gagnes en vidant le plateau ; en Infini deux nouvelles sortent au hasard et tu continues jusqu’à ce qu’il ne reste plus aucune paire."
+  },
+  "conecta-4": {
+   "name": "Puissance 4",
+   "short": "Fais tomber des pions. Gagne celui qui en aligne quatre.",
+   "long": "Toi, tu joues avec les pions rouges. Touche une colonne et le pion tombe jusqu’en bas. Tu gagnes si tu alignes quatre d’affilée, en ligne, colonne ou diagonale. À chaque revanche, c’est l’autre qui commence."
+  },
+  "hundir-la-flota": {
+   "name": "Bataille navale",
+   "short": "Place tes bateaux et tire dans la mer de l’autre.",
+   "long": "Chacun place cinq bateaux et tire dans la mer de l’autre. En facile la mer fait 8 sur 8, en normal 9 sur 9 et en difficile 10 sur 10. Touche une case : à l’eau, touché ou coulé. Gagne celui qui coule toute la flotte de l’autre."
+  },
+  "reversi": {
+   "name": "Reversi",
+   "short": "Entoure les pions de l’autre et retourne-les.",
+   "long": "Toi, tu as les noirs et tu commences. Touche une case vide qui laisse des pions de l’autre entre deux des tiens : ces pions deviennent noirs. Gagne celui qui a le plus de pions à la fin."
+  }
+ },
+ "de": {
+  "2048": {
+   "name": "2048",
+   "short": "Wische, verschmelze und sammle Punkte.",
+   "long": "Wische über das Brett. Wenn du zwei gleiche Steine zusammenbringst, verschmelzen sie und du sammelst Punkte. Komm so weit du kannst."
+  },
+  "solitario": {
+   "name": "Solitär",
+   "short": "Klassisches Klondike für eine Person.",
+   "long": "Verteile das Brett und stapel die Karten weiter. Das Ziel ist, vier Stapel zu machen, vom Ass zum König."
+  },
+  "spider": {
+   "name": "Spider",
+   "short": "Spider Solitaire mit 1, 2 oder 4 Farben.",
+   "long": "Baue Folgen vom König zum Ass derselben Farbe. Wenn eine fertig ist, verschwindet sie von allein."
+  },
+  "freecell": {
+   "name": "Freecell",
+   "short": "Solitär mit freien Zellen, alle Karten sichtbar.",
+   "long": "Verteile die 52 Karten auf acht Spalten. Du parkst eine Karte in einer freien Zelle oder schickst sie zu ihrer Farbe, vom Ass zum König."
+  },
+  "piramide": {
+   "name": "Pyramide",
+   "short": "Nimm Karten von der Pyramide, die 13 ergeben.",
+   "long": "Tippe zwei freie Karten, die 13 ergeben, oder einen König allein. Eine Karte zählt nicht, wenn noch eine drauf liegt, auch wenn sie 13 ergeben. Wenn keine mehr auf der Pyramide ist, hast du gewonnen."
+  },
+  "siete-y-media": {
+   "name": "Siebeneinhalb",
+   "short": "Komm auf siebeneinhalb: Siebeneinhalb (Spanien) oder Sette e mezzo (Italien).",
+   "long": "Du und die Bank bekommen je eine spanische Karte. Du kannst eine weitere nehmen oder stehen bleiben. Es gewinnt, wer näher an siebeneinhalb kommt, ohne darüber zu gehen."
+  },
+  "capitales": {
+   "name": "Hauptstädte",
+   "short": "Ein Land, vier Städte. Tippe die Hauptstadt.",
+   "long": "Ein Land und vier Städte erscheinen. Tippe die, die die Hauptstadt ist. Wenn du daneben tippst, verlierst du ein Leben. Du gewinnst, wenn du alle Fragen geschafft hast."
+  },
+  "banderas": {
+   "name": "Flaggen",
+   "short": "Vier Flaggen oder vier Länder. Tippe die passende.",
+   "long": "Du kannst mit Flaggen oder mit Namen spielen. Bei Flaggen erscheint ein Land und du tippst seine Flagge; bei Namen erscheint eine Flagge und du tippst das Land. Wenn du daneben tippst, verlierst du ein Leben. Du gewinnst, wenn du alle Fragen geschafft hast."
+  },
+  "ordenar-colores": {
+   "name": "Farben sortieren",
+   "short": "Lege die Würfel von Turm zu Turm, bis jede Farbe zusammen ist.",
+   "long": "Tippe einen Turm, um die Würfel oben derselben Farbe zu nehmen, und lass sie auf einen leeren Turm oder einen, der diese Farbe oben hat. Du gewinnst, wenn jede Farbe einen Turm füllt."
+  },
+  "cinquillo": {
+   "name": "Cinquillo",
+   "short": "Die 5 eröffnet: Cinquillo (Spanien) oder Cinque (Italien).",
+   "long": "Es beginnt, wer die 5 der Münzen hat. Lege Karten derselben Farbe nebeneinander, bis du keine mehr hast."
+  },
+  "escoba": {
+   "name": "Escoba",
+   "short": "Fischen auf 15: Escoba (Spanien) oder Scopa (Italien).",
+   "long": "Lege eine Karte und nimm Tischkarten, die mit ihr 15 ergeben. Wähle Escoba oder Scopa unter Regeln. Wenn du den Tisch leer räumst, machst du Escoba."
+  },
+  "basra": {
+   "name": "Basra",
+   "short": "Fangen nach Wert: Basra (Ägypten) oder Xeri (Griechenland).",
+   "long": "Französisches Blatt mit 52. Fange mit gleichem Wert oder durch Addieren (Ass–10). Wähle Basra oder Xeri unter Regeln. Wenn du den Tisch leer räumst, machst du Basra."
+  },
+  "brisca": {
+   "name": "Brisca",
+   "short": "Stiche mit Trumpf: Brisca (Spanien) oder Briscola (Italien).",
+   "long": "Drei Karten, eine Trumpffarbe, und jede Runde zählt. Wähle Brisca oder Briscola unter Regeln. Gewonnen hat, wer (oder welches Paar) mehr Punkte hat."
+  },
+  "chinchon": {
+   "name": "Chinchón",
+   "short": "Folgen und Gruppen mit 7 Karten.",
+   "long": "Sieben Karten: Mache Gruppen oder Folgen und geh raus, wenn dir wenig Lose bleiben. Eine Siebener-Folge ist ein Chinchón und gewinnt die Partie."
+  },
+  "gin-rummy": {
+   "name": "Gin Rummy",
+   "short": "Zehn Karten, Kombinationen und Klopfen.",
+   "long": "Zehn französische Karten. Mache Drillinge oder Folgen und klopfe, wenn dir wenig Lose bleiben. Wenn keine Lose mehr da sind, ist es Gin."
+  },
+  "scala-40": {
+   "name": "Scala 40",
+   "short": "Dreizehn Karten und Joker. Eröffne mit 40 Punkten.",
+   "long": "Zwei französische Blätter mit 4 Jokern. Lege Drillinge oder Folgen auf den Tisch; das erste Ablegen muss 40 ergeben. Wer seine letzte Karte abwirft, schließt."
+  },
+  "conquian": {
+   "name": "Conquian",
+   "short": "Zehn Karten. Lege die Karte in der Mitte ab oder passe.",
+   "long": "Spanisches Blatt. Die Karte in der Mitte kommt nie auf die Hand: Du legst sie sofort in deinen Kombinationen ab oder passt. Wer 11 Karten auf dem Tisch hat, gewinnt."
+  },
+  "tute": {
+   "name": "Tute",
+   "short": "Tute und Guiñote (Stiche und Ansagen) oder argentinisches Truco.",
+   "long": "Stiche mit Trumpf und Ansagen mit König und Reiter. Ohne Stapel: bedienen und überstechen. Die meisten Punkte gewinnen."
+  },
+  "tressette": {
+   "name": "Tressette",
+   "short": "Italienische Stiche ohne Trumpf. Die 3 ist die stärkste.",
+   "long": "Du musst Farbe bekennen. Es gibt keinen Trumpf. Die 3 schlägt die 2 und die 2 schlägt das Ass. Gewonnen hat, wer mehr Punkte hat."
+  },
+  "domino": {
+   "name": "Domino",
+   "short": "Steine anlegen: in Paaren (karibisch), mit Nachziehen oder als Blockspiel.",
+   "long": "Domino mit Nachziehen: Leg einen Stein, der an ein Ende passt. Hast du keinen, ziehst du vom Reststapel, bis du kannst. Wer zuerst keine Steine mehr hat, gewinnt."
+  },
+  "sudoku": {
+   "name": "Sudoku",
+   "short": "9×9: Reihen, Spalten und Blöcke von 1 bis 9.",
+   "long": "Fülle das Brett so, dass in jeder Reihe, Spalte und jedem 3×3-Block die Zahlen 1 bis 9 stehen, ohne Wiederholung."
+  },
+  "ahorcado": {
+   "name": "Galgenmännchen",
+   "short": "Rate das Wort Buchstabe für Buchstabe.",
+   "long": "Rate das Wort Buchstabe für Buchstabe. Wenn du daneben tippst, verlierst du ein Leben. Du siehst immer das Thema."
+  },
+  "mahjong": {
+   "name": "Mahjong",
+   "short": "Paare freie Steine auf dem Brett.",
+   "long": "Tippe zwei gleiche Steine, die frei sind: nichts drauf und eine Seite offen. Räume das Brett leer."
+  },
+  "memoria": {
+   "name": "Memory",
+   "short": "Finde die Paare.",
+   "long": "Dreh zwei Karten um. Wenn sie gleich sind, verschwinden sie vom Spielfeld. Finde alle Paare."
+  },
+  "memoria-musical": {
+   "name": "Musik-Memory",
+   "short": "Wiederhole die Farbfolge, jedes Mal ein bisschen länger.",
+   "long": "Die Pads leuchten in einer Reihenfolge. Tippe sie genauso. Jede Runde kommt eine Farbe dazu. Du gewinnst, wenn du am Ende der Kette bist."
+  },
+  "nonograma": {
+   "name": "Nonogramm",
+   "short": "Male das Gitter mit den Hinweisen.",
+   "long": "Die Zahlen jeder Reihe und Spalte sagen dir, was du malen sollst. Mach das Bild fertig, bevor dir die Leben ausgehen."
+  },
+  "tres-en-raya": {
+   "name": "Tic-Tac-Toe",
+   "short": "Das klassische 3×3: drei in einer Reihe gegen das Handy oder einen Freund.",
+   "long": "Mach drei in einer Reihe: Reihe, Spalte oder Diagonale. Spiel gegen das Handy oder mit einem Freund am selben Handy."
+  },
+  "trenecito": {
+   "name": "Roll, kleiner Zug",
+   "short": "Fahr den Zug und sammle Kistchen.",
+   "long": "Wische zum Drehen. Sammle die Werkzeugkisten und ein Waggon hängt an. Knall nicht gegen den Rand und nicht gegen deinen Zug."
+  },
+  "buscaminas": {
+   "name": "Minesweeper",
+   "short": "Öffne Felder und markiere die Minen.",
+   "long": "Der erste Tipp ist sicher. Die Zahl sagt, wie viele Minen drumherum sind. Öffne jedes Feld ohne Mine."
+  },
+  "avioncito": {
+   "name": "Flieg, kleines Flugzeug",
+   "short": "Tippe zum Steigen und flieg durch die Lücken.",
+   "long": "Tippe, damit das kleine Flugzeug steigt. Es fällt von allein: Flieg durch die Lücken zwischen den Lampen und dem Spielzeug, als flöge es durch ein Zimmer."
+  },
+  "bloques": {
+   "name": "Farbblöcke",
+   "short": "Setze die Teile ein und räume Reihen und Spalten.",
+   "long": "Zieh die Teile aufs Brett. Wenn du eine Reihe oder Spalte füllst, verschwindet sie und du sammelst Punkte. Setze so viele ein, wie du kannst."
+  },
+  "match-3": {
+   "name": "Früchte verbinden",
+   "short": "Verbinde drei gleiche Früchte und sammle Punkte.",
+   "long": "Zieh eine Frucht auf eine daneben. Wenn du drei oder mehr Gleiche verbindest, verschwinden sie und an ihrer Stelle erscheinen neue Früchte. Mit vier geht die ganze Linie; mit fünf diese Frucht vom ganzen Brett. Mach weiter, bis kein Dreier mehr bleibt."
+  },
+  "lluvia-de-bloques": {
+   "name": "Blockregen",
+   "short": "Drehe die fallenden Teile und fülle Reihen.",
+   "long": "Die Teile fallen weiter. Bewege sie und drehe sie, um Reihen zu füllen. Jede volle Reihe verschwindet und du sammelst Punkte. Halte durch, bis der Schacht voll ist."
+  },
+  "canicas": {
+   "name": "Murmeln schießen",
+   "short": "Schieß eine Murmel in die Schlange. Drei derselben Farbe springen raus.",
+   "long": "Die Murmeln laufen den Weg zum Loch. Ziel und lass los, um deine zu werfen: Wenn du drei oder mehr derselben Farbe verbindest, verschwinden sie. Wenn die Schlange weg ist, hast du gewonnen. Wenn sie zum Loch kommen, ist Schluss."
+  },
+  "burbujas": {
+   "name": "Kugeln schießen",
+   "short": "Schieß bunte Kugeln auf den Haufen, der runterkommt.",
+   "long": "Ziel und wirf. Wenn du drei oder mehr derselben Farbe verbindest, verschwinden sie. Der Haufen kommt ab und zu runter: Wenn er die untere Linie erreicht, ist Schluss. Bei Normal gewinnst du, wenn du den Haufen räumst; bei Endlos kommt die nächste Welle."
+  },
+  "sumas-cruzadas": {
+   "name": "Kreuzsummen",
+   "short": "Ein Quadrat: Fülle die fehlenden Zahlen.",
+   "long": "Es ist ein Quadrat mit manchen Zahlen, die schon da stehen. Oben siehst du, was jede Spalte ergibt, und links, was jede Reihe ergibt. Du füllst die Lücken."
+  },
+  "sopa-de-letras": {
+   "name": "Wörter suchen",
+   "short": "Finde die versteckten Wörter im Gitter.",
+   "long": "Zwischen den Buchstaben stecken Wörter, alle zum selben Thema. Zieh vom ersten zum letzten Buchstaben jedes Worts, bis du sie alle findest."
+  },
+  "crucigrama": {
+   "name": "Kreuzworträtsel",
+   "short": "Fülle die Felder mit den Wörtern der Hinweise.",
+   "long": "Jeder Hinweis ist ein Wort. Waagerecht geht nach rechts und senkrecht nach unten, und sie kreuzen sich an den Buchstaben, die sie teilen."
+  },
+  "ranita": {
+   "name": "Spring, kleiner Frosch",
+   "short": "Spring von Plattform zu Plattform und steig so hoch du kannst.",
+   "long": "Der kleine Frosch springt von allein von einer Plattform zur anderen. Du bewegst ihn zur Seite, damit er nicht fällt. Je höher er kommt, desto besser."
+  },
+  "caminos": {
+   "name": "Wege",
+   "short": "Verbinde die Farben und bedecke das ganze Brett.",
+   "long": "Verbinde jedes Paar derselben Farbe mit einer Linie. Du musst jedes Feld bedecken, ohne Linien zu kreuzen oder durch Punkte einer anderen Farbe zu gehen."
+  },
+  "pintar-suelo": {
+   "name": "Boden malen",
+   "short": "Schiebe den Stein und male den ganzen Boden.",
+   "long": "Zieh den Finger: Der Stein gleitet in diese Richtung bis zu einem Block. Er malt den Boden beim Vorbeilaufen. Er darf über schon Bemaltes nochmal. Du musst jedes helle Feld bedecken."
+  },
+  "marcianito": {
+   "name": "Mars-Abenteuer",
+   "short": "Bewege das Schiff und schieß auf die kleinen Marsmenschen, die runterkommen.",
+   "long": "Leg den Finger hin, wo du willst: Das Schiff fliegt dahin. Der kleine Marsmensch schießt von allein, eine Kugel auf einmal. Je mehr Viecher du triffst, desto stärker wird das Schiff."
+  },
+  "la-meta": {
+   "name": "Das Ziel",
+   "short": "Schiebe den Stein, bis du auf dem grünen Feld stehst.",
+   "long": "Zieh den Finger: Der Stein gleitet bis zu einem Block. Du musst genau auf Grün stehen bleiben. Darüberfahren zählt nicht."
+  },
+  "adivina-la-palabra": {
+   "name": "Wort erraten",
+   "short": "Rate das geheime Wort, mit Farb-Tipps.",
+   "long": "Du schreibst ein Wort. Grün: Dieser Buchstabe gehört dorthin. Gelb: Der Buchstabe ist drin, aber woanders. Grau: Er ist nicht drin. Du hast ein paar Versuche."
+  },
+  "ajedrez": {
+   "name": "Schach",
+   "short": "Zieh die Figuren und setze den König des anderen matt.",
+   "long": "Du spielst mit den hellen Figuren. Tippe eine Figur und dann das Feld, wohin du willst. Du gewinnst, wenn der dunkle König im Schach steht und nicht entkommen kann."
+  },
+  "damas": {
+   "name": "Dame",
+   "short": "Diagonal schlagen: spanische, englische oder brasilianische Dame.",
+   "long": "Du spielst mit den hellen Steinen. Tippe einen Stein und dann das dunkle Feld, wohin du willst. Wenn du schlagen kannst, musst du schlagen. Auf der anderen Seite wird der Stein gekrönt und zur Dame."
+  },
+  "blackjack": {
+   "name": "Blackjack",
+   "short": "Komm auf 21, ohne drüber zu gehen. Die Bank spielt danach.",
+   "long": "Du und die Bank bekommen je zwei Karten. Du kannst eine weitere nehmen oder stehen bleiben. Es gewinnt, wer näher an 21 kommt, ohne darüber zu gehen."
+  },
+  "torre": {
+   "name": "Turm stapeln",
+   "short": "Staple Blöcke. Was übersteht, wird abgeschnitten.",
+   "long": "Ein Block geht von einer Seite zur anderen. Tippe, um ihn auf den Turm fallen zu lassen. Was nicht aufliegt, wird abgeschnitten, und der Turm wird schmaler. Steig so hoch du kannst."
+  },
+  "forma-palabras": {
+   "name": "Wörter bilden",
+   "short": "Buchstaben durcheinander. Finde die Wörter, die sie verstecken.",
+   "long": "Wir geben dir die Buchstaben eines Worts, aber durcheinander. Du musst eine feste Zahl gültiger Wörter finden (je nach Schwierigkeit): Jedes Wort, das sich bilden lässt, zählt, und eines muss alle Buchstaben verwenden. Du gewinnst, wenn du sie alle hast."
+  },
+  "palabras-encadenadas": {
+   "name": "Wortkette",
+   "short": "Jedes Wort fängt mit den Endbuchstaben des vorigen an.",
+   "long": "Wir geben dir das erste Wort. Der nächste Spieler schreibt ein anderes, das mit seinen Endbuchstaben anfängt — diese Buchstaben stehen schon da. Gespielt wird gegen einen Bot oder gegen einen Freund am selben Handy. Bei Normal gibt es ein Längenziel; bei Endlos macht ihr weiter, bis einer nicht mehr kann."
+  },
+  "bingo": {
+   "name": "Bingo",
+   "short": "Markiere die Zahlen auf deiner Karte: allein oder mit anderen am selben Handy.",
+   "long": "Du bekommst Karten und markierst die Zahlen, die gezogen werden. Gegen Gegner wählst du eine, und sie markieren selbst; im Mehrspielermodus hat jeder seine eigene. Für eine Linie gibt es Münzen (gegen Gegner); ist die Karte voll, heißt es Bingo."
+  },
+  "parchis": {
+   "name": "Parchís",
+   "short": "Bring deine Figuren raus: Parchís, Ludo, Parcheesi oder Mensch.",
+   "long": "Das spanische Parchís: ein Würfel und vier Steine. Mit einer 5 kommst du aus dem Haus, mit einer 6 würfelst du noch einmal. Landest du auf einem fremden Stein, schlägst du ihn und ziehst 20. Wer zuerst alle vier ins Ziel bringt, gewinnt."
+  },
+  "oca": {
+   "name": "Gänsespiel",
+   "short": "Würfle: Gänsespiel, Gioco dell’Oca oder Jeu de l’oie.",
+   "long": "Das Gänsespiel mit 63 Feldern: Ihr würfelt und zieht. Von Gans zu Gans und noch einmal würfeln; die Brücken und die Würfel bringen dich weiter und du würfelst noch einmal; der Totenkopf schickt dich zurück zum Start. Wer genau im Garten landet, gewinnt."
+  },
+  "cifras": {
+   "name": "Zahlen",
+   "short": "Triff die Zielzahl: Zahlen, Countdown oder Des chiffres.",
+   "long": "Du bekommst Zahlen und ein Ziel. Du nimmst zwei, rechnest, und das Ergebnis bleibt. Du gewinnst, wenn du genau das Ziel triffst."
+  },
+  "kenken": {
+   "name": "KenKen",
+   "short": "Fülle das Brett: In jedem Käfig muss die Rechnung aufgehen und Zahlen dürfen nicht doppelt vorkommen.",
+   "long": "Du füllst das Brett mit Zahlen, die in derselben Reihe und derselben Spalte nicht doppelt vorkommen dürfen. Die dicken Linien markieren Käfige: In jedem müssen die Zahlen plus, minus, mal oder geteilt das Ziel in der Ecke treffen."
+  },
+  "puentes": {
+   "name": "Brücken",
+   "short": "Verbinde die Inseln mit so vielen Brücken, wie jede verlangt.",
+   "long": "Tippe zwei Inseln derselben Reihe oder Spalte, um eine Brücke zu setzen. Tippe eine Brücke, um sie zu zerbrechen. Jede Insel verlangt eine Zahl Brücken. Die Brücken dürfen sich nicht kreuzen, und am Ende müssen alle verbunden sein."
+  },
+  "suma-x": {
+   "name": "Summe X",
+   "short": "Verbinde Paare von Steinen, die das Ziel ergeben.",
+   "long": "Du tippst zwei Steine. Wenn sie das Ziel ergeben, verschwinden sie. In Normal gewinnst du, wenn das Brett leer ist; in Endlos kommen zwei neue zufällige und du machst weiter, bis kein Paar mehr da ist."
+  },
+  "conecta-4": {
+   "name": "Vier gewinnt",
+   "short": "Lass Steine fallen. Gewonnen hat, wer vier in einer Linie legt.",
+   "long": "Du spielst die roten Steine. Tippe eine Spalte und der Stein fällt nach unten. Du gewinnst, wenn du vier in Folge verbindest, in Reihe, Spalte oder Diagonale. Bei jeder Revanche fängt der andere an."
+  },
+  "hundir-la-flota": {
+   "name": "Schiffe versenken",
+   "short": "Stelle deine Schiffe und schieß ins Meer des anderen.",
+   "long": "Jeder stellt fünf Schiffe und schießt ins Meer des anderen. Bei Leicht ist das Meer 8 mal 8, bei Normal 9 mal 9 und bei Schwer 10 mal 10. Tippe ein Feld: Wasser, Treffer oder versenkt. Gewonnen hat, wer die ganze Flotte des anderen versenkt."
+  },
+  "reversi": {
+   "name": "Reversi",
+   "short": "Umschließe Steine des anderen und drehe sie um.",
+   "long": "Du spielst Schwarz und fängst an. Tippe ein leeres Feld, das Steine des anderen zwischen zwei eigenen Steinen einschließt: Diese Steine werden schwarz. Gewonnen hat, wer am Ende mehr Steine hat."
+  }
+ }
+}

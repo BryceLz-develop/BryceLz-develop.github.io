@@ -85,6 +85,72 @@
    "mayor-o-menor": "Mayor o Menor",
    "el-impostor": "El Impostor"
   },
+  "gameText": {
+   "yo-nunca": {
+    "short": "Quien lo haya hecho, bebe.",
+    "long": "Sale una frase que empieza por «Yo nunca…». Quien sí lo haya hecho, bebe. Las mejores historias salen solas."
+   },
+   "verdad-o-reto": {
+    "short": "Elige: confiesa o cumple.",
+    "long": "Por turnos, cada jugador elige verdad o reto. La app reparte la pregunta o la prueba según la intensidad."
+   },
+   "quien-es-mas-probable": {
+    "short": "A la de tres, todos señalan.",
+    "long": "Sale una situación. A la de tres, todos señalan a quien creen más capaz. El más señalado bebe."
+   },
+   "preferirias": {
+    "short": "Dos opciones. La minoría paga.",
+    "long": "Dilemas imposibles con dos salidas. Todos votan a la vez y el grupo que quede en minoría bebe."
+   },
+   "la-botella": {
+    "short": "Gira la botella y cumple.",
+    "long": "Gira la botella: a quien apunte le toca un reto. Si la botella decide, no hay discusión."
+   },
+   "ruleta-loca": {
+    "short": "Castigos, premios y comodines.",
+    "long": "Cada jugador gira la ruleta en su turno. Puede tocarte un trago, un reto, repartir castigos o un comodín."
+   },
+   "dados-picantes": {
+    "short": "Un dado dice qué; otro, dónde.",
+    "long": "Dos dados: uno marca la acción y otro el objetivo. La app sortea con quién."
+   },
+   "bomba": {
+    "short": "Responde y pasa. ¡No explotes!",
+    "long": "Sale un tema. Di algo que encaje y pasa el móvil. La bomba explota cuando nadie lo espera: quien la tenga, bebe."
+   },
+   "charadas-calientes": {
+    "short": "Mímica por equipos, sin hablar.",
+    "long": "Representa la palabra sin decir nada y que tu equipo la adivine antes de que acabe el tiempo."
+   },
+   "verdadero-o-falso": {
+    "short": "¿Lo hizo de verdad o se lo inventa?",
+    "long": "Al jugador le sale un tema y cuenta una anécdota, real o inventada. El resto vota. Quien falle, bebe."
+   },
+   "palabra-prohibida": {
+    "short": "Explícala sin decir lo obvio.",
+    "long": "Describe la palabra a tu equipo sin usar las cinco prohibidas. Si se te escapa una, pierdes punto."
+   },
+   "quien-soy": {
+    "short": "Móvil en la frente y pistas del grupo.",
+    "long": "Ponte el móvil en la frente sin mirar. El grupo te da pistas y tú intentas adivinar quién o qué eres."
+   },
+   "piramide": {
+    "short": "Voltea la pirámide y reparte tragos.",
+    "long": "Cada jugador memoriza cuatro cartas. Se voltea la pirámide: si tienes ese número, reparte; si mientes y te pillan, bebes."
+   },
+   "anillo-de-fuego": {
+    "short": "Cada carta, una norma.",
+    "long": "Se roba una carta por turno y cada número trae su norma. Quien saque el cuarto rey se bebe la copa del centro."
+   },
+   "mayor-o-menor": {
+    "short": "Adivina la racha o bebe.",
+    "long": "¿La siguiente carta será mayor o menor? Cada acierto suma a la racha; al fallar, bebes la racha."
+   },
+   "el-impostor": {
+    "short": "Todos saben la palabra menos uno.",
+    "long": "Pasad el móvil: todos ven la misma palabra salvo el impostor. Dad pistas, debatid y votad a quién expulsar."
+   }
+  },
   "categories": {
    "preguntas": "Preguntas",
    "retos": "Retos y azar",
@@ -177,6 +243,72 @@
    "anillo-de-fuego": "Ring of Fire",
    "mayor-o-menor": "Higher or Lower",
    "el-impostor": "The Impostor"
+  },
+  "gameText": {
+   "yo-nunca": {
+    "short": "If you've done it, drink.",
+    "long": "A line pops up starting with “Never have I ever…”. If you have, drink. The best stories tell themselves."
+   },
+   "verdad-o-reto": {
+    "short": "Pick one: confess or do it.",
+    "long": "Taking turns, each player picks truth or dare. The app deals the question or challenge based on the intensity."
+   },
+   "quien-es-mas-probable": {
+    "short": "On three, everyone points.",
+    "long": "A scenario pops up. On three, everyone points at whoever they think is most likely. Whoever gets the most fingers drinks."
+   },
+   "preferirias": {
+    "short": "Two options. The minority pays.",
+    "long": "Impossible dilemmas with two ways out. Everyone votes at once and the minority drinks."
+   },
+   "la-botella": {
+    "short": "Spin the bottle and do it.",
+    "long": "Spin the bottle: whoever it points at gets a dare. The bottle has spoken, no arguing."
+   },
+   "ruleta-loca": {
+    "short": "Penalties, prizes and wildcards.",
+    "long": "Each player spins the wheel on their turn. You might get a sip, a dare, penalties to hand out or a wildcard."
+   },
+   "dados-picantes": {
+    "short": "One die says what; the other, where.",
+    "long": "Two dice: one sets the action, the other the target. The app picks who with."
+   },
+   "bomba": {
+    "short": "Answer and pass. Don't blow up!",
+    "long": "A topic pops up. Say something that fits and pass the phone. The bomb goes off when nobody expects it: whoever's holding it drinks."
+   },
+   "charadas-calientes": {
+    "short": "Team charades, no talking.",
+    "long": "Act out the word without saying anything and get your team to guess it before time runs out."
+   },
+   "verdadero-o-falso": {
+    "short": "Did they really do it or are they making it up?",
+    "long": "The player gets a topic and tells a story, true or made up. Everyone else votes. Whoever gets it wrong drinks."
+   },
+   "palabra-prohibida": {
+    "short": "Explain it without saying the obvious.",
+    "long": "Describe the word to your team without using the five taboo words. If one slips out, you lose a point."
+   },
+   "quien-soy": {
+    "short": "Phone on your forehead, clues from the group.",
+    "long": "Put the phone on your forehead without looking. The group gives you clues and you try to guess who or what you are."
+   },
+   "piramide": {
+    "short": "Flip the pyramid and hand out sips.",
+    "long": "Each player memorises four cards. The pyramid gets flipped: if you have that number, hand out sips; if you lie and get caught, you drink."
+   },
+   "anillo-de-fuego": {
+    "short": "Every card, a rule.",
+    "long": "Draw one card per turn and each number comes with its rule. Whoever draws the fourth king drinks the cup in the middle."
+   },
+   "mayor-o-menor": {
+    "short": "Guess the streak or drink.",
+    "long": "Will the next card be higher or lower? Each correct guess adds to the streak; miss and you drink the streak."
+   },
+   "el-impostor": {
+    "short": "Everyone knows the word except one.",
+    "long": "Pass the phone: everyone sees the same word except the impostor. Give clues, debate and vote someone out."
+   }
   },
   "categories": {
    "preguntas": "Questions",
@@ -271,6 +403,72 @@
    "mayor-o-menor": "Maior ou Menor",
    "el-impostor": "O Impostor"
   },
+  "gameText": {
+   "yo-nunca": {
+    "short": "Quem já fez, bebe.",
+    "long": "Aparece uma frase que começa com “Eu nunca…”. Quem já fez, bebe. As melhores histórias surgem sozinhas."
+   },
+   "verdad-o-reto": {
+    "short": "Escolha: confesse ou cumpra.",
+    "long": "Um de cada vez, cada jogador escolhe verdade ou desafio. O app sorteia a pergunta ou a prova de acordo com a intensidade."
+   },
+   "quien-es-mas-probable": {
+    "short": "No três, todo mundo aponta.",
+    "long": "Aparece uma situação. No três, todos apontam para quem acham mais capaz. O mais apontado bebe."
+   },
+   "preferirias": {
+    "short": "Duas opções. A minoria paga.",
+    "long": "Dilemas impossíveis com duas saídas. Todos votam ao mesmo tempo e o grupo que ficar em minoria bebe."
+   },
+   "la-botella": {
+    "short": "Gire a garrafa e cumpra.",
+    "long": "Gire a garrafa: quem ela apontar recebe um desafio. Se a garrafa decidiu, não tem discussão."
+   },
+   "ruleta-loca": {
+    "short": "Castigos, prêmios e coringas.",
+    "long": "Cada jogador gira a roleta na sua vez. Pode sair um gole, um desafio, castigos para distribuir ou um coringa."
+   },
+   "dados-picantes": {
+    "short": "Um dado diz o quê; o outro, onde.",
+    "long": "Dois dados: um marca a ação e o outro, o alvo. O app sorteia com quem."
+   },
+   "bomba": {
+    "short": "Responda e passe. Não exploda!",
+    "long": "Aparece um tema. Diga algo que combine e passe o celular. A bomba explode quando ninguém espera: quem estiver com ela, bebe."
+   },
+   "charadas-calientes": {
+    "short": "Mímica em equipes, sem falar.",
+    "long": "Represente a palavra sem dizer nada e faça sua equipe adivinhar antes que o tempo acabe."
+   },
+   "verdadero-o-falso": {
+    "short": "Fez de verdade ou está inventando?",
+    "long": "O jogador recebe um tema e conta uma história, real ou inventada. Os outros votam. Quem errar, bebe."
+   },
+   "palabra-prohibida": {
+    "short": "Explique sem dizer o óbvio.",
+    "long": "Descreva a palavra para sua equipe sem usar as cinco proibidas. Se escapar uma, você perde ponto."
+   },
+   "quien-soy": {
+    "short": "Celular na testa e dicas do grupo.",
+    "long": "Coloque o celular na testa sem olhar. O grupo dá dicas e você tenta adivinhar quem ou o que você é."
+   },
+   "piramide": {
+    "short": "Vire a pirâmide e distribua goles.",
+    "long": "Cada jogador memoriza quatro cartas. A pirâmide é virada: se você tem esse número, distribui; se mentir e for pego, bebe."
+   },
+   "anillo-de-fuego": {
+    "short": "Cada carta, uma regra.",
+    "long": "Tira-se uma carta por vez e cada número traz sua regra. Quem tirar o quarto rei bebe o copo do meio."
+   },
+   "mayor-o-menor": {
+    "short": "Adivinhe a sequência ou beba.",
+    "long": "A próxima carta será maior ou menor? Cada acerto aumenta a sequência; se errar, você bebe a sequência."
+   },
+   "el-impostor": {
+    "short": "Todos sabem a palavra, menos um.",
+    "long": "Passem o celular: todos veem a mesma palavra, menos o impostor. Deem dicas, debatam e votem em quem expulsar."
+   }
+  },
   "categories": {
    "preguntas": "Perguntas",
    "retos": "Desafios",
@@ -363,6 +561,72 @@
    "anillo-de-fuego": "Anello di Fuoco",
    "mayor-o-menor": "Più Alta o Più Bassa",
    "el-impostor": "L'Impostore"
+  },
+  "gameText": {
+   "yo-nunca": {
+    "short": "Chi l'ha fatto, beve.",
+    "long": "Esce una frase che inizia con «Non ho mai…». Chi invece l'ha fatto, beve. Le storie migliori escono da sole."
+   },
+   "verdad-o-reto": {
+    "short": "Scegli: confessa o esegui.",
+    "long": "A turno, ogni giocatore sceglie verità o obbligo. L'app assegna la domanda o la sfida in base all'intensità."
+   },
+   "quien-es-mas-probable": {
+    "short": "Al tre, tutti indicano.",
+    "long": "Esce una situazione. Al tre, tutti indicano chi ritengono più capace. Il più indicato beve."
+   },
+   "preferirias": {
+    "short": "Due opzioni. La minoranza paga.",
+    "long": "Dilemmi impossibili con due vie d'uscita. Tutti votano insieme e il gruppo in minoranza beve."
+   },
+   "la-botella": {
+    "short": "Gira la bottiglia ed esegui.",
+    "long": "Gira la bottiglia: a chi indica tocca una sfida. Se decide la bottiglia, niente discussioni."
+   },
+   "ruleta-loca": {
+    "short": "Penitenze, premi e jolly.",
+    "long": "Ogni giocatore gira la ruota al suo turno. Può capitarti un sorso, una sfida, penitenze da distribuire o un jolly."
+   },
+   "dados-picantes": {
+    "short": "Un dado dice cosa; l'altro, dove.",
+    "long": "Due dadi: uno indica l'azione e l'altro il bersaglio. L'app sorteggia con chi."
+   },
+   "bomba": {
+    "short": "Rispondi e passa. Non esplodere!",
+    "long": "Esce un tema. Di' qualcosa di pertinente e passa il telefono. La bomba esplode quando nessuno se lo aspetta: chi ce l'ha, beve."
+   },
+   "charadas-calientes": {
+    "short": "Mimo a squadre, senza parlare.",
+    "long": "Mima la parola senza dire nulla e fai in modo che la tua squadra la indovini prima che scada il tempo."
+   },
+   "verdadero-o-falso": {
+    "short": "L'ha fatto davvero o se lo inventa?",
+    "long": "Al giocatore tocca un tema e racconta un aneddoto, vero o inventato. Gli altri votano. Chi sbaglia, beve."
+   },
+   "palabra-prohibida": {
+    "short": "Spiegala senza dire l'ovvio.",
+    "long": "Descrivi la parola alla tua squadra senza usare le cinque vietate. Se te ne scappa una, perdi un punto."
+   },
+   "quien-soy": {
+    "short": "Telefono sulla fronte e indizi dal gruppo.",
+    "long": "Mettiti il telefono sulla fronte senza guardare. Il gruppo ti dà indizi e tu provi a indovinare chi o cosa sei."
+   },
+   "piramide": {
+    "short": "Scopri la piramide e distribuisci sorsi.",
+    "long": "Ogni giocatore memorizza quattro carte. Si scopre la piramide: se hai quel numero, distribuisci; se menti e ti beccano, bevi."
+   },
+   "anillo-de-fuego": {
+    "short": "Ogni carta, una regola.",
+    "long": "Si pesca una carta a turno e ogni numero ha la sua regola. Chi pesca il quarto re beve il bicchiere al centro."
+   },
+   "mayor-o-menor": {
+    "short": "Indovina la serie o bevi.",
+    "long": "La prossima carta sarà più alta o più bassa? Ogni risposta giusta allunga la serie; se sbagli, bevi la serie."
+   },
+   "el-impostor": {
+    "short": "Tutti conoscono la parola tranne uno.",
+    "long": "Passatevi il telefono: tutti vedono la stessa parola tranne l'impostore. Date indizi, discutete e votate chi eliminare."
+   }
   },
   "categories": {
    "preguntas": "Domande",
@@ -457,6 +721,72 @@
    "mayor-o-menor": "Plus ou Moins",
    "el-impostor": "L'Imposteur"
   },
+  "gameText": {
+   "yo-nunca": {
+    "short": "Si tu l'as déjà fait, tu bois.",
+    "long": "Une phrase apparaît, commençant par « Je n'ai jamais… ». Ceux qui l'ont déjà fait boivent. Les meilleures histoires viennent toutes seules."
+   },
+   "verdad-o-reto": {
+    "short": "Choisis : avoue ou relève le défi.",
+    "long": "À tour de rôle, chaque joueur choisit action ou vérité. L'appli distribue la question ou le défi selon l'intensité."
+   },
+   "quien-es-mas-probable": {
+    "short": "À trois, tout le monde désigne quelqu'un.",
+    "long": "Une situation apparaît. À trois, chacun désigne la personne qu'il en juge la plus capable. Le plus désigné boit."
+   },
+   "preferirias": {
+    "short": "Deux options. La minorité paie.",
+    "long": "Des dilemmes impossibles à deux issues. Tout le monde vote en même temps et le groupe minoritaire boit."
+   },
+   "la-botella": {
+    "short": "Fais tourner la bouteille et obéis.",
+    "long": "Fais tourner la bouteille : celui qu'elle désigne a un défi. Quand la bouteille a décidé, on ne discute pas."
+   },
+   "ruleta-loca": {
+    "short": "Gages, récompenses et jokers.",
+    "long": "Chaque joueur fait tourner la roue à son tour. Tu peux tomber sur une gorgée, un défi, des gages à distribuer ou un joker."
+   },
+   "dados-picantes": {
+    "short": "Un dé dit quoi ; l'autre, où.",
+    "long": "Deux dés : l'un donne l'action, l'autre la cible. L'appli tire au sort avec qui."
+   },
+   "bomba": {
+    "short": "Réponds et passe. N'explose pas !",
+    "long": "Un thème apparaît. Dis quelque chose qui colle et passe le téléphone. La bombe explose quand personne ne s'y attend : celui qui l'a boit."
+   },
+   "charadas-calientes": {
+    "short": "Mimes en équipes, sans parler.",
+    "long": "Mime le mot sans rien dire et fais-le deviner à ton équipe avant la fin du temps."
+   },
+   "verdadero-o-falso": {
+    "short": "Il l'a vraiment fait ou il invente ?",
+    "long": "Le joueur reçoit un thème et raconte une anecdote, vraie ou inventée. Les autres votent. Ceux qui se trompent boivent."
+   },
+   "palabra-prohibida": {
+    "short": "Fais-le deviner sans dire l'évidence.",
+    "long": "Décris le mot à ton équipe sans utiliser les cinq mots tabous. Si l'un t'échappe, tu perds un point."
+   },
+   "quien-soy": {
+    "short": "Téléphone sur le front et indices du groupe.",
+    "long": "Mets le téléphone sur ton front sans regarder. Le groupe te donne des indices et tu essaies de deviner qui ou quoi tu es."
+   },
+   "piramide": {
+    "short": "Retourne la pyramide et distribue des gorgées.",
+    "long": "Chaque joueur mémorise quatre cartes. On retourne la pyramide : si tu as cette valeur, tu distribues ; si tu mens et qu'on te démasque, tu bois."
+   },
+   "anillo-de-fuego": {
+    "short": "Chaque carte, une règle.",
+    "long": "On pioche une carte par tour et chaque valeur a sa règle. Celui qui tire le quatrième roi boit le verre du centre."
+   },
+   "mayor-o-menor": {
+    "short": "Devine la série ou bois.",
+    "long": "La prochaine carte sera-t-elle plus haute ou plus basse ? Chaque bonne réponse allonge la série ; si tu te trompes, tu bois la série."
+   },
+   "el-impostor": {
+    "short": "Tout le monde connaît le mot, sauf un.",
+    "long": "Faites tourner le téléphone : tout le monde voit le même mot sauf l'imposteur. Donnez des indices, débattez et votez pour éliminer quelqu'un."
+   }
+  },
   "categories": {
    "preguntas": "Questions",
    "retos": "Défis",
@@ -549,6 +879,72 @@
    "anillo-de-fuego": "Feuerring",
    "mayor-o-menor": "Höher oder Tiefer",
    "el-impostor": "Der Hochstapler"
+  },
+  "gameText": {
+   "yo-nunca": {
+    "short": "Wer's schon getan hat, trinkt.",
+    "long": "Es erscheint ein Satz, der mit „Ich hab noch nie…“ beginnt. Wer es doch schon getan hat, trinkt. Die besten Geschichten ergeben sich von selbst."
+   },
+   "verdad-o-reto": {
+    "short": "Wähle: gestehen oder erfüllen.",
+    "long": "Reihum wählt jeder Wahrheit oder Pflicht. Die App teilt je nach Intensität die Frage oder Aufgabe zu."
+   },
+   "quien-es-mas-probable": {
+    "short": "Auf drei zeigen alle.",
+    "long": "Eine Situation erscheint. Auf drei zeigen alle auf die Person, der sie es am ehesten zutrauen. Wer die meisten Finger abbekommt, trinkt."
+   },
+   "preferirias": {
+    "short": "Zwei Optionen. Die Minderheit zahlt.",
+    "long": "Unmögliche Dilemmas mit zwei Auswegen. Alle stimmen gleichzeitig ab und die Gruppe in der Minderheit trinkt."
+   },
+   "la-botella": {
+    "short": "Dreh die Flasche und erfülle.",
+    "long": "Dreh die Flasche: Auf wen sie zeigt, der bekommt eine Aufgabe. Wenn die Flasche entscheidet, wird nicht diskutiert."
+   },
+   "ruleta-loca": {
+    "short": "Strafen, Preise und Joker.",
+    "long": "Jeder dreht in seiner Runde das Glücksrad. Du kannst einen Schluck, eine Aufgabe, Strafen zum Verteilen oder einen Joker bekommen."
+   },
+   "dados-picantes": {
+    "short": "Ein Würfel sagt was, der andere wo.",
+    "long": "Zwei Würfel: Einer bestimmt die Aktion, der andere das Ziel. Die App lost aus, mit wem."
+   },
+   "bomba": {
+    "short": "Antworte und gib weiter. Explodier nicht!",
+    "long": "Ein Thema erscheint. Sag etwas Passendes und gib das Handy weiter. Die Bombe explodiert, wenn niemand damit rechnet: Wer sie hat, trinkt."
+   },
+   "charadas-calientes": {
+    "short": "Pantomime im Team, ohne zu reden.",
+    "long": "Stell das Wort dar, ohne etwas zu sagen, und lass dein Team es erraten, bevor die Zeit abläuft."
+   },
+   "verdadero-o-falso": {
+    "short": "Wirklich passiert oder nur erfunden?",
+    "long": "Die Person bekommt ein Thema und erzählt eine Anekdote, wahr oder erfunden. Die anderen stimmen ab. Wer falsch liegt, trinkt."
+   },
+   "palabra-prohibida": {
+    "short": "Erklär es, ohne das Offensichtliche zu sagen.",
+    "long": "Beschreibe deinem Team das Wort, ohne die fünf Tabuwörter zu benutzen. Rutscht dir eins raus, verlierst du einen Punkt."
+   },
+   "quien-soy": {
+    "short": "Handy an die Stirn, Tipps von der Gruppe.",
+    "long": "Halt dir das Handy an die Stirn, ohne hinzuschauen. Die Gruppe gibt dir Tipps und du versuchst zu erraten, wer oder was du bist."
+   },
+   "piramide": {
+    "short": "Deck die Pyramide auf und verteile Schlucke.",
+    "long": "Jeder merkt sich vier Karten. Die Pyramide wird aufgedeckt: Hast du diesen Wert, verteilst du; lügst du und wirst erwischt, trinkst du."
+   },
+   "anillo-de-fuego": {
+    "short": "Jede Karte, eine Regel.",
+    "long": "Pro Runde wird eine Karte gezogen und jeder Wert hat seine Regel. Wer den vierten König zieht, trinkt den Becher in der Mitte."
+   },
+   "mayor-o-menor": {
+    "short": "Errate die Serie oder trink.",
+    "long": "Ist die nächste Karte höher oder tiefer? Jeder Treffer verlängert die Serie; liegst du falsch, trinkst du die Serie."
+   },
+   "el-impostor": {
+    "short": "Alle kennen das Wort, bis auf einen.",
+    "long": "Gebt das Handy weiter: Alle sehen dasselbe Wort, nur der Impostor nicht. Gebt Hinweise, diskutiert und stimmt ab, wen ihr rauswerft."
+   }
   },
   "categories": {
    "preguntas": "Fragen",
