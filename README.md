@@ -85,3 +85,17 @@ la versión anterior queda guardada en `privacidad/AAAA-MM-DD/`.
 
 Las fuentes Bricolage Grotesque, Nunito Sans y la rotulación de AllTheGames
 llevan licencia SIL Open Font License (`static/fonts/*-OFL.txt`).
+
+## Copia local con las apps en desarrollo
+
+`python3 build.py --local` genera `docs-local/` (no se publica: está en `.gitignore`). Es la misma web más una sección por cada app en desarrollo (`content/planned-apps.json`): ficha de la app y una página por juego, con textos e imágenes provisionales.
+
+Para verla en el PC: doble clic en `herramientas/ver-web-local.bat` (necesita Node), que abre http://localhost:8080.
+
+Cuando el chat de una app manda datos para la web (icono, logo, descripciones…), se cambian en `content/planned-apps.json`; cuando la app vaya a salir, pasa a tener su sección de verdad en `content/apps/<app>/` y a la web publicada.
+
+## Fichas de juego
+
+Cada juego tiene su página en `apps/<app>/juegos/<slug>/`. Los textos son los de la app:
+- AllTheGames: `npx tsx tools/export-games.mts RUTA/A/AllTheGames/mobile content/apps/allthegames/games.json > content/apps/allthegames/games-text.json`
+- AllThePartyGames: `tools/export-party.py` (copia también las descripciones).

@@ -81,7 +81,8 @@
     "chipAndroid": "Para Android",
     "playIn": "Juégalo en",
     "moreGames": "Más juegos · {cat}",
-    "crumbs": "Dónde estás"
+    "crumbs": "Dónde estás",
+    "inDev": "En desarrollo"
   },
   "en": {
     "langName": "English",
@@ -165,7 +166,8 @@
     "chipAndroid": "For Android",
     "playIn": "Play it in",
     "moreGames": "More games · {cat}",
-    "crumbs": "You are here"
+    "crumbs": "You are here",
+    "inDev": "In development"
   },
   "pt": {
     "langName": "Português",
@@ -249,7 +251,8 @@
     "chipAndroid": "Para Android",
     "playIn": "Jogue em",
     "moreGames": "Mais jogos · {cat}",
-    "crumbs": "Onde você está"
+    "crumbs": "Onde você está",
+    "inDev": "Em desenvolvimento"
   },
   "it": {
     "langName": "Italiano",
@@ -333,7 +336,8 @@
     "chipAndroid": "Per Android",
     "playIn": "Giocalo su",
     "moreGames": "Altri giochi · {cat}",
-    "crumbs": "Dove sei"
+    "crumbs": "Dove sei",
+    "inDev": "In sviluppo"
   },
   "fr": {
     "langName": "Français",
@@ -417,7 +421,8 @@
     "chipAndroid": "Pour Android",
     "playIn": "Joue dans",
     "moreGames": "Plus de jeux · {cat}",
-    "crumbs": "Où tu es"
+    "crumbs": "Où tu es",
+    "inDev": "En développement"
   },
   "de": {
     "langName": "Deutsch",
@@ -501,6 +506,7 @@
     "chipAndroid": "Für Android",
     "playIn": "Spiel es in",
     "moreGames": "Mehr Spiele · {cat}",
-    "crumbs": "Wo du bist"
+    "crumbs": "Wo du bist",
+    "inDev": "In Entwicklung"
   }
 }

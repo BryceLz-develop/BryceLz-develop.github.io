@@ -23,16 +23,21 @@ from typing import Callable
 import math
 import re
 import shutil
+import sys
 import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 CONTENT = ROOT / 'content'
 STATIC = ROOT / 'static'
-OUT = ROOT / 'docs'
+# `python3 build.py --local` hace la copia local (docs-local/, sin publicar) con las apps en desarrollo.
+LOCAL = '--local' in sys.argv
+OUT = ROOT / ('docs-local' if LOCAL else 'docs')
 
 SITE = json.loads((CONTENT / 'site.json').read_text('utf-8'))
 UI = json.loads((CONTENT / 'ui.json').read_text('utf-8'))
+# Apps en desarrollo: solo en la copia local.
+PLANNED = json.loads((CONTENT / 'planned-apps.json').read_text('utf-8'))['apps'] if LOCAL else []
 BRAND = SITE['brand']
 OWNER = SITE['owner']
 EMAIL = SITE['email']
@@ -210,7 +215,7 @@ class Ctx:
 def nav_items(lang: str) -> list[tuple[str, str]]:
     """Los apartados del banner. De momento: Inicio y AllTheGames."""
     return [(lp(lang, ''), T(lang, 'home')), (lp(lang, 'apps/allthegames/'), 'AllTheGames'),
-            (lp(lang, PARTY), 'AllThePartyGames')]
+            (lp(lang, PARTY), 'AllThePartyGames')] + [(lp(lang, f"apps/{a['id']}/"), a['name']) for a in PLANNED]
 
 
 def wordmark(c: Ctx, lang: str) -> str:
@@ -520,6 +525,7 @@ def build_home(d: dict, p: dict, lang: str) -> None:
             chips=[(p['i18n'][lang]['categories'][cat['id']], cat['accent']) for cat in p['app']['categories']],
             store_published=p['app'].get('storePublished', False), privacy=party_paths('privacy')[lang], badge='+18'))
         supports.append(('AllThePartyGames', lp(lang, PARTY + 'soporte/')))
+    features += [planned_feature(c, lang, a) for a in PLANNED]
     support_buttons = ''.join(
         f'<a class="sticker{"" if i == 0 else " sticker-soft"}" href="{c.to(path)}">{esc(T(lang, "appSupportTitle", app=name))}</a>'
         for i, (name, path) in enumerate(supports)
@@ -1087,10 +1093,12 @@ def game_path(app_id: str, game_slug: str, lang: str) -> str:
 def build_game_pages(*, app_id: str, app_name: str, theme: str, favicon: str, logo: str, logo_size: tuple,
                      lead: Callable[[str], str], store_published: bool, store_url: str,
                      categories: list[dict], cat_name: Callable[[str, str], str], games: list[dict],
-                     text: Callable[[str, str], dict], nav: Callable, notice: Callable[[str], str] = lambda l: '') -> None:
+                     text: Callable[[str, str], dict], nav: Callable, notice: Callable[[str], str] = lambda l: '',
+                     img: Callable[[str], str] | None = None, status: Callable[[str], str] | None = None) -> None:
     """Una página por juego y por idioma. Los textos vienen de la app; aquí no se escribe ninguno."""
     accents = {cat['id']: cat['accent'] for cat in categories}
     app_home = f'apps/{app_id}/'
+    img = img or (lambda game_slug: f'static/apps/{app_id}/games/{game_slug}.webp')
     for lang in LANGS:
         for g in games:
             here = game_path(app_id, g['slug'], lang)
@@ -1098,12 +1106,13 @@ def build_game_pages(*, app_id: str, app_name: str, theme: str, favicon: str, lo
             t = text(lang, g['slug'])
             acc, cat = accents[g['folder']], cat_name(lang, g['folder'])
             store = (
+                status(lang) if status else
                 f'<a class="sticker" href="{esc(store_url)}&amp;hl={HTML_LANG[lang]}">{esc(T(lang, "download"))}</a>'
                 if store_published else f'<p class="soon">{esc(T(lang, "soon"))}</p>'
             )
             others = ''.join(
                 f'''<li class="game"><a href="{c.to(game_path(app_id, o['slug'], lang))}">
-        <img src="{c.to(f'static/apps/{app_id}/games/{o["slug"]}.webp')}" alt="" width="72" height="72" loading="lazy">
+        <img src="{c.to(img(o['slug']))}" alt="" width="72" height="72" loading="lazy">
         <span>{esc(text(lang, o['slug'])['name'])}</span>
       </a></li>'''
                 for o in games if o['folder'] == g['folder'] and o['slug'] != g['slug']
@@ -1120,10 +1129,10 @@ def build_game_pages(*, app_id: str, app_name: str, theme: str, favicon: str, lo
   </nav>
   {notice(lang)}
   <div class="game-hero">
-    <img src="{c.to(f'static/apps/{app_id}/games/{g["slug"]}.webp')}" alt="" width="144" height="144">
+    <img src="{c.to(img(g['slug']))}" alt="" width="144" height="144">
     <div>
       <p class="lead">{esc(t['short'])}</p>
-      <p>{esc(t['long'])}</p>
+      {f"<p>{esc(t['long'])}</p>" if t['long'] else ''}
     </div>
   </div>
   <section class="play-in" aria-labelledby="donde">
@@ -1163,6 +1172,103 @@ def build_all_game_pages(d: dict, p: dict) -> None:
         nav=party_nav, notice=lambda l: age_notice(p, l, compact=True))
 
 
+# ---------------------------------------------------------------------------
+# Apps en desarrollo (solo en la copia local). Textos provisionales en español
+# (content/planned-apps.json) e imágenes provisionales generadas aquí.
+
+
+def svg_tile(text: str, accent: str) -> str:
+    initials = ''.join(w[0] for w in re.findall(r'[A-Za-zÁÉÍÓÚÑáéíóúñ¿?]+', text) if w[0].isalpha())[:2].upper() or '?'
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><rect x="6" y="6" width="84" height="84" rx="22" '
+            f'fill="{accent}" stroke="#2A1A1D" stroke-width="4"/><text x="48" y="60" text-anchor="middle" '
+            f'font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="34" fill="#FFF8EE">{esc(initials)}</text></svg>')
+
+
+def svg_logo(word: str, accent: str) -> str:
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 270"><g font-family="Arial Black, Arial, sans-serif" '
+            f'font-weight="900" text-anchor="middle" stroke="#2A1A1D" stroke-width="8" paint-order="stroke">'
+            f'<text x="200" y="70" font-size="62" fill="#FFF8EE">AllThe</text>'
+            f'<text x="200" y="165" font-size="96" fill="{accent}">{esc(word)}</text>'
+            f'<text x="200" y="240" font-size="62" fill="#FFF8EE">Games</text></g></svg>')
+
+
+def planned_static(a: dict) -> None:
+    base = OUT / 'static' / 'planned' / a['id']
+    (base / 'games').mkdir(parents=True, exist_ok=True)
+    (base / 'logo.svg').write_text(svg_logo(a['word'], a['accent']), 'utf-8')
+    acc = {cat['id']: cat['accent'] for cat in a['categories']}
+    for g in a['games']:
+        (base / 'games' / f"{g['slug']}.svg").write_text(svg_tile(g['name'], acc[g['folder']]), 'utf-8')
+
+
+def in_dev(lang: str) -> str:
+    return f'<p class="soon">{esc(T(lang, "inDev"))}</p>'
+
+
+def planned_feature(c: Ctx, lang: str, a: dict) -> str:
+    here = lp(lang, f"apps/{a['id']}/")
+    chips = ''.join(f'<li style="--chip:{cat["accent"]}">{esc(cat["label"])}</li>' for cat in a['categories'])
+    return f'''<article class="feature card">
+    <a class="feature-art" href="{c.to(here)}" tabindex="-1" aria-hidden="true">
+      <img src="{c.to(f"static/planned/{a['id']}/logo.svg")}" alt="" width="400" height="270" loading="lazy">
+    </a>
+    <div class="feature-copy">
+      <h3 class="display feature-name"><a href="{c.to(here)}">{a['name']}</a></h3>
+      <p>{esc(a['tagline'])}</p>
+      <ul class="chips" aria-label="{esc(T(lang, 'byCategory'))}">{chips}</ul>
+      {in_dev(lang)}
+      <div class="actions"><a class="sticker" href="{c.to(here)}">{esc(T(lang, 'seeApp'))}</a></div>
+    </div>
+  </article>'''
+
+
+def build_planned(a: dict) -> None:
+    planned_static(a)
+    for lang in LANGS:
+        here = lp(lang, f"apps/{a['id']}/")
+        c = Ctx(here)
+        perks = ''.join(f'<li>{esc(x)}</li>' for x in a['perks'])
+        cats = []
+        for cat in a['categories']:
+            tiles = ''.join(
+                f'''<li class="game"><a href="{c.to(game_path(a['id'], g['slug'], lang))}">
+        <img src="{c.to(f"static/planned/{a['id']}/games/{g['slug']}.svg")}" alt="" width="72" height="72" loading="lazy">
+        <span>{esc(g['name'])}</span>
+      </a></li>'''
+                for g in a['games'] if g['folder'] == cat['id'])
+            cats.append(f'''<section class="cat" aria-labelledby="cat-{cat['id']}">
+    <h3 class="cat-band" id="cat-{cat['id']}" style="--fill:{band_fill(cat['accent'])};--lip:{band_lip(cat['accent'])}">
+      <span>{esc(cat['label'])}</span>
+    </h3>
+    <ul class="games">
+      {tiles}
+    </ul>
+  </section>''')
+        main = f'''<section class="wrap atg-hero">
+  <img class="atg-logo" src="{c.to(f"static/planned/{a['id']}/logo.svg")}" alt="" width="400" height="270">
+  <div class="atg-intro">
+    <h1 class="visually-hidden">{a['name']}</h1>
+    <p class="lead">{esc(a['tagline'])}</p>
+    {in_dev(lang)}
+    <ul class="facts">{perks}</ul>
+  </div>
+</section>
+<section class="wrap catalog" aria-labelledby="los-juegos">
+  <h2 id="los-juegos" class="atg-h2">{esc(T(lang, 'atgGames'))}</h2>
+  {''.join(cats)}
+</section>'''
+        page(here, title=f"{a['name']} · {BRAND}", description=a['tagline'], main=main, theme='studio',
+             section=here, lang=lang, links=same_page(f"apps/{a['id']}/"))
+    by_slug = {g['slug']: g for g in a['games']}
+    build_game_pages(
+        app_id=a['id'], app_name=a['name'], theme='studio', favicon='static/brand/favicon-64.png',
+        logo=f"static/planned/{a['id']}/logo.svg", logo_size=(400, 270), lead=lambda l: a['tagline'],
+        store_published=False, store_url='', categories=a['categories'],
+        cat_name=lambda l, f: next(x['label'] for x in a['categories'] if x['id'] == f),
+        games=a['games'], text=lambda l, g: {'name': by_slug[g]['name'], 'short': by_slug[g]['short'], 'long': ''},
+        nav=lambda c, cur, l: '', img=lambda g: f"static/planned/{a['id']}/games/{g}.svg", status=in_dev)
+
+
 def build() -> None:
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -1191,6 +1297,8 @@ def build() -> None:
         build_party_legal(party, 'privacy')
         build_party_legal(party, 'terms')
     build_all_game_pages(d, party)
+    for a in PLANNED:
+        build_planned(a)
     base = SITE['baseUrl'].rstrip('/')
     urls = sorted(
         p.parent.relative_to(OUT).as_posix() for p in OUT.rglob('index.html') if 'static' not in p.parts
@@ -1203,7 +1311,7 @@ def build() -> None:
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + sitemap + '</urlset>\n',
         'utf-8',
     )
-    print(f'Web generada en docs/ ({len(urls)} páginas).')
+    print(f'Web generada en {OUT.name}/ ({len(urls)} páginas).')
 
 
 if __name__ == '__main__':

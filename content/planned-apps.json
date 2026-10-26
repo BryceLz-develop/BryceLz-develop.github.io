@@ -1,0 +1,108 @@
+{
+  "_nota": "Apps del estudio en desarrollo. Solo salen en la copia local de la web (python3 build.py --local). Textos provisionales en español: se cambian por los de cada app cuando su chat los dé.",
+  "apps": [
+    {
+      "id": "allthefamilygames", "name": "AllTheFamilyGames", "word": "Family", "accent": "#E0663E",
+      "tagline": "Juegos de grupo para la familia: un móvil en el centro de la mesa y a jugar, de 6 a 90 años.",
+      "perks": ["Para jugar en grupo", "Tres niveles: Peques, Todos y Expertos", "Mazos temáticos", "En 6 idiomas"],
+      "categories": [
+        {"id": "preguntas", "label": "Preguntas", "accent": "#C2185B"},
+        {"id": "adivinar", "label": "Adivinar", "accent": "#3949AB"},
+        {"id": "retos", "label": "Retos y azar", "accent": "#EF6C00"},
+        {"id": "equipos", "label": "Equipos y cartas", "accent": "#2E7D32"}
+      ],
+      "games": [
+        {"slug": "quien-es-mas-probable", "name": "¿Quién es más probable?", "folder": "preguntas", "short": "Votad quién de la mesa haría cada cosa."},
+        {"slug": "que-prefieres", "name": "¿Qué prefieres?", "folder": "preguntas", "short": "Dos opciones y hay que elegir una."},
+        {"slug": "verdad-o-prueba", "name": "Verdad o Prueba", "folder": "preguntas", "short": "Responde con la verdad o haz una prueba de casa."},
+        {"slug": "cuentame", "name": "Cuéntame", "folder": "preguntas", "short": "Preguntas para que hablen abuelos, padres y niños."},
+        {"slug": "mimica", "name": "Mímica", "folder": "adivinar", "short": "Representa la palabra sin hablar."},
+        {"slug": "palabra-prohibida", "name": "Palabra Prohibida", "folder": "adivinar", "short": "Describe la palabra sin decir las prohibidas."},
+        {"slug": "quien-soy", "name": "¿Quién soy?", "folder": "adivinar", "short": "Con el móvil en la frente, adivina quién eres."},
+        {"slug": "verdadero-o-falso", "name": "Verdadero o Falso", "folder": "adivinar", "short": "Curiosidades: ¿es verdad o no?"},
+        {"slug": "dibuja-y-adivina", "name": "Dibuja y adivina", "folder": "adivinar", "short": "Uno dibuja y el resto adivina antes de que acabe el tiempo."},
+        {"slug": "la-botella", "name": "La Botella", "folder": "retos", "short": "La botella decide a quién le toca."},
+        {"slug": "ruleta", "name": "Ruleta", "folder": "retos", "short": "Gira la ruleta y cumple lo que salga."},
+        {"slug": "bomba", "name": "Bomba", "folder": "retos", "short": "Di algo del tema y pasa el móvil antes de que explote."},
+        {"slug": "stop", "name": "Stop", "folder": "retos", "short": "Una letra y varias categorías: rellénalas antes que nadie."},
+        {"slug": "el-impostor", "name": "El Impostor", "folder": "equipos", "short": "Todos saben la palabra menos uno."},
+        {"slug": "mayor-o-menor", "name": "Mayor o Menor", "folder": "equipos", "short": "¿La siguiente carta será mayor o menor?"},
+        {"slug": "cadena-de-palabras", "name": "Cadena de palabras", "folder": "equipos", "short": "Cada palabra empieza por la última sílaba de la anterior."}
+      ]
+    },
+    {
+      "id": "allthepuzzlegames", "name": "AllThePuzzleGames", "word": "Puzzle", "accent": "#00897B",
+      "tagline": "Puzles de lógica para pensar un rato: rápidos de empezar, con puzle del día y ranking.",
+      "perks": ["Puzle del día", "Ranking mundial opcional", "Varias dificultades", "En 6 idiomas"],
+      "categories": [
+        {"id": "numeros", "label": "Números", "accent": "#1565C0"},
+        {"id": "logica", "label": "Lógica", "accent": "#6A1B9A"},
+        {"id": "piezas", "label": "Piezas", "accent": "#E65100"}
+      ],
+      "games": [
+        {"slug": "rascacielos", "name": "Rascacielos", "folder": "numeros", "short": "Coloca edificios según cuántos se ven desde cada lado."},
+        {"slug": "mayor-que", "name": "Mayor que", "folder": "numeros", "short": "Rellena la cuadrícula respetando los signos."},
+        {"slug": "binario", "name": "Binario", "folder": "numeros", "short": "Ceros y unos, sin tres iguales seguidos."},
+        {"slug": "lazo", "name": "Lazo", "folder": "logica", "short": "Traza un único lazo que cumpla los números."},
+        {"slug": "islas", "name": "Islas", "folder": "logica", "short": "Separa islas y mar según los números."},
+        {"slug": "tiendas-y-arboles", "name": "Tiendas y árboles", "folder": "logica", "short": "Una tienda junto a cada árbol."},
+        {"slug": "bombillas", "name": "Bombillas", "folder": "logica", "short": "Ilumina todo el tablero sin que se vean dos bombillas."},
+        {"slug": "estrellas", "name": "Estrellas", "folder": "logica", "short": "Una estrella por fila, columna y zona."},
+        {"slug": "tuberias", "name": "Tuberías", "folder": "piezas", "short": "Gira las piezas hasta conectar todo."},
+        {"slug": "desliza", "name": "Desliza", "folder": "piezas", "short": "Ordena las fichas deslizándolas."},
+        {"slug": "cajas", "name": "Cajas", "folder": "piezas", "short": "Empuja cada caja a su sitio."},
+        {"slug": "tangram", "name": "Tangram", "folder": "piezas", "short": "Forma la figura con las siete piezas."},
+        {"slug": "apaga-las-luces", "name": "Apaga las luces", "folder": "piezas", "short": "Apaga todas las luces del tablero."},
+        {"slug": "torres-de-hanoi", "name": "Torres de Hanói", "folder": "piezas", "short": "Mueve la torre disco a disco."}
+      ]
+    },
+    {
+      "id": "allthekidsgames", "name": "AllTheKidsGames", "word": "Kids", "accent": "#F9A825",
+      "tagline": "Juegos para niños de 3 a 8 años: grandes, sencillos, sin anuncios y sin leer.",
+      "perks": ["Sin anuncios", "Sin cuenta ni datos", "Control parental", "En 6 idiomas"],
+      "categories": [
+        {"id": "crear", "label": "Crear", "accent": "#D81B60"},
+        {"id": "pensar", "label": "Pensar", "accent": "#5E35B1"},
+        {"id": "aprender", "label": "Aprender", "accent": "#00897B"},
+        {"id": "moverse", "label": "Moverse", "accent": "#F4511E"}
+      ],
+      "games": [
+        {"slug": "colorear", "name": "Colorear", "folder": "crear", "short": "Pinta dibujos con el dedo."},
+        {"slug": "pinta-por-numeros", "name": "Pinta por números", "folder": "crear", "short": "Cada número, un color."},
+        {"slug": "piano", "name": "Piano y xilófono", "folder": "crear", "short": "Toca notas y canciones."},
+        {"slug": "memoria-de-animales", "name": "Memoria de animales", "folder": "pensar", "short": "Encuentra las parejas."},
+        {"slug": "puzle-de-piezas", "name": "Puzle de piezas", "folder": "pensar", "short": "Arrastra las piezas a su sitio."},
+        {"slug": "formas-y-colores", "name": "Formas y colores", "folder": "pensar", "short": "Encaja cada forma en su hueco."},
+        {"slug": "ordena-por-tamano", "name": "Ordena por tamaño", "folder": "pensar", "short": "Del más pequeño al más grande."},
+        {"slug": "que-falta", "name": "¿Qué falta?", "folder": "pensar", "short": "Descubre qué ha desaparecido."},
+        {"slug": "cuenta-conmigo", "name": "Cuenta conmigo", "folder": "aprender", "short": "Contar del 1 al 20."},
+        {"slug": "traza-letras", "name": "Traza letras y números", "folder": "aprender", "short": "Sigue el trazo con el dedo."},
+        {"slug": "sonidos-de-animales", "name": "Sonidos de animales", "folder": "aprender", "short": "¿Qué animal hace este sonido?"},
+        {"slug": "laberintos", "name": "Laberintos", "folder": "moverse", "short": "Lleva al personaje hasta la salida."},
+        {"slug": "simon", "name": "Simón", "folder": "moverse", "short": "Repite la secuencia de colores."},
+        {"slug": "une-los-puntos", "name": "Une los puntos", "folder": "moverse", "short": "Une los puntos y descubre el dibujo."}
+      ]
+    },
+    {
+      "id": "allthequizgames", "name": "AllTheQuizGames", "word": "Quiz", "accent": "#3949AB",
+      "tagline": "Preguntas y concursos para jugar solo o en duelo, con pregunta del día y ranking.",
+      "perks": ["Pregunta del día", "Duelo en el mismo móvil", "Ranking mundial opcional", "En 6 idiomas"],
+      "categories": [
+        {"id": "clasicos", "label": "Clásicos", "accent": "#283593"},
+        {"id": "rapidos", "label": "Rápidos", "accent": "#C62828"},
+        {"id": "retos", "label": "Retos", "accent": "#2E7D32"}
+      ],
+      "games": [
+        {"slug": "clasico", "name": "Clásico", "folder": "clasicos", "short": "Diez preguntas de una categoría."},
+        {"slug": "quien-soy", "name": "¿Quién soy?", "folder": "clasicos", "short": "Adivina con las pistas que se van destapando."},
+        {"slug": "ordena-en-el-tiempo", "name": "Ordena en el tiempo", "folder": "clasicos", "short": "Pon los hechos en orden."},
+        {"slug": "contrarreloj", "name": "Contrarreloj", "folder": "rapidos", "short": "Todas las que puedas en 60 segundos."},
+        {"slug": "verdadero-o-falso", "name": "Verdadero o falso", "folder": "rapidos", "short": "Responde rápido: ¿sí o no?"},
+        {"slug": "mas-o-menos", "name": "Más o menos", "folder": "rapidos", "short": "¿Qué cifra es mayor?"},
+        {"slug": "supervivencia", "name": "Supervivencia", "folder": "retos", "short": "Sigue hasta fallar tres."},
+        {"slug": "duelo", "name": "Duelo", "folder": "retos", "short": "Dos jugadores en el mismo móvil."},
+        {"slug": "pregunta-del-dia", "name": "Pregunta del día", "folder": "retos", "short": "La misma pregunta para todos, cada día."}
+      ]
+    }
+  ]
+}
