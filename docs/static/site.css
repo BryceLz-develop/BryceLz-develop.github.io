@@ -257,6 +257,11 @@ h1, h2, h3 { text-wrap: balance; }
 .foot-links a:hover { text-decoration-color: var(--gold); }
 .foot-links a:focus-visible { outline-color: var(--gold); }
 .foot-copy { margin: 0; }
+.foot-social { display: flex; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.foot-social a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; color: var(--band-ink); background: rgba(255, 248, 238, 0.12); transition: background 0.15s ease, transform 0.15s ease; }
+.foot-social a:hover { background: rgba(255, 248, 238, 0.24); transform: translateY(-2px); }
+.foot-social a:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { .foot-social a { transition: none; } }
 @media (min-width: 720px) { .foot-copy { margin-left: auto; } }
 
 /* ------------------------------------------------------------------- */

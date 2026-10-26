@@ -82,7 +82,9 @@
     "playIn": "Juégalo en",
     "moreGames": "Más juegos · {cat}",
     "crumbs": "Dónde estás",
-    "inDev": "En desarrollo"
+    "inDev": "En desarrollo",
+    "socialAria": "Redes sociales",
+    "socialOn": "BryceLz en {red}"
   },
   "en": {
     "langName": "English",
@@ -167,7 +169,9 @@
     "playIn": "Play it in",
     "moreGames": "More games · {cat}",
     "crumbs": "You are here",
-    "inDev": "In development"
+    "inDev": "In development",
+    "socialAria": "Social media",
+    "socialOn": "BryceLz on {red}"
   },
   "pt": {
     "langName": "Português",
@@ -252,7 +256,9 @@
     "playIn": "Jogue em",
     "moreGames": "Mais jogos · {cat}",
     "crumbs": "Onde você está",
-    "inDev": "Em desenvolvimento"
+    "inDev": "Em desenvolvimento",
+    "socialAria": "Redes sociais",
+    "socialOn": "BryceLz no {red}"
   },
   "it": {
     "langName": "Italiano",
@@ -337,7 +343,9 @@
     "playIn": "Giocalo su",
     "moreGames": "Altri giochi · {cat}",
     "crumbs": "Dove sei",
-    "inDev": "In sviluppo"
+    "inDev": "In sviluppo",
+    "socialAria": "Social",
+    "socialOn": "BryceLz su {red}"
   },
   "fr": {
     "langName": "Français",
@@ -422,7 +430,9 @@
     "playIn": "Joue dans",
     "moreGames": "Plus de jeux · {cat}",
     "crumbs": "Où tu es",
-    "inDev": "En développement"
+    "inDev": "En développement",
+    "socialAria": "Réseaux sociaux",
+    "socialOn": "BryceLz sur {red}"
   },
   "de": {
     "langName": "Deutsch",
@@ -507,6 +517,8 @@
     "playIn": "Spiel es in",
     "moreGames": "Mehr Spiele · {cat}",
     "crumbs": "Wo du bist",
-    "inDev": "In Entwicklung"
+    "inDev": "In Entwicklung",
+    "socialAria": "Soziale Netzwerke",
+    "socialOn": "BryceLz auf {red}"
   }
 }

@@ -8,5 +8,22 @@
   "brand": "BryceLz",
   "year": 2026,
   "tagline": "Apps sencillas para toda la casa.",
-  "headline": "Apps sencillas para toda la casa"
+  "headline": "Apps sencillas para toda la casa",
+  "social": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@BryceLz"
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "url": "https://www.instagram.com/bryce.lz/"
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "url": "https://www.tiktok.com/@brycelzgames"
+    }
+  ]
 }

@@ -265,6 +265,29 @@ def _nav_link(c: Ctx, path: str, label: str, section: str | None) -> str:
     return f'<a class="banner-tab" href="{c.to(path)}"{current}>{label}</a>'
 
 
+SOCIAL_ICONS = {
+    # Iconos sencillos dibujados aquí (sin logotipos copiados), en el color del texto del pie.
+    'youtube': '<rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="none" stroke="currentColor" stroke-width="2"/>'
+               '<path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/>',
+    'instagram': '<rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/>'
+                 '<circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>'
+                 '<circle cx="17.3" cy="6.7" r="1.3" fill="currentColor"/>',
+    'tiktok': '<path d="M14 3v11.2a3.6 3.6 0 1 1-3.6-3.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>'
+              '<path d="M14 3c.6 2.6 2.5 4.3 5 4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>',
+}
+
+
+def social_links(lang: str) -> str:
+    """Los perfiles del estudio en redes (content/site.json › social)."""
+    items = ''.join(
+        f'<li><a href="{esc(s["url"])}" rel="me noopener" target="_blank" '
+        f'aria-label="{esc(T(lang, "socialOn", red=s["name"]))}" title="{esc(T(lang, "socialOn", red=s["name"]))}">'
+        f'<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">{SOCIAL_ICONS[s["id"]]}</svg></a></li>'
+        for s in SITE.get('social', [])
+    )
+    return f'<ul class="foot-social" aria-label="{esc(T(lang, "socialAria"))}">{items}</ul>' if items else ''
+
+
 def site_footer(c: Ctx, lang: str) -> str:
     """El pie cierra la página como el banner la abre: banda honda, esquinas de arriba redondas."""
     return f'''<footer class="site-foot">
@@ -274,6 +297,7 @@ def site_footer(c: Ctx, lang: str) -> str:
       <a href="{c.to(lp(lang, 'aviso-legal/'))}">{esc(T(lang, 'legalNotice'))}</a>
       {mail_link()}
     </nav>
+    {social_links(lang)}
     <p class="foot-copy">© {YEAR} {esc(OWNER)} ({esc(T(lang, 'ownerNote'))})</p>
   </div>
 </footer>'''
