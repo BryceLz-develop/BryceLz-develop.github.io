@@ -1216,9 +1216,32 @@ def svg_logo(word: str, accent: str) -> str:
             f'<text x="200" y="240" font-size="62" fill="#FFF8EE">Games</text></g></svg>')
 
 
+# Arte ya hecho de una app en desarrollo (icono de app, favicon): en
+# content/planned-art/<id>/, para que solo salga en la copia local.
+PLANNED_ART = CONTENT / 'planned-art'
+
+
+def planned_logo(a: dict) -> tuple[str, int, int]:
+    """Su icono de app si ya lo tiene; si no, el logo de texto provisional."""
+    if (PLANNED_ART / a['id'] / 'icon.webp').exists():
+        return f"static/planned/{a['id']}/icon.webp", 512, 512
+    return f"static/planned/{a['id']}/logo.svg", 400, 270
+
+
+def planned_favicon(a: dict) -> str:
+    if (PLANNED_ART / a['id'] / 'favicon.png').exists():
+        return f"static/planned/{a['id']}/favicon.png"
+    return 'static/brand/favicon-64.png'
+
+
 def planned_static(a: dict) -> None:
     base = OUT / 'static' / 'planned' / a['id']
     (base / 'games').mkdir(parents=True, exist_ok=True)
+    art = PLANNED_ART / a['id']
+    if art.is_dir():
+        for f in art.iterdir():
+            if f.is_file():
+                shutil.copy2(f, base / f.name)
     (base / 'logo.svg').write_text(svg_logo(a['word'], a['accent']), 'utf-8')
     acc = {cat['id']: cat['accent'] for cat in a['categories']}
     for g in a['games']:
@@ -1231,10 +1254,11 @@ def in_dev(lang: str) -> str:
 
 def planned_feature(c: Ctx, lang: str, a: dict) -> str:
     here = lp(lang, f"apps/{a['id']}/")
+    logo, lw, lh = planned_logo(a)
     chips = ''.join(f'<li style="--chip:{cat["accent"]}">{esc(cat["label"])}</li>' for cat in a['categories'])
     return f'''<article class="feature card">
     <a class="feature-art" href="{c.to(here)}" tabindex="-1" aria-hidden="true">
-      <img src="{c.to(f"static/planned/{a['id']}/logo.svg")}" alt="" width="400" height="270" loading="lazy">
+      <img src="{c.to(logo)}" alt="" width="{lw}" height="{lh}" loading="lazy">
     </a>
     <div class="feature-copy">
       <h3 class="display feature-name"><a href="{c.to(here)}">{a['name']}</a></h3>
@@ -1248,6 +1272,7 @@ def planned_feature(c: Ctx, lang: str, a: dict) -> str:
 
 def build_planned(a: dict) -> None:
     planned_static(a)
+    logo, lw, lh = planned_logo(a)
     for lang in LANGS:
         here = lp(lang, f"apps/{a['id']}/")
         c = Ctx(here)
@@ -1269,7 +1294,7 @@ def build_planned(a: dict) -> None:
     </ul>
   </section>''')
         main = f'''<section class="wrap atg-hero">
-  <img class="atg-logo" src="{c.to(f"static/planned/{a['id']}/logo.svg")}" alt="" width="400" height="270">
+  <img class="atg-logo" src="{c.to(logo)}" alt="" width="{lw}" height="{lh}">
   <div class="atg-intro">
     <h1 class="visually-hidden">{a['name']}</h1>
     <p class="lead">{esc(a['tagline'])}</p>
@@ -1282,11 +1307,11 @@ def build_planned(a: dict) -> None:
   {''.join(cats)}
 </section>'''
         page(here, title=f"{a['name']} · {BRAND}", description=a['tagline'], main=main, theme='studio',
-             section=here, lang=lang, links=same_page(f"apps/{a['id']}/"))
+             section=here, lang=lang, links=same_page(f"apps/{a['id']}/"), favicon=planned_favicon(a))
     by_slug = {g['slug']: g for g in a['games']}
     build_game_pages(
-        app_id=a['id'], app_name=a['name'], theme='studio', favicon='static/brand/favicon-64.png',
-        logo=f"static/planned/{a['id']}/logo.svg", logo_size=(400, 270), lead=lambda l: a['tagline'],
+        app_id=a['id'], app_name=a['name'], theme='studio', favicon=planned_favicon(a),
+        logo=logo, logo_size=(lw, lh), lead=lambda l: a['tagline'],
         store_published=False, store_url='', categories=a['categories'],
         cat_name=lambda l, f: next(x['label'] for x in a['categories'] if x['id'] == f),
         games=a['games'], text=lambda l, g: {'name': by_slug[g]['name'], 'short': by_slug[g]['short'], 'long': ''},
