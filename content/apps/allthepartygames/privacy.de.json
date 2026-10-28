@@ -1,48 +1,44 @@
 {
-  "version": "2026-10-21",
-  "updated": "Stand 21. Oktober 2026",
+  "version": "2026-10-27",
+  "updated": "Stand 27. Oktober 2026",
   "title": "Datenschutz",
-  "intro": "AllThePartyGames ist eine Sammlung von Partyspielen für Erwachsene ab 18 Jahren. Hier steht, welche Daten die App nutzt und wozu.",
+  "intro": "AllThePartyGames ist eine Spiele-App. Dieser Text sagt, welche Daten die App nutzt und wofür. Er ist so geschrieben, dass man ihn zu Hause versteht.",
   "sections": [
     [
-      "Was auf dem Handy bleibt",
-      "Die Spielernamen, die du eingibst, die gewählte Intensität pro Spiel, Favoriten, Shop-Pässe, Lautstärke und Sprache werden nur auf diesem Gerät gespeichert. Es gibt keine Konten und keinen eigenen Server, der deine Runden liest. Wenn du die App deinstallierst, wird alles gelöscht."
-    ],
-    [
-      "Nur für Erwachsene",
-      "Beim Öffnen fragen wir, ob du mindestens 18 Jahre alt bist. Wir speichern nur die Antwort auf dem Handy; wir fragen nie nach Geburtsdatum, Ausweis, Adresse oder Telefonnummer. Manche Spiele enthalten Alkohol und gewagte Inhalte (nie explizit): Spiel mit Verstand und trink verantwortungsvoll."
+      "Was das Handy speichert",
+      "Deine Rekorde, dein Fortschritt und deine Einstellungen bleiben auf diesem Gerät. Ebenso alles, was du im Shop kaufst. Profile mit Name und PIN bleiben nur auf diesem Handy, und ihre PIN schützt keine anderen Daten des Geräts. Die Namen und Farben der Personen, die du für Gruppenspiele einträgst, bleiben nur auf diesem Handy. Es gibt keine Chats, und angefangene Partien verlassen nie das Handy. Wenn du die App löschst, ist der Speicher weg."
     ],
     [
       "Werbung",
-      "Unter Android zeigt Google AdMob kurze Anzeigen: ab und zu zwischen den Runden und, wenn du willst, eine, um Scharf und Chaos für eine Weile zu öffnen. Wir fordern immer nicht personalisierte Anzeigen für ein erwachsenes Publikum an. Trotzdem kann Google zum Ausliefern, Messen und Schützen der Anzeigen die IP-Adresse (die einen ungefähren Standort erlaubt), Interaktionen mit App und Anzeigen, Diagnosedaten und Gerätekennungen erfassen. Im Europäischen Wirtschaftsraum und im Vereinigten Königreich fragen wir mit dem Formular von Google nach deiner Einwilligung; du kannst sie unter Einstellungen > Datenschutzoptionen ändern. Ist keine Anzeige verfügbar, kannst du trotzdem spielen."
+      "Google AdMob zeigt Werbung nur, wenn du es willst und auf „Werbung ansehen“ tippst. Google kann dich um Erlaubnis für personalisierte Werbung bitten; wenn du sie nicht gibst, ist sie nicht personalisiert, und du kannst das jederzeit in den Einstellungen ändern. Die Werbung kann für Erwachsene sein. Die App greift nicht auf die Werbe-ID des Geräts zu und fragt unter iOS nicht nach der Erlaubnis zum Tracking. Für Auslieferung, Messung und Schutz der Werbung kann Google die IP-Adresse (aus der der ungefähre Standort abgeleitet werden kann), Interaktionen mit App und Werbung, Diagnosedaten sowie Geräte- oder Konto-Kennungen erfassen und weitergeben. Die Daten werden bei der Übertragung verschlüsselt."
     ],
     [
       "Käufe",
-      "Werbung entfernen und Premium werden über Google Play oder den App Store bezahlt. Der Store wickelt die Zahlung ab und teilt der App Produkt und Kaufstatus mit, damit sie ihn liefern oder wiederherstellen kann. Wir sehen deine Zahlungsdaten nie und senden sie an keinen eigenen Server."
+      "Was du im Shop kaufst, wird über Google Play oder den App Store bezahlt. Der Store verarbeitet die Zahlung und teilt der App Produkt, Kennung und Kaufstatus mit, damit Zugriff gewährt, wiederhergestellt oder entzogen werden kann. Die Daten werden bei der Übertragung verschlüsselt."
     ],
     [
       "Was wir nicht tun",
-      "Wir verkaufen keine Daten, erstellen keine Werbeprofile und greifen weder auf GPS, Kamera, Mikrofon noch auf deine Kontakte zu. Es gibt keinen Chat zwischen Spielern und keine kostenpflichtigen Lootboxen."
+      "Wir verkaufen keine Daten, erstellen keine Werbeprofile und greifen weder auf GPS zu noch fragen wir nach einem genauen Standort. Es gibt keine Überraschungskisten. Es gibt keinen Chat zwischen Spielern."
     ],
     [
-      "Wer verantwortlich ist",
-      "Verantwortlich für AllThePartyGames und diese Daten ist Brais López Arias (Privatperson). Bei Fragen zum Datenschutz schreib an {email}."
+      "Wen du fragen kannst",
+      "Verantwortlich für AllThePartyGames und diese Daten ist Brais López Arias (Privatperson). Für eine Datenschutzfrage schreib an {email}. Wenn eine Werbung oder eine Abbuchung nicht zu einem Kind passt, sag uns Bescheid und wir schauen hin."
     ],
     [
-      "Andere Dienste",
-      "Die Flaggen in der Sprachauswahl werden von flagcdn.com geladen, das die IP und den Bildcode erhält. Um die Verbindung zu prüfen, sendet die App gelegentlich eine leere Anfrage an Google (connectivitycheck.gstatic.com), das die IP erhält. Stürzt die App ab, sendet sie an Sentry (Server in der EU) einen technischen Fehlerbericht: was schiefging, die App-Version sowie Modell und System des Handys, ohne IP, ohne Spielernamen und ohne andere personenbezogene Daten."
+      "Andere Seiten",
+      "Um zu prüfen, ob eine Verbindung besteht, sendet die App ab und zu eine leere Anfrage an Google (connectivitycheck.gstatic.com), das die IP-Adresse erhält. Das sind technische HTTPS-Anfragen. Google verwaltet Werbung und Käufe; wir senden diesen Diensten weder den Namen des lokalen Profils noch die PIN oder deine E-Mail-Adresse."
     ],
     [
       "Warum und wie lange",
-      "Die Werbung hält die App kostenlos, scharfe Inhalte inklusive (berechtigtes Interesse und, wo nötig, deine Einwilligung). Käufe werden verarbeitet, um das Gekaufte zu liefern (Vertrag). Was auf dem Handy gespeichert ist, bleibt, bis du die App-Daten löschst oder die App deinstallierst; Google speichert seine Daten nach eigenen Richtlinien."
+      "Nicht personalisierte Werbung wird gezeigt, damit die App kostenlos bleibt (berechtigtes Interesse); personalisierte nur mit deiner Einwilligung. Käufe werden verarbeitet, um dir zu geben, worum du bittest (Vertrag). Was auf dem Handy gespeichert ist, bleibt dort, bis du die App-Daten löschst oder die App deinstallierst. Google speichert seine Daten nach eigenen Richtlinien."
     ],
     [
       "Deine Rechte",
-      "Du kannst Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung oder Übertragbarkeit deiner Daten verlangen, indem du an {email} schreibst. Da fast alles nur auf deinem Handy liegt, genügt meist das Löschen der App-Daten oder die Deinstallation. Wenn du meinst, dass deine Rechte nicht gewahrt werden, kannst du dich bei der spanischen Datenschutzbehörde (aepd.es) beschweren."
+      "Du kannst Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung oder Übertragbarkeit deiner Daten verlangen, indem du an {email} schreibst. Fast alles liegt nur auf deinem Handy, und es reicht, die App-Daten zu löschen oder die App zu deinstallieren. Wenn du meinst, dass deine Rechte nicht beachtet werden, kannst du dich bei der spanischen Datenschutzbehörde beschweren (aepd.es)."
     ],
     [
-      "Minderjährige",
-      "AllThePartyGames ist nicht für Personen unter 18 Jahren gedacht, und wir erfassen wissentlich keine Daten von Minderjährigen. Wenn du Elternteil oder Vormund bist und glaubst, dass ein Minderjähriger die App genutzt hat, schreib an {email} und wir prüfen das."
+      "Kinder und Familien",
+      "AllThePartyGames ist nur für Menschen ab 18 Jahren und richtet sich nicht an Minderjährige. Beim Start fragt die App, ob du 18 oder älter bist, und lässt dich sonst nicht hinein. Wenn du Elternteil oder Erziehungsberechtigter bist und möchtest, dass wir etwas prüfen oder löschen, schreib an {email}."
     ]
   ]
 }

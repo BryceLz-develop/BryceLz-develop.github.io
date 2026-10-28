@@ -4,26 +4,26 @@
   "perks": [
    "Sin cuenta",
    "Para jugar en grupo",
-   "Cuatro niveles, de Suave a Caos",
+   "Niveles de Suave a Caos",
    "Añade tus propias frases",
    "En 6 idiomas"
   ],
   "faq": [
    [
     "¿Es gratis?",
-    "Sí. La app es gratis y se mantiene con anuncios cortos entre partidas. Puedes quitar los anuncios o comprar Premium si quieres, pero no hace falta para jugar."
+    "Sí. La app es gratis. Solo ves un anuncio cuando tú lo eliges, para abrir Picante y Caos un rato."
    ],
    [
     "¿Cómo abro Picante y Caos?",
     "Al elegir Picante o Caos en un juego, mira un anuncio corto y quedan abiertos en todos los juegos: 30 minutos con los dos primeros anuncios del día y 15 minutos con los siguientes. Con Premium están siempre abiertos."
    ],
    [
-    "¿Cómo quito los anuncios?",
-    "En la Tienda de la app, compra Quitar anuncios (un solo pago) o Premium, que además deja Picante y Caos siempre abiertos. El pago lo hace Google Play."
+    "¿Hay anuncios entre partidas?",
+    "No. Solo ves un anuncio si lo eliges tú, para abrir Picante y Caos. Con Premium no hace falta ninguno."
    ],
    [
     "¿Qué incluye Premium?",
-    "Un solo pago, para siempre: sin anuncios entre partidas y Picante y Caos abiertos en todos los juegos."
+    "Un solo pago, para siempre: Picante y Caos abiertos en todos los juegos, sin ver anuncios. Si solo es para una fiesta, hay un Pase de 2 horas y un Pase de noche (6 h)."
    ],
    [
     "He cambiado de móvil, ¿cómo recupero mis compras?",
@@ -46,8 +46,8 @@
     "Sí, los juegos funcionan sin conexión. Hace falta internet para ver anuncios y para comprar o restaurar compras."
    ],
    [
-    "¿Hay que beber para jugar?",
-    "No. Algunos juegos usan tragos, pero se puede jugar con agua o con prendas, y nadie está obligado a nada. Bebe con responsabilidad."
+    "¿Qué pasa si pierdo?",
+    "Te llevas un castigo que decide el grupo. Nadie está obligado a nada: si alguien pasa, se sigue jugando."
    ],
    [
     "¿Cómo cambio el idioma?",
@@ -64,8 +64,8 @@
   ],
   "ageGate": {
    "title": "¿Eres mayor de edad?",
-   "body": "AllThePartyGames tiene contenido para adultos: alcohol e insinuaciones. Solo para mayores de 18 años.",
-   "drinkResponsibly": "Bebe con responsabilidad. Nadie está obligado a beber ni a cumplir un reto."
+   "body": "AllThePartyGames tiene contenido para adultos: retos atrevidos e insinuaciones. Solo para mayores de 18 años.",
+   "drinkResponsibly": "Jugad con respeto. Nadie está obligado a cumplir un reto ni un castigo."
   },
   "games": {
    "yo-nunca": "Yo Nunca",
@@ -163,26 +163,26 @@
   "perks": [
    "No account",
    "Made for groups",
-   "Four levels, from Mild to Chaos",
+   "Levels from Mild to Chaos",
    "Add your own prompts",
    "In 6 languages"
   ],
   "faq": [
    [
     "Is it free?",
-    "Yes. The app is free and supported by short ads between games. You can remove the ads or buy Premium if you want, but you don’t need to in order to play."
+    "Yes. The app is free. You only see an ad when you choose to, to open Spicy and Chaos for a while."
    ],
    [
     "How do I open Spicy and Chaos?",
     "When you pick Spicy or Chaos in a game, watch a short ad and they stay open in every game: 30 minutes with the first two ads of the day and 15 minutes with any later ones. With Premium they are always open."
    ],
    [
-    "How do I remove the ads?",
-    "In the app’s Shop, buy Remove ads (one payment) or Premium, which also keeps Spicy and Chaos always open. Payment is handled by Google Play."
+    "Are there ads between games?",
+    "No. You only see an ad if you choose to, to open Spicy and Chaos. With Premium you don’t need any."
    ],
    [
     "What does Premium include?",
-    "One payment, forever: no ads between games and Spicy and Chaos open in every game."
+    "One payment, forever: Spicy and Chaos open in every game, with no ads to watch. Just for one party? There's a 2-hour pass and a Party night pass (6 h)."
    ],
    [
     "I changed phones. How do I get my purchases back?",
@@ -205,8 +205,8 @@
     "Yes, the games work offline. You need an internet connection to watch ads and to buy or restore purchases."
    ],
    [
-    "Do we have to drink to play?",
-    "No. Some games use sips, but you can play with water or forfeits, and nobody has to do anything. Please drink responsibly."
+    "What happens if I lose?",
+    "You take a penalty chosen by the group. Nobody has to do anything: if someone passes, the game goes on."
    ],
    [
     "How do I change the language?",
@@ -223,8 +223,8 @@
   ],
   "ageGate": {
    "title": "Are you of legal age?",
-   "body": "AllThePartyGames has adult content: drinking and innuendo. 18+ only.",
-   "drinkResponsibly": "Drink responsibly. Nobody has to drink or do a dare."
+   "body": "AllThePartyGames has adult content: daring dares and innuendo. 18+ only.",
+   "drinkResponsibly": "Play with respect. Nobody has to do a dare or a penalty."
   },
   "games": {
    "yo-nunca": "Never Have I Ever",
@@ -322,26 +322,26 @@
   "perks": [
    "Sem conta",
    "Para jogar em grupo",
-   "Quatro níveis, de Leve a Caos",
+   "Níveis de Leve a Caos",
    "Adicione suas próprias frases",
    "Em 6 idiomas"
   ],
   "faq": [
    [
     "É grátis?",
-    "Sim. O app é gratuito e mantido por anúncios curtos entre partidas. Você pode tirar os anúncios ou comprar o Premium se quiser, mas não precisa para jogar."
+    "Sim. O app é gratuito. Você só vê um anúncio quando escolhe, para abrir Picante e Caos por um tempo."
    ],
    [
     "Como abro Picante e Caos?",
     "Ao escolher Picante ou Caos em um jogo, assista a um anúncio curto e eles ficam abertos em todos os jogos: 30 minutos com os dois primeiros anúncios do dia e 15 minutos com os seguintes. Com o Premium ficam sempre abertos."
    ],
    [
-    "Como tiro os anúncios?",
-    "Na Loja do app, compre Tirar anúncios (pagamento único) ou o Premium, que também deixa Picante e Caos sempre abertos. O pagamento é feito pelo Google Play."
+    "Tem anúncios entre as partidas?",
+    "Não. Você só vê um anúncio se escolher, para abrir Picante e Caos. Com o Premium, não precisa de nenhum."
    ],
    [
     "O que o Premium inclui?",
-    "Um pagamento único, para sempre: sem anúncios entre partidas e Picante e Caos abertos em todos os jogos."
+    "Um pagamento único, para sempre: Picante e Caos abertos em todos os jogos, sem ver anúncios. Só para uma festa? Tem o Passe de 2 horas e o Passe da noite (6 h)."
    ],
    [
     "Troquei de celular. Como recupero minhas compras?",
@@ -364,8 +364,8 @@
     "Sim, os jogos funcionam sem conexão. É preciso internet para ver anúncios e para comprar ou restaurar compras."
    ],
    [
-    "Tem que beber para jogar?",
-    "Não. Alguns jogos usam goles, mas dá para jogar com água ou com prendas, e ninguém é obrigado a nada. Beba com moderação."
+    "O que acontece se eu perder?",
+    "Você leva um castigo que o grupo decide. Ninguém é obrigado a nada: se alguém passar, o jogo continua."
    ],
    [
     "Como mudo o idioma?",
@@ -382,8 +382,8 @@
   ],
   "ageGate": {
    "title": "Você é maior de idade?",
-   "body": "AllThePartyGames tem conteúdo adulto: álcool e insinuações. Só para maiores de 18 anos.",
-   "drinkResponsibly": "Beba com responsabilidade. Ninguém é obrigado a beber nem a cumprir um desafio."
+   "body": "AllThePartyGames tem conteúdo adulto: desafios ousados e insinuações. Só para maiores de 18 anos.",
+   "drinkResponsibly": "Joguem com respeito. Ninguém é obrigado a cumprir um desafio nem um castigo."
   },
   "games": {
    "yo-nunca": "Eu Nunca",
@@ -481,26 +481,26 @@
   "perks": [
    "Nessun account",
    "Pensato per il gruppo",
-   "Quattro livelli, da Soft a Caos",
+   "Livelli da Soft a Caos",
    "Aggiungi le tue frasi",
    "In 6 lingue"
   ],
   "faq": [
    [
     "È gratis?",
-    "Sì. L’app è gratuita ed è sostenuta da brevi annunci tra una partita e l’altra. Puoi togliere gli annunci o comprare Premium se vuoi, ma non serve per giocare."
+    "Sì. L’app è gratuita. Vedi un annuncio solo quando lo scegli tu, per aprire Piccante e Caos per un po’."
    ],
    [
     "Come apro Piccante e Caos?",
     "Quando scegli Piccante o Caos in un gioco, guarda un breve annuncio e restano aperti in tutti i giochi: 30 minuti con i primi due annunci del giorno e 15 minuti con i successivi. Con Premium sono sempre aperti."
    ],
    [
-    "Come tolgo gli annunci?",
-    "Nel Negozio dell’app, compra Togli gli annunci (un solo pagamento) oppure Premium, che lascia anche Piccante e Caos sempre aperti. Il pagamento lo gestisce Google Play."
+    "Ci sono annunci tra le partite?",
+    "No. Vedi un annuncio solo se lo scegli tu, per aprire Piccante e Caos. Con Premium non ne serve nessuno."
    ],
    [
     "Cosa include Premium?",
-    "Un solo pagamento, per sempre: niente annunci tra le partite e Piccante e Caos aperti in tutti i giochi."
+    "Un unico pagamento, per sempre: Piccante e Caos aperti in tutti i giochi, senza guardare annunci. Solo per una festa? C’è il Pass di 2 ore e il Pass della serata (6 h)."
    ],
    [
     "Ho cambiato telefono: come recupero gli acquisti?",
@@ -523,8 +523,8 @@
     "Sì, i giochi funzionano offline. Serve internet per vedere gli annunci e per acquistare o ripristinare gli acquisti."
    ],
    [
-    "Bisogna bere per giocare?",
-    "No. Alcuni giochi usano i sorsi, ma si può giocare con l’acqua o con le penitenze, e nessuno è obbligato a niente. Bevi responsabilmente."
+    "Cosa succede se perdo?",
+    "Ti prendi una penitenza decisa dal gruppo. Nessuno è obbligato a niente: se qualcuno passa, si continua a giocare."
    ],
    [
     "Come cambio la lingua?",
@@ -541,8 +541,8 @@
   ],
   "ageGate": {
    "title": "Sei maggiorenne?",
-   "body": "AllThePartyGames ha contenuti per adulti: alcol e allusioni. Solo per maggiori di 18 anni.",
-   "drinkResponsibly": "Bevi responsabilmente. Nessuno è obbligato a bere o a fare un obbligo."
+   "body": "AllThePartyGames ha contenuti per adulti: sfide audaci e allusioni. Solo per maggiori di 18 anni.",
+   "drinkResponsibly": "Giocate con rispetto. Nessuno è obbligato a fare una sfida o una penitenza."
   },
   "games": {
    "yo-nunca": "Non Ho Mai",
@@ -636,61 +636,61 @@
   }
  },
  "fr": {
-  "tagline": "Des jeux de soirée pour les 18 ans et plus : un téléphone au milieu de la table et c’est parti.",
+  "tagline": "Des jeux de soirée pour les 18 ans et plus : un téléphone au milieu de la table et c’est parti.",
   "perks": [
    "Sans compte",
    "Fait pour jouer en groupe",
-   "Quatre niveaux, de Doux à Chaos",
+   "Des niveaux de Doux à Chaos",
    "Ajoute tes propres phrases",
    "En 6 langues"
   ],
   "faq": [
    [
-    "C’est gratuit ?",
-    "Oui. L’appli est gratuite et financée par de courtes publicités entre les parties. Tu peux enlever les pubs ou acheter Premium si tu veux, mais ce n’est pas nécessaire pour jouer."
+    "C’est gratuit ?",
+    "Oui. L’appli est gratuite. Tu ne vois une pub que si tu le choisis, pour ouvrir Épicé et Chaos un moment."
    ],
    [
-    "Comment ouvrir Épicé et Chaos ?",
-    "Quand tu choisis Épicé ou Chaos dans un jeu, regarde une courte publicité et ils restent ouverts dans tous les jeux : 30 minutes avec les deux premières pubs de la journée et 15 minutes avec les suivantes. Avec Premium, ils sont toujours ouverts."
+    "Comment ouvrir Épicé et Chaos ?",
+    "Quand tu choisis Épicé ou Chaos dans un jeu, regarde une courte publicité et ils restent ouverts dans tous les jeux : 30 minutes avec les deux premières pubs de la journée et 15 minutes avec les suivantes. Avec Premium, ils sont toujours ouverts."
    ],
    [
-    "Comment enlever les pubs ?",
-    "Dans la Boutique de l’appli, achète Enlever les pubs (un seul paiement) ou Premium, qui laisse aussi Épicé et Chaos toujours ouverts. Le paiement est géré par Google Play."
+    "Y a-t-il des pubs entre les parties ?",
+    "Non. Tu ne vois une pub que si tu le choisis, pour ouvrir Épicé et Chaos. Avec Premium, aucune n’est nécessaire."
    ],
    [
-    "Que comprend Premium ?",
-    "Un seul paiement, pour toujours : pas de pub entre les parties et Épicé et Chaos ouverts dans tous les jeux."
+    "Que comprend Premium ?",
+    "Un seul paiement, pour toujours : Épicé et Chaos ouverts dans tous les jeux, sans regarder de pub. Juste pour une soirée ? Il y a le Pass de 2 heures et le Pass soirée (6 h)."
    ],
    [
-    "J’ai changé de téléphone, comment récupérer mes achats ?",
+    "J’ai changé de téléphone, comment récupérer mes achats ?",
     "Installe l’appli avec le même compte Google Play, ouvre la Boutique et touche Restaurer les achats."
    ],
    [
-    "Puis-je ajouter mes propres phrases ou retirer celles qu’on n’aime pas ?",
+    "Puis-je ajouter mes propres phrases ou retirer celles qu’on n’aime pas ?",
     "Oui. Sur la fiche de chaque jeu, touche Phrases pour ajouter les tiennes ou récupérer celles qui sont masquées. Pendant la partie, touche Ne plus afficher pour masquer une carte."
    ],
    [
-    "Faut-il créer un compte ?",
+    "Faut-il créer un compte ?",
     "Non. Pas de compte ni d’inscription. Les prénoms des joueurs, tes phrases et tes réglages restent uniquement sur ton téléphone."
    ],
    [
-    "Comment effacer mes données ?",
+    "Comment effacer mes données ?",
     "Comme tout est stocké sur le téléphone, il suffit d’effacer les données de l’appli dans les paramètres d’Android ou de la désinstaller. Les achats peuvent être restaurés ensuite avec le même compte."
    ],
    [
-    "Ça marche sans internet ?",
+    "Ça marche sans internet ?",
     "Oui, les jeux fonctionnent hors ligne. Il faut internet pour regarder les publicités et pour acheter ou restaurer des achats."
    ],
    [
-    "Faut-il boire pour jouer ?",
-    "Non. Certains jeux utilisent des gorgées, mais on peut jouer avec de l’eau ou des gages, et personne n’est obligé de rien. L’abus d’alcool est dangereux pour la santé, à consommer avec modération."
+    "Que se passe-t-il si je perds ?",
+    "Tu prends un gage choisi par le groupe. Personne n’est obligé de rien : si quelqu’un passe, on continue à jouer."
    ],
    [
-    "Comment changer la langue ?",
+    "Comment changer la langue ?",
     "Dans Paramètres, touche la langue et choisis entre français, espagnol, anglais, portugais, italien et allemand."
    ],
    [
-    "Comment modifier mon consentement aux pubs ?",
+    "Comment modifier mon consentement aux pubs ?",
     "Dans l’Espace économique européen et au Royaume-Uni, va dans Paramètres > Options de confidentialité."
    ],
    [
@@ -700,8 +700,8 @@
   ],
   "ageGate": {
    "title": "Es-tu majeur ?",
-   "body": "AllThePartyGames contient du contenu pour adultes : alcool et sous-entendus. Réservé aux 18 ans et plus.",
-   "drinkResponsibly": "L’abus d’alcool est dangereux. Personne n’est obligé de boire ni de relever un défi."
+   "body": "AllThePartyGames contient du contenu pour adultes : défis osés et sous-entendus. Réservé aux 18 ans et plus.",
+   "drinkResponsibly": "Jouez dans le respect. Personne n’est obligé de relever un défi ni de faire un gage."
   },
   "games": {
    "yo-nunca": "Je n'ai jamais",
@@ -799,26 +799,26 @@
   "perks": [
    "Kein Konto",
    "Für Gruppen gemacht",
-   "Vier Stufen, von Sanft bis Chaos",
+   "Stufen von Sanft bis Chaos",
    "Eigene Sätze hinzufügen",
    "In 6 Sprachen"
   ],
   "faq": [
    [
     "Ist die App kostenlos?",
-    "Ja. Die App ist kostenlos und wird durch kurze Werbung zwischen den Spielen finanziert. Du kannst die Werbung entfernen oder Premium kaufen, musst es aber nicht, um zu spielen."
+    "Ja. Die App ist kostenlos. Werbung siehst du nur, wenn du es willst, um Scharf und Chaos eine Weile zu öffnen."
    ],
    [
     "Wie schalte ich Scharf und Chaos frei?",
     "Wenn du in einem Spiel Scharf oder Chaos wählst, schau eine kurze Werbung an – dann bleiben sie in allen Spielen offen: 30 Minuten mit den ersten zwei Werbungen des Tages und 15 Minuten mit jeder weiteren. Mit Premium sind sie immer offen."
    ],
    [
-    "Wie entferne ich die Werbung?",
-    "Kauf im Shop der App „Werbung aus“ (eine Einmalzahlung) oder Premium, das außerdem Scharf und Chaos dauerhaft freischaltet. Die Zahlung läuft über Google Play."
+    "Gibt es Werbung zwischen den Spielen?",
+    "Nein. Werbung siehst du nur, wenn du es willst, um Scharf und Chaos zu öffnen. Mit Premium brauchst du keine."
    ],
    [
     "Was enthält Premium?",
-    "Eine Einmalzahlung, für immer: keine Werbung zwischen den Spielen und Scharf und Chaos in allen Spielen offen."
+    "Ein Einmalkauf, für immer: Scharf und Chaos in allen Spielen offen, ohne Werbung anzusehen. Nur für eine Party? Es gibt den 2-Stunden-Pass und den Partynacht-Pass (6 Std.)."
    ],
    [
     "Ich habe ein neues Handy. Wie bekomme ich meine Käufe zurück?",
@@ -841,8 +841,8 @@
     "Ja, die Spiele funktionieren ohne Internet. Für Werbung sowie zum Kaufen oder Wiederherstellen von Käufen brauchst du eine Verbindung."
    ],
    [
-    "Muss man zum Spielen trinken?",
-    "Nein. Manche Spiele nutzen Schlucke, aber ihr könnt auch mit Wasser oder Pfändern spielen, und niemand muss etwas tun. Bitte trinkt verantwortungsvoll."
+    "Was passiert, wenn ich verliere?",
+    "Du bekommst eine Strafe, die die Gruppe aussucht. Niemand muss etwas tun: Wer aussetzt, setzt aus, und es geht weiter."
    ],
    [
     "Wie ändere ich die Sprache?",
@@ -859,8 +859,8 @@
   ],
   "ageGate": {
    "title": "Bist du volljährig?",
-   "body": "AllThePartyGames enthält Inhalte für Erwachsene: Alkohol und Anspielungen. Nur ab 18.",
-   "drinkResponsibly": "Trink verantwortungsvoll. Niemand muss trinken oder eine Aufgabe machen."
+   "body": "AllThePartyGames enthält Inhalte für Erwachsene: gewagte Aufgaben und Anspielungen. Erst ab 18.",
+   "drinkResponsibly": "Spielt mit Respekt. Niemand muss eine Aufgabe oder Strafe erfüllen."
   },
   "games": {
    "yo-nunca": "Ich hab noch nie",

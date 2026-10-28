@@ -1,0 +1,634 @@
+{
+ "exportedAt": "2026-10-27T17:49:13.501Z",
+ "app": {
+  "name": "AllThePuzzles",
+  "id": "allthepuzzles",
+  "webUrl": "https://brycelz-develop.github.io/apps/allthepuzzles",
+  "icon": "app-icon.png"
+ },
+ "folders": {
+  "es": {
+   "all": "Todos",
+   "cartas": "Cartas",
+   "mesa": "De mesa",
+   "numeros": "Números",
+   "accion": "Piezas",
+   "puzzle": "Lógica",
+   "letras": "Letras",
+   "favoritos": "Favoritos",
+   "multijugador": "Multijugador"
+  },
+  "en": {
+   "all": "All",
+   "cartas": "Cards",
+   "mesa": "Tabletop",
+   "numeros": "Numbers",
+   "accion": "Pieces",
+   "puzzle": "Logic",
+   "letras": "Words",
+   "favoritos": "Favourites",
+   "multijugador": "Multiplayer"
+  },
+  "pt": {
+   "all": "Todos",
+   "cartas": "Cartas",
+   "mesa": "De mesa",
+   "numeros": "Números",
+   "accion": "Peças",
+   "puzzle": "Lógica",
+   "letras": "Letras",
+   "favoritos": "Favoritos",
+   "multijugador": "Multijogador"
+  },
+  "it": {
+   "all": "Tutti",
+   "cartas": "Carte",
+   "mesa": "Da tavolo",
+   "numeros": "Numeri",
+   "accion": "Pezzi",
+   "puzzle": "Logica",
+   "letras": "Lettere",
+   "favoritos": "Preferiti",
+   "multijugador": "Multigiocatore"
+  },
+  "fr": {
+   "all": "Tous",
+   "cartas": "Cartes",
+   "mesa": "Plateau",
+   "numeros": "Nombres",
+   "accion": "Pièces",
+   "puzzle": "Logique",
+   "letras": "Lettres",
+   "favoritos": "Favoris",
+   "multijugador": "Multijoueur"
+  },
+  "de": {
+   "all": "Alle",
+   "cartas": "Karten",
+   "mesa": "Brett",
+   "numeros": "Zahlen",
+   "accion": "Teile",
+   "puzzle": "Logik",
+   "letras": "Buchstaben",
+   "favoritos": "Favoriten",
+   "multijugador": "Mehrspieler"
+  }
+ },
+ "games": [
+  {
+   "slug": "rascacielos",
+   "folder": "puzzle",
+   "icon": "iconos/rascacielos.png",
+   "text": {
+    "es": {
+     "name": "Rascacielos",
+     "short": "Coloca edificios y cuenta cuántos se ven desde cada lado.",
+     "long": "Cada casilla es un edificio de 1 a N plantas, sin repetir altura en su fila ni en su columna. Los números del borde dicen cuántos edificios se ven desde ahí: los altos tapan a los bajos."
+    },
+    "en": {
+     "name": "Skyscrapers",
+     "short": "Place buildings and count how many can be seen from each side.",
+     "long": "Each cell is a building of 1 to N floors, with no height repeated in its row or column. The numbers on the edge say how many buildings can be seen from there: tall ones hide short ones."
+    },
+    "pt": {
+     "name": "Arranha-céus",
+     "short": "Coloque prédios e conte quantos se veem de cada lado.",
+     "long": "Cada casa é um prédio de 1 a N andares, sem repetir altura na sua linha nem na sua coluna. Os números da borda dizem quantos prédios se veem dali: os altos escondem os baixos."
+    },
+    "it": {
+     "name": "Grattacieli",
+     "short": "Metti gli edifici e conta quanti se ne vedono da ogni lato.",
+     "long": "Ogni casella è un edificio da 1 a N piani, senza ripetere l’altezza nella sua riga né nella sua colonna. I numeri sul bordo dicono quanti edifici si vedono da lì: quelli alti nascondono quelli bassi."
+    },
+    "fr": {
+     "name": "Gratte-ciel",
+     "short": "Place des immeubles et compte combien on en voit de chaque côté.",
+     "long": "Chaque case est un immeuble de 1 à N étages, sans répéter de hauteur dans sa ligne ni dans sa colonne. Les nombres du bord disent combien d’immeubles on voit de là : les hauts cachent les bas."
+    },
+    "de": {
+     "name": "Wolkenkratzer",
+     "short": "Setze Gebäude und zähle, wie viele man von jeder Seite sieht.",
+     "long": "Jedes Feld ist ein Gebäude mit 1 bis N Stockwerken, ohne Höhe doppelt in Zeile oder Spalte. Die Zahlen am Rand sagen, wie viele Gebäude man von dort sieht: Hohe verdecken niedrige."
+    }
+   }
+  },
+  {
+   "slug": "tuberias",
+   "folder": "accion",
+   "icon": "iconos/tuberias.png",
+   "text": {
+    "es": {
+     "name": "Tuberías",
+     "short": "Gira las piezas hasta que el agua llegue a todas.",
+     "long": "Cada pieza es un trozo de tubería. Gírala con un toque hasta que todas encajen: el agua sale de la fuente y tiene que llegar a todas las piezas, sin ninguna salida suelta."
+    },
+    "en": {
+     "name": "Pipes",
+     "short": "Turn the pieces until the water reaches them all.",
+     "long": "Each piece is a bit of pipe. Turn it with a tap until they all fit: the water flows from the source and must reach every piece, with no loose ends."
+    },
+    "pt": {
+     "name": "Canos",
+     "short": "Gire as peças até a água chegar a todas.",
+     "long": "Cada peça é um pedaço de cano. Gire com um toque até todas encaixarem: a água sai da fonte e tem que chegar a todas as peças, sem nenhuma saída solta."
+    },
+    "it": {
+     "name": "Tubi",
+     "short": "Gira i pezzi finché l’acqua non arriva a tutti.",
+     "long": "Ogni pezzo è un tratto di tubo. Giralo con un tocco finché tutti si incastrano: l’acqua esce dalla sorgente e deve arrivare a tutti i pezzi, senza uscite libere."
+    },
+    "fr": {
+     "name": "Tuyaux",
+     "short": "Tourne les pièces jusqu’à ce que l’eau arrive partout.",
+     "long": "Chaque pièce est un bout de tuyau. Tourne-la d’un toucher jusqu’à ce que tout s’emboîte : l’eau sort de la source et doit atteindre toutes les pièces, sans aucune sortie libre."
+    },
+    "de": {
+     "name": "Rohre",
+     "short": "Drehe die Teile, bis das Wasser alle erreicht.",
+     "long": "Jedes Teil ist ein Stück Rohr. Drehe es mit einem Tippen, bis alle passen: Das Wasser kommt aus der Quelle und muss alle Teile erreichen, ohne offene Enden."
+    }
+   }
+  },
+  {
+   "slug": "binario",
+   "folder": "puzzle",
+   "icon": "iconos/binario.png",
+   "text": {
+    "es": {
+     "name": "Binario",
+     "short": "Rellena con 0 y 1: nunca tres iguales seguidos.",
+     "long": "Completa la cuadrícula con ceros y unos. En cada fila y columna hay tantos 0 como 1, nunca tres iguales seguidos y no se repite ninguna fila ni columna."
+    },
+    "en": {
+     "name": "Binary",
+     "short": "Fill with 0 and 1: never three alike in a row.",
+     "long": "Complete the grid with zeros and ones. Every row and column has as many 0s as 1s, never three alike in a row, and no row or column repeats."
+    },
+    "pt": {
+     "name": "Binário",
+     "short": "Preencha com 0 e 1: nunca três iguais seguidos.",
+     "long": "Complete a grade com zeros e uns. Cada linha e coluna tem tantos 0 quanto 1, nunca três iguais seguidos e nenhuma linha ou coluna se repete."
+    },
+    "it": {
+     "name": "Binario",
+     "short": "Riempi con 0 e 1: mai tre uguali di fila.",
+     "long": "Completa la griglia con zeri e uni. Ogni riga e colonna ha tanti 0 quanti 1, mai tre uguali di fila e nessuna riga o colonna si ripete."
+    },
+    "fr": {
+     "name": "Binaire",
+     "short": "Remplis avec des 0 et des 1 : jamais trois pareils à la suite.",
+     "long": "Complète la grille avec des zéros et des uns. Chaque ligne et colonne a autant de 0 que de 1, jamais trois pareils à la suite, et aucune ligne ni colonne ne se répète."
+    },
+    "de": {
+     "name": "Binär",
+     "short": "Fülle mit 0 und 1: nie drei gleiche hintereinander.",
+     "long": "Fülle das Gitter mit Nullen und Einsen. Jede Zeile und Spalte hat gleich viele 0 und 1, nie drei gleiche hintereinander, und keine Zeile oder Spalte wiederholt sich."
+    }
+   }
+  },
+  {
+   "slug": "mayor-que",
+   "folder": "puzzle",
+   "icon": "iconos/mayor-que.png",
+   "text": {
+    "es": {
+     "name": "Mayor que",
+     "short": "Rellena con números y respeta los signos entre casillas.",
+     "long": "Cada casilla lleva un número de 1 a N, sin repetirlo en su fila ni en su columna. Los signos entre dos casillas dicen cuál de las dos es mayor."
+    },
+    "en": {
+     "name": "Greater Than",
+     "short": "Fill in numbers and respect the signs between cells.",
+     "long": "Each cell holds a number from 1 to N, never repeated in its row or column. The signs between two cells tell you which one is bigger."
+    },
+    "pt": {
+     "name": "Maior que",
+     "short": "Preencha com números e respeite os sinais entre as casas.",
+     "long": "Cada casa leva um número de 1 a N, sem repetir na linha nem na coluna. Os sinais entre duas casas dizem qual delas é maior."
+    },
+    "it": {
+     "name": "Maggiore di",
+     "short": "Riempi con i numeri e rispetta i segni tra le caselle.",
+     "long": "Ogni casella ha un numero da 1 a N, senza ripeterlo nella sua riga né nella sua colonna. I segni tra due caselle dicono quale delle due è maggiore."
+    },
+    "fr": {
+     "name": "Plus grand que",
+     "short": "Remplis avec des chiffres et respecte les signes entre les cases.",
+     "long": "Chaque case contient un chiffre de 1 à N, sans répétition dans sa ligne ni dans sa colonne. Les signes entre deux cases indiquent laquelle est la plus grande."
+    },
+    "de": {
+     "name": "Größer als",
+     "short": "Fülle Zahlen ein und beachte die Zeichen zwischen den Feldern.",
+     "long": "Jedes Feld hat eine Zahl von 1 bis N, ohne Wiederholung in Zeile oder Spalte. Die Zeichen zwischen zwei Feldern sagen, welches größer ist."
+    }
+   }
+  },
+  {
+   "slug": "estrellas",
+   "folder": "puzzle",
+   "icon": "iconos/estrellas.png",
+   "text": {
+    "es": {
+     "name": "Estrellas",
+     "short": "Una estrella por fila, columna y zona, sin tocarse.",
+     "long": "Coloca estrellas de forma que haya justo una en cada fila, en cada columna y en cada zona de color. Dos estrellas nunca se tocan, ni siquiera en diagonal."
+    },
+    "en": {
+     "name": "Stars",
+     "short": "One star per row, column and region, never touching.",
+     "long": "Place stars so there is exactly one in every row, every column and every colored region. Two stars never touch, not even diagonally."
+    },
+    "pt": {
+     "name": "Estrelas",
+     "short": "Uma estrela por linha, coluna e zona, sem se tocarem.",
+     "long": "Coloque estrelas de modo que haja exatamente uma em cada linha, em cada coluna e em cada zona de cor. Duas estrelas nunca se tocam, nem na diagonal."
+    },
+    "it": {
+     "name": "Stelle",
+     "short": "Una stella per riga, colonna e zona, senza toccarsi.",
+     "long": "Metti le stelle in modo che ce ne sia esattamente una in ogni riga, in ogni colonna e in ogni zona colorata. Due stelle non si toccano mai, nemmeno in diagonale."
+    },
+    "fr": {
+     "name": "Étoiles",
+     "short": "Une étoile par ligne, colonne et zone, sans se toucher.",
+     "long": "Place des étoiles pour qu’il y en ait exactement une dans chaque ligne, chaque colonne et chaque zone de couleur. Deux étoiles ne se touchent jamais, même en diagonale."
+    },
+    "de": {
+     "name": "Sterne",
+     "short": "Ein Stern pro Zeile, Spalte und Bereich, ohne sich zu berühren.",
+     "long": "Setze Sterne so, dass genau einer in jeder Zeile, jeder Spalte und jedem Farbbereich steht. Zwei Sterne berühren sich nie, auch nicht diagonal."
+    }
+   }
+  },
+  {
+   "slug": "bombillas",
+   "folder": "puzzle",
+   "icon": "iconos/bombillas.png",
+   "text": {
+    "es": {
+     "name": "Bombillas",
+     "short": "Pon bombillas hasta iluminar todas las casillas.",
+     "long": "Cada bombilla ilumina su fila y su columna hasta la primera pared. Ilumina todas las casillas blancas sin que dos bombillas se vean entre sí; los números de las paredes dicen cuántas bombillas tienen al lado."
+    },
+    "en": {
+     "name": "Light Bulbs",
+     "short": "Place bulbs until every cell is lit.",
+     "long": "Each bulb lights its row and column up to the first wall. Light every white cell without two bulbs seeing each other; the numbers on walls tell how many bulbs are next to them."
+    },
+    "pt": {
+     "name": "Lâmpadas",
+     "short": "Coloque lâmpadas até iluminar todas as casas.",
+     "long": "Cada lâmpada ilumina sua linha e sua coluna até a primeira parede. Ilumine todas as casas brancas sem que duas lâmpadas se vejam; os números das paredes dizem quantas lâmpadas há ao lado."
+    },
+    "it": {
+     "name": "Lampadine",
+     "short": "Metti lampadine fino a illuminare tutte le caselle.",
+     "long": "Ogni lampadina illumina la sua riga e la sua colonna fino al primo muro. Illumina tutte le caselle bianche senza che due lampadine si vedano; i numeri sui muri dicono quante lampadine hanno accanto."
+    },
+    "fr": {
+     "name": "Ampoules",
+     "short": "Pose des ampoules jusqu’à éclairer toutes les cases.",
+     "long": "Chaque ampoule éclaire sa ligne et sa colonne jusqu’au premier mur. Éclaire toutes les cases blanches sans que deux ampoules se voient ; les chiffres des murs indiquent combien d’ampoules ils ont à côté."
+    },
+    "de": {
+     "name": "Glühbirnen",
+     "short": "Setze Glühbirnen, bis alle Felder beleuchtet sind.",
+     "long": "Jede Glühbirne beleuchtet ihre Zeile und Spalte bis zur ersten Wand. Beleuchte alle weißen Felder, ohne dass sich zwei Glühbirnen sehen; die Zahlen auf Wänden sagen, wie viele Glühbirnen daneben liegen."
+    }
+   }
+  },
+  {
+   "slug": "tiendas-y-arboles",
+   "folder": "puzzle",
+   "icon": "iconos/tiendas-y-arboles.png",
+   "text": {
+    "es": {
+     "name": "Tiendas y árboles",
+     "short": "Pon una tienda junto a cada árbol.",
+     "long": "Cada árbol tiene su tienda al lado (arriba, abajo, izquierda o derecha). Las tiendas no se tocan, ni en diagonal, y los números de fuera dicen cuántas tiendas hay en cada fila y columna."
+    },
+    "en": {
+     "name": "Tents and Trees",
+     "short": "Put a tent next to every tree.",
+     "long": "Every tree has its tent next to it (above, below, left or right). Tents never touch, not even diagonally, and the numbers outside tell how many tents are in each row and column."
+    },
+    "pt": {
+     "name": "Barracas e árvores",
+     "short": "Ponha uma barraca ao lado de cada árvore.",
+     "long": "Cada árvore tem sua barraca ao lado (acima, abaixo, à esquerda ou à direita). As barracas não se tocam, nem na diagonal, e os números de fora dizem quantas barracas há em cada linha e coluna."
+    },
+    "it": {
+     "name": "Tende e alberi",
+     "short": "Metti una tenda accanto a ogni albero.",
+     "long": "Ogni albero ha la sua tenda accanto (sopra, sotto, a sinistra o a destra). Le tende non si toccano, nemmeno in diagonale, e i numeri fuori dicono quante tende ci sono in ogni riga e colonna."
+    },
+    "fr": {
+     "name": "Tentes et arbres",
+     "short": "Place une tente à côté de chaque arbre.",
+     "long": "Chaque arbre a sa tente à côté (en haut, en bas, à gauche ou à droite). Les tentes ne se touchent pas, même en diagonale, et les chiffres à l’extérieur indiquent combien de tentes il y a dans chaque ligne et colonne."
+    },
+    "de": {
+     "name": "Zelte und Bäume",
+     "short": "Stelle neben jeden Baum ein Zelt.",
+     "long": "Jeder Baum hat sein Zelt daneben (oben, unten, links oder rechts). Zelte berühren sich nicht, auch nicht diagonal, und die Zahlen außen sagen, wie viele Zelte in jeder Zeile und Spalte stehen."
+    }
+   }
+  },
+  {
+   "slug": "islas",
+   "folder": "puzzle",
+   "icon": "iconos/islas.png",
+   "text": {
+    "es": {
+     "name": "Islas",
+     "short": "Pinta el mar y deja islas del tamaño de cada número.",
+     "long": "Cada número es una isla con ese número de casillas. Pinta de mar el resto: el mar tiene que estar todo unido, sin charcos de 2×2, y las islas no se tocan."
+    },
+    "en": {
+     "name": "Islands",
+     "short": "Paint the sea and leave islands the size of each number.",
+     "long": "Each number is an island with that many cells. Paint the rest as sea: the sea must be all connected, with no 2×2 pools, and islands don’t touch."
+    },
+    "pt": {
+     "name": "Ilhas",
+     "short": "Pinte o mar e deixe ilhas do tamanho de cada número.",
+     "long": "Cada número é uma ilha com esse número de casas. Pinte o resto de mar: o mar tem que estar todo unido, sem poças de 2×2, e as ilhas não se tocam."
+    },
+    "it": {
+     "name": "Isole",
+     "short": "Colora il mare e lascia isole grandi come ogni numero.",
+     "long": "Ogni numero è un’isola con quel numero di caselle. Colora di mare il resto: il mare deve essere tutto unito, senza pozze 2×2, e le isole non si toccano."
+    },
+    "fr": {
+     "name": "Îles",
+     "short": "Peins la mer et laisse des îles de la taille de chaque chiffre.",
+     "long": "Chaque chiffre est une île de ce nombre de cases. Peins le reste en mer : la mer doit être toute reliée, sans flaques de 2×2, et les îles ne se touchent pas."
+    },
+    "de": {
+     "name": "Inseln",
+     "short": "Male das Meer aus und lass Inseln so groß wie jede Zahl.",
+     "long": "Jede Zahl ist eine Insel mit so vielen Feldern. Male den Rest als Meer: Das Meer muss ganz zusammenhängen, ohne 2×2-Pfützen, und Inseln berühren sich nicht."
+    }
+   }
+  },
+  {
+   "slug": "lazo",
+   "folder": "puzzle",
+   "icon": "iconos/lazo.png",
+   "text": {
+    "es": {
+     "name": "Lazo",
+     "short": "Dibuja un solo lazo cerrado alrededor de los números.",
+     "long": "Une los puntos con líneas para formar un único lazo cerrado, sin cruces ni ramas. Cada número dice cuántos lados de su casilla forman parte del lazo."
+    },
+    "en": {
+     "name": "Loop",
+     "short": "Draw a single closed loop around the numbers.",
+     "long": "Join the dots with lines to make a single closed loop, with no crossings or branches. Each number tells how many sides of its cell are part of the loop."
+    },
+    "pt": {
+     "name": "Laço",
+     "short": "Desenhe um só laço fechado em volta dos números.",
+     "long": "Una os pontos com linhas para formar um único laço fechado, sem cruzamentos nem ramos. Cada número diz quantos lados da sua casa fazem parte do laço."
+    },
+    "it": {
+     "name": "Anello",
+     "short": "Disegna un solo anello chiuso intorno ai numeri.",
+     "long": "Unisci i punti con linee per formare un unico anello chiuso, senza incroci né rami. Ogni numero dice quanti lati della sua casella fanno parte dell’anello."
+    },
+    "fr": {
+     "name": "Boucle",
+     "short": "Dessine une seule boucle fermée autour des chiffres.",
+     "long": "Relie les points par des traits pour former une seule boucle fermée, sans croisements ni branches. Chaque chiffre indique combien de côtés de sa case font partie de la boucle."
+    },
+    "de": {
+     "name": "Schleife",
+     "short": "Zeichne eine einzige geschlossene Schleife um die Zahlen.",
+     "long": "Verbinde die Punkte mit Linien zu einer einzigen geschlossenen Schleife, ohne Kreuzungen und Abzweigungen. Jede Zahl sagt, wie viele Seiten ihres Feldes zur Schleife gehören."
+    }
+   }
+  },
+  {
+   "slug": "apaga-las-luces",
+   "folder": "accion",
+   "icon": "iconos/apaga-las-luces.png",
+   "text": {
+    "es": {
+     "name": "Apaga las luces",
+     "short": "Apaga todas las luces: cada toque cambia también las de al lado.",
+     "long": "Al tocar una luz cambia ella y sus cuatro vecinas: las encendidas se apagan y las apagadas se encienden. Déjalo todo a oscuras."
+    },
+    "en": {
+     "name": "Lights Out",
+     "short": "Turn off all the lights: each tap also flips the ones next to it.",
+     "long": "Tapping a light flips it and its four neighbors: lit ones go out and dark ones light up. Leave everything dark."
+    },
+    "pt": {
+     "name": "Apague as luzes",
+     "short": "Apague todas as luzes: cada toque também muda as do lado.",
+     "long": "Ao tocar uma luz, mudam ela e suas quatro vizinhas: as acesas se apagam e as apagadas se acendem. Deixe tudo no escuro."
+    },
+    "it": {
+     "name": "Spegni le luci",
+     "short": "Spegni tutte le luci: ogni tocco cambia anche quelle accanto.",
+     "long": "Toccando una luce cambiano lei e le sue quattro vicine: quelle accese si spengono e quelle spente si accendono. Lascia tutto al buio."
+    },
+    "fr": {
+     "name": "Éteins les lumières",
+     "short": "Éteins toutes les lumières : chaque toucher change aussi celles d’à côté.",
+     "long": "Toucher une lumière la change, elle et ses quatre voisines : celles allumées s’éteignent et celles éteintes s’allument. Laisse tout dans le noir."
+    },
+    "de": {
+     "name": "Licht aus",
+     "short": "Schalte alle Lichter aus: Jeder Tipp schaltet auch die daneben um.",
+     "long": "Ein Tipp auf ein Licht schaltet es und seine vier Nachbarn um: Brennende gehen aus, dunkle gehen an. Mach alles dunkel."
+    }
+   }
+  },
+  {
+   "slug": "laberinto",
+   "folder": "puzzle",
+   "icon": "iconos/laberinto.png",
+   "text": {
+    "es": {
+     "name": "Laberinto",
+     "short": "Encuentra el único camino hasta la salida.",
+     "long": "Lleva tu ficha desde la entrada hasta la bandera por los pasillos del laberinto. Solo hay un camino bueno: los demás acaban en callejones sin salida."
+    },
+    "en": {
+     "name": "Maze",
+     "short": "Find the only way to the exit.",
+     "long": "Take your token from the entrance to the flag through the maze corridors. There is only one right way: the rest end in dead ends."
+    },
+    "pt": {
+     "name": "Labirinto",
+     "short": "Encontre o único caminho até a saída.",
+     "long": "Leve sua peça da entrada até a bandeira pelos corredores do labirinto. Só há um caminho certo: os outros acabam em becos sem saída."
+    },
+    "it": {
+     "name": "Labirinto",
+     "short": "Trova l'unica strada fino all'uscita.",
+     "long": "Porta la tua pedina dall'ingresso alla bandiera lungo i corridoi del labirinto. C'è una sola strada giusta: le altre finiscono in vicoli ciechi."
+    },
+    "fr": {
+     "name": "Labyrinthe",
+     "short": "Trouve le seul chemin jusqu’à la sortie.",
+     "long": "Emmène ton pion de l’entrée jusqu’au drapeau par les couloirs du labyrinthe. Il n’y a qu’un bon chemin : les autres finissent en impasse."
+    },
+    "de": {
+     "name": "Labyrinth",
+     "short": "Finde den einzigen Weg zum Ausgang.",
+     "long": "Bring deine Figur vom Eingang zur Flagge durch die Gänge des Labyrinths. Es gibt nur einen richtigen Weg: Die anderen enden in Sackgassen."
+    }
+   }
+  },
+  {
+   "slug": "llega-al-numero",
+   "folder": "puzzle",
+   "icon": "iconos/llega-al-numero.png",
+   "text": {
+    "es": {
+     "name": "Llega al número",
+     "short": "Combina los números con + − × ÷ hasta el objetivo.",
+     "long": "Junta las fichas de dos en dos con una operación: el resultado sustituye a las dos. Llega exactamente al número objetivo; no hace falta usar todas las fichas."
+    },
+    "en": {
+     "name": "Reach the Number",
+     "short": "Combine the numbers with + − × ÷ to reach the target.",
+     "long": "Join the tiles two at a time with an operation: the result replaces both. Reach the target number exactly; you don’t have to use every tile."
+    },
+    "pt": {
+     "name": "Chegue ao número",
+     "short": "Combine os números com + − × ÷ até o objetivo.",
+     "long": "Junte as peças de duas em duas com uma operação: o resultado substitui as duas. Chegue exatamente ao número objetivo; não é preciso usar todas as peças."
+    },
+    "it": {
+     "name": "Arriva al numero",
+     "short": "Combina i numeri con + − × ÷ fino all'obiettivo.",
+     "long": "Unisci le tessere a due a due con un'operazione: il risultato sostituisce entrambe. Arriva esattamente al numero obiettivo; non serve usare tutte le tessere."
+    },
+    "fr": {
+     "name": "Atteins le nombre",
+     "short": "Combine les nombres avec + − × ÷ jusqu’à la cible.",
+     "long": "Assemble les tuiles deux par deux avec une opération : le résultat remplace les deux. Atteins exactement le nombre cible ; pas besoin d’utiliser toutes les tuiles."
+    },
+    "de": {
+     "name": "Triff die Zahl",
+     "short": "Kombiniere die Zahlen mit + − × ÷ bis zum Ziel.",
+     "long": "Verbinde die Plättchen paarweise mit einer Rechenart: Das Ergebnis ersetzt beide. Triff die Zielzahl genau; du musst nicht alle Plättchen benutzen."
+    }
+   }
+  },
+  {
+   "slug": "series",
+   "folder": "puzzle",
+   "icon": "iconos/series.png",
+   "text": {
+    "es": {
+     "name": "Series",
+     "short": "¿Qué número sigue? Descubre la regla de cada serie.",
+     "long": "Cada serie sigue una regla: sumar, multiplicar, alternar operaciones, diferencias que crecen… Escribe el número que va después. Cada partida son varias series seguidas."
+    },
+    "en": {
+     "name": "Sequences",
+     "short": "What number comes next? Find each sequence’s rule.",
+     "long": "Each sequence follows a rule: adding, multiplying, alternating operations, growing differences… Type the number that comes next. Each game is several sequences in a row."
+    },
+    "pt": {
+     "name": "Sequências",
+     "short": "Qual número vem depois? Descubra a regra de cada sequência.",
+     "long": "Cada sequência segue uma regra: somar, multiplicar, alternar operações, diferenças que crescem… Escreva o número que vem depois. Cada partida são várias sequências seguidas."
+    },
+    "it": {
+     "name": "Sequenze",
+     "short": "Che numero viene dopo? Scopri la regola di ogni sequenza.",
+     "long": "Ogni sequenza segue una regola: sommare, moltiplicare, alternare operazioni, differenze che crescono… Scrivi il numero che viene dopo. Ogni partita sono varie sequenze di fila."
+    },
+    "fr": {
+     "name": "Suites",
+     "short": "Quel nombre vient ensuite ? Trouve la règle de chaque suite.",
+     "long": "Chaque suite suit une règle : additionner, multiplier, alterner les opérations, des écarts qui grandissent… Écris le nombre suivant. Chaque partie enchaîne plusieurs suites."
+    },
+    "de": {
+     "name": "Zahlenfolgen",
+     "short": "Welche Zahl kommt als Nächstes? Finde die Regel jeder Folge.",
+     "long": "Jede Folge folgt einer Regel: addieren, multiplizieren, Rechenarten abwechseln, wachsende Abstände … Gib die nächste Zahl ein. Jede Partie besteht aus mehreren Folgen hintereinander."
+    }
+   }
+  },
+  {
+   "slug": "cuadrado-magico",
+   "folder": "puzzle",
+   "icon": "iconos/cuadrado-magico.png",
+   "text": {
+    "es": {
+     "name": "Cuadrado mágico",
+     "short": "Que todas las filas, columnas y diagonales sumen lo mismo.",
+     "long": "Coloca los números que faltan para que cada fila, cada columna y las dos diagonales sumen lo mismo. Cada número se usa una sola vez."
+    },
+    "en": {
+     "name": "Magic Square",
+     "short": "Make every row, column and diagonal add up the same.",
+     "long": "Place the missing numbers so every row, every column and both diagonals add up the same. Each number is used only once."
+    },
+    "pt": {
+     "name": "Quadrado mágico",
+     "short": "Faça todas as linhas, colunas e diagonais somarem o mesmo.",
+     "long": "Coloque os números que faltam para que cada linha, cada coluna e as duas diagonais somem o mesmo. Cada número é usado uma só vez."
+    },
+    "it": {
+     "name": "Quadrato magico",
+     "short": "Fai in modo che righe, colonne e diagonali diano la stessa somma.",
+     "long": "Metti i numeri mancanti perché ogni riga, ogni colonna e le due diagonali diano la stessa somma. Ogni numero si usa una sola volta."
+    },
+    "fr": {
+     "name": "Carré magique",
+     "short": "Que toutes les lignes, colonnes et diagonales aient la même somme.",
+     "long": "Place les nombres manquants pour que chaque ligne, chaque colonne et les deux diagonales aient la même somme. Chaque nombre ne sert qu’une fois."
+    },
+    "de": {
+     "name": "Magisches Quadrat",
+     "short": "Alle Zeilen, Spalten und Diagonalen sollen dieselbe Summe haben.",
+     "long": "Setze die fehlenden Zahlen so, dass jede Zeile, jede Spalte und beide Diagonalen dieselbe Summe haben. Jede Zahl kommt nur einmal vor."
+    }
+   }
+  },
+  {
+   "slug": "ecuaciones",
+   "folder": "puzzle",
+   "icon": "iconos/ecuaciones.png",
+   "text": {
+    "es": {
+     "name": "Ecuaciones de figuras",
+     "short": "Cada figura vale un número: resuelve la última línea.",
+     "long": "Con las igualdades de arriba averigua cuánto vale cada figura y calcula el resultado de la última línea. Primero se multiplica y luego se suma y se resta."
+    },
+    "en": {
+     "name": "Shape Equations",
+     "short": "Each shape is worth a number: solve the last line.",
+     "long": "Use the equations above to work out each shape’s value and compute the last line. Multiply first, then add and subtract."
+    },
+    "pt": {
+     "name": "Equações de figuras",
+     "short": "Cada figura vale um número: resolva a última linha.",
+     "long": "Com as igualdades de cima descubra quanto vale cada figura e calcule o resultado da última linha. Primeiro se multiplica e depois se soma e subtrai."
+    },
+    "it": {
+     "name": "Equazioni di figure",
+     "short": "Ogni figura vale un numero: risolvi l'ultima riga.",
+     "long": "Con le uguaglianze in alto scopri quanto vale ogni figura e calcola il risultato dell'ultima riga. Prima si moltiplica e poi si somma e si sottrae."
+    },
+    "fr": {
+     "name": "Équations de formes",
+     "short": "Chaque forme vaut un nombre : résous la dernière ligne.",
+     "long": "Avec les égalités du haut, trouve combien vaut chaque forme et calcule le résultat de la dernière ligne. On multiplie d’abord, puis on additionne et on soustrait."
+    },
+    "de": {
+     "name": "Formengleichungen",
+     "short": "Jede Form ist eine Zahl wert: Löse die letzte Zeile.",
+     "long": "Finde mit den Gleichungen oben heraus, was jede Form wert ist, und berechne die letzte Zeile. Erst wird multipliziert, dann addiert und subtrahiert."
+    }
+   }
+  }
+ ]
+}

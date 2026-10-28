@@ -1,48 +1,44 @@
 {
-  "version": "2026-10-21",
-  "updated": "Atualizado 21 de outubro de 2026",
+  "version": "2026-10-27",
+  "updated": "Atualizado 27 de outubro de 2026",
   "title": "Privacidade",
-  "intro": "AllThePartyGames é uma coleção de jogos de festa para maiores de 18 anos. Esta nota explica que dados a app usa e para quê.",
+  "intro": "O AllThePartyGames é um app de jogos. Esta nota explica que dados o app usa e para quê. Está escrita para dar para entender em casa.",
   "sections": [
     [
-      "O que fica no telemóvel",
-      "Os nomes dos jogadores que escreves, a intensidade escolhida em cada jogo, os favoritos, os passes da loja, o volume e o idioma ficam guardados só neste aparelho. Não há contas nem um servidor nosso a ler as tuas partidas. Se desinstalares a app, tudo isso é apagado."
-    ],
-    [
-      "Só para maiores de idade",
-      "Ao abrir a app perguntamos se tens 18 anos ou mais. Guardamos só a resposta no telemóvel; não pedimos data de nascimento, documento, morada nem telefone. Alguns jogos incluem álcool e conteúdo ousado (nunca explícito): joga com cabeça e bebe com responsabilidade."
+      "O que o celular guarda",
+      "Seus recordes, seu progresso e seus ajustes ficam neste aparelho. O que você comprar na loja também. Os perfis com nome e PIN ficam só neste celular, e o PIN não protege outros dados do aparelho. Os nomes e as cores das pessoas que você cadastra para jogar em grupo ficam só neste celular. Não tem chat, e partidas pela metade nunca saem do celular. Se você desinstalar o app, esse salvamento some."
     ],
     [
       "Anúncios",
-      "No Android, o Google AdMob mostra anúncios curtos: de vez em quando entre partidas e, se escolheres, um para abrir Picante e Caos por um tempo. Pedimos sempre anúncios não personalizados e para público adulto. Mesmo assim, para entregar, medir e proteger os anúncios, a Google pode recolher o endereço IP (que permite estimar a localização aproximada), interações com a app e os anúncios, diagnósticos e identificadores do dispositivo. No Espaço Económico Europeu e no Reino Unido pedimos o consentimento com o formulário da Google, e podes alterá-lo em Definições > Opções de privacidade. Se não houver anúncio disponível, podes jogar na mesma."
+      "O Google AdMob só mostra um anúncio quando você escolhe, ao tocar Ver anúncio. O Google pode pedir sua permissão para mostrar anúncios personalizados; se você não der, eles não são personalizados, e você pode mudar isso quando quiser em Ajustes. Os anúncios podem ser para adultos. O app não acessa o identificador de publicidade do dispositivo e, no iOS, não pede permissão para rastrear. Para entregar, medir e proteger os anúncios, o Google pode coletar e compartilhar o endereço IP (que permite estimar a localização aproximada), interações com o app e os anúncios, diagnósticos e identificadores do dispositivo ou da conta. Os dados são criptografados em trânsito."
     ],
     [
       "Compras",
-      "Remover anúncios e Premium são pagos ao Google Play ou à App Store. A loja processa o pagamento e comunica à app o produto e o estado da compra para a entregar ou restaurar. Não vemos os teus dados de pagamento nem os enviamos para um servidor nosso."
+      "O que você compra na loja é pago pela Google Play ou App Store. A loja processa o pagamento e informa ao app o produto, o identificador e o estado da compra para entregar, restaurar ou retirar o acesso. Os dados são criptografados em trânsito."
     ],
     [
-      "O que não fazemos",
-      "Não vendemos dados, não criamos perfis publicitários, não acedemos ao GPS, à câmara, ao microfone nem aos teus contactos. Não há chat entre jogadores nem caixas-surpresa pagas."
+      "O que a gente não faz",
+      "Não vendemos dados, não criamos perfis publicitários e não acessamos o GPS nem pedimos localização exata. Não tem caixa surpresa de compras. Não tem chat entre jogadores."
     ],
     [
-      "Quem é o responsável",
-      "O responsável pela AllThePartyGames e por estes dados é Brais López Arias (pessoa física). Para qualquer dúvida de privacidade escreve para {email}."
+      "Quem responde",
+      "O responsável pelo AllThePartyGames e por estes dados é Brais López Arias (pessoa física). Para uma dúvida de privacidade escreva para {email}. Se um anúncio ou uma cobrança não combina com uma criança, conte para a gente e nós verificamos."
     ],
     [
-      "Outros serviços",
-      "As bandeiras do seletor de idioma são carregadas de flagcdn.com, que recebe o IP e o código da imagem. Para saber se há ligação, a app faz de vez em quando um pedido vazio à Google (connectivitycheck.gstatic.com), que recebe o IP. Se a app falhar, envia ao Sentry (servidores na UE) um relatório técnico do erro: o que falhou, a versão da app e o modelo e sistema do telemóvel, sem IP, sem nomes de jogadores nem outros dados pessoais."
+      "Outros sites",
+      "Para saber se há conexão, o app faz de vez em quando uma solicitação vazia ao Google (connectivitycheck.gstatic.com), que recebe o IP. São solicitações técnicas por HTTPS. O Google gerencia anúncios e compras; não enviamos a esses serviços o nome do perfil local, o PIN nem o seu e-mail."
     ],
     [
-      "Porquê e por quanto tempo",
-      "Os anúncios mantêm a app gratuita, incluindo o conteúdo picante (interesse legítimo e, quando exigido, o teu consentimento). As compras são tratadas para cumprir o que compras (contrato). O que fica no telemóvel dura até apagares os dados da app ou a desinstalares; a Google conserva os seus dados segundo as suas próprias políticas."
+      "Por que e por quanto tempo",
+      "Os anúncios não personalizados aparecem para manter o app gratuito (interesse legítimo); os personalizados, só com o seu consentimento. As compras são tratadas para entregar o que você pede (contrato). O que fica guardado no telefone dura até você apagar os dados do app ou desinstalá-lo. O Google guarda os seus dados segundo as próprias políticas."
     ],
     [
-      "Os teus direitos",
-      "Podes pedir acesso, retificação, apagamento, oposição, limitação ou portabilidade dos teus dados escrevendo para {email}. Como quase tudo fica só no teu telemóvel, normalmente basta apagar os dados da app ou desinstalá-la. Se achares que os teus direitos não são respeitados, podes reclamar junto da Agência Espanhola de Proteção de Dados (aepd.es)."
+      "Seus direitos",
+      "Você pode pedir acesso, retificação, eliminação, oposição, limitação ou portabilidade dos seus dados escrevendo para {email}. Quase tudo fica só no seu telefone e basta apagar os dados do app ou desinstalá-lo. Se achar que seus direitos não foram respeitados, pode reclamar à Agência Espanhola de Proteção de Dados (aepd.es)."
     ],
     [
-      "Menores",
-      "A AllThePartyGames não se destina a menores de 18 anos e não recolhemos conscientemente dados de menores. Se és pai, mãe ou tutor e achas que um menor a usou, escreve para {email} e analisamos o caso."
+      "Crianças e famílias",
+      "O AllThePartyGames é só para maiores de 18 anos e não é dirigido a menores. Ao começar, o app pergunta se você tem 18 anos ou mais e, se não tiver, não deixa entrar. Se você é mãe, pai ou responsável e quer que a gente revise ou apague algo, escreva para {email}."
     ]
   ]
 }

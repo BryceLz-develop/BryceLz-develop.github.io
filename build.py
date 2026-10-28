@@ -701,6 +701,23 @@ def screens(c: Ctx, d: dict, lang: str) -> str:
 '''
 
 
+def video(c: Ctx, lang: str) -> str:
+    """El vídeo de tiendas de AllTheGames en el idioma de la página
+    (publicidad/anuncio-final/AllTheGames-tiendas-XX, a 540 de ancho)."""
+    base = STATIC / 'apps' / 'allthegames' / 'video'
+    if not (base / f'anuncio-{lang}.mp4').exists():
+        return ''
+    src = c.to(f'static/apps/allthegames/video/anuncio-{lang}.mp4')
+    poster = c.to(f'static/apps/allthegames/video/anuncio-{lang}.webp')
+    return f'''<section class="wrap atg-video" aria-labelledby="video">
+  <h2 id="video" class="atg-h2">{esc(T(lang, 'videoTitle'))}</h2>
+  <video controls muted playsinline preload="none" poster="{poster}" width="540" height="1170" aria-label="{esc(T(lang, 'videoAria'))}">
+    <source src="{src}" type="video/mp4">
+  </video>
+</section>
+'''
+
+
 def build_atg_home(d: dict, lang: str) -> None:
     app, games = d['app'], d['games']
     here = lp(lang, 'apps/allthegames/')
@@ -739,7 +756,7 @@ def build_atg_home(d: dict, lang: str) -> None:
     <ul class="facts">{facts}</ul>
   </div>
 </section>
-{screens(c, d, lang)}<section class="wrap catalog" aria-labelledby="los-juegos">
+{video(c, lang)}{screens(c, d, lang)}<section class="wrap catalog" aria-labelledby="los-juegos">
   <h2 id="los-juegos" class="atg-h2">{esc(T(lang, 'atgGames'))}</h2>
   {''.join(cats)}
 </section>
@@ -1225,6 +1242,8 @@ def planned_logo(a: dict) -> tuple[str, int, int]:
     """Su icono de app si ya lo tiene; si no, el logo de texto provisional."""
     if (PLANNED_ART / a['id'] / 'icon.webp').exists():
         return f"static/planned/{a['id']}/icon.webp", 512, 512
+    if a.get('_datos') and (a['_datos']['dir'] / 'app-icon.png').exists():
+        return f"static/planned/{a['id']}/app-icon.png", 512, 512
     return f"static/planned/{a['id']}/logo.svg", 400, 270
 
 
@@ -1232,6 +1251,70 @@ def planned_favicon(a: dict) -> str:
     if (PLANNED_ART / a['id'] / 'favicon.png').exists():
         return f"static/planned/{a['id']}/favicon.png"
     return 'static/brand/favicon-64.png'
+
+
+def planned_datos(a: dict) -> None:
+    """Si la app ya exporta sus fichas (`npm run web:datos` en su repo, ruta
+    `datos` de planned-apps.json, relativa a esta carpeta), sus juegos,
+    carpetas, textos en 6 idiomas e iconos salen de ahí; si no, se quedan los
+    provisionales de planned-apps.json."""
+    a['_datos'] = None
+    # La carpeta de la app; si aún no la tiene, la copia que dejó el
+    # coordinador en content/planned-datos/<id>/ (sacada del código de la app).
+    tries = ([(ROOT / a['datos']).resolve()] if a.get('datos') else []) + [CONTENT / 'planned-datos' / a['id']]
+    d = next((t for t in tries if (t / 'juegos.json').exists()), None)
+    if not d:
+        print(f"  {a['id']}: sin datos (pasa `npm run web:datos` en la app); textos provisionales")
+        return
+    f = d / 'juegos.json'
+    data = json.loads(f.read_text('utf-8'))
+    a['_datos'] = {'dir': d, 'folders': data['folders'], 'app': data.get('app', {})}
+    # Presentación de la app (frase y ventajas en 6 idiomas) que deja su chat en
+    # tienda/web/web-datos.json; sin ella, las provisionales de planned-apps.json.
+    pres = next((p for p in (d.parent / 'web-datos.json', d / 'web-datos.json') if p.exists()), None)
+    if pres:
+        w = json.loads(pres.read_text('utf-8'))
+        w = {('pt' if k == 'pt-BR' else k): v for k, v in w.items() if isinstance(v, dict)}
+        if all(l in w and w[l].get('tagline') for l in LANGS):
+            a['tagline'] = {l: w[l]['tagline'] for l in LANGS}
+            a['perks'] = [{l: w[l]['perks'][i] for l in LANGS} for i in range(min(len(w[l]['perks']) for l in LANGS))]
+    acc = {cat['id']: cat['accent'] for cat in a['categories']}
+    by_label = {cat['label'].lower(): cat['accent'] for cat in a['categories']}
+    spare = ['#C2185B', '#3949AB', '#EF6C00', '#2E7D32', '#6A1B9A', '#00838F', '#AD1457', '#5D4037']
+    order = []
+    for g in data['games']:
+        if g['folder'] not in order:
+            order.append(g['folder'])
+    a['categories'] = [{'id': fid, 'label': data['folders']['es'].get(fid, fid),
+                        'accent': acc.get(fid) or by_label.get(data['folders']['es'].get(fid, '').lower()) or spare[i % len(spare)]} for i, fid in enumerate(order)]
+    a['games'] = [{'slug': g['slug'], 'folder': g['folder'], 'name': g['text']['es']['name'],
+                   'short': g['text']['es']['short'], 'icon': g.get('icon'), 'text': g['text']} for g in data['games']]
+    print(f"  {a['id']}: {len(a['games'])} juegos desde {d}")
+
+
+def loc(x, lang: str):
+    """Texto de planned-apps.json: una cadena (solo español) o {idioma: texto}."""
+    return x.get(lang) or x['es'] if isinstance(x, dict) else x
+
+
+def planned_img(a: dict, slug: str) -> str:
+    g = next((x for x in a['games'] if x['slug'] == slug), {})
+    if g.get('icon'):
+        return f"static/planned/{a['id']}/games/{slug}{Path(g['icon']).suffix}"
+    return f"static/planned/{a['id']}/games/{slug}.svg"
+
+
+def planned_cat(a: dict, lang: str, fid: str) -> str:
+    if a.get('_datos'):
+        return a['_datos']['folders'].get(lang, {}).get(fid) or a['_datos']['folders']['es'].get(fid, fid)
+    return next(x['label'] for x in a['categories'] if x['id'] == fid)
+
+
+def planned_text(a: dict, lang: str, slug: str) -> dict:
+    g = next(x for x in a['games'] if x['slug'] == slug)
+    if g.get('text'):
+        return g['text'].get(lang) or g['text']['es']
+    return {'name': g['name'], 'short': g['short'], 'long': ''}
 
 
 def planned_static(a: dict) -> None:
@@ -1243,9 +1326,14 @@ def planned_static(a: dict) -> None:
             if f.is_file():
                 shutil.copy2(f, base / f.name)
     (base / 'logo.svg').write_text(svg_logo(a['word'], a['accent']), 'utf-8')
+    if a.get('_datos') and (a['_datos']['dir'] / 'app-icon.png').exists():
+        shutil.copy2(a['_datos']['dir'] / 'app-icon.png', base / 'app-icon.png')
     acc = {cat['id']: cat['accent'] for cat in a['categories']}
     for g in a['games']:
-        (base / 'games' / f"{g['slug']}.svg").write_text(svg_tile(g['name'], acc[g['folder']]), 'utf-8')
+        if g.get('icon') and a.get('_datos'):
+            shutil.copy2(a['_datos']['dir'] / g['icon'], base / 'games' / f"{g['slug']}{Path(g['icon']).suffix}")
+        else:
+            (base / 'games' / f"{g['slug']}.svg").write_text(svg_tile(g['name'], acc[g['folder']]), 'utf-8')
 
 
 def in_dev(lang: str) -> str:
@@ -1255,14 +1343,14 @@ def in_dev(lang: str) -> str:
 def planned_feature(c: Ctx, lang: str, a: dict) -> str:
     here = lp(lang, f"apps/{a['id']}/")
     logo, lw, lh = planned_logo(a)
-    chips = ''.join(f'<li style="--chip:{cat["accent"]}">{esc(cat["label"])}</li>' for cat in a['categories'])
+    chips = ''.join(f'<li style="--chip:{cat["accent"]}">{esc(planned_cat(a, lang, cat["id"]))}</li>' for cat in a['categories'])
     return f'''<article class="feature card">
     <a class="feature-art" href="{c.to(here)}" tabindex="-1" aria-hidden="true">
       <img src="{c.to(logo)}" alt="" width="{lw}" height="{lh}" loading="lazy">
     </a>
     <div class="feature-copy">
       <h3 class="display feature-name"><a href="{c.to(here)}">{a['name']}</a></h3>
-      <p>{esc(a['tagline'])}</p>
+      <p>{esc(loc(a['tagline'], lang))}</p>
       <ul class="chips" aria-label="{esc(T(lang, 'byCategory'))}">{chips}</ul>
       {in_dev(lang)}
       <div class="actions"><a class="sticker" href="{c.to(here)}">{esc(T(lang, 'seeApp'))}</a></div>
@@ -1276,18 +1364,18 @@ def build_planned(a: dict) -> None:
     for lang in LANGS:
         here = lp(lang, f"apps/{a['id']}/")
         c = Ctx(here)
-        perks = ''.join(f'<li>{esc(x)}</li>' for x in a['perks'])
+        perks = ''.join(f'<li>{esc(loc(x, lang))}</li>' for x in a['perks'])
         cats = []
         for cat in a['categories']:
             tiles = ''.join(
                 f'''<li class="game"><a href="{c.to(game_path(a['id'], g['slug'], lang))}">
-        <img src="{c.to(f"static/planned/{a['id']}/games/{g['slug']}.svg")}" alt="" width="72" height="72" loading="lazy">
-        <span>{esc(g['name'])}</span>
+        <img src="{c.to(planned_img(a, g['slug']))}" alt="" width="72" height="72" loading="lazy">
+        <span>{esc(planned_text(a, lang, g['slug'])['name'])}</span>
       </a></li>'''
                 for g in a['games'] if g['folder'] == cat['id'])
             cats.append(f'''<section class="cat" aria-labelledby="cat-{cat['id']}">
     <h3 class="cat-band" id="cat-{cat['id']}" style="--fill:{band_fill(cat['accent'])};--lip:{band_lip(cat['accent'])}">
-      <span>{esc(cat['label'])}</span>
+      <span>{esc(planned_cat(a, lang, cat['id']))}</span>
     </h3>
     <ul class="games">
       {tiles}
@@ -1297,7 +1385,7 @@ def build_planned(a: dict) -> None:
   <img class="atg-logo" src="{c.to(logo)}" alt="" width="{lw}" height="{lh}">
   <div class="atg-intro">
     <h1 class="visually-hidden">{a['name']}</h1>
-    <p class="lead">{esc(a['tagline'])}</p>
+    <p class="lead">{esc(loc(a['tagline'], lang))}</p>
     {in_dev(lang)}
     <ul class="facts">{perks}</ul>
   </div>
@@ -1306,16 +1394,15 @@ def build_planned(a: dict) -> None:
   <h2 id="los-juegos" class="atg-h2">{esc(T(lang, 'atgGames'))}</h2>
   {''.join(cats)}
 </section>'''
-        page(here, title=f"{a['name']} · {BRAND}", description=a['tagline'], main=main, theme='studio',
+        page(here, title=f"{a['name']} · {BRAND}", description=loc(a['tagline'], lang), main=main, theme='studio',
              section=here, lang=lang, links=same_page(f"apps/{a['id']}/"), favicon=planned_favicon(a))
-    by_slug = {g['slug']: g for g in a['games']}
     build_game_pages(
         app_id=a['id'], app_name=a['name'], theme='studio', favicon=planned_favicon(a),
-        logo=logo, logo_size=(lw, lh), lead=lambda l: a['tagline'],
+        logo=logo, logo_size=(lw, lh), lead=lambda l: loc(a['tagline'], l),
         store_published=False, store_url='', categories=a['categories'],
-        cat_name=lambda l, f: next(x['label'] for x in a['categories'] if x['id'] == f),
-        games=a['games'], text=lambda l, g: {'name': by_slug[g]['name'], 'short': by_slug[g]['short'], 'long': ''},
-        nav=lambda c, cur, l: '', img=lambda g: f"static/planned/{a['id']}/games/{g}.svg", status=in_dev)
+        cat_name=lambda l, f: planned_cat(a, l, f),
+        games=a['games'], text=lambda l, g: planned_text(a, l, g),
+        nav=lambda c, cur, l: '', img=lambda g: planned_img(a, g), status=in_dev)
 
 
 def build() -> None:
@@ -1330,6 +1417,8 @@ def build() -> None:
         (OUT / 'CNAME').write_text(SITE['domain'] + '\n', 'utf-8')
     d = load()
     party = load_party()
+    for a in PLANNED:
+        planned_datos(a)
     for lang in LANGS:
         build_home(d, party, lang)
         build_legal_notice(d, lang)

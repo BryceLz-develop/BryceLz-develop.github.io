@@ -1,0 +1,412 @@
+{
+ "exportedAt": "2026-10-27T17:49:15.961Z",
+ "app": {
+  "name": "AllTheTrivia",
+  "id": "allthetrivia",
+  "webUrl": "https://brycelz-develop.github.io/apps/allthetrivia",
+  "icon": "app-icon.png"
+ },
+ "folders": {
+  "es": {
+   "all": "Todos",
+   "cartas": "Cartas",
+   "mesa": "De mesa",
+   "numeros": "Números",
+   "accion": "Acción",
+   "puzzle": "Preguntas",
+   "letras": "Letras",
+   "favoritos": "Favoritos",
+   "multijugador": "Multijugador"
+  },
+  "en": {
+   "all": "All",
+   "cartas": "Cards",
+   "mesa": "Tabletop",
+   "numeros": "Numbers",
+   "accion": "Action",
+   "puzzle": "Questions",
+   "letras": "Words",
+   "favoritos": "Favourites",
+   "multijugador": "Multiplayer"
+  },
+  "pt": {
+   "all": "Todos",
+   "cartas": "Cartas",
+   "mesa": "De mesa",
+   "numeros": "Números",
+   "accion": "Ação",
+   "puzzle": "Perguntas",
+   "letras": "Letras",
+   "favoritos": "Favoritos",
+   "multijugador": "Multijogador"
+  },
+  "it": {
+   "all": "Tutti",
+   "cartas": "Carte",
+   "mesa": "Da tavolo",
+   "numeros": "Numeri",
+   "accion": "Azione",
+   "puzzle": "Domande",
+   "letras": "Lettere",
+   "favoritos": "Preferiti",
+   "multijugador": "Multigiocatore"
+  },
+  "fr": {
+   "all": "Tous",
+   "cartas": "Cartes",
+   "mesa": "Plateau",
+   "numeros": "Nombres",
+   "accion": "Action",
+   "puzzle": "Questions",
+   "letras": "Lettres",
+   "favoritos": "Favoris",
+   "multijugador": "Multijoueur"
+  },
+  "de": {
+   "all": "Alle",
+   "cartas": "Karten",
+   "mesa": "Brett",
+   "numeros": "Zahlen",
+   "accion": "Action",
+   "puzzle": "Fragen",
+   "letras": "Buchstaben",
+   "favoritos": "Favoriten",
+   "multijugador": "Mehrspieler"
+  }
+ },
+ "games": [
+  {
+   "slug": "trivia-cultura",
+   "folder": "puzzle",
+   "icon": "iconos/trivia-cultura.png",
+   "text": {
+    "es": {
+     "name": "Cultura general",
+     "short": "Un poco de todo lo que se sabe.",
+     "long": "Preguntas de cultura general: idiomas, costumbres, inventos, comidas y curiosidades."
+    },
+    "en": {
+     "name": "General knowledge",
+     "short": "A little of everything worth knowing.",
+     "long": "General knowledge questions: languages, customs, inventions, food and curiosities."
+    },
+    "pt": {
+     "name": "Conhecimentos gerais",
+     "short": "Um pouco de tudo o que se sabe.",
+     "long": "Perguntas de conhecimentos gerais: idiomas, costumes, invenções, comidas e curiosidades."
+    },
+    "it": {
+     "name": "Cultura generale",
+     "short": "Un po’ di tutto quello che si sa.",
+     "long": "Domande di cultura generale: lingue, usanze, invenzioni, cibi e curiosità."
+    },
+    "fr": {
+     "name": "Culture générale",
+     "short": "Un peu de tout ce qu’on sait.",
+     "long": "Questions de culture générale : langues, coutumes, inventions, cuisine et curiosités."
+    },
+    "de": {
+     "name": "Allgemeinwissen",
+     "short": "Ein bisschen von allem, was man weiß.",
+     "long": "Fragen zum Allgemeinwissen: Sprachen, Bräuche, Erfindungen, Essen und Kurioses."
+    }
+   }
+  },
+  {
+   "slug": "trivia-animales",
+   "folder": "puzzle",
+   "icon": "iconos/trivia-animales.png",
+   "text": {
+    "es": {
+     "name": "Animales",
+     "short": "Mamíferos, aves, insectos y bichos del mar.",
+     "long": "Preguntas sobre animales: cómo viven, qué comen, dónde están y sus récords."
+    },
+    "en": {
+     "name": "Animals",
+     "short": "Mammals, birds, insects and sea creatures.",
+     "long": "Questions about animals: how they live, what they eat, where they are and their records."
+    },
+    "pt": {
+     "name": "Animais",
+     "short": "Mamíferos, aves, insetos e bichos do mar.",
+     "long": "Perguntas sobre animais: como vivem, o que comem, onde estão e seus recordes."
+    },
+    "it": {
+     "name": "Animali",
+     "short": "Mammiferi, uccelli, insetti e creature del mare.",
+     "long": "Domande sugli animali: come vivono, cosa mangiano, dove stanno e i loro record."
+    },
+    "fr": {
+     "name": "Animaux",
+     "short": "Mammifères, oiseaux, insectes et bêtes de la mer.",
+     "long": "Questions sur les animaux : comment ils vivent, ce qu’ils mangent, où ils sont et leurs records."
+    },
+    "de": {
+     "name": "Tiere",
+     "short": "Säugetiere, Vögel, Insekten und Meerestiere.",
+     "long": "Fragen über Tiere: wie sie leben, was sie fressen, wo sie wohnen und ihre Rekorde."
+    }
+   }
+  },
+  {
+   "slug": "trivia-ciencia",
+   "folder": "puzzle",
+   "icon": "iconos/trivia-ciencia.png",
+   "text": {
+    "es": {
+     "name": "Naturaleza y ciencia",
+     "short": "El cuerpo, las plantas, el espacio y los inventos.",
+     "long": "Preguntas de ciencia y naturaleza: el cuerpo humano, la química, la física, las plantas y el universo."
+    },
+    "en": {
+     "name": "Nature and science",
+     "short": "The body, plants, space and inventions.",
+     "long": "Science and nature questions: the human body, chemistry, physics, plants and the universe."
+    },
+    "pt": {
+     "name": "Natureza e ciência",
+     "short": "O corpo, as plantas, o espaço e as invenções.",
+     "long": "Perguntas de ciência e natureza: o corpo humano, a química, a física, as plantas e o universo."
+    },
+    "it": {
+     "name": "Natura e scienza",
+     "short": "Il corpo, le piante, lo spazio e le invenzioni.",
+     "long": "Domande di scienza e natura: il corpo umano, la chimica, la fisica, le piante e l’universo."
+    },
+    "fr": {
+     "name": "Nature et sciences",
+     "short": "Le corps, les plantes, l’espace et les inventions.",
+     "long": "Questions de sciences et de nature : le corps humain, la chimie, la physique, les plantes et l’univers."
+    },
+    "de": {
+     "name": "Natur und Wissenschaft",
+     "short": "Der Körper, Pflanzen, das Weltall und Erfindungen.",
+     "long": "Fragen zu Wissenschaft und Natur: der menschliche Körper, Chemie, Physik, Pflanzen und das Universum."
+    }
+   }
+  },
+  {
+   "slug": "trivia-geografia",
+   "folder": "puzzle",
+   "icon": "iconos/trivia-geografia.png",
+   "text": {
+    "es": {
+     "name": "Geografía",
+     "short": "Ríos, montañas, mares y países.",
+     "long": "Preguntas de geografía: ríos, montañas, mares, desiertos, países y ciudades. Sin capitales ni banderas."
+    },
+    "en": {
+     "name": "Geography",
+     "short": "Rivers, mountains, seas and countries.",
+     "long": "Geography questions: rivers, mountains, seas, deserts, countries and cities. No capitals or flags."
+    },
+    "pt": {
+     "name": "Geografia",
+     "short": "Rios, montanhas, mares e países.",
+     "long": "Perguntas de geografia: rios, montanhas, mares, desertos, países e cidades. Sem capitais nem bandeiras."
+    },
+    "it": {
+     "name": "Geografia",
+     "short": "Fiumi, montagne, mari e paesi.",
+     "long": "Domande di geografia: fiumi, montagne, mari, deserti, paesi e città. Niente capitali né bandiere."
+    },
+    "fr": {
+     "name": "Géographie",
+     "short": "Fleuves, montagnes, mers et pays.",
+     "long": "Questions de géographie : fleuves, montagnes, mers, déserts, pays et villes. Ni capitales ni drapeaux."
+    },
+    "de": {
+     "name": "Geografie",
+     "short": "Flüsse, Berge, Meere und Länder.",
+     "long": "Geografiefragen: Flüsse, Berge, Meere, Wüsten, Länder und Städte. Ohne Hauptstädte und Flaggen."
+    }
+   }
+  },
+  {
+   "slug": "trivia-historia",
+   "folder": "puzzle",
+   "icon": "iconos/trivia-historia.png",
+   "text": {
+    "es": {
+     "name": "Historia",
+     "short": "De las pirámides a nuestros días.",
+     "long": "Preguntas de historia: civilizaciones, descubrimientos, personajes y fechas que cambiaron el mundo."
+    },
+    "en": {
+     "name": "History",
+     "short": "From the pyramids to the present day.",
+     "long": "History questions: civilisations, discoveries, people and dates that changed the world."
+    },
+    "pt": {
+     "name": "História",
+     "short": "Das pirâmides aos dias de hoje.",
+     "long": "Perguntas de história: civilizações, descobertas, personagens e datas que mudaram o mundo."
+    },
+    "it": {
+     "name": "Storia",
+     "short": "Dalle piramidi ai giorni nostri.",
+     "long": "Domande di storia: civiltà, scoperte, personaggi e date che hanno cambiato il mondo."
+    },
+    "fr": {
+     "name": "Histoire",
+     "short": "Des pyramides à nos jours.",
+     "long": "Questions d’histoire : civilisations, découvertes, personnages et dates qui ont changé le monde."
+    },
+    "de": {
+     "name": "Geschichte",
+     "short": "Von den Pyramiden bis heute.",
+     "long": "Geschichtsfragen: Zivilisationen, Entdeckungen, Persönlichkeiten und Daten, die die Welt verändert haben."
+    }
+   }
+  },
+  {
+   "slug": "trivia-arte",
+   "folder": "puzzle",
+   "icon": "iconos/trivia-arte.png",
+   "text": {
+    "es": {
+     "name": "Arte y literatura",
+     "short": "Cuadros, libros, autores y museos.",
+     "long": "Preguntas de arte y literatura: pintores, escritores, obras famosas, poesía y arquitectura."
+    },
+    "en": {
+     "name": "Art and literature",
+     "short": "Paintings, books, authors and museums.",
+     "long": "Art and literature questions: painters, writers, famous works, poetry and architecture."
+    },
+    "pt": {
+     "name": "Arte e literatura",
+     "short": "Quadros, livros, autores e museus.",
+     "long": "Perguntas de arte e literatura: pintores, escritores, obras famosas, poesia e arquitetura."
+    },
+    "it": {
+     "name": "Arte e letteratura",
+     "short": "Quadri, libri, autori e musei.",
+     "long": "Domande di arte e letteratura: pittori, scrittori, opere famose, poesia e architettura."
+    },
+    "fr": {
+     "name": "Art et littérature",
+     "short": "Tableaux, livres, auteurs et musées.",
+     "long": "Questions d’art et de littérature : peintres, écrivains, œuvres célèbres, poésie et architecture."
+    },
+    "de": {
+     "name": "Kunst und Literatur",
+     "short": "Gemälde, Bücher, Autoren und Museen.",
+     "long": "Fragen zu Kunst und Literatur: Maler, Schriftsteller, berühmte Werke, Lyrik und Architektur."
+    }
+   }
+  },
+  {
+   "slug": "trivia-deportes",
+   "folder": "puzzle",
+   "icon": "iconos/trivia-deportes.png",
+   "text": {
+    "es": {
+     "name": "Deportes",
+     "short": "Reglas, campeonatos y leyendas.",
+     "long": "Preguntas de deportes: reglas, campeonatos, estadios y leyendas que ya son historia."
+    },
+    "en": {
+     "name": "Sports",
+     "short": "Rules, championships and legends.",
+     "long": "Sports questions: rules, championships, stadiums and legends who are already history."
+    },
+    "pt": {
+     "name": "Esportes",
+     "short": "Regras, campeonatos e lendas.",
+     "long": "Perguntas de esportes: regras, campeonatos, estádios e lendas que já são história."
+    },
+    "it": {
+     "name": "Sport",
+     "short": "Regole, campionati e leggende.",
+     "long": "Domande di sport: regole, campionati, stadi e leggende ormai entrate nella storia."
+    },
+    "fr": {
+     "name": "Sports",
+     "short": "Règles, championnats et légendes.",
+     "long": "Questions de sport : règles, championnats, stades et légendes entrées dans l’histoire."
+    },
+    "de": {
+     "name": "Sport",
+     "short": "Regeln, Meisterschaften und Legenden.",
+     "long": "Sportfragen: Regeln, Meisterschaften, Stadien und Legenden, die schon Geschichte sind."
+    }
+   }
+  },
+  {
+   "slug": "trivia-cine",
+   "folder": "puzzle",
+   "icon": "iconos/trivia-cine.png",
+   "text": {
+    "es": {
+     "name": "Cine, música y TV",
+     "short": "Películas, canciones y series de siempre.",
+     "long": "Preguntas de cine, música y televisión: directores, instrumentos, géneros y clásicos."
+    },
+    "en": {
+     "name": "Film, music and TV",
+     "short": "Classic films, songs and series.",
+     "long": "Film, music and TV questions: directors, instruments, genres and classics."
+    },
+    "pt": {
+     "name": "Cinema, música e TV",
+     "short": "Filmes, músicas e séries de sempre.",
+     "long": "Perguntas de cinema, música e televisão: diretores, instrumentos, gêneros e clássicos."
+    },
+    "it": {
+     "name": "Cinema, musica e TV",
+     "short": "Film, canzoni e serie di sempre.",
+     "long": "Domande di cinema, musica e televisione: registi, strumenti, generi e classici."
+    },
+    "fr": {
+     "name": "Cinéma, musique et télé",
+     "short": "Films, chansons et séries de toujours.",
+     "long": "Questions de cinéma, de musique et de télé : réalisateurs, instruments, genres et classiques."
+    },
+    "de": {
+     "name": "Film, Musik und TV",
+     "short": "Filme, Lieder und Serien von damals bis heute.",
+     "long": "Fragen zu Film, Musik und Fernsehen: Regisseure, Instrumente, Genres und Klassiker."
+    }
+   }
+  },
+  {
+   "slug": "trivia-de-todo",
+   "folder": "puzzle",
+   "icon": "iconos/trivia-de-todo.png",
+   "text": {
+    "es": {
+     "name": "De todo",
+     "short": "Todas las categorías mezcladas.",
+     "long": "Preguntas de todas las categorías mezcladas: nunca sabes qué tocará."
+    },
+    "en": {
+     "name": "A bit of everything",
+     "short": "Every category mixed together.",
+     "long": "Questions from every category mixed together: you never know what’s next."
+    },
+    "pt": {
+     "name": "De tudo",
+     "short": "Todas as categorias misturadas.",
+     "long": "Perguntas de todas as categorias misturadas: você nunca sabe o que vem."
+    },
+    "it": {
+     "name": "Di tutto",
+     "short": "Tutte le categorie mescolate.",
+     "long": "Domande di tutte le categorie mescolate: non sai mai cosa capiterà."
+    },
+    "fr": {
+     "name": "Un peu de tout",
+     "short": "Toutes les catégories mélangées.",
+     "long": "Des questions de toutes les catégories mélangées : on ne sait jamais ce qui va tomber."
+    },
+    "de": {
+     "name": "Von allem etwas",
+     "short": "Alle Kategorien gemischt.",
+     "long": "Fragen aus allen Kategorien gemischt: Man weiß nie, was kommt."
+    }
+   }
+  }
+ ]
+}

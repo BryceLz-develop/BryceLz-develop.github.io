@@ -1,0 +1,671 @@
+{
+ "exportedAt": "2026-10-27T17:49:12.236Z",
+ "app": {
+  "name": "AllTheFamilyGames",
+  "id": "allthefamilygames",
+  "webUrl": "https://brycelz-develop.github.io/apps/allthefamilygames",
+  "icon": "app-icon.png"
+ },
+ "folders": {
+  "es": {
+   "all": "Todos",
+   "cartas": "Equipos y cartas",
+   "mesa": "Preguntas",
+   "numeros": "Números",
+   "accion": "Retos y azar",
+   "puzzle": "Adivinar",
+   "letras": "Letras",
+   "favoritos": "Favoritos",
+   "multijugador": "En equipos"
+  },
+  "en": {
+   "all": "All",
+   "cartas": "Teams and cards",
+   "mesa": "Questions",
+   "numeros": "Numbers",
+   "accion": "Challenges",
+   "puzzle": "Guessing",
+   "letras": "Words",
+   "favoritos": "Favourites",
+   "multijugador": "In teams"
+  },
+  "pt": {
+   "all": "Todos",
+   "cartas": "Equipes e cartas",
+   "mesa": "Perguntas",
+   "numeros": "Números",
+   "accion": "Desafios e sorte",
+   "puzzle": "Adivinhar",
+   "letras": "Letras",
+   "favoritos": "Favoritos",
+   "multijugador": "Em equipes"
+  },
+  "it": {
+   "all": "Tutti",
+   "cartas": "Squadre e carte",
+   "mesa": "Domande",
+   "numeros": "Numeri",
+   "accion": "Sfide e fortuna",
+   "puzzle": "Indovinare",
+   "letras": "Lettere",
+   "favoritos": "Preferiti",
+   "multijugador": "A squadre"
+  },
+  "fr": {
+   "all": "Tous",
+   "cartas": "Équipes et cartes",
+   "mesa": "Questions",
+   "numeros": "Nombres",
+   "accion": "Défis et hasard",
+   "puzzle": "Deviner",
+   "letras": "Lettres",
+   "favoritos": "Favoris",
+   "multijugador": "En équipes"
+  },
+  "de": {
+   "all": "Alle",
+   "cartas": "Teams und Karten",
+   "mesa": "Fragen",
+   "numeros": "Zahlen",
+   "accion": "Aufgaben und Glück",
+   "puzzle": "Raten",
+   "letras": "Buchstaben",
+   "favoritos": "Favoriten",
+   "multijugador": "In Teams"
+  }
+ },
+ "games": [
+  {
+   "slug": "quien-es-mas-probable",
+   "folder": "mesa",
+   "icon": "iconos/quien-es-mas-probable.png",
+   "text": {
+    "es": {
+     "name": "¿Quién es más probable?",
+     "short": "A la de tres, todos señalan.",
+     "long": "Sale una situación divertida. A la de tres, todos señalan a quien creen más capaz de hacerlo. Quien reciba más dedos cuenta por qué."
+    },
+    "en": {
+     "name": "Who’s Most Likely?",
+     "short": "On three, everyone points.",
+     "long": "A funny situation comes up. On three, everyone points at who they think is most likely to do it. Whoever gets the most fingers explains why."
+    },
+    "pt": {
+     "name": "Quem tem mais chance?",
+     "short": "No três, todo mundo aponta.",
+     "long": "Aparece uma situação engraçada. No três, todos apontam para quem acham mais capaz de fazer aquilo. Quem receber mais dedos conta por quê."
+    },
+    "it": {
+     "name": "Chi è più probabile?",
+     "short": "Al tre, tutti indicano.",
+     "long": "Esce una situazione divertente. Al tre, tutti indicano chi pensano sia più capace di farlo. Chi riceve più dita spiega perché."
+    },
+    "fr": {
+     "name": "Qui est le plus susceptible ?",
+     "short": "À trois, tout le monde montre du doigt.",
+     "long": "Une situation amusante apparaît. À trois, chacun montre la personne la plus susceptible de le faire. Celui qui reçoit le plus de doigts explique pourquoi."
+    },
+    "de": {
+     "name": "Wer würde am ehesten?",
+     "short": "Auf drei zeigen alle.",
+     "long": "Eine lustige Situation erscheint. Auf drei zeigen alle auf die Person, die es am ehesten tun würde. Wer die meisten Finger abbekommt, erklärt, warum."
+    }
+   }
+  },
+  {
+   "slug": "que-prefieres",
+   "folder": "mesa",
+   "icon": "iconos/que-prefieres.png",
+   "text": {
+    "es": {
+     "name": "¿Qué prefieres?",
+     "short": "Dos opciones. Elige y defiéndela.",
+     "long": "Dilemas divertidos con dos salidas. Todos votan a la vez y cada bando explica por qué ha elegido lo suyo."
+    },
+    "en": {
+     "name": "Would you rather",
+     "short": "Two options. Pick one and defend it.",
+     "long": "Fun dilemmas with two ways out. Everyone votes at once and each side explains its choice."
+    },
+    "pt": {
+     "name": "O que você prefere?",
+     "short": "Duas opções. Escolha e defenda.",
+     "long": "Dilemas divertidos com duas saídas. Todos votam juntos e cada grupo explica sua escolha."
+    },
+    "it": {
+     "name": "Cosa preferisci?",
+     "short": "Due opzioni. Scegli e difendi la tua.",
+     "long": "Dilemmi divertenti con due uscite. Tutti votano insieme e ogni gruppo spiega la sua scelta."
+    },
+    "fr": {
+     "name": "Tu préfères",
+     "short": "Deux options. Choisis et défends ton choix.",
+     "long": "Des dilemmes amusants avec deux issues. Tout le monde vote en même temps et chaque camp explique son choix."
+    },
+    "de": {
+     "name": "Was wäre dir lieber?",
+     "short": "Zwei Möglichkeiten. Wähle und verteidige sie.",
+     "long": "Lustige Zwickmühlen mit zwei Auswegen. Alle stimmen gleichzeitig ab, und jede Seite erklärt ihre Wahl."
+    }
+   }
+  },
+  {
+   "slug": "verdad-o-prueba",
+   "folder": "mesa",
+   "icon": "iconos/verdad-o-prueba.png",
+   "text": {
+    "es": {
+     "name": "Verdad o Prueba",
+     "short": "Elige: contar una verdad o hacer una prueba.",
+     "long": "Por turnos, cada persona elige verdad o prueba antes de ver la carta. Verdades para conocerse mejor y pruebas divertidas para hacer en casa."
+    },
+    "en": {
+     "name": "Truth or Dare",
+     "short": "Choose: tell a truth or take a dare.",
+     "long": "Taking turns, each person picks truth or dare before seeing the card. Truths to get to know each other and fun dares to do at home."
+    },
+    "pt": {
+     "name": "Verdade ou Desafio",
+     "short": "Escolha: contar uma verdade ou cumprir um desafio.",
+     "long": "Na sua vez, cada pessoa escolhe verdade ou desafio antes de ver a carta. Verdades para se conhecerem melhor e desafios divertidos para fazer em casa."
+    },
+    "it": {
+     "name": "Obbligo o Verità",
+     "short": "Scegli: dire una verità o fare un obbligo.",
+     "long": "A turno, ognuno sceglie obbligo o verità prima di vedere la carta. Verità per conoscersi meglio e obblighi divertenti da fare in casa."
+    },
+    "fr": {
+     "name": "Action ou Vérité",
+     "short": "Choisis : dire une vérité ou relever une action.",
+     "long": "Chacun son tour, on choisit action ou vérité avant de voir la carte. Des vérités pour mieux se connaître et des actions amusantes à faire à la maison."
+    },
+    "de": {
+     "name": "Wahrheit oder Pflicht",
+     "short": "Wähle: eine Wahrheit erzählen oder eine Pflicht erfüllen.",
+     "long": "Reihum wählt jede Person Wahrheit oder Pflicht, bevor sie die Karte sieht. Wahrheiten, um sich besser kennenzulernen, und lustige Aufgaben für zu Hause."
+    }
+   }
+  },
+  {
+   "slug": "cuentame",
+   "folder": "mesa",
+   "icon": "iconos/cuentame.png",
+   "text": {
+    "es": {
+     "name": "Cuéntame",
+     "short": "Preguntas para conocerse mejor.",
+     "long": "Preguntas para que pequeños, mayores y abuelos cuenten historias, recuerdos y sueños. Responde quien tiene el turno y luego todos pueden sumarse."
+    },
+    "en": {
+     "name": "Tell me",
+     "short": "Questions to get to know each other.",
+     "long": "Questions that get kids, grown-ups and grandparents sharing stories, memories and dreams. The person whose turn it is answers, then everyone can join in."
+    },
+    "pt": {
+     "name": "Me conta",
+     "short": "Perguntas para se conhecerem melhor.",
+     "long": "Perguntas para pequenos, adultos e avós contarem histórias, lembranças e sonhos. Quem está na vez responde e depois todos podem participar."
+    },
+    "it": {
+     "name": "Raccontami",
+     "short": "Domande per conoscersi meglio.",
+     "long": "Domande per far raccontare a piccoli, grandi e nonni storie, ricordi e sogni. Risponde chi ha il turno, poi tutti possono aggiungersi."
+    },
+    "fr": {
+     "name": "Raconte-moi",
+     "short": "Des questions pour mieux se connaître.",
+     "long": "Des questions pour que petits, grands et grands-parents racontent histoires, souvenirs et rêves. Celui dont c’est le tour répond, puis tout le monde peut s’y mettre."
+    },
+    "de": {
+     "name": "Erzähl mal",
+     "short": "Fragen, um sich besser kennenzulernen.",
+     "long": "Fragen, bei denen Kinder, Erwachsene und Großeltern Geschichten, Erinnerungen und Träume erzählen. Wer dran ist, antwortet, danach dürfen alle mitreden."
+    }
+   }
+  },
+  {
+   "slug": "mimica",
+   "folder": "puzzle",
+   "icon": "iconos/mimica.png",
+   "text": {
+    "es": {
+     "name": "Mímica",
+     "short": "Representa sin hablar. Tu equipo adivina.",
+     "long": "Por equipos y contra el reloj: quien tiene el móvil representa lo que sale en la carta sin hablar ni hacer ruidos, y su equipo intenta adivinarlo."
+    },
+    "en": {
+     "name": "Charades",
+     "short": "Act it out without talking. Your team guesses.",
+     "long": "In teams and against the clock: whoever has the phone acts out the card with no words or sounds, and their team tries to guess it."
+    },
+    "pt": {
+     "name": "Mímica",
+     "short": "Represente sem falar. Sua equipe adivinha.",
+     "long": "Em equipes e contra o relógio: quem está com o celular representa a carta sem falar nem fazer barulho, e sua equipe tenta adivinhar."
+    },
+    "it": {
+     "name": "Mimo",
+     "short": "Mima senza parlare. La tua squadra indovina.",
+     "long": "A squadre e contro il tempo: chi ha il telefono mima la carta senza parlare né fare rumori, e la sua squadra prova a indovinare."
+    },
+    "fr": {
+     "name": "Mime",
+     "short": "Mime sans parler. Ton équipe devine.",
+     "long": "En équipes et contre la montre : celui qui a le téléphone mime la carte sans parler ni faire de bruit, et son équipe essaie de deviner."
+    },
+    "de": {
+     "name": "Pantomime",
+     "short": "Ohne Worte darstellen. Dein Team rät.",
+     "long": "In Teams und gegen die Uhr: Wer das Handy hat, stellt die Karte ohne Worte und Geräusche dar, und das eigene Team rät."
+    }
+   }
+  },
+  {
+   "slug": "palabra-prohibida",
+   "folder": "puzzle",
+   "icon": "iconos/palabra-prohibida.png",
+   "text": {
+    "es": {
+     "name": "Palabra Prohibida",
+     "short": "Haz que adivinen sin decir las palabras prohibidas.",
+     "long": "Por equipos y contra el reloj: describe la palabra de la carta para que tu equipo la adivine, pero sin decir ninguna de las palabras prohibidas."
+    },
+    "en": {
+     "name": "Forbidden Word",
+     "short": "Get them to guess without saying the banned words.",
+     "long": "In teams and against the clock: describe the word on the card so your team guesses it, without saying any of the banned words."
+    },
+    "pt": {
+     "name": "Palavra Proibida",
+     "short": "Faça adivinharem sem dizer as palavras proibidas.",
+     "long": "Em equipes e contra o relógio: descreva a palavra da carta para sua equipe adivinhar, sem dizer nenhuma das palavras proibidas."
+    },
+    "it": {
+     "name": "Parola Proibita",
+     "short": "Fai indovinare senza dire le parole vietate.",
+     "long": "A squadre e contro il tempo: descrivi la parola della carta perché la tua squadra la indovini, senza dire nessuna delle parole vietate."
+    },
+    "fr": {
+     "name": "Mot Interdit",
+     "short": "Fais deviner sans dire les mots interdits.",
+     "long": "En équipes et contre la montre : décris le mot de la carte pour que ton équipe le devine, sans dire aucun des mots interdits."
+    },
+    "de": {
+     "name": "Verbotenes Wort",
+     "short": "Lass raten, ohne die verbotenen Wörter zu sagen.",
+     "long": "In Teams und gegen die Uhr: Beschreib das Wort auf der Karte, damit dein Team es errät, ohne eines der verbotenen Wörter zu sagen."
+    }
+   }
+  },
+  {
+   "slug": "quien-soy",
+   "folder": "puzzle",
+   "icon": "iconos/quien-soy.png",
+   "text": {
+    "es": {
+     "name": "¿Quién soy?",
+     "short": "Móvil en la frente: adivina quién eres.",
+     "long": "Ponte el móvil en la frente sin mirar. Tu equipo te da pistas con palabras y gestos, y tú intentas adivinar qué personaje, animal u oficio te ha tocado."
+    },
+    "en": {
+     "name": "Who am I?",
+     "short": "Phone on your forehead: guess who you are.",
+     "long": "Hold the phone on your forehead without looking. Your team gives you clues with words and gestures, and you try to guess which character, animal or job you got."
+    },
+    "pt": {
+     "name": "Quem sou eu?",
+     "short": "Celular na testa: adivinhe quem você é.",
+     "long": "Coloque o celular na testa sem olhar. Sua equipe dá dicas com palavras e gestos, e você tenta adivinhar que personagem, animal ou profissão saiu."
+    },
+    "it": {
+     "name": "Chi sono?",
+     "short": "Telefono sulla fronte: indovina chi sei.",
+     "long": "Tieni il telefono sulla fronte senza guardare. La tua squadra ti dà indizi con parole e gesti, e tu provi a indovinare che personaggio, animale o mestiere ti è capitato."
+    },
+    "fr": {
+     "name": "Qui suis-je ?",
+     "short": "Téléphone sur le front : devine qui tu es.",
+     "long": "Pose le téléphone sur ton front sans regarder. Ton équipe te donne des indices avec des mots et des gestes, et tu essaies de deviner quel personnage, animal ou métier tu es."
+    },
+    "de": {
+     "name": "Wer bin ich?",
+     "short": "Handy an die Stirn: Rate, wer du bist.",
+     "long": "Halte das Handy an die Stirn, ohne hinzuschauen. Dein Team gibt Hinweise mit Worten und Gesten, und du rätst, welche Figur, welches Tier oder welcher Beruf du bist."
+    }
+   }
+  },
+  {
+   "slug": "verdadero-o-falso",
+   "folder": "puzzle",
+   "icon": "iconos/verdadero-o-falso.png",
+   "text": {
+    "es": {
+     "name": "Verdadero o Falso",
+     "short": "Curiosidades: ¿verdad o mentira?",
+     "long": "Frases sorprendentes sobre animales, ciencia y el mundo. Por turnos, cada persona dice si son verdaderas o falsas y suma un punto si acierta."
+    },
+    "en": {
+     "name": "True or False",
+     "short": "Fun facts: true or not?",
+     "long": "Surprising statements about animals, science and the world. Taking turns, each person says if they’re true or false and scores a point for each right answer."
+    },
+    "pt": {
+     "name": "Verdadeiro ou Falso",
+     "short": "Curiosidades: verdade ou mentira?",
+     "long": "Frases surpreendentes sobre animais, ciência e o mundo. Na sua vez, cada pessoa diz se são verdadeiras ou falsas e ganha um ponto se acertar."
+    },
+    "it": {
+     "name": "Vero o Falso",
+     "short": "Curiosità: vero o no?",
+     "long": "Frasi sorprendenti su animali, scienza e mondo. A turno, ognuno dice se sono vere o false e guadagna un punto se indovina."
+    },
+    "fr": {
+     "name": "Vrai ou Faux",
+     "short": "Le saviez-vous : vrai ou pas ?",
+     "long": "Des affirmations étonnantes sur les animaux, la science et le monde. Chacun son tour, on dit si elles sont vraies ou fausses et on gagne un point par bonne réponse."
+    },
+    "de": {
+     "name": "Wahr oder Falsch",
+     "short": "Erstaunliches: wahr oder nicht?",
+     "long": "Erstaunliche Sätze über Tiere, Wissenschaft und die Welt. Reihum sagt jede Person, ob sie wahr oder falsch sind, und bekommt für jeden Treffer einen Punkt."
+    }
+   }
+  },
+  {
+   "slug": "bomba",
+   "folder": "accion",
+   "icon": "iconos/bomba.png",
+   "text": {
+    "es": {
+     "name": "Bomba",
+     "short": "Di algo de la lista y pasa antes de que explote.",
+     "long": "Sale una categoría y se enciende la mecha. Por turnos, cada persona dice algo de la lista y pasa el móvil. Nadie sabe cuándo va a explotar."
+    },
+    "en": {
+     "name": "Bomb",
+     "short": "Say something from the list and pass before it blows.",
+     "long": "A category comes up and the fuse is lit. Taking turns, each person says something from the list and passes the phone. Nobody knows when it will blow."
+    },
+    "pt": {
+     "name": "Bomba",
+     "short": "Diga algo da lista e passe antes que exploda.",
+     "long": "Aparece uma categoria e o pavio é aceso. Na sua vez, cada pessoa diz algo da lista e passa o celular. Ninguém sabe quando vai explodir."
+    },
+    "it": {
+     "name": "Bomba",
+     "short": "Di’ qualcosa della lista e passa prima che esploda.",
+     "long": "Esce una categoria e si accende la miccia. A turno, ognuno dice qualcosa della lista e passa il telefono. Nessuno sa quando esploderà."
+    },
+    "fr": {
+     "name": "Bombe",
+     "short": "Cite quelque chose de la liste et passe avant que ça explose.",
+     "long": "Une catégorie apparaît et la mèche s’allume. Chacun son tour, on cite quelque chose de la liste et on passe le téléphone. Personne ne sait quand ça va exploser."
+    },
+    "de": {
+     "name": "Bombe",
+     "short": "Sag etwas aus der Liste und gib weiter, bevor sie platzt.",
+     "long": "Eine Kategorie erscheint, und die Zündschnur brennt. Reihum sagt jede Person etwas aus der Liste und gibt das Handy weiter. Niemand weiß, wann sie platzt."
+    }
+   }
+  },
+  {
+   "slug": "la-botella",
+   "folder": "accion",
+   "icon": "iconos/la-botella.png",
+   "text": {
+    "es": {
+     "name": "La Botella",
+     "short": "Gira la botella y descubre a quién le toca.",
+     "long": "Quien tiene el turno gira la botella. La persona a la que apunte hace un pequeño reto o responde una pregunta, y luego gira ella."
+    },
+    "en": {
+     "name": "Spin the Bottle",
+     "short": "Spin the bottle and see who’s up.",
+     "long": "Whoever’s turn it is spins the bottle. The person it points at does a little challenge or answers a question, then spins next."
+    },
+    "pt": {
+     "name": "A Garrafa",
+     "short": "Gire a garrafa e descubra de quem é a vez.",
+     "long": "Quem está na vez gira a garrafa. A pessoa para quem ela apontar faz um pequeno desafio ou responde a uma pergunta, e depois gira."
+    },
+    "it": {
+     "name": "La Bottiglia",
+     "short": "Gira la bottiglia e scopri a chi tocca.",
+     "long": "Chi ha il turno gira la bottiglia. La persona indicata fa una piccola sfida o risponde a una domanda, e poi gira lei."
+    },
+    "fr": {
+     "name": "La Bouteille",
+     "short": "Fais tourner la bouteille et découvre à qui c’est le tour.",
+     "long": "Celui dont c’est le tour fait tourner la bouteille. La personne désignée relève un petit défi ou répond à une question, puis c’est elle qui tourne."
+    },
+    "de": {
+     "name": "Flaschendrehen",
+     "short": "Dreh die Flasche und sieh, wer dran ist.",
+     "long": "Wer dran ist, dreht die Flasche. Auf wen sie zeigt, macht eine kleine Aufgabe oder beantwortet eine Frage und dreht danach."
+    }
+   }
+  },
+  {
+   "slug": "ruleta",
+   "folder": "accion",
+   "icon": "iconos/ruleta.png",
+   "text": {
+    "es": {
+     "name": "Ruleta",
+     "short": "Gira la rueda y haz el reto que salga.",
+     "long": "Una rueda llena de retos divertidos para cantar, bailar, imitar o contar chistes. Por turnos, cada persona la gira y hace lo que salga."
+    },
+    "en": {
+     "name": "Challenge Wheel",
+     "short": "Spin the wheel and do the challenge it lands on.",
+     "long": "A wheel full of fun challenges: singing, dancing, impressions and jokes. Taking turns, each person spins it and does what comes up."
+    },
+    "pt": {
+     "name": "Roleta",
+     "short": "Gire a roda e faça o desafio que sair.",
+     "long": "Uma roda cheia de desafios divertidos para cantar, dançar, imitar ou contar piadas. Na sua vez, cada pessoa gira e faz o que sair."
+    },
+    "it": {
+     "name": "Ruota",
+     "short": "Gira la ruota e fai la sfida che esce.",
+     "long": "Una ruota piena di sfide divertenti per cantare, ballare, imitare o raccontare barzellette. A turno, ognuno la gira e fa quello che esce."
+    },
+    "fr": {
+     "name": "La Roue",
+     "short": "Fais tourner la roue et relève le défi qui sort.",
+     "long": "Une roue pleine de défis amusants pour chanter, danser, imiter ou raconter des blagues. Chacun son tour, on la fait tourner et on fait ce qui sort."
+    },
+    "de": {
+     "name": "Glücksrad",
+     "short": "Dreh das Rad und mach die Aufgabe, die kommt.",
+     "long": "Ein Rad voller lustiger Aufgaben: singen, tanzen, nachmachen oder Witze erzählen. Reihum dreht jede Person und macht, was kommt."
+    }
+   }
+  },
+  {
+   "slug": "el-impostor",
+   "folder": "cartas",
+   "icon": "iconos/el-impostor.png",
+   "text": {
+    "es": {
+     "name": "El Impostor",
+     "short": "Todos saben la palabra menos uno. ¿Quién es?",
+     "long": "Cada persona mira en secreto su carta: todos ven la misma palabra menos el impostor. Por turnos decís algo relacionado y después votáis quién disimula."
+    },
+    "en": {
+     "name": "The Impostor",
+     "short": "Everyone knows the word but one. Who is it?",
+     "long": "Everyone secretly looks at their card: all see the same word except the impostor. Take turns saying something related, then vote for who’s bluffing."
+    },
+    "pt": {
+     "name": "O Impostor",
+     "short": "Todos sabem a palavra menos um. Quem é?",
+     "long": "Cada pessoa olha sua carta em segredo: todos veem a mesma palavra, menos o impostor. Na sua vez, digam algo relacionado e depois votem em quem está disfarçando."
+    },
+    "it": {
+     "name": "L’Impostore",
+     "short": "Tutti sanno la parola tranne uno. Chi è?",
+     "long": "Ognuno guarda in segreto la sua carta: tutti vedono la stessa parola tranne l’impostore. A turno dite qualcosa di collegato e poi votate chi sta bluffando."
+    },
+    "fr": {
+     "name": "L’Imposteur",
+     "short": "Tout le monde connaît le mot sauf un. Qui est-ce ?",
+     "long": "Chacun regarde sa carte en secret : tout le monde voit le même mot sauf l’imposteur. Chacun son tour, dites quelque chose en rapport, puis votez pour celui qui bluffe."
+    },
+    "de": {
+     "name": "Der Hochstapler",
+     "short": "Alle kennen das Wort außer einer Person. Wer ist es?",
+     "long": "Jede Person sieht heimlich ihre Karte: Alle sehen dasselbe Wort außer dem Hochstapler. Reihum sagt ihr etwas Passendes, dann stimmt ihr ab, wer blufft."
+    }
+   }
+  },
+  {
+   "slug": "mayor-o-menor",
+   "folder": "cartas",
+   "icon": "iconos/mayor-o-menor.png",
+   "text": {
+    "es": {
+     "name": "Mayor o Menor",
+     "short": "¿La siguiente carta será mayor o menor?",
+     "long": "Sale una carta con un número. Por turnos, cada persona dice si la siguiente será mayor o menor. Cada acierto, un punto."
+    },
+    "en": {
+     "name": "Higher or Lower",
+     "short": "Will the next card be higher or lower?",
+     "long": "A card with a number comes up. Taking turns, each person says if the next one will be higher or lower. Each right guess is a point."
+    },
+    "pt": {
+     "name": "Maior ou Menor",
+     "short": "A próxima carta será maior ou menor?",
+     "long": "Sai uma carta com um número. Na sua vez, cada pessoa diz se a próxima será maior ou menor. Cada acerto vale um ponto."
+    },
+    "it": {
+     "name": "Più Alto o Più Basso",
+     "short": "La prossima carta sarà più alta o più bassa?",
+     "long": "Esce una carta con un numero. A turno, ognuno dice se la prossima sarà più alta o più bassa. Ogni risposta giusta vale un punto."
+    },
+    "fr": {
+     "name": "Plus ou Moins",
+     "short": "La carte suivante sera-t-elle plus haute ou plus basse ?",
+     "long": "Une carte avec un nombre apparaît. Chacun son tour, on dit si la suivante sera plus haute ou plus basse. Chaque bonne réponse vaut un point."
+    },
+    "de": {
+     "name": "Höher oder Niedriger",
+     "short": "Wird die nächste Karte höher oder niedriger?",
+     "long": "Eine Karte mit einer Zahl erscheint. Reihum sagt jede Person, ob die nächste höher oder niedriger ist. Jeder Treffer ist ein Punkt."
+    }
+   }
+  },
+  {
+   "slug": "stop",
+   "folder": "accion",
+   "icon": "iconos/stop.png",
+   "text": {
+    "es": {
+     "name": "Stop",
+     "short": "Una letra, cinco categorías y el reloj corriendo.",
+     "long": "Sale una letra y cinco categorías. Todos escriben en papel una palabra de cada una que empiece por esa letra antes de que acabe el tiempo. Se puede jugar por equipos."
+    },
+    "en": {
+     "name": "Stop",
+     "short": "One letter, five categories and the clock ticking.",
+     "long": "A letter and five categories come up. Everyone writes on paper a word for each one starting with that letter before time runs out. You can play in teams."
+    },
+    "pt": {
+     "name": "Stop",
+     "short": "Uma letra, cinco categorias e o relógio correndo.",
+     "long": "Saem uma letra e cinco categorias. Todos escrevem no papel uma palavra de cada uma que comece com essa letra antes que o tempo acabe. Dá para jogar em equipes."
+    },
+    "it": {
+     "name": "Nomi, Cose, Città",
+     "short": "Una lettera, cinque categorie e il tempo che corre.",
+     "long": "Escono una lettera e cinque categorie. Tutti scrivono su carta una parola per ognuna che inizi con quella lettera prima che scada il tempo. Si può giocare a squadre."
+    },
+    "fr": {
+     "name": "Petit Bac",
+     "short": "Une lettre, cinq catégories et le chrono qui tourne.",
+     "long": "Une lettre et cinq catégories apparaissent. Chacun écrit sur papier un mot pour chacune commençant par cette lettre avant la fin du temps. On peut jouer en équipes."
+    },
+    "de": {
+     "name": "Stadt, Land, Fluss",
+     "short": "Ein Buchstabe, fünf Kategorien und die Uhr läuft.",
+     "long": "Ein Buchstabe und fünf Kategorien erscheinen. Alle schreiben auf Papier zu jeder Kategorie ein Wort mit diesem Anfangsbuchstaben, bevor die Zeit abläuft. Auch in Teams spielbar."
+    }
+   }
+  },
+  {
+   "slug": "cadena-de-palabras",
+   "folder": "cartas",
+   "icon": "iconos/cadena-de-palabras.png",
+   "text": {
+    "es": {
+     "name": "Cadena de palabras",
+     "short": "Encadena palabras antes de que se acabe el tiempo.",
+     "long": "Por turnos, cada persona dice una palabra que siga la cadena antes de que se acabe su tiempo. Quien se quede en blanco pierde una vida. Gana quien aguante más."
+    },
+    "en": {
+     "name": "Word Chain",
+     "short": "Chain words together before time runs out.",
+     "long": "Taking turns, each person says a word that continues the chain before their time runs out. Whoever goes blank loses a life. The last one standing wins."
+    },
+    "pt": {
+     "name": "Corrente de Palavras",
+     "short": "Encadeie palavras antes que o tempo acabe.",
+     "long": "Na sua vez, cada pessoa diz uma palavra que continue a corrente antes que o tempo acabe. Quem der branco perde uma vida. Vence quem aguentar mais."
+    },
+    "it": {
+     "name": "Catena di Parole",
+     "short": "Concatena parole prima che scada il tempo.",
+     "long": "A turno, ognuno dice una parola che continui la catena prima che scada il suo tempo. Chi resta senza parole perde una vita. Vince chi resiste di più."
+    },
+    "fr": {
+     "name": "Chaîne de Mots",
+     "short": "Enchaîne les mots avant la fin du temps.",
+     "long": "Chacun son tour, on dit un mot qui prolonge la chaîne avant la fin de son temps. Celui qui sèche perd une vie. Le dernier en lice gagne."
+    },
+    "de": {
+     "name": "Wörterkette",
+     "short": "Reih Wörter aneinander, bevor die Zeit abläuft.",
+     "long": "Reihum sagt jede Person ein Wort, das die Kette fortsetzt, bevor ihre Zeit abläuft. Wem nichts einfällt, verliert ein Leben. Wer am längsten durchhält, gewinnt."
+    }
+   }
+  },
+  {
+   "slug": "dibuja-y-adivina",
+   "folder": "puzzle",
+   "icon": "iconos/dibuja-y-adivina.png",
+   "text": {
+    "es": {
+     "name": "Dibuja y adivina",
+     "short": "Dibuja sin letras; tu equipo adivina.",
+     "long": "Por equipos y contra el reloj: quien tiene el móvil mira la palabra en secreto y la dibuja con el dedo. Su equipo intenta adivinarla antes de que acabe el minuto."
+    },
+    "en": {
+     "name": "Draw and Guess",
+     "short": "Draw without letters; your team guesses.",
+     "long": "In teams and against the clock: whoever has the phone secretly looks at the word and draws it with a finger. Their team tries to guess it before the minute is up."
+    },
+    "pt": {
+     "name": "Desenhe e Adivinhe",
+     "short": "Desenhe sem letras; sua equipe adivinha.",
+     "long": "Em equipes e contra o relógio: quem está com o celular vê a palavra em segredo e desenha com o dedo. A equipe tenta adivinhar antes que o minuto acabe."
+    },
+    "it": {
+     "name": "Disegna e Indovina",
+     "short": "Disegna senza lettere; la tua squadra indovina.",
+     "long": "A squadre e contro il tempo: chi ha il telefono guarda la parola in segreto e la disegna con il dito. La sua squadra prova a indovinarla prima che scada il minuto."
+    },
+    "fr": {
+     "name": "Dessine et Devine",
+     "short": "Dessine sans lettres ; ton équipe devine.",
+     "long": "En équipes et contre la montre : celui qui a le téléphone regarde le mot en secret et le dessine avec le doigt. Son équipe essaie de le deviner avant la fin de la minute."
+    },
+    "de": {
+     "name": "Zeichnen und Raten",
+     "short": "Zeichne ohne Buchstaben, dein Team rät.",
+     "long": "In Teams und gegen die Uhr: Wer das Handy hat, sieht sich das Wort heimlich an und zeichnet es mit dem Finger. Das Team versucht, es zu erraten, bevor die Minute um ist."
+    }
+   }
+  }
+ ]
+}

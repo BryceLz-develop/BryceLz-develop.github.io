@@ -582,6 +582,16 @@ h1, h2, h3 { text-wrap: balance; }
 .contact .sticker { margin-top: 8px; }
 
 /* ------------------------------------------------------------------- */
+/* Vídeo de la ficha (el de tiendas, en cada idioma). */
+
+.atg-video video {
+  display: block; margin: 0 auto; width: 260px; max-width: 100%; height: auto; aspect-ratio: 886 / 1920;
+  border: 2px solid var(--outline); border-radius: 22px;
+  box-shadow: 0 5px 0 var(--outline); background: var(--surface);
+}
+@media (min-width: 720px) { .atg-video video { width: 300px; } }
+
+/* ------------------------------------------------------------------- */
 /* Galería de capturas de la ficha (las de Google Play, en cada idioma). */
 
 .shots-strip {

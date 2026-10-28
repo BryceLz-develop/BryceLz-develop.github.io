@@ -1,0 +1,523 @@
+{
+ "exportedAt": "2026-10-27T17:49:14.810Z",
+ "app": {
+  "name": "AllTheKidsGames",
+  "id": "allthekidsgames",
+  "webUrl": "https://brycelz-develop.github.io/apps/allthekidsgames",
+  "icon": "app-icon.png"
+ },
+ "folders": {
+  "es": {
+   "all": "Todos",
+   "cartas": "Crear",
+   "mesa": "De mesa",
+   "numeros": "Aprender",
+   "accion": "Moverse",
+   "puzzle": "Pensar",
+   "letras": "Letras",
+   "favoritos": "Favoritos",
+   "multijugador": "Multijugador"
+  },
+  "en": {
+   "all": "All",
+   "cartas": "Create",
+   "mesa": "Tabletop",
+   "numeros": "Learn",
+   "accion": "Move",
+   "puzzle": "Think",
+   "letras": "Words",
+   "favoritos": "Favourites",
+   "multijugador": "Multiplayer"
+  },
+  "pt": {
+   "all": "Todos",
+   "cartas": "Criar",
+   "mesa": "De mesa",
+   "numeros": "Aprender",
+   "accion": "Mexer-se",
+   "puzzle": "Pensar",
+   "letras": "Letras",
+   "favoritos": "Favoritos",
+   "multijugador": "Multijogador"
+  },
+  "it": {
+   "all": "Tutti",
+   "cartas": "Crea",
+   "mesa": "Da tavolo",
+   "numeros": "Impara",
+   "accion": "Muoviti",
+   "puzzle": "Pensa",
+   "letras": "Lettere",
+   "favoritos": "Preferiti",
+   "multijugador": "Multigiocatore"
+  },
+  "fr": {
+   "all": "Tous",
+   "cartas": "Créer",
+   "mesa": "Plateau",
+   "numeros": "Apprendre",
+   "accion": "Bouger",
+   "puzzle": "Réfléchir",
+   "letras": "Lettres",
+   "favoritos": "Favoris",
+   "multijugador": "Multijoueur"
+  },
+  "de": {
+   "all": "Alle",
+   "cartas": "Gestalten",
+   "mesa": "Brett",
+   "numeros": "Lernen",
+   "accion": "Bewegen",
+   "puzzle": "Denken",
+   "letras": "Buchstaben",
+   "favoritos": "Favoriten",
+   "multijugador": "Mehrspieler"
+  }
+ },
+ "games": [
+  {
+   "slug": "pinta-numeros",
+   "folder": "cartas",
+   "icon": "iconos/pinta-numeros.png",
+   "text": {
+    "es": {
+     "name": "Pinta por números",
+     "short": "Pinta cada parte con su color y descubre el dibujo.",
+     "long": "Cada parte del dibujo lleva una marca: una bolita de color o un número. Elige la cera que le toca, pinta y mira cómo aparece el dibujo."
+    },
+    "en": {
+     "name": "Paint by Numbers",
+     "short": "Paint each part with its colour and discover the picture.",
+     "long": "Each part of the picture has a mark: a coloured dot or a number. Pick the right crayon, paint and watch the picture appear."
+    },
+    "pt": {
+     "name": "Pinte por números",
+     "short": "Pinte cada parte com sua cor e descubra o desenho.",
+     "long": "Cada parte do desenho tem uma marca: uma bolinha colorida ou um número. Escolha o giz certo, pinte e veja o desenho aparecer."
+    },
+    "it": {
+     "name": "Colora con i numeri",
+     "short": "Colora ogni parte col suo colore e scopri il disegno.",
+     "long": "Ogni parte del disegno ha un segno: un pallino colorato o un numero. Scegli il pastello giusto, colora e guarda apparire il disegno."
+    },
+    "fr": {
+     "name": "Coloriage magique",
+     "short": "Colorie chaque partie de sa couleur et découvre le dessin.",
+     "long": "Chaque partie du dessin a une marque : un point de couleur ou un numéro. Choisis la bonne craie, colorie et regarde le dessin apparaître."
+    },
+    "de": {
+     "name": "Malen nach Zahlen",
+     "short": "Mal jeden Teil in seiner Farbe aus und entdecke das Bild.",
+     "long": "Jeder Teil des Bildes hat ein Zeichen: einen bunten Punkt oder eine Zahl. Wähl den passenden Stift, mal aus und schau, wie das Bild erscheint."
+    }
+   }
+  },
+  {
+   "slug": "colorear",
+   "folder": "cartas",
+   "icon": "iconos/colorear.png",
+   "text": {
+    "es": {
+     "name": "Colorear",
+     "short": "Elige una cera y pinta los dibujos como quieras.",
+     "long": "Una casa, un pez, una flor, un cohete. Elige el color que más te guste y toca cada parte del dibujo para pintarla."
+    },
+    "en": {
+     "name": "Colouring",
+     "short": "Pick a crayon and colour the pictures however you like.",
+     "long": "A house, a fish, a flower, a rocket. Pick your favourite colour and tap each part of the picture to colour it."
+    },
+    "pt": {
+     "name": "Colorir",
+     "short": "Escolha um giz e pinte os desenhos como quiser.",
+     "long": "Uma casa, um peixe, uma flor, um foguete. Escolha a cor de que mais gosta e toque em cada parte do desenho para pintá-la."
+    },
+    "it": {
+     "name": "Colorare",
+     "short": "Scegli un pastello e colora i disegni come vuoi.",
+     "long": "Una casa, un pesce, un fiore, un razzo. Scegli il colore che ti piace di più e tocca ogni parte del disegno per colorarla."
+    },
+    "fr": {
+     "name": "Coloriage",
+     "short": "Choisis une craie et colorie les dessins comme tu veux.",
+     "long": "Une maison, un poisson, une fleur, une fusée. Choisis ta couleur préférée et touche chaque partie du dessin pour la colorier."
+    },
+    "de": {
+     "name": "Ausmalen",
+     "short": "Wähl einen Stift und mal die Bilder aus, wie du willst.",
+     "long": "Ein Haus, ein Fisch, eine Blume, eine Rakete. Wähl deine Lieblingsfarbe und tippe auf jeden Teil des Bildes, um ihn auszumalen."
+    }
+   }
+  },
+  {
+   "slug": "traza",
+   "folder": "puzzle",
+   "icon": "iconos/traza.png",
+   "text": {
+    "es": {
+     "name": "Traza letras y números",
+     "short": "Sigue las bolitas con el dedo y escribe números y letras.",
+     "long": "Pon el dedo en la bolita verde y sigue el camino de bolitas: así se escribe cada número y cada letra, en el orden de verdad."
+    },
+    "en": {
+     "name": "Trace Letters and Numbers",
+     "short": "Follow the dots with your finger and write numbers and letters.",
+     "long": "Put your finger on the green dot and follow the path of dots: that’s how each number and letter is written, in the real order."
+    },
+    "pt": {
+     "name": "Trace letras e números",
+     "short": "Siga as bolinhas com o dedo e escreva números e letras.",
+     "long": "Ponha o dedo na bolinha verde e siga o caminho de bolinhas: é assim que se escreve cada número e cada letra, na ordem certa."
+    },
+    "it": {
+     "name": "Traccia lettere e numeri",
+     "short": "Segui i pallini col dito e scrivi numeri e lettere.",
+     "long": "Metti il dito sul pallino verde e segui la strada di pallini: così si scrive ogni numero e ogni lettera, nell’ordine giusto."
+    },
+    "fr": {
+     "name": "Trace lettres et chiffres",
+     "short": "Suis les petits points avec le doigt et écris des chiffres et des lettres.",
+     "long": "Pose ton doigt sur le point vert et suis le chemin de points : c’est comme ça qu’on écrit chaque chiffre et chaque lettre, dans le bon ordre."
+    },
+    "de": {
+     "name": "Buchstaben und Zahlen nachfahren",
+     "short": "Fahr die Punkte mit dem Finger nach und schreib Zahlen und Buchstaben.",
+     "long": "Leg den Finger auf den grünen Punkt und folge dem Weg aus Punkten: So schreibt man jede Zahl und jeden Buchstaben, in der richtigen Reihenfolge."
+    }
+   }
+  },
+  {
+   "slug": "une-los-puntos",
+   "folder": "accion",
+   "icon": "iconos/une-los-puntos.png",
+   "text": {
+    "es": {
+     "name": "Une los puntos",
+     "short": "Une los puntos en orden y descubre el dibujo.",
+     "long": "Empieza en el 1 y ve uniendo los puntos con el dedo: 2, 3, 4. Cuando llegues al último, ¡sorpresa! Aparece el dibujo escondido."
+    },
+    "en": {
+     "name": "Join the Dots",
+     "short": "Join the dots in order and discover the picture.",
+     "long": "Start at 1 and join the dots with your finger: 2, 3, 4. When you reach the last one, surprise! The hidden picture appears."
+    },
+    "pt": {
+     "name": "Ligue os pontos",
+     "short": "Ligue os pontos em ordem e descubra o desenho.",
+     "long": "Comece no 1 e vá ligando os pontos com o dedo: 2, 3, 4. Quando chegar ao último, surpresa! Aparece o desenho escondido."
+    },
+    "it": {
+     "name": "Unisci i puntini",
+     "short": "Unisci i puntini in ordine e scopri il disegno.",
+     "long": "Parti dall’1 e unisci i puntini col dito: 2, 3, 4. Quando arrivi all’ultimo, sorpresa! Appare il disegno nascosto."
+    },
+    "fr": {
+     "name": "Relie les points",
+     "short": "Relie les points dans l’ordre et découvre le dessin.",
+     "long": "Commence au 1 et relie les points avec le doigt : 2, 3, 4. Quand tu arrives au dernier, surprise ! Le dessin caché apparaît."
+    },
+    "de": {
+     "name": "Verbinde die Punkte",
+     "short": "Verbinde die Punkte der Reihe nach und entdecke das Bild.",
+     "long": "Fang bei 1 an und verbinde die Punkte mit dem Finger: 2, 3, 4. Beim letzten gibt es eine Überraschung: Das versteckte Bild erscheint!"
+    }
+   }
+  },
+  {
+   "slug": "laberintos",
+   "folder": "accion",
+   "icon": "iconos/laberintos.png",
+   "text": {
+    "es": {
+     "name": "Laberintos",
+     "short": "Lleva al ratón hasta el queso sin chocar con las paredes.",
+     "long": "Un ratón, un conejo, un perrito y una abeja buscan su premio. Arrastra el dedo por los pasillos del laberinto y llévalos hasta la meta."
+    },
+    "en": {
+     "name": "Mazes",
+     "short": "Lead the mouse to the cheese without bumping into the walls.",
+     "long": "A mouse, a bunny, a puppy and a bee are looking for their treat. Drag your finger along the paths of the maze and lead them to the goal."
+    },
+    "pt": {
+     "name": "Labirintos",
+     "short": "Leve o ratinho até o queijo sem bater nas paredes.",
+     "long": "Um ratinho, um coelho, um cachorrinho e uma abelha procuram seu prêmio. Arraste o dedo pelos caminhos do labirinto e leve-os até a chegada."
+    },
+    "it": {
+     "name": "Labirinti",
+     "short": "Porta il topolino al formaggio senza sbattere contro i muri.",
+     "long": "Un topolino, un coniglietto, un cagnolino e un’ape cercano il loro premio. Trascina il dito lungo i corridoi del labirinto e portali al traguardo."
+    },
+    "fr": {
+     "name": "Labyrinthes",
+     "short": "Emmène la souris jusqu’au fromage sans toucher les murs.",
+     "long": "Une souris, un lapin, un chiot et une abeille cherchent leur récompense. Fais glisser ton doigt dans les couloirs du labyrinthe et emmène-les jusqu’au but."
+    },
+    "de": {
+     "name": "Labyrinthe",
+     "short": "Bring die Maus zum Käse, ohne an die Wände zu stoßen.",
+     "long": "Eine Maus, ein Hase, ein Hündchen und eine Biene suchen ihre Belohnung. Zieh den Finger durch die Gänge des Labyrinths und bring sie ins Ziel."
+    }
+   }
+  },
+  {
+   "slug": "piano-xilofono",
+   "folder": "cartas",
+   "icon": "iconos/piano-xilofono.png",
+   "text": {
+    "es": {
+     "name": "Piano y xilófono",
+     "short": "Toca canciones con las teclas de colores.",
+     "long": "Un xilófono de colores y un piano. La tecla que brilla es la siguiente nota: tócala y la canción suena. Estrellita, Martinillo y más."
+    },
+    "en": {
+     "name": "Piano and Xylophone",
+     "short": "Play songs with the coloured keys.",
+     "long": "A colourful xylophone and a piano. The shining key is the next note: tap it and the song plays. Twinkle Twinkle, Frère Jacques and more."
+    },
+    "pt": {
+     "name": "Piano e xilofone",
+     "short": "Toque músicas com as teclas coloridas.",
+     "long": "Um xilofone colorido e um piano. A tecla que brilha é a próxima nota: toque nela e a música toca. Brilha, brilha, estrelinha, Frei Martinho e mais."
+    },
+    "it": {
+     "name": "Piano e xilofono",
+     "short": "Suona canzoni con i tasti colorati.",
+     "long": "Uno xilofono colorato e un pianoforte. Il tasto che brilla è la nota successiva: toccalo e la canzone suona. Brilla brilla la stellina, Fra Martino e altre."
+    },
+    "fr": {
+     "name": "Piano et xylophone",
+     "short": "Joue des chansons avec les touches de couleur.",
+     "long": "Un xylophone de toutes les couleurs et un piano. La touche qui brille est la note suivante : touche-la et la chanson joue. Ah ! vous dirai-je, maman, Frère Jacques et d’autres."
+    },
+    "de": {
+     "name": "Klavier und Xylofon",
+     "short": "Spiel Lieder mit den bunten Tasten.",
+     "long": "Ein buntes Xylofon und ein Klavier. Die leuchtende Taste ist der nächste Ton: Tippe darauf und das Lied erklingt. Morgen kommt der Weihnachtsmann, Bruder Jakob und mehr."
+    }
+   }
+  },
+  {
+   "slug": "formas-colores",
+   "folder": "puzzle",
+   "icon": "iconos/formas-colores.png",
+   "text": {
+    "es": {
+     "name": "Formas y colores",
+     "short": "Encaja cada pieza en su hueco.",
+     "long": "Círculos, estrellas, corazones. Mira la pieza de arriba y toca el hueco de la caja donde encaja."
+    },
+    "en": {
+     "name": "Shapes and Colours",
+     "short": "Fit each piece into its hole.",
+     "long": "Circles, stars, hearts. Look at the piece at the top and tap the hole in the box where it fits."
+    },
+    "pt": {
+     "name": "Formas e cores",
+     "short": "Encaixe cada peça no seu buraco.",
+     "long": "Círculos, estrelas, corações. Olhe a peça de cima e toque no buraco da caixa onde ela encaixa."
+    },
+    "it": {
+     "name": "Forme e colori",
+     "short": "Incastra ogni pezzo nel suo buco.",
+     "long": "Cerchi, stelle, cuori. Guarda il pezzo in alto e tocca il buco della scatola dove si incastra."
+    },
+    "fr": {
+     "name": "Formes et couleurs",
+     "short": "Mets chaque pièce dans son trou.",
+     "long": "Des ronds, des étoiles, des cœurs. Regarde la pièce en haut et touche le trou de la boîte où elle entre."
+    },
+    "de": {
+     "name": "Formen und Farben",
+     "short": "Steck jedes Teil in sein Loch.",
+     "long": "Kreise, Sterne, Herzen. Schau dir das Teil oben an und tippe auf das Loch in der Box, in das es passt."
+    }
+   }
+  },
+  {
+   "slug": "que-falta",
+   "folder": "puzzle",
+   "icon": "iconos/que-falta.png",
+   "text": {
+    "es": {
+     "name": "¿Qué falta?",
+     "short": "Mira las cosas y descubre cuál ha desaparecido.",
+     "long": "Mira bien los juguetes y toca «¡Listo!». Una manta los tapa y, al quitarla, uno se ha escondido. ¿Sabes cuál?"
+    },
+    "en": {
+     "name": "What’s Missing?",
+     "short": "Look at the things and find out which one disappeared.",
+     "long": "Look closely at the toys and tap “Ready!”. A blanket covers them and, when it lifts, one is hiding. Do you know which?"
+    },
+    "pt": {
+     "name": "O que falta?",
+     "short": "Olhe as coisas e descubra qual desapareceu.",
+     "long": "Olhe bem os brinquedos e toque em “Pronto!”. Um cobertor os cobre e, quando sai, um se escondeu. Sabe qual?"
+    },
+    "it": {
+     "name": "Che cosa manca?",
+     "short": "Guarda le cose e scopri quale è sparita.",
+     "long": "Guarda bene i giocattoli e tocca «Pronto!». Una coperta li copre e, quando si alza, uno si è nascosto. Sai quale?"
+    },
+    "fr": {
+     "name": "Qu’est-ce qui manque ?",
+     "short": "Regarde les choses et trouve celle qui a disparu.",
+     "long": "Regarde bien les jouets et touche « Prêt ! ». Une couverture les cache et, quand elle s’en va, l’un d’eux s’est caché. Tu sais lequel ?"
+    },
+    "de": {
+     "name": "Was fehlt?",
+     "short": "Schau dir die Dinge an und finde heraus, welches verschwunden ist.",
+     "long": "Schau dir die Spielsachen genau an und tippe auf „Bereit!“. Eine Decke deckt sie zu, und wenn sie weg ist, hat sich eins versteckt. Weißt du, welches?"
+    }
+   }
+  },
+  {
+   "slug": "ordena-tamano",
+   "folder": "puzzle",
+   "icon": "iconos/ordena-tamano.png",
+   "text": {
+    "es": {
+     "name": "Ordena por tamaño",
+     "short": "Coloca las cosas de la más pequeña a la más grande.",
+     "long": "Ositos, globos, árboles. Toca primero el más pequeño y luego el siguiente, hasta tener la fila ordenada en el estante."
+    },
+    "en": {
+     "name": "Size Order",
+     "short": "Put things in order from smallest to biggest.",
+     "long": "Teddies, balloons, trees. Tap the smallest first, then the next one, until the row on the shelf is in order."
+    },
+    "pt": {
+     "name": "Ordem de tamanho",
+     "short": "Coloque as coisas da menor para a maior.",
+     "long": "Ursinhos, balões, árvores. Toque primeiro o menor e depois o seguinte, até a fila ficar em ordem na prateleira."
+    },
+    "it": {
+     "name": "In ordine di grandezza",
+     "short": "Metti le cose in ordine dalla più piccola alla più grande.",
+     "long": "Orsetti, palloncini, alberi. Tocca prima il più piccolo e poi il successivo, finché la fila sulla mensola è in ordine."
+    },
+    "fr": {
+     "name": "Du petit au grand",
+     "short": "Range les choses de la plus petite à la plus grande.",
+     "long": "Des oursons, des ballons, des arbres. Touche d’abord le plus petit, puis le suivant, jusqu’à ce que la rangée soit en ordre sur l’étagère."
+    },
+    "de": {
+     "name": "Nach Größe ordnen",
+     "short": "Ordne die Dinge vom kleinsten zum größten.",
+     "long": "Teddys, Luftballons, Bäume. Tippe zuerst auf das kleinste, dann auf das nächste, bis die Reihe im Regal geordnet ist."
+    }
+   }
+  },
+  {
+   "slug": "cuenta-conmigo",
+   "folder": "puzzle",
+   "icon": "iconos/cuenta-conmigo.png",
+   "text": {
+    "es": {
+     "name": "Cuenta conmigo",
+     "short": "Cuenta los dibujos y toca el número que es.",
+     "long": "Salen manzanas, estrellas, patos. Cuéntalos con el dedo y toca el número correcto. ¡A ver cuántos aciertas!"
+    },
+    "en": {
+     "name": "Count with Me",
+     "short": "Count the pictures and tap the right number.",
+     "long": "Apples, stars, ducks. Count them with your finger and tap the right number. How many can you get right?"
+    },
+    "pt": {
+     "name": "Conte comigo",
+     "short": "Conte os desenhos e toque no número certo.",
+     "long": "Aparecem maçãs, estrelas, patos. Conte com o dedo e toque no número certo. Quantos você acerta?"
+    },
+    "it": {
+     "name": "Conta con me",
+     "short": "Conta i disegni e tocca il numero giusto.",
+     "long": "Escono mele, stelle, papere. Contale col dito e tocca il numero giusto. Quante ne indovini?"
+    },
+    "fr": {
+     "name": "Compte avec moi",
+     "short": "Compte les dessins et touche le bon nombre.",
+     "long": "Des pommes, des étoiles, des canards. Compte-les avec le doigt et touche le bon nombre. Combien vas-tu en trouver ?"
+    },
+    "de": {
+     "name": "Zähl mit mir",
+     "short": "Zähl die Bilder und tippe auf die richtige Zahl.",
+     "long": "Äpfel, Sterne, Enten. Zähl sie mit dem Finger und tippe auf die richtige Zahl. Wie viele schaffst du?"
+    }
+   }
+  },
+  {
+   "slug": "memoria-musical",
+   "folder": "accion",
+   "icon": "iconos/memoria-musical.png",
+   "text": {
+    "es": {
+     "name": "Memoria musical",
+     "short": "Mira cómo se encienden los colores y repítelos en el mismo orden.",
+     "long": "Los botones se encienden y suenan uno detrás de otro. Cuando acaben, tócalos tú en el mismo orden. ¡Cada vez hay uno más!"
+    },
+    "en": {
+     "name": "Musical memory",
+     "short": "Watch the colours light up and repeat them in the same order.",
+     "long": "The buttons light up and sound one after another. When they stop, tap them in the same order. Each time there is one more!"
+    },
+    "pt": {
+     "name": "Memória musical",
+     "short": "Veja as cores acenderem e repita na mesma ordem.",
+     "long": "Os botões acendem e tocam um depois do outro. Quando acabarem, toque neles na mesma ordem. A cada vez tem mais um!"
+    },
+    "it": {
+     "name": "Memoria musicale",
+     "short": "Guarda i colori che si accendono e ripetili nello stesso ordine.",
+     "long": "I pulsanti si accendono e suonano uno dopo l’altro. Quando finiscono, toccali nello stesso ordine. Ogni volta ce n’è uno in più!"
+    },
+    "fr": {
+     "name": "Mémoire musicale",
+     "short": "Regarde les couleurs s’allumer et répète-les dans le même ordre.",
+     "long": "Les boutons s’allument et sonnent l’un après l’autre. Quand ils s’arrêtent, touche-les dans le même ordre. À chaque fois, il y en a un de plus !"
+    },
+    "de": {
+     "name": "Musik-Memory",
+     "short": "Schau, wie die Farben aufleuchten, und tippe sie in derselben Reihenfolge nach.",
+     "long": "Die Knöpfe leuchten und klingen nacheinander. Wenn sie fertig sind, tippst du sie in derselben Reihenfolge. Jedes Mal kommt einer dazu!"
+    }
+   }
+  },
+  {
+   "slug": "memoria-animales",
+   "folder": "puzzle",
+   "icon": "iconos/memoria-animales.png",
+   "text": {
+    "es": {
+     "name": "Memoria de animales",
+     "short": "Da la vuelta a las cartas y encuentra las parejas de animales.",
+     "long": "Toca dos cartas. Si son el mismo animal, ¡pareja! Si no, se vuelven a tapar: recuerda dónde estaba cada uno."
+    },
+    "en": {
+     "name": "Animal Memory",
+     "short": "Turn the cards over and find the animal pairs.",
+     "long": "Tap two cards. If they are the same animal, it’s a pair! If not, they turn back over: remember where each one was."
+    },
+    "pt": {
+     "name": "Memória dos animais",
+     "short": "Vire as cartas e encontre os pares de animais.",
+     "long": "Toque em duas cartas. Se forem o mesmo animal, é um par! Se não, elas se viram de novo: lembre onde estava cada um."
+    },
+    "it": {
+     "name": "Memory degli animali",
+     "short": "Gira le carte e trova le coppie di animali.",
+     "long": "Tocca due carte. Se sono lo stesso animale, è una coppia! Se no, si girano di nuovo: ricorda dov’era ognuno."
+    },
+    "fr": {
+     "name": "Mémoire des animaux",
+     "short": "Retourne les cartes et trouve les paires d’animaux.",
+     "long": "Touche deux cartes. Si c’est le même animal, c’est une paire ! Sinon, elles se retournent : souviens-toi où était chacun."
+    },
+    "de": {
+     "name": "Tier-Memo",
+     "short": "Dreh die Karten um und finde die Tierpaare.",
+     "long": "Tippe auf zwei Karten. Ist es dasselbe Tier, hast du ein Paar! Wenn nicht, drehen sie sich wieder um: Merk dir, wo jedes war."
+    }
+   }
+  }
+ ]
+}

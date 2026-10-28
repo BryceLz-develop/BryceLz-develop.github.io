@@ -1,12 +1,12 @@
 {
-  "version": "2026-10-21",
-  "updated": "Mis à jour le 21 octobre 2026",
+  "version": "2026-10-27",
+  "updated": "Mis à jour le 27 octobre 2026",
   "title": "Conditions des achats",
   "intro": "AllThePartyGames est une collection de jeux de soirée pour les 18 ans et plus. Ces conditions expliquent ce qui se paie dans la boutique et comment cela fonctionne.",
   "sections": [
     [
       "Ce qu’on peut acheter",
-      "Enlever les pubs : un paiement unique qui supprime les publicités entre les parties. Premium : un paiement unique qui supprime les publicités entre les parties et laisse Épicé et Chaos ouverts pour toujours dans tous les jeux. Sans rien acheter, Épicé et Chaos s’ouvrent gratuitement en regardant une courte publicité : chaque jour, les deux premières pubs les ouvrent 30 minutes et les suivantes 15 minutes. Le contenu et le prix en vigueur sont ceux qu’affiche Google Play ou l’App Store avant de confirmer ; ils peuvent varier selon le pays."
+      "Premium : un paiement unique qui laisse Épicé et Chaos ouverts pour toujours dans tous les jeux, sans regarder de pub. Pass de 2 heures et Pass soirée : paiements uniques qui laissent Épicé et Chaos ouverts 2 ou 6 heures dans tous les jeux, sans regarder de pub ; le temps commence à l’achat. Sans rien acheter, Épicé et Chaos s’ouvrent gratuitement en regardant une courte publicité : chaque jour, les deux premières pubs les ouvrent 30 minutes et les suivantes 15 minutes. Le contenu et le prix en vigueur sont ceux qu’affiche Google Play ou l’App Store avant de confirmer ; ils peuvent varier selon le pays."
     ],
     [
       "Qui encaisse",
@@ -22,11 +22,11 @@
     ],
     [
       "Joue avec modération",
-      "Certains jeux impliquent de l’alcool. Personne n’est obligé de boire ni de faire un défi : on peut jouer avec de l’eau ou des gages. L’abus d’alcool est dangereux pour la santé, à consommer avec modération."
+      "Personne n’est obligé de relever un défi ni de faire un gage : le groupe choisit les gages et ceux qui ne veulent pas passent leur tour. Jouez dans le respect."
     ],
     [
       "Éditeur",
-      "AllThePartyGames est publiée par Brais López Arias (particulier). Contact : {email}."
+      "AllThePartyGames est publiée par Brais López Arias (particulier). Contact : {email}."
     ],
     [
       "Confidentialité",

@@ -1,17 +1,52 @@
 {
-  "_nota": "Apps del estudio en desarrollo. Solo salen en la copia local de la web (python3 build.py --local). Textos provisionales en español: se cambian por los de cada app cuando su chat los dé.",
+  "_nota": "Apps del estudio en desarrollo. Solo salen en la copia local de la web (python3 build.py --local). Juegos, carpetas, textos de juegos e iconos: de `datos` (lo que deja `npm run web:datos` en la app) o, si aún no, de content/planned-datos/<id>/. tagline y perks: por idioma, provisionales del coordinador hasta que cada app tenga su ficha de tienda. categories solo da colores (por id o por nombre en español).",
   "apps": [
     {
       "id": "allthefamilygames",
       "name": "AllTheFamilyGames",
       "word": "Family",
       "accent": "#E0663E",
-      "tagline": "Juegos de grupo para la familia: un móvil en el centro de la mesa y a jugar, de 6 a 90 años.",
+      "tagline": {
+        "es": "Juegos de grupo para la familia: un móvil en el centro de la mesa y a jugar.",
+        "en": "Group games for the whole family: put one phone in the middle of the table and play.",
+        "pt": "Jogos em grupo para a família: um celular no meio da mesa e é só jogar.",
+        "it": "Giochi di gruppo per la famiglia: un telefono al centro del tavolo e si gioca.",
+        "fr": "Des jeux de groupe pour toute la famille : un téléphone au milieu de la table, et c’est parti.",
+        "de": "Gruppenspiele für die ganze Familie: ein Handy in die Tischmitte und los geht’s."
+      },
       "perks": [
-        "Para jugar en grupo",
-        "Tres niveles: Peques, Todos y Expertos",
-        "Mazos temáticos",
-        "En 6 idiomas"
+        {
+          "es": "Para jugar en grupo",
+          "en": "Made for groups",
+          "pt": "Para jogar em grupo",
+          "it": "Da giocare in gruppo",
+          "fr": "À jouer en groupe",
+          "de": "Für Gruppen gemacht"
+        },
+        {
+          "es": "Un solo móvil para todos",
+          "en": "One phone for everyone",
+          "pt": "Um só celular para todos",
+          "it": "Un solo telefono per tutti",
+          "fr": "Un seul téléphone pour tous",
+          "de": "Ein Handy für alle"
+        },
+        {
+          "es": "Por turnos o por equipos",
+          "en": "Take turns or play in teams",
+          "pt": "Por turnos ou em equipes",
+          "it": "A turni o a squadre",
+          "fr": "Chacun son tour ou en équipes",
+          "de": "Abwechselnd oder in Teams"
+        },
+        {
+          "es": "En 6 idiomas",
+          "en": "In 6 languages",
+          "pt": "Em 6 idiomas",
+          "it": "In 6 lingue",
+          "fr": "En 6 langues",
+          "de": "In 6 Sprachen"
+        }
       ],
       "categories": [
         {
@@ -132,19 +167,55 @@
           "folder": "equipos",
           "short": "Cada palabra empieza por la última sílaba de la anterior."
         }
-      ]
+      ],
+      "datos": "../../AllTheFamilyGames/tienda/web/datos"
     },
     {
       "id": "allthepuzzles",
       "name": "AllThePuzzles",
       "word": "Puzzles",
       "accent": "#1F8A8A",
-      "tagline": "Un camino de puzles que se crean solos: nivel a nivel, de los más fáciles a los más difíciles, con reto del día.",
+      "tagline": {
+        "es": "Un camino de puzles que se crean solos, nivel a nivel, y un puzle nuevo cada día.",
+        "en": "A path of puzzles that create themselves, level by level, plus a new puzzle every day.",
+        "pt": "Um caminho de quebra-cabeças que se criam sozinhos, nível a nível, e um novo a cada dia.",
+        "it": "Un percorso di rompicapi che si creano da soli, livello dopo livello, e uno nuovo ogni giorno.",
+        "fr": "Un parcours de casse-tête qui se créent tout seuls, niveau après niveau, et un nouveau chaque jour.",
+        "de": "Ein Weg aus Rätseln, die sich selbst erstellen, Level für Level, und jeden Tag ein neues."
+      },
       "perks": [
-        "Camino por niveles",
-        "Puzles que no se repiten",
-        "Reto del día",
-        "En 6 idiomas"
+        {
+          "es": "Camino por niveles",
+          "en": "Level-by-level path",
+          "pt": "Caminho por níveis",
+          "it": "Percorso a livelli",
+          "fr": "Parcours par niveaux",
+          "de": "Weg in Levels"
+        },
+        {
+          "es": "Puzles que no se repiten",
+          "en": "Puzzles that never repeat",
+          "pt": "Quebra-cabeças que não se repetem",
+          "it": "Rompicapi che non si ripetono",
+          "fr": "Des casse-tête qui ne se répètent pas",
+          "de": "Rätsel, die sich nie wiederholen"
+        },
+        {
+          "es": "Puzle del día",
+          "en": "Daily puzzle",
+          "pt": "Quebra-cabeça do dia",
+          "it": "Rompicapo del giorno",
+          "fr": "Casse-tête du jour",
+          "de": "Rätsel des Tages"
+        },
+        {
+          "es": "En 6 idiomas",
+          "en": "In 6 languages",
+          "pt": "Em 6 idiomas",
+          "it": "In 6 lingue",
+          "fr": "En 6 langues",
+          "de": "In 6 Sprachen"
+        }
       ],
       "categories": [
         {
@@ -248,19 +319,55 @@
           "folder": "piezas",
           "short": "Mueve la torre disco a disco."
         }
-      ]
+      ],
+      "datos": "../../AllThePuzzles/tienda/web/datos"
     },
     {
       "id": "allthekidsgames",
       "name": "AllTheKidsGames",
       "word": "Kids",
       "accent": "#F9A825",
-      "tagline": "Juegos para niños de 3 a 8 años: grandes, sencillos, sin anuncios y sin leer.",
+      "tagline": {
+        "es": "Juegos para niños de 3 a 8 años: grandes, sencillos y sin anuncios.",
+        "en": "Games for children aged 3 to 8: big, simple and ad-free.",
+        "pt": "Jogos para crianças de 3 a 8 anos: grandes, simples e sem anúncios.",
+        "it": "Giochi per bambini dai 3 agli 8 anni: grandi, semplici e senza pubblicità.",
+        "fr": "Des jeux pour les enfants de 3 à 8 ans : grands, simples et sans publicité.",
+        "de": "Spiele für Kinder von 3 bis 8 Jahren: groß, einfach und ohne Werbung."
+      },
       "perks": [
-        "Sin anuncios",
-        "Sin cuenta ni datos",
-        "Control parental",
-        "En 6 idiomas"
+        {
+          "es": "Sin anuncios",
+          "en": "No ads",
+          "pt": "Sem anúncios",
+          "it": "Senza pubblicità",
+          "fr": "Sans publicité",
+          "de": "Keine Werbung"
+        },
+        {
+          "es": "Sin cuenta ni datos",
+          "en": "No account, no data",
+          "pt": "Sem conta nem dados",
+          "it": "Nessun account né dati",
+          "fr": "Ni compte ni données",
+          "de": "Kein Konto, keine Daten"
+        },
+        {
+          "es": "Control parental",
+          "en": "Parental gate",
+          "pt": "Controle parental",
+          "it": "Controllo parentale",
+          "fr": "Contrôle parental",
+          "de": "Elternbereich"
+        },
+        {
+          "es": "En 6 idiomas",
+          "en": "In 6 languages",
+          "pt": "Em 6 idiomas",
+          "it": "In 6 lingue",
+          "fr": "En 6 langues",
+          "de": "In 6 Sprachen"
+        }
       ],
       "categories": [
         {
@@ -369,21 +476,62 @@
           "folder": "moverse",
           "short": "Une los puntos y descubre el dibujo."
         }
-      ]
+      ],
+      "datos": "../../AllTheKidsGames/tienda/web/datos"
     },
     {
       "id": "allthetrivia",
       "name": "AllTheTrivia",
       "word": "Trivia",
       "accent": "#7048A8",
-      "tagline": "Preguntas de todo tipo: elige la categoría, cómo responder y cómo jugar, con pregunta del día.",
+      "tagline": {
+        "es": "Preguntas de todo tipo: elige la categoría y cómo quieres jugar.",
+        "en": "Questions of every kind: pick a category and how you want to play.",
+        "pt": "Perguntas de todo tipo: escolha a categoria e como quer jogar.",
+        "it": "Domande di ogni tipo: scegli la categoria e come vuoi giocare.",
+        "fr": "Des questions de toutes sortes : choisis la catégorie et ta façon de jouer.",
+        "de": "Fragen aller Art: Wähle die Kategorie und wie du spielen willst."
+      },
       "perks": [
-        "Por categorías",
-        "Verdadero o falso, cuatro respuestas y más",
-        "Supervivencia y contrarreloj",
-        "En 6 idiomas"
+        {
+          "es": "Por categorías",
+          "en": "By category",
+          "pt": "Por categorias",
+          "it": "Per categorie",
+          "fr": "Par catégories",
+          "de": "Nach Kategorien"
+        },
+        {
+          "es": "Varias formas de responder",
+          "en": "Several ways to answer",
+          "pt": "Várias formas de responder",
+          "it": "Diversi modi di rispondere",
+          "fr": "Plusieurs façons de répondre",
+          "de": "Verschiedene Antwortarten"
+        },
+        {
+          "es": "Supervivencia y contrarreloj",
+          "en": "Survival and time trial",
+          "pt": "Sobrevivência e contra o relógio",
+          "it": "Sopravvivenza e contro il tempo",
+          "fr": "Survie et contre-la-montre",
+          "de": "Überleben und gegen die Uhr"
+        },
+        {
+          "es": "En 6 idiomas",
+          "en": "In 6 languages",
+          "pt": "Em 6 idiomas",
+          "it": "In 6 lingue",
+          "fr": "En 6 langues",
+          "de": "In 6 Sprachen"
+        }
       ],
       "categories": [
+        {
+          "id": "preguntas",
+          "label": "Preguntas",
+          "accent": "#7048A8"
+        },
         {
           "id": "general",
           "label": "General",
@@ -454,7 +602,8 @@
           "folder": "ocio",
           "short": "Instrumentos, estilos y artistas."
         }
-      ]
+      ],
+      "datos": "../../AllTheTrivia/tienda/web/datos"
     }
   ]
 }

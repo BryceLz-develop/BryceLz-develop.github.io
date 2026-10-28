@@ -1,0 +1,387 @@
+{
+  "_nota": "Presentación y preguntas frecuentes de AllTheFamilyGames para la web del estudio. Sin número de juegos. Fuente: tienda/web/web-datos.es.json.",
+  "es": {
+    "tagline": "Juegos para jugar en familia: un móvil en el centro de la mesa y todos a jugar, de 6 a 90 años.",
+    "perks": [
+      "Sin cuenta",
+      "Para jugar en grupo o por equipos",
+      "Tres niveles: Peques, Todos y Expertos",
+      "Un juego del día para estrenar",
+      "En 6 idiomas"
+    ],
+    "faq": [
+      {
+        "q": "¿Es gratis?",
+        "a": "Sí. La app es gratis y se mantiene con anuncios cortos y poco frecuentes entre rondas. Puedes quitar los anuncios o comprar Premium si quieres, pero no hace falta para jugar."
+      },
+      {
+        "q": "¿Para qué edades es?",
+        "a": "Para toda la familia, desde los 6 años. El nivel Peques usa frases cortas y fáciles de leer en voz alta; Todos sirve para jugar juntos pequeños, mayores y abuelos; Expertos lo pone más difícil."
+      },
+      {
+        "q": "¿Cómo abro los mazos especiales?",
+        "a": "Cada juego trae gratis su mazo Clásico. Los mazos especiales, como Navidad o Animales, se abren viendo un anuncio corto: 60 minutos el primero del día y 30 los siguientes. Con Premium están siempre abiertos."
+      },
+      {
+        "q": "¿Cómo quito los anuncios?",
+        "a": "En la Tienda de la app, compra Quitar anuncios (un solo pago) o Premium, que además deja todos los mazos especiales abiertos. El pago lo hace Google Play o la App Store."
+      },
+      {
+        "q": "¿Qué incluye Premium?",
+        "a": "Un solo pago, para siempre: sin anuncios entre rondas y todos los mazos especiales abiertos en todos los juegos."
+      },
+      {
+        "q": "He cambiado de móvil, ¿cómo recupero mis compras?",
+        "a": "Instala la app con la misma cuenta de la tienda, abre la Tienda y pulsa Restaurar compras."
+      },
+      {
+        "q": "¿Cómo apunto a los jugadores y hago equipos?",
+        "a": "En Inicio, toca Personas: apunta los nombres y, si quieres, repártelos en equipos. Los juegos por equipos usan esos equipos; si no hay, la app hace dos al azar."
+      },
+      {
+        "q": "¿Tengo que crear una cuenta?",
+        "a": "No. No hay cuentas ni registro. Los nombres de los jugadores y tus ajustes se guardan solo en tu teléfono."
+      },
+      {
+        "q": "¿Cómo borro mis datos?",
+        "a": "Como todo se guarda en el teléfono, basta con borrar los datos de la app desde los ajustes del teléfono o desinstalarla. Las compras se pueden restaurar después con la misma cuenta."
+      },
+      {
+        "q": "¿Funciona sin internet?",
+        "a": "Sí, los juegos funcionan sin conexión. Hace falta internet para ver anuncios y para comprar o restaurar compras."
+      },
+      {
+        "q": "¿Cómo cambio el idioma?",
+        "a": "En Ajustes, toca el idioma y elige entre español, inglés, portugués, italiano, francés y alemán."
+      },
+      {
+        "q": "¿Cómo cambio el consentimiento de los anuncios?",
+        "a": "En el Espacio Económico Europeo y el Reino Unido, entra en Ajustes > Opciones de privacidad. Si tienes menos de 16 años, los anuncios son siempre no personalizados y aptos para menores."
+      },
+      {
+        "q": "Tengo otra duda",
+        "a": "Escríbenos a bryce.lz.as@gmail.com."
+      }
+    ]
+  },
+  "en": {
+    "tagline": "Games for the whole family: one phone in the middle of the table and everyone joins in, from 6 to 90.",
+    "perks": [
+      "No account needed",
+      "Play as a group or in teams",
+      "Three levels: Little ones, Everyone and Experts",
+      "A fresh game of the day to try",
+      "In 6 languages"
+    ],
+    "faq": [
+      {
+        "q": "Is it free?",
+        "a": "Yes. The app is free and supported by short, infrequent ads between rounds. You can remove the ads or get Premium if you like, but you don't need to in order to play."
+      },
+      {
+        "q": "What ages is it for?",
+        "a": "For the whole family, from age 6. The Little ones level uses short sentences that are easy to read aloud; Everyone works for kids, parents and grandparents playing together; Experts makes things tougher."
+      },
+      {
+        "q": "How do I unlock the special decks?",
+        "a": "Every game comes with its Classic deck for free. Special decks, like Christmas or Animals, unlock by watching a short ad: 60 minutes for the first one of the day and 30 for the rest. With Premium they're always unlocked."
+      },
+      {
+        "q": "How do I remove the ads?",
+        "a": "In the app's Shop, buy Remove ads (a one-time payment) or Premium, which also unlocks all the special decks. Payment is handled by Google Play or the App Store."
+      },
+      {
+        "q": "What does Premium include?",
+        "a": "One payment, yours forever: no ads between rounds and every special deck unlocked in every game."
+      },
+      {
+        "q": "I got a new phone. How do I get my purchases back?",
+        "a": "Install the app with the same store account, open the Shop and tap Restore purchases."
+      },
+      {
+        "q": "How do I add players and make teams?",
+        "a": "On the Home screen, tap People: add the names and, if you like, split them into teams. Team games use those teams; if there aren't any, the app makes two at random."
+      },
+      {
+        "q": "Do I need to create an account?",
+        "a": "No. There are no accounts and no sign-up. Player names and your settings are only stored on your phone."
+      },
+      {
+        "q": "How do I delete my data?",
+        "a": "Since everything is stored on your phone, just clear the app's data from your phone's settings or uninstall it. You can restore your purchases later with the same account."
+      },
+      {
+        "q": "Does it work offline?",
+        "a": "Yes, the games work without a connection. You need internet to watch ads and to buy or restore purchases."
+      },
+      {
+        "q": "How do I change the language?",
+        "a": "In Settings, tap the language and choose from Spanish, English, Portuguese, Italian, French and German."
+      },
+      {
+        "q": "How do I change my ad consent?",
+        "a": "In the European Economic Area and the UK, go to Settings > Privacy options. If you're under 16, ads are always non-personalized and suitable for children."
+      },
+      {
+        "q": "I have another question",
+        "a": "Write to us at bryce.lz.as@gmail.com."
+      }
+    ]
+  },
+  "pt-BR": {
+    "tagline": "Jogos para jogar em família: um celular no meio da mesa e todo mundo jogando, dos 6 aos 90 anos.",
+    "perks": [
+      "Sem conta",
+      "Para jogar em grupo ou em equipes",
+      "Três níveis: Pequenos, Todos e Experientes",
+      "Um jogo do dia para estrear",
+      "Em 6 idiomas"
+    ],
+    "faq": [
+      {
+        "q": "É grátis?",
+        "a": "Sim. O app é grátis e se mantém com anúncios curtos e pouco frequentes entre as rodadas. Você pode remover os anúncios ou comprar o Premium se quiser, mas não precisa disso para jogar."
+      },
+      {
+        "q": "Para que idades é?",
+        "a": "Para toda a família, a partir dos 6 anos. O nível Pequenos usa frases curtas e fáceis de ler em voz alta; Todos serve para crianças, pais e avós jogarem juntos; Experientes deixa tudo mais difícil."
+      },
+      {
+        "q": "Como abro os baralhos especiais?",
+        "a": "Cada jogo vem com o seu baralho Clássico grátis. Os baralhos especiais, como Natal ou Animais, são liberados assistindo a um anúncio curto: 60 minutos no primeiro do dia e 30 nos seguintes. Com o Premium, ficam sempre liberados."
+      },
+      {
+        "q": "Como removo os anúncios?",
+        "a": "Na Loja do app, compre Remover anúncios (pagamento único) ou o Premium, que também libera todos os baralhos especiais. O pagamento é feito pelo Google Play ou pela App Store."
+      },
+      {
+        "q": "O que o Premium inclui?",
+        "a": "Um único pagamento, para sempre: sem anúncios entre as rodadas e todos os baralhos especiais liberados em todos os jogos."
+      },
+      {
+        "q": "Troquei de celular. Como recupero minhas compras?",
+        "a": "Instale o app com a mesma conta da loja, abra a Loja e toque em Restaurar compras."
+      },
+      {
+        "q": "Como cadastro os jogadores e monto equipes?",
+        "a": "Na tela inicial, toque em Pessoas: anote os nomes e, se quiser, divida todo mundo em equipes. Os jogos em equipe usam essas equipes; se não houver nenhuma, o app monta duas por sorteio."
+      },
+      {
+        "q": "Preciso criar uma conta?",
+        "a": "Não. Não há contas nem cadastro. Os nomes dos jogadores e seus ajustes ficam salvos só no seu celular."
+      },
+      {
+        "q": "Como apago meus dados?",
+        "a": "Como tudo fica salvo no celular, basta limpar os dados do app nas configurações do celular ou desinstalá-lo. Depois, você pode restaurar as compras com a mesma conta."
+      },
+      {
+        "q": "Funciona sem internet?",
+        "a": "Sim, os jogos funcionam sem conexão. É preciso internet para ver anúncios e para comprar ou restaurar compras."
+      },
+      {
+        "q": "Como mudo o idioma?",
+        "a": "Em Ajustes, toque no idioma e escolha entre espanhol, inglês, português, italiano, francês e alemão."
+      },
+      {
+        "q": "Como mudo o consentimento dos anúncios?",
+        "a": "No Espaço Econômico Europeu e no Reino Unido, vá em Ajustes > Opções de privacidade. Se você tem menos de 16 anos, os anúncios são sempre não personalizados e adequados para menores."
+      },
+      {
+        "q": "Tenho outra dúvida",
+        "a": "Escreva para a gente em bryce.lz.as@gmail.com."
+      }
+    ]
+  },
+  "it": {
+    "tagline": "Giochi da fare in famiglia: un telefono al centro del tavolo e tutti a giocare, dai 6 ai 90 anni.",
+    "perks": [
+      "Nessun account",
+      "Per giocare in gruppo o a squadre",
+      "Tre livelli: Piccoli, Tutti ed Esperti",
+      "Un gioco del giorno da provare",
+      "In 6 lingue"
+    ],
+    "faq": [
+      {
+        "q": "È gratis?",
+        "a": "Sì. L'app è gratuita e si sostiene con pubblicità brevi e poco frequenti tra un round e l'altro. Se vuoi puoi togliere la pubblicità o acquistare Premium, ma per giocare non serve."
+      },
+      {
+        "q": "Per che età è?",
+        "a": "Per tutta la famiglia, dai 6 anni in su. Il livello Piccoli usa frasi brevi e facili da leggere ad alta voce; Tutti va bene per far giocare insieme bambini, genitori e nonni; Esperti rende tutto più difficile."
+      },
+      {
+        "q": "Come sblocco i mazzi speciali?",
+        "a": "Ogni gioco include gratis il suo mazzo Classico. I mazzi speciali, come Natale o Animali, si sbloccano guardando una breve pubblicità: 60 minuti per il primo della giornata e 30 per i successivi. Con Premium sono sempre sbloccati."
+      },
+      {
+        "q": "Come tolgo la pubblicità?",
+        "a": "Nel Negozio dell'app, acquista Rimuovi pubblicità (un unico pagamento) oppure Premium, che sblocca anche tutti i mazzi speciali. Il pagamento avviene tramite Google Play o l'App Store."
+      },
+      {
+        "q": "Cosa include Premium?",
+        "a": "Un unico pagamento, per sempre: niente pubblicità tra i round e tutti i mazzi speciali sbloccati in tutti i giochi."
+      },
+      {
+        "q": "Ho cambiato telefono: come recupero i miei acquisti?",
+        "a": "Installa l'app con lo stesso account dello store, apri il Negozio e tocca Ripristina acquisti."
+      },
+      {
+        "q": "Come inserisco i giocatori e faccio le squadre?",
+        "a": "Nella schermata iniziale, tocca Persone: scrivi i nomi e, se vuoi, dividili in squadre. I giochi a squadre usano quelle squadre; se non ce ne sono, l'app ne crea due a caso."
+      },
+      {
+        "q": "Devo creare un account?",
+        "a": "No. Non ci sono account né registrazioni. I nomi dei giocatori e le tue impostazioni restano salvati solo sul tuo telefono."
+      },
+      {
+        "q": "Come cancello i miei dati?",
+        "a": "Dato che tutto è salvato sul telefono, basta cancellare i dati dell'app dalle impostazioni del telefono o disinstallarla. Potrai ripristinare gli acquisti in seguito con lo stesso account."
+      },
+      {
+        "q": "Funziona senza internet?",
+        "a": "Sì, i giochi funzionano anche offline. Serve internet per vedere la pubblicità e per acquistare o ripristinare gli acquisti."
+      },
+      {
+        "q": "Come cambio la lingua?",
+        "a": "In Impostazioni, tocca la lingua e scegli tra spagnolo, inglese, portoghese, italiano, francese e tedesco."
+      },
+      {
+        "q": "Come modifico il consenso per la pubblicità?",
+        "a": "Nello Spazio economico europeo e nel Regno Unito, vai su Impostazioni > Opzioni sulla privacy. Se hai meno di 16 anni, la pubblicità è sempre non personalizzata e adatta ai minori."
+      },
+      {
+        "q": "Ho un'altra domanda",
+        "a": "Scrivici a bryce.lz.as@gmail.com."
+      }
+    ]
+  },
+  "fr": {
+    "tagline": "Des jeux à partager en famille : un téléphone au milieu de la table et tout le monde joue, de 6 à 90 ans.",
+    "perks": [
+      "Sans compte",
+      "À plusieurs ou en équipes",
+      "Trois niveaux : Petits, Tout le monde et Experts",
+      "Un jeu du jour à découvrir",
+      "En 6 langues"
+    ],
+    "faq": [
+      {
+        "q": "C'est gratuit ?",
+        "a": "Oui. L'appli est gratuite et financée par des pubs courtes et peu fréquentes entre les manches. Vous pouvez supprimer les pubs ou passer à Premium si vous le souhaitez, mais ce n'est pas nécessaire pour jouer."
+      },
+      {
+        "q": "Pour quel âge ?",
+        "a": "Pour toute la famille, dès 6 ans. Le niveau Petits utilise des phrases courtes et faciles à lire à voix haute ; Tout le monde permet aux enfants, aux parents et aux grands-parents de jouer ensemble ; Experts corse la difficulté."
+      },
+      {
+        "q": "Comment débloquer les paquets spéciaux ?",
+        "a": "Chaque jeu inclut gratuitement son paquet Classique. Les paquets spéciaux, comme Noël ou Animaux, se débloquent en regardant une courte pub : 60 minutes pour la première de la journée, puis 30 pour les suivantes. Avec Premium, ils sont toujours débloqués."
+      },
+      {
+        "q": "Comment supprimer les pubs ?",
+        "a": "Dans la Boutique de l'appli, achetez Supprimer les pubs (paiement unique) ou Premium, qui débloque aussi tous les paquets spéciaux. Le paiement passe par Google Play ou l'App Store."
+      },
+      {
+        "q": "Que comprend Premium ?",
+        "a": "Un seul paiement, pour toujours : plus de pubs entre les manches et tous les paquets spéciaux débloqués dans tous les jeux."
+      },
+      {
+        "q": "J'ai changé de téléphone, comment récupérer mes achats ?",
+        "a": "Installez l'appli avec le même compte de store, ouvrez la Boutique et touchez Restaurer les achats."
+      },
+      {
+        "q": "Comment ajouter les joueurs et faire des équipes ?",
+        "a": "Sur l'écran d'accueil, touchez Personnes : notez les prénoms et, si vous voulez, répartissez-les en équipes. Les jeux en équipes utilisent ces équipes ; s'il n'y en a pas, l'appli en forme deux au hasard."
+      },
+      {
+        "q": "Dois-je créer un compte ?",
+        "a": "Non. Pas de compte ni d'inscription. Les prénoms des joueurs et vos réglages restent uniquement sur votre téléphone."
+      },
+      {
+        "q": "Comment supprimer mes données ?",
+        "a": "Comme tout est enregistré sur le téléphone, il suffit d'effacer les données de l'appli dans les paramètres du téléphone ou de la désinstaller. Vous pourrez ensuite restaurer vos achats avec le même compte."
+      },
+      {
+        "q": "Ça marche sans internet ?",
+        "a": "Oui, les jeux fonctionnent hors connexion. Internet est nécessaire pour regarder les pubs et pour acheter ou restaurer des achats."
+      },
+      {
+        "q": "Comment changer de langue ?",
+        "a": "Dans Réglages, touchez la langue et choisissez entre espagnol, anglais, portugais, italien, français et allemand."
+      },
+      {
+        "q": "Comment modifier mon consentement pour les pubs ?",
+        "a": "Dans l'Espace économique européen et au Royaume-Uni, allez dans Réglages > Options de confidentialité. Si vous avez moins de 16 ans, les pubs sont toujours non personnalisées et adaptées aux mineurs."
+      },
+      {
+        "q": "J'ai une autre question",
+        "a": "Écrivez-nous à bryce.lz.as@gmail.com."
+      }
+    ]
+  },
+  "de": {
+    "tagline": "Spiele für die ganze Familie: ein Handy in der Mitte des Tisches und alle spielen mit, von 6 bis 90 Jahren.",
+    "perks": [
+      "Ohne Konto",
+      "In der Gruppe oder in Teams spielen",
+      "Drei Stufen: Kleine, Alle und Profis",
+      "Jeden Tag ein neues Spiel des Tages",
+      "In 6 Sprachen"
+    ],
+    "faq": [
+      {
+        "q": "Ist es kostenlos?",
+        "a": "Ja. Die App ist kostenlos und finanziert sich durch kurze, seltene Werbung zwischen den Runden. Du kannst die Werbung entfernen oder Premium kaufen, wenn du möchtest, zum Spielen brauchst du das aber nicht."
+      },
+      {
+        "q": "Für welches Alter ist die App?",
+        "a": "Für die ganze Familie, ab 6 Jahren. Die Stufe Kleine nutzt kurze Sätze, die sich leicht vorlesen lassen; mit Alle spielen Kinder, Eltern und Großeltern zusammen; Profis macht es kniffliger."
+      },
+      {
+        "q": "Wie schalte ich die Spezial-Stapel frei?",
+        "a": "Jedes Spiel enthält seinen Klassik-Stapel kostenlos. Spezial-Stapel wie Weihnachten oder Tiere schaltest du frei, indem du dir eine kurze Werbung ansiehst: 60 Minuten beim ersten Mal am Tag, danach jeweils 30. Mit Premium sind sie immer freigeschaltet."
+      },
+      {
+        "q": "Wie entferne ich die Werbung?",
+        "a": "Kauf im Shop der App Werbung entfernen (einmalige Zahlung) oder Premium, das zusätzlich alle Spezial-Stapel freischaltet. Die Zahlung läuft über Google Play oder den App Store."
+      },
+      {
+        "q": "Was ist in Premium enthalten?",
+        "a": "Eine einmalige Zahlung, für immer: keine Werbung zwischen den Runden und alle Spezial-Stapel in allen Spielen freigeschaltet."
+      },
+      {
+        "q": "Ich habe ein neues Handy. Wie bekomme ich meine Käufe zurück?",
+        "a": "Installiere die App mit demselben Store-Konto, öffne den Shop und tippe auf Käufe wiederherstellen."
+      },
+      {
+        "q": "Wie trage ich Spieler ein und bilde Teams?",
+        "a": "Tippe auf dem Startbildschirm auf Personen: Trag die Namen ein und teile sie, wenn du möchtest, in Teams auf. Teamspiele nutzen diese Teams; gibt es keine, bildet die App zwei zufällige Teams."
+      },
+      {
+        "q": "Muss ich ein Konto erstellen?",
+        "a": "Nein. Es gibt weder Konten noch Registrierung. Die Spielernamen und deine Einstellungen werden nur auf deinem Handy gespeichert."
+      },
+      {
+        "q": "Wie lösche ich meine Daten?",
+        "a": "Da alles auf dem Handy gespeichert ist, reicht es, die App-Daten in den Einstellungen des Handys zu löschen oder die App zu deinstallieren. Deine Käufe kannst du später mit demselben Konto wiederherstellen."
+      },
+      {
+        "q": "Funktioniert die App ohne Internet?",
+        "a": "Ja, die Spiele funktionieren offline. Internet brauchst du, um Werbung anzusehen und um Käufe zu tätigen oder wiederherzustellen."
+      },
+      {
+        "q": "Wie ändere ich die Sprache?",
+        "a": "Tippe in den Einstellungen auf die Sprache und wähle zwischen Spanisch, Englisch, Portugiesisch, Italienisch, Französisch und Deutsch."
+      },
+      {
+        "q": "Wie ändere ich meine Einwilligung zur Werbung?",
+        "a": "Im Europäischen Wirtschaftsraum und im Vereinigten Königreich findest du sie unter Einstellungen > Datenschutzoptionen. Wenn du unter 16 bist, ist die Werbung immer nicht personalisiert und für Minderjährige geeignet."
+      },
+      {
+        "q": "Ich habe eine andere Frage",
+        "a": "Schreib uns an bryce.lz.as@gmail.com."
+      }
+    ]
+  }
+}

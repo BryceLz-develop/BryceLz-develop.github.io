@@ -86,7 +86,9 @@
     "socialAria": "Redes sociales",
     "socialOn": "BryceLz en {red}",
     "footContact": "Contacto",
-    "footFollow": "Síguenos"
+    "footFollow": "Síguenos",
+    "videoTitle": "La app en acción",
+    "videoAria": "Vídeo de AllTheGames"
   },
   "en": {
     "langName": "English",
@@ -175,7 +177,9 @@
     "socialAria": "Social media",
     "socialOn": "BryceLz on {red}",
     "footContact": "Contact",
-    "footFollow": "Follow us"
+    "footFollow": "Follow us",
+    "videoTitle": "The app in action",
+    "videoAria": "AllTheGames video"
   },
   "pt": {
     "langName": "Português",
@@ -264,7 +268,9 @@
     "socialAria": "Redes sociais",
     "socialOn": "BryceLz no {red}",
     "footContact": "Contato",
-    "footFollow": "Siga-nos"
+    "footFollow": "Siga-nos",
+    "videoTitle": "O app em ação",
+    "videoAria": "Vídeo do AllTheGames"
   },
   "it": {
     "langName": "Italiano",
@@ -353,7 +359,9 @@
     "socialAria": "Social",
     "socialOn": "BryceLz su {red}",
     "footContact": "Contatti",
-    "footFollow": "Seguici"
+    "footFollow": "Seguici",
+    "videoTitle": "L’app in azione",
+    "videoAria": "Video di AllTheGames"
   },
   "fr": {
     "langName": "Français",
@@ -442,7 +450,9 @@
     "socialAria": "Réseaux sociaux",
     "socialOn": "BryceLz sur {red}",
     "footContact": "Contact",
-    "footFollow": "Suis-nous"
+    "footFollow": "Suis-nous",
+    "videoTitle": "L’appli en action",
+    "videoAria": "Vidéo d’AllTheGames"
   },
   "de": {
     "langName": "Deutsch",
@@ -531,6 +541,8 @@
     "socialAria": "Soziale Netzwerke",
     "socialOn": "BryceLz auf {red}",
     "footContact": "Kontakt",
-    "footFollow": "Folge uns"
+    "footFollow": "Folge uns",
+    "videoTitle": "Die App in Aktion",
+    "videoAria": "Video von AllTheGames"
   }
 }
