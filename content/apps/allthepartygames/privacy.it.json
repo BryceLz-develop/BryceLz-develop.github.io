@@ -6,7 +6,7 @@
   "sections": [
     [
       "Cosa tiene il telefono",
-      "I tuoi record, i tuoi progressi e le tue impostazioni restano su questo apparecchio. Anche ciò che acquisti nel negozio. I profili con nome e PIN restano solo su questo telefono, e il loro PIN non protegge altri dati del dispositivo. I nomi e i colori delle persone che aggiungi per giocare in gruppo restano solo su questo telefono. Non ci sono chat e le partite a metà non escono mai dal telefono. Se disinstalli l’app, quel salvataggio sparisce."
+      "I tuoi record, i tuoi progressi e le tue impostazioni restano su questo apparecchio. Anche ciò che acquisti nel negozio. I nomi e i colori delle persone che aggiungi per giocare in gruppo restano solo su questo telefono. Non ci sono chat e le partite a metà non escono mai dal telefono. Se disinstalli l’app, quel salvataggio sparisce."
     ],
     [
       "Annunci",
@@ -26,7 +26,7 @@
     ],
     [
       "Altri siti",
-      "Per sapere se c’è connessione, l’app invia di tanto in tanto una richiesta vuota a Google (connectivitycheck.gstatic.com), che riceve l’indirizzo IP. Sono richieste tecniche tramite HTTPS. Google gestisce annunci e acquisti; non inviamo a questi servizi il nome del profilo locale, il PIN né la tua email."
+      "Per sapere se c’è connessione, l’app invia di tanto in tanto una richiesta vuota a Google (connectivitycheck.gstatic.com), che riceve l’indirizzo IP. Sono richieste tecniche tramite HTTPS. Google gestisce annunci e acquisti; non inviamo a questi servizi il tuo nome né la tua email."
     ],
     [
       "Perché e per quanto tempo",

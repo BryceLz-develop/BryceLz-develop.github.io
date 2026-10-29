@@ -6,7 +6,7 @@
   "sections": [
     [
       "O que o celular guarda",
-      "Seus recordes, seu progresso e seus ajustes ficam neste aparelho. O que você comprar na loja também. Os perfis com nome e PIN ficam só neste celular, e o PIN não protege outros dados do aparelho. Os nomes e as cores das pessoas que você cadastra para jogar em grupo ficam só neste celular. Não tem chat, e partidas pela metade nunca saem do celular. Se você desinstalar o app, esse salvamento some."
+      "Seus recordes, seu progresso e seus ajustes ficam neste aparelho. O que você comprar na loja também. Os nomes e as cores das pessoas que você cadastra para jogar em grupo ficam só neste celular. Não tem chat, e partidas pela metade nunca saem do celular. Se você desinstalar o app, esse salvamento some."
     ],
     [
       "Anúncios",
@@ -26,7 +26,7 @@
     ],
     [
       "Outros sites",
-      "Para saber se há conexão, o app faz de vez em quando uma solicitação vazia ao Google (connectivitycheck.gstatic.com), que recebe o IP. São solicitações técnicas por HTTPS. O Google gerencia anúncios e compras; não enviamos a esses serviços o nome do perfil local, o PIN nem o seu e-mail."
+      "Para saber se há conexão, o app faz de vez em quando uma solicitação vazia ao Google (connectivitycheck.gstatic.com), que recebe o IP. São solicitações técnicas por HTTPS. O Google gerencia anúncios e compras; não enviamos a esses serviços o seu nome nem o seu e-mail."
     ],
     [
       "Por que e por quanto tempo",

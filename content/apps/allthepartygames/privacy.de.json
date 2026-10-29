@@ -6,7 +6,7 @@
   "sections": [
     [
       "Was das Handy speichert",
-      "Deine Rekorde, dein Fortschritt und deine Einstellungen bleiben auf diesem Gerät. Ebenso alles, was du im Shop kaufst. Profile mit Name und PIN bleiben nur auf diesem Handy, und ihre PIN schützt keine anderen Daten des Geräts. Die Namen und Farben der Personen, die du für Gruppenspiele einträgst, bleiben nur auf diesem Handy. Es gibt keine Chats, und angefangene Partien verlassen nie das Handy. Wenn du die App löschst, ist der Speicher weg."
+      "Deine Rekorde, dein Fortschritt und deine Einstellungen bleiben auf diesem Gerät. Ebenso alles, was du im Shop kaufst. Die Namen und Farben der Personen, die du für Gruppenspiele einträgst, bleiben nur auf diesem Handy. Es gibt keine Chats, und angefangene Partien verlassen nie das Handy. Wenn du die App löschst, ist der Speicher weg."
     ],
     [
       "Werbung",
@@ -26,7 +26,7 @@
     ],
     [
       "Andere Seiten",
-      "Um zu prüfen, ob eine Verbindung besteht, sendet die App ab und zu eine leere Anfrage an Google (connectivitycheck.gstatic.com), das die IP-Adresse erhält. Das sind technische HTTPS-Anfragen. Google verwaltet Werbung und Käufe; wir senden diesen Diensten weder den Namen des lokalen Profils noch die PIN oder deine E-Mail-Adresse."
+      "Um zu prüfen, ob eine Verbindung besteht, sendet die App ab und zu eine leere Anfrage an Google (connectivitycheck.gstatic.com), das die IP-Adresse erhält. Das sind technische HTTPS-Anfragen. Google verwaltet Werbung und Käufe; wir senden diesen Diensten weder deinen Namen noch deine E-Mail-Adresse."
     ],
     [
       "Warum und wie lange",

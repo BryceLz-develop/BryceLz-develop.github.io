@@ -6,7 +6,7 @@
   "sections": [
     [
       "Qué guarda el teléfono",
-      "Tus récords, tu progreso y tus ajustes se guardan en este aparato. También lo que compres en la tienda. Los perfiles con nombre y PIN se quedan solo en este teléfono, y su PIN no protege otros datos del aparato. Los nombres y colores de las personas que apuntas para jugar en grupo se quedan solo en este teléfono. No hay chats y las partidas a medias nunca salen del teléfono. Si desinstalas la app, ese guardado se pierde."
+      "Tus récords, tu progreso y tus ajustes se guardan en este aparato. También lo que compres en la tienda. Los nombres y colores de las personas que apuntas para jugar en grupo se quedan solo en este teléfono. No hay chats y las partidas a medias nunca salen del teléfono. Si desinstalas la app, ese guardado se pierde."
     ],
     [
       "Anuncios",
@@ -26,7 +26,7 @@
     ],
     [
       "Otros sitios",
-      "Para saber si hay conexión, la app hace de vez en cuando una petición vacía a Google (connectivitycheck.gstatic.com), que recibe la IP. Son peticiones técnicas por HTTPS. Google gestiona anuncios y compras; no enviamos a estos servicios el nombre del perfil local, el PIN ni un correo tuyo."
+      "Para saber si hay conexión, la app hace de vez en cuando una petición vacía a Google (connectivitycheck.gstatic.com), que recibe la IP. Son peticiones técnicas por HTTPS. Google gestiona anuncios y compras; no enviamos a estos servicios tu nombre ni un correo tuyo."
     ],
     [
       "Por qué y cuánto tiempo",

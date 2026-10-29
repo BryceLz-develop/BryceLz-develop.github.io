@@ -6,7 +6,7 @@
   "sections": [
     [
       "What the phone stores",
-      "Your records, progress and settings stay on this device. So does whatever you buy in the shop. Profiles with a name and PIN stay only on this phone, and their PIN does not protect other data on the device. The names and colours of the people you add for group games stay only on this phone. There are no chats, and unfinished games never leave the phone. If you uninstall the app, that save is gone."
+      "Your records, progress and settings stay on this device. So does whatever you buy in the shop. The names and colours of the people you add for group games stay only on this phone. There are no chats, and unfinished games never leave the phone. If you uninstall the app, that save is gone."
     ],
     [
       "Ads",
@@ -26,7 +26,7 @@
     ],
     [
       "Other sites",
-      "To know whether there is a connection, the app now and then sends an empty request to Google (connectivitycheck.gstatic.com), which receives the IP address. These are technical HTTPS requests. Google manages ads and purchases; we do not send these services the local profile name, PIN, or your email."
+      "To know whether there is a connection, the app now and then sends an empty request to Google (connectivitycheck.gstatic.com), which receives the IP address. These are technical HTTPS requests. Google manages ads and purchases; we do not send these services your name or your email."
     ],
     [
       "Why and for how long",
