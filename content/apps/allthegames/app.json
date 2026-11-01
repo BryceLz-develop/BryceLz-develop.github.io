@@ -4,6 +4,8 @@
   "package": "com.allthegames.app",
   "storeUrl": "https://play.google.com/store/apps/details?id=com.allthegames.app",
   "storePublished": true,
+  "iosStoreUrl": "https://apps.apple.com/app/id6826538284",
+  "androidOnly": ["blackjack", "siete-y-media", "bingo"],
   "lead": "Juegos de siempre en una sola app: cartas, juegos de mesa, números, letras, puzzles y acción.",
   "facts": [
     "Sin cuenta ni registro: todo se guarda en tu teléfono.",

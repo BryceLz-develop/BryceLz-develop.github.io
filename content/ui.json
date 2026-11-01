@@ -10,7 +10,7 @@
     "footAria": "Pie",
     "headline": "Apps sencillas para toda la casa",
     "homeTitle": "BryceLz: apps sencillas para toda la casa",
-    "intro": "BryceLz es el estudio de Brais López Arias. Hago apps para Android que se entienden a la primera, no piden cuenta y cuidan tus datos.",
+    "intro": "BryceLz es el estudio de Brais López Arias. Hago apps para Android e iPhone que se entienden a la primera, no piden cuenta y cuidan tus datos.",
     "ctaApp": "Conoce AllTheGames",
     "ctaWrite": "Escríbeme",
     "chipGames": "Juegos de siempre",
@@ -78,7 +78,7 @@
     "theApps": "Las apps",
     "wallAll": "Los juegos",
     "ctaApps": "Ver las apps",
-    "chipAndroid": "Para Android",
+    "chipAndroid": "Android e iPhone",
     "playIn": "Juégalo en",
     "moreGames": "Más juegos · {cat}",
     "crumbs": "Dónde estás",
@@ -88,7 +88,11 @@
     "footContact": "Contacto",
     "footFollow": "Síguenos",
     "videoTitle": "La app en acción",
-    "videoAria": "Vídeo de AllTheGames"
+    "videoAria": "Vídeo de AllTheGames",
+    "downloadIos": "Descargar en la App Store",
+    "forBoth": "Para Android e iPhone.",
+    "storeBoth": "Ya está en Google Play y en la App Store.",
+    "onlyAndroid": "Solo en Android: este juego no está en la versión de iPhone."
   },
   "en": {
     "langName": "English",
@@ -101,7 +105,7 @@
     "footAria": "Footer",
     "headline": "Simple apps for the whole family",
     "homeTitle": "BryceLz: simple apps for the whole family",
-    "intro": "BryceLz is the studio of Brais López Arias. I make Android apps that make sense from the first tap, never ask you to sign up and look after your data.",
+    "intro": "BryceLz is the studio of Brais López Arias. I make apps for Android and iPhone that make sense from the first tap, never ask you to sign up and look after your data.",
     "ctaApp": "Discover AllTheGames",
     "ctaWrite": "Write to me",
     "chipGames": "Classic games",
@@ -169,7 +173,7 @@
     "theApps": "The apps",
     "wallAll": "The games",
     "ctaApps": "See the apps",
-    "chipAndroid": "For Android",
+    "chipAndroid": "Android & iPhone",
     "playIn": "Play it in",
     "moreGames": "More games · {cat}",
     "crumbs": "You are here",
@@ -179,7 +183,11 @@
     "footContact": "Contact",
     "footFollow": "Follow us",
     "videoTitle": "The app in action",
-    "videoAria": "AllTheGames video"
+    "videoAria": "AllTheGames video",
+    "downloadIos": "Download on the App Store",
+    "forBoth": "For Android and iPhone.",
+    "storeBoth": "Now on Google Play and the App Store.",
+    "onlyAndroid": "Android only: this game isn’t in the iPhone version."
   },
   "pt": {
     "langName": "Português",
@@ -192,7 +200,7 @@
     "footAria": "Rodapé",
     "headline": "Apps simples para toda a família",
     "homeTitle": "BryceLz: apps simples para toda a família",
-    "intro": "BryceLz é o estúdio de Brais López Arias. Faço apps para Android fáceis de entender de primeira, que não pedem conta e cuidam dos seus dados.",
+    "intro": "BryceLz é o estúdio de Brais López Arias. Faço apps para Android e iPhone fáceis de entender de primeira, que não pedem conta e cuidam dos seus dados.",
     "ctaApp": "Conheça o AllTheGames",
     "ctaWrite": "Fale comigo",
     "chipGames": "Jogos clássicos",
@@ -260,7 +268,7 @@
     "theApps": "Os apps",
     "wallAll": "Os jogos",
     "ctaApps": "Ver os apps",
-    "chipAndroid": "Para Android",
+    "chipAndroid": "Android e iPhone",
     "playIn": "Jogue em",
     "moreGames": "Mais jogos · {cat}",
     "crumbs": "Onde você está",
@@ -270,7 +278,11 @@
     "footContact": "Contato",
     "footFollow": "Siga-nos",
     "videoTitle": "O app em ação",
-    "videoAria": "Vídeo do AllTheGames"
+    "videoAria": "Vídeo do AllTheGames",
+    "downloadIos": "Baixar na App Store",
+    "forBoth": "Para Android e iPhone.",
+    "storeBoth": "Já está no Google Play e na App Store.",
+    "onlyAndroid": "Só no Android: este jogo não está na versão para iPhone."
   },
   "it": {
     "langName": "Italiano",
@@ -283,7 +295,7 @@
     "footAria": "Piè di pagina",
     "headline": "App semplici per tutta la famiglia",
     "homeTitle": "BryceLz: app semplici per tutta la famiglia",
-    "intro": "BryceLz è lo studio di Brais López Arias. Creo app per Android che si capiscono al primo colpo, non chiedono un account e rispettano i tuoi dati.",
+    "intro": "BryceLz è lo studio di Brais López Arias. Creo app per Android e iPhone che si capiscono al primo colpo, non chiedono un account e rispettano i tuoi dati.",
     "ctaApp": "Scopri AllTheGames",
     "ctaWrite": "Scrivimi",
     "chipGames": "Giochi di sempre",
@@ -351,7 +363,7 @@
     "theApps": "Le app",
     "wallAll": "I giochi",
     "ctaApps": "Vedi le app",
-    "chipAndroid": "Per Android",
+    "chipAndroid": "Android e iPhone",
     "playIn": "Giocalo su",
     "moreGames": "Altri giochi · {cat}",
     "crumbs": "Dove sei",
@@ -361,7 +373,11 @@
     "footContact": "Contatti",
     "footFollow": "Seguici",
     "videoTitle": "L’app in azione",
-    "videoAria": "Video di AllTheGames"
+    "videoAria": "Video di AllTheGames",
+    "downloadIos": "Scarica dall’App Store",
+    "forBoth": "Per Android e iPhone.",
+    "storeBoth": "Già su Google Play e App Store.",
+    "onlyAndroid": "Solo su Android: questo gioco non c’è nella versione per iPhone."
   },
   "fr": {
     "langName": "Français",
@@ -374,7 +390,7 @@
     "footAria": "Pied de page",
     "headline": "Des applis simples pour toute la famille",
     "homeTitle": "BryceLz : des applis simples pour toute la famille",
-    "intro": "BryceLz est le studio de Brais López Arias. Je crée des applis Android qu’on comprend du premier coup, sans compte à créer et respectueuses de tes données.",
+    "intro": "BryceLz est le studio de Brais López Arias. Je crée des applis Android et iPhone qu’on comprend du premier coup, sans compte à créer et respectueuses de tes données.",
     "ctaApp": "Découvre AllTheGames",
     "ctaWrite": "Écris-moi",
     "chipGames": "Jeux classiques",
@@ -442,7 +458,7 @@
     "theApps": "Les applis",
     "wallAll": "Les jeux",
     "ctaApps": "Voir les applis",
-    "chipAndroid": "Pour Android",
+    "chipAndroid": "Android et iPhone",
     "playIn": "Joue dans",
     "moreGames": "Plus de jeux · {cat}",
     "crumbs": "Où tu es",
@@ -452,7 +468,11 @@
     "footContact": "Contact",
     "footFollow": "Suis-nous",
     "videoTitle": "L’appli en action",
-    "videoAria": "Vidéo d’AllTheGames"
+    "videoAria": "Vidéo d’AllTheGames",
+    "downloadIos": "Télécharger dans l’App Store",
+    "forBoth": "Pour Android et iPhone.",
+    "storeBoth": "Disponible sur Google Play et l’App Store.",
+    "onlyAndroid": "Uniquement sur Android : ce jeu n’est pas dans la version iPhone."
   },
   "de": {
     "langName": "Deutsch",
@@ -465,7 +485,7 @@
     "footAria": "Fußzeile",
     "headline": "Einfache Apps für die ganze Familie",
     "homeTitle": "BryceLz: einfache Apps für die ganze Familie",
-    "intro": "BryceLz ist das Studio von Brais López Arias. Ich mache Android-Apps, die man sofort versteht, die kein Konto verlangen und mit deinen Daten sorgsam umgehen.",
+    "intro": "BryceLz ist das Studio von Brais López Arias. Ich mache Apps für Android und iPhone, die man sofort versteht, die kein Konto verlangen und mit deinen Daten sorgsam umgehen.",
     "ctaApp": "AllTheGames entdecken",
     "ctaWrite": "Schreib mir",
     "chipGames": "Spieleklassiker",
@@ -533,7 +553,7 @@
     "theApps": "Die Apps",
     "wallAll": "Die Spiele",
     "ctaApps": "Zu den Apps",
-    "chipAndroid": "Für Android",
+    "chipAndroid": "Android & iPhone",
     "playIn": "Spiel es in",
     "moreGames": "Mehr Spiele · {cat}",
     "crumbs": "Wo du bist",
@@ -543,6 +563,10 @@
     "footContact": "Kontakt",
     "footFollow": "Folge uns",
     "videoTitle": "Die App in Aktion",
-    "videoAria": "Video von AllTheGames"
+    "videoAria": "Video von AllTheGames",
+    "downloadIos": "Laden im App Store",
+    "forBoth": "Für Android und iPhone.",
+    "storeBoth": "Jetzt bei Google Play und im App Store.",
+    "onlyAndroid": "Nur für Android: Dieses Spiel gibt es nicht in der iPhone-Version."
   }
 }

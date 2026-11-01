@@ -504,10 +504,12 @@ def home_tiles(c: Ctx, d: dict, p: dict, lang: str) -> list[dict]:
 
 
 def app_feature(c: Ctx, lang: str, *, name: str, here: str, logo: str, logo_size: tuple, lead: str,
-                chips: list[tuple[str, str]], store_published: bool, privacy: str, badge: str = '') -> str:
-    """La tarjeta de una app en la portada (todas iguales)."""
+                chips: list[tuple[str, str]], store_published: bool, privacy: str, badge: str = '',
+                ios: bool = False) -> str:
+    """La tarjeta de una app en la portada (todas iguales). `ios`: también en la App Store."""
     chip_html = ''.join(f'<li style="--chip:{acc}">{esc(label)}</li>' for label, acc in chips)
-    store = T(lang, 'storeYes') if store_published else T(lang, 'storeSoon')
+    store = T(lang, 'storeBoth' if ios else 'storeYes') if store_published else T(lang, 'storeSoon')
+    platforms = T(lang, 'forBoth' if ios else 'forAndroid')
     badge_html = f' <span class="age-badge">{badge}</span>' if badge else ''
     return f'''<article class="feature card">
     <a class="feature-art" href="{c.to(here)}" tabindex="-1" aria-hidden="true">
@@ -517,7 +519,7 @@ def app_feature(c: Ctx, lang: str, *, name: str, here: str, logo: str, logo_size
       <h3 class="display feature-name"><a href="{c.to(here)}">{name}</a>{badge_html}</h3>
       <p>{esc(lead)}</p>
       <ul class="chips" aria-label="{esc(T(lang, 'byCategory'))}">{chip_html}</ul>
-      <p class="muted">{esc(T(lang, 'forAndroid'))} {esc(store)}</p>
+      <p class="muted">{esc(platforms)} {esc(store)}</p>
       <div class="actions">
         <a class="sticker" href="{c.to(here)}">{esc(T(lang, 'seeApp'))}</a>
         <a class="sticker sticker-soft" href="{c.to(here + 'soporte/')}">{esc(T(lang, 'support'))}</a>
@@ -535,7 +537,8 @@ def build_home(d: dict, p: dict, lang: str) -> None:
         c, lang, name='AllTheGames', here=lp(lang, 'apps/allthegames/'), logo='static/apps/allthegames/logo.webp',
         logo_size=(743, 500), lead=app_text(d, lang, 'lead'),
         chips=[(cat_label(d, lang, cat), cat['accent']) for cat in d['app']['categories']],
-        store_published=d['app'].get('storePublished', False), privacy=privacy_paths()[lang])]
+        store_published=d['app'].get('storePublished', False), privacy=privacy_paths()[lang],
+        ios=bool(d['app'].get('iosStoreUrl')))]
     supports = [('AllTheGames', lp(lang, 'apps/allthegames/soporte/'))]
     if p:
         features.append(app_feature(
@@ -747,6 +750,9 @@ def build_atg_home(d: dict, lang: str) -> None:
         f'<a class="sticker" href="{esc(app["storeUrl"])}&amp;hl={HTML_LANG[lang]}">{esc(T(lang, "download"))}</a>'
         if app.get('storePublished') else f'<p class="soon">{esc(T(lang, "soon"))}</p>'
     )
+    if app.get('storePublished') and app.get('iosStoreUrl'):
+        store = (f'<div class="actions">{store}'
+                 f'<a class="sticker" href="{esc(app["iosStoreUrl"])}">{esc(T(lang, "downloadIos"))}</a></div>')
     main = f'''<section class="wrap atg-hero">
   <img class="atg-logo" src="{s('logo.webp')}" alt="" width="743" height="500">
   <div class="atg-intro">
@@ -1135,7 +1141,8 @@ def build_game_pages(*, app_id: str, app_name: str, theme: str, favicon: str, lo
                      lead: Callable[[str], str], store_published: bool, store_url: str,
                      categories: list[dict], cat_name: Callable[[str, str], str], games: list[dict],
                      text: Callable[[str, str], dict], nav: Callable, notice: Callable[[str], str] = lambda l: '',
-                     img: Callable[[str], str] | None = None, status: Callable[[str], str] | None = None) -> None:
+                     img: Callable[[str], str] | None = None, status: Callable[[str], str] | None = None,
+                     ios_url: str = '', android_only: frozenset[str] = frozenset()) -> None:
     """Una página por juego y por idioma. Los textos vienen de la app; aquí no se escribe ninguno."""
     accents = {cat['id']: cat['accent'] for cat in categories}
     app_home = f'apps/{app_id}/'
@@ -1151,6 +1158,10 @@ def build_game_pages(*, app_id: str, app_name: str, theme: str, favicon: str, lo
                 f'<a class="sticker" href="{esc(store_url)}&amp;hl={HTML_LANG[lang]}">{esc(T(lang, "download"))}</a>'
                 if store_published else f'<p class="soon">{esc(T(lang, "soon"))}</p>'
             )
+            only_android = bool(ios_url) and g['slug'] in android_only
+            if store_published and ios_url and not status and not only_android:
+                store += f'<a class="sticker" href="{esc(ios_url)}">{esc(T(lang, "downloadIos"))}</a>'
+            only_note = f'<p class="muted">{esc(T(lang, "onlyAndroid"))}</p>' if only_android else ''
             others = ''.join(
                 f'''<li class="game"><a href="{c.to(game_path(app_id, o['slug'], lang))}">
         <img src="{c.to(img(o['slug']))}" alt="" width="72" height="72" loading="lazy">
@@ -1183,6 +1194,7 @@ def build_game_pages(*, app_id: str, app_name: str, theme: str, favicon: str, lo
       <div>
         <p class="play-card-name display">{app_name}</p>
         <p>{esc(lead(lang))}</p>
+        {only_note}
         <div class="actions">{store}<a class="sticker sticker-soft" href="{c.to(lp(lang, app_home))}">{esc(T(lang, 'seeApp'))}</a></div>
       </div>
     </div>
@@ -1200,7 +1212,8 @@ def build_all_game_pages(d: dict, p: dict) -> None:
         logo='static/apps/allthegames/logo.webp', logo_size=(743, 500), lead=lambda l: app_text(d, l, 'lead'),
         store_published=d['app'].get('storePublished', False), store_url=d['app']['storeUrl'],
         categories=d['app']['categories'], cat_name=lambda l, f: cat_label(d, l, next(x for x in d['app']['categories'] if x['id'] == f)),
-        games=d['games'], text=lambda l, g: d['gameText'][l][g], nav=atg_nav)
+        games=d['games'], text=lambda l, g: d['gameText'][l][g], nav=atg_nav,
+        ios_url=d['app'].get('iosStoreUrl', ''), android_only=frozenset(d['app'].get('androidOnly', [])))
     if not p:
         return
     build_game_pages(
