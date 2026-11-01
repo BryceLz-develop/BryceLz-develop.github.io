@@ -366,6 +366,21 @@ def page(
     document.addEventListener('keydown', function (e) {{ if (e.key === 'Escape' && m.open) {{ m.open = false; m.querySelector('summary').focus(); }} }});
   }})();
 </script>
+<script>
+  // Android: el navegador de Instagram (y otros dentro de apps) no abre los
+  // enlaces de play.google.com. Con intent:// se abre la Play Store; si no
+  // puede, vuelve a la ficha web de Google Play.
+  (function () {{
+    if (!/Android/i.test(navigator.userAgent)) return;
+    var links = document.querySelectorAll('a[href^="https://play.google.com/store/apps/details?id="]');
+    for (var i = 0; i < links.length; i++) {{
+      var web = links[i].href;
+      var id = (web.match(/[?&]id=([^&]+)/) || [])[1];
+      if (!id) continue;
+      links[i].href = 'intent://details?id=' + id + '#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=' + encodeURIComponent(web) + ';end';
+    }}
+  }})();
+</script>
 </body>
 </html>
 '''
