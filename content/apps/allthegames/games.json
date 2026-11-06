@@ -303,20 +303,20 @@
 "id": 19,
 "name": "Bloques de colores",
 "slug": "bloques",
-"type": "accion",
+"type": "puzzle",
 "playable": true,
 "short": "Encaja las piezas y limpia filas y columnas.",
-"folder": "accion",
+"folder": "puzzle",
 "multi": false
 },
 {
 "id": 51,
 "name": "Conecta frutas",
 "slug": "match-3",
-"type": "accion",
+"type": "puzzle",
 "playable": true,
 "short": "Junta tres frutas iguales y suma puntos.",
-"folder": "accion",
+"folder": "puzzle",
 "multi": false
 },
 {
@@ -326,17 +326,6 @@
 "type": "accion",
 "playable": true,
 "short": "Gira las piezas que caen y completa filas.",
-"folder": "accion",
-"multi": false
-},
-{
-"id": 55,
-"name": "Lanza canicas",
-"slug": "canicas",
-"hidden": true,
-"type": "accion",
-"playable": true,
-"short": "Tira una canica a la cola. Tres del mismo color saltan.",
 "folder": "accion",
 "multi": false
 },
@@ -389,6 +378,16 @@
 "short": "Salta de plataforma en plataforma y sube todo lo que puedas.",
 "folder": "accion",
 "multi": false
+},
+{
+"id": 63,
+"name": "Minigolf",
+"slug": "minigolf",
+"type": "accion",
+"playable": true,
+"short": "Mete la bola en el hoyo con los menos golpes posibles.",
+"folder": "accion",
+"multi": true
 },
 {
 "id": 25,
@@ -577,6 +576,26 @@
 "type": "mesa",
 "playable": true,
 "short": "Deja caer fichas. Gana quien pone cuatro en línea.",
+"folder": "mesa",
+"multi": true
+},
+{
+"id": 62,
+"name": "Mancala",
+"slug": "mancala",
+"type": "mesa",
+"playable": true,
+"short": "Reparte semillas por los hoyos y llena tu granero.",
+"folder": "mesa",
+"multi": true
+},
+{
+"id": 64,
+"name": "Billar",
+"slug": "billar",
+"type": "mesa",
+"playable": true,
+"short": "Bola 8, Bola 9, Carambola libre y Tres bandas en una mesa de billar.",
 "folder": "mesa",
 "multi": true
 },

@@ -158,17 +158,12 @@
   "match-3": {
    "name": "Conecta frutas",
    "short": "Junta tres frutas iguales y suma puntos.",
-   "long": "Arrastra una fruta a otra de al lado. Si juntas tres o más iguales, desaparecen y en su sitio salen frutas nuevas. Con cuatro se va toda la línea; con cinco, esa fruta de todo el tablero. Sigue hasta que no quede ningún trío."
+   "long": "Arrastra una fruta a otra de al lado. Si juntas tres o más iguales, desaparecen y en su sitio salen frutas nuevas. Con cuatro se va toda la línea; con cinco, esa fruta de todo el tablero. En Contrarreloj tienes tres minutos; en Infinito, sigue hasta que no quede ningún trío."
   },
   "lluvia-de-bloques": {
    "name": "Lluvia de bloques",
    "short": "Gira las piezas que caen y completa filas.",
    "long": "Las piezas van cayendo. Muévelas y gíralas para llenar filas. Cada fila llena desaparece y sumas puntos. Aguanta hasta que el pozo se llene."
-  },
-  "canicas": {
-   "name": "Lanza canicas",
-   "short": "Tira una canica a la cola. Tres del mismo color saltan.",
-   "long": "Las canicas avanzan por el camino hacia el hoyo. Apunta y suelta para tirar la tuya: si juntas tres o más del mismo color, desaparecen. Cuando se acaba la cola, has ganado. Si llegan al hoyo, se acaba."
   },
   "burbujas": {
    "name": "Dispara bolas",
@@ -194,6 +189,11 @@
    "name": "Salta, ranita",
    "short": "Salta de plataforma en plataforma y sube todo lo que puedas.",
    "long": "La ranita salta sola de una plataforma a otra. Tú la mueves a los lados para que no se caiga. Cuanto más alto llegue, mejor."
+  },
+  "minigolf": {
+   "name": "Minigolf",
+   "short": "Mete la bola en el hoyo con los menos golpes posibles.",
+   "long": "Apunta con el dedo y desliza la fuerza para tirar la bola. Métela en el hoyo con los menos golpes que puedas, hoyo tras hoyo."
   },
   "caminos": {
    "name": "Caminos",
@@ -289,6 +289,16 @@
    "name": "Conecta 4",
    "short": "Deja caer fichas. Gana quien pone cuatro en línea.",
    "long": "Tú juegas con las fichas rojas. Toca una columna y la ficha cae hasta abajo. Ganas si juntas cuatro seguidas, en fila, columna o diagonal. En cada revancha empieza el otro."
+  },
+  "mancala": {
+   "name": "Mancala",
+   "short": "Reparte semillas por los hoyos y llena tu granero.",
+   "long": "Toca uno de tus hoyos y sus semillas se reparten de una en una hacia tu granero. Gana quien junta más semillas en su granero."
+  },
+  "billar": {
+   "name": "Billar",
+   "short": "Bola 8, Bola 9, Carambola libre y Tres bandas en una mesa de billar.",
+   "long": "Apunta con el dedo y desliza la fuerza para tirar. Elige Bola 8, Bola 9, Carambola libre o Tres bandas y juega contra el móvil o con un amigo."
   },
   "hundir-la-flota": {
    "name": "Hundir la flota",
@@ -460,17 +470,12 @@
   "match-3": {
    "name": "Match fruits",
    "short": "Join three matching fruits and score points.",
-   "long": "Drag a fruit onto one next to it. If you join three or more matching ones, they disappear and new fruits appear in their place. With four the whole line goes; with five, that fruit from the whole board. Keep going until no three are left."
+   "long": "Drag a fruit onto one next to it. If you join three or more matching ones, they disappear and new fruits appear in their place. With four the whole line goes; with five, that fruit from the whole board. In Time trial you have three minutes; in Endless, keep going until no three are left."
   },
   "lluvia-de-bloques": {
    "name": "Block rain",
    "short": "Rotate the falling pieces and complete rows.",
    "long": "The pieces keep falling. Move them and rotate them to fill rows. Each full row disappears and you score points. Hold on until the well fills up."
-  },
-  "canicas": {
-   "name": "Launch marbles",
-   "short": "Throw a marble into the line. Three of the same color jump out.",
-   "long": "The marbles move along the path toward the hole. Aim and let go to throw yours: if you join three or more of the same color, they disappear. When the line is gone, you win. If they reach the hole, it is over."
   },
   "burbujas": {
    "name": "Shoot balls",
@@ -496,6 +501,11 @@
    "name": "Jump, little frog",
    "short": "Jump from platform to platform and climb as high as you can.",
    "long": "The little frog jumps on its own from one platform to another. You move it sideways so it does not fall. The higher it goes, the better."
+  },
+  "minigolf": {
+   "name": "Mini golf",
+   "short": "Get the ball in the hole in as few strokes as you can.",
+   "long": "Aim with your finger and slide the power to hit the ball. Get it in the hole in as few strokes as you can, hole after hole."
   },
   "caminos": {
    "name": "Paths",
@@ -591,6 +601,16 @@
    "name": "Connect 4",
    "short": "Drop pieces. The one who puts four in a line wins.",
    "long": "You play the red pieces. Tap a column and the piece falls to the bottom. You win if you line up four: across, down or diagonally. Each rematch, the other player starts."
+  },
+  "mancala": {
+   "name": "Mancala",
+   "short": "Sow seeds around the pits and fill your store.",
+   "long": "Tap one of your pits and its seeds are sown one by one towards your store. Whoever gathers the most seeds in their store wins."
+  },
+  "billar": {
+   "name": "Pool",
+   "short": "8-ball, 9-ball, straight rail and three-cushion on a billiard table.",
+   "long": "Aim with your finger and slide the power to shoot. Pick 8-ball, 9-ball, straight rail or three-cushion and play against the phone or with a friend."
   },
   "hundir-la-flota": {
    "name": "Battleship",
@@ -762,17 +782,12 @@
   "match-3": {
    "name": "Una frutas",
    "short": "Junte três frutas iguais e some pontos.",
-   "long": "Arraste uma fruta para outra do lado. Se juntar três ou mais iguais, desaparecem e no lugar delas aparecem frutas novas. Com quatro vai a linha inteira; com cinco, essa fruta do tabuleiro inteiro. Siga até não restar nenhum trio."
+   "long": "Arraste uma fruta até outra ao lado. Se juntar três ou mais iguais, elas somem e frutas novas aparecem no lugar. Com quatro some a linha inteira; com cinco, essa fruta do tabuleiro todo. No Contra o relógio você tem três minutos; no Infinito, continue até não restar nenhum trio."
   },
   "lluvia-de-bloques": {
    "name": "Chuva de blocos",
    "short": "Gire as peças que caem e complete linhas.",
    "long": "As peças vão caindo. Mova e gire para encher linhas. Cada linha cheia desaparece e você soma pontos. Aguente até o poço encher."
-  },
-  "canicas": {
-   "name": "Lance bolinhas",
-   "short": "Lance uma bolinha na fila. Três da mesma cor saltam.",
-   "long": "As bolinhas avançam pelo caminho rumo ao buraco. Mire e solte para atirar a sua: se juntar três ou mais da mesma cor, desaparecem. Quando a fila acabar, você ganhou. Se chegarem ao buraco, acaba."
   },
   "burbujas": {
    "name": "Atire bolas",
@@ -798,6 +813,11 @@
    "name": "Pule, rãzinha",
    "short": "Pule de plataforma em plataforma e suba o máximo que puder.",
    "long": "A rãzinha pula sozinha de uma plataforma a outra. Você a move para os lados para que não caia. Quanto mais alto chegar, melhor."
+  },
+  "minigolf": {
+   "name": "Minigolfe",
+   "short": "Coloque a bola no buraco com o menor número de tacadas.",
+   "long": "Mire com o dedo e deslize a força para lançar a bola. Coloque-a no buraco com o menor número de tacadas, buraco após buraco."
   },
   "caminos": {
    "name": "Caminhos",
@@ -893,6 +913,16 @@
    "name": "Liga 4",
    "short": "Deixe cair peças. Ganha quem puser quatro em linha.",
    "long": "Você joga com as peças vermelhas. Toque uma coluna e a peça cai até embaixo. Você ganha se juntar quatro seguidas, em linha, coluna ou diagonal. Em cada revanche começa o outro."
+  },
+  "mancala": {
+   "name": "Mancala",
+   "short": "Semeie as sementes pelas covas e encha o seu armazém.",
+   "long": "Toque em uma das suas covas e as sementes são semeadas uma a uma rumo ao seu armazém. Ganha quem junta mais sementes no armazém."
+  },
+  "billar": {
+   "name": "Bilhar",
+   "short": "Bola 8, bola 9, carambola livre e três tabelas numa mesa de bilhar.",
+   "long": "Mire com o dedo e deslize a força para tacar. Escolha bola 8, bola 9, carambola livre ou três tabelas e jogue contra o celular ou com um amigo."
   },
   "hundir-la-flota": {
    "name": "Batalha naval",
@@ -1064,17 +1094,12 @@
   "match-3": {
    "name": "Unisci la frutta",
    "short": "Unisci tre frutti uguali e fai punti.",
-   "long": "Trascina un frutto su un altro accanto. Se unisci tre o più uguali, spariscono e al loro posto compaiono frutti nuovi. Con quattro se ne va tutta la linea; con cinque, quel frutto da tutto il tabellone. Continua finché non resta nessun trio."
+   "long": "Trascina un frutto su quello accanto. Se ne unisci tre o più uguali, spariscono e al loro posto arrivano frutti nuovi. Con quattro se ne va tutta la riga; con cinque, quel frutto da tutto il tabellone. A tempo hai tre minuti; in Infinito, continua finché non resta nessun tris."
   },
   "lluvia-de-bloques": {
    "name": "Pioggia di blocchi",
    "short": "Gira i pezzi che cadono e completa le righe.",
    "long": "I pezzi cadono. Muovili e girali per riempire le righe. Ogni riga piena sparisce e fai punti. Tieni duro finché il pozzo si riempie."
-  },
-  "canicas": {
-   "name": "Lancia le biglie",
-   "short": "Tira una biglia nella fila. Tre dello stesso colore saltano via.",
-   "long": "Le biglie avanzano sul percorso verso il buco. Mira e lascia per tirare la tua: se unisci tre o più dello stesso colore, spariscono. Quando la fila è finita, hai vinto. Se arrivano al buco, è finita."
   },
   "burbujas": {
    "name": "Spara le palle",
@@ -1100,6 +1125,11 @@
    "name": "Salta, ranocchia",
    "short": "Salta di piattaforma in piattaforma e sali più che puoi.",
    "long": "La ranocchia salta da sola da una piattaforma all’altra. Tu la muovi di lato perché non cada. Più in alto arriva, meglio è."
+  },
+  "minigolf": {
+   "name": "Minigolf",
+   "short": "Manda la pallina in buca con meno colpi possibile.",
+   "long": "Mira con il dito e scorri la forza per tirare la pallina. Mandala in buca con meno colpi possibile, buca dopo buca."
   },
   "caminos": {
    "name": "Percorsi",
@@ -1195,6 +1225,16 @@
    "name": "Forza 4",
    "short": "Fai cadere le pedine. Vince chi ne mette quattro in fila.",
    "long": "Tu giochi con le pedine rosse. Tocca una colonna e la pedina cade fino in fondo. Vinci se unisci quattro di seguito, in riga, colonna o diagonale. A ogni rivincita inizia l’altro."
+  },
+  "mancala": {
+   "name": "Mancala",
+   "short": "Semina i semi nelle buche e riempi il tuo granaio.",
+   "long": "Tocca una delle tue buche e i suoi semi vengono seminati uno a uno verso il tuo granaio. Vince chi raccoglie più semi nel suo granaio."
+  },
+  "billar": {
+   "name": "Biliardo",
+   "short": "Palla 8, palla 9, carambola libera e tre sponde su un tavolo da biliardo.",
+   "long": "Mira con il dito e scorri la forza per tirare. Scegli palla 8, palla 9, carambola libera o tre sponde e gioca contro il telefono o con un amico."
   },
   "hundir-la-flota": {
    "name": "Battaglia navale",
@@ -1366,17 +1406,12 @@
   "match-3": {
    "name": "Relie les fruits",
    "short": "Réunis trois fruits pareils et marque des points.",
-   "long": "Glisse un fruit sur un autre à côté. Si tu réunis trois ou plus de pareils, ils disparaissent et de nouveaux fruits apparaissent à leur place. Avec quatre, toute la ligne s’en va ; avec cinq, ce fruit de tout le plateau. Continue jusqu’à ce qu’il ne reste plus aucun trio."
+   "long": "Fais glisser un fruit sur son voisin. Si tu en alignes trois ou plus identiques, ils disparaissent et de nouveaux fruits prennent leur place. Avec quatre, toute la ligne part ; avec cinq, ce fruit sur tout le plateau. En Contre la montre, tu as trois minutes ; en Infini, continue jusqu’à ce qu’il ne reste aucun trio."
   },
   "lluvia-de-bloques": {
    "name": "Pluie de blocs",
    "short": "Tourne les pièces qui tombent et complète des lignes.",
    "long": "Les pièces tombent. Bouge-les et tourne-les pour remplir des lignes. Chaque ligne pleine disparaît et tu marques des points. Tiens jusqu’à ce que le puits se remplisse."
-  },
-  "canicas": {
-   "name": "Lance les billes",
-   "short": "Lance une bille dans la file. Trois de la même couleur sautent.",
-   "long": "Les billes avancent sur le chemin vers le trou. Vise et lâche pour lancer la tienne : si tu réunis trois ou plus de la même couleur, elles disparaissent. Quand la file est finie, tu as gagné. Si elles arrivent au trou, c’est fini."
   },
   "burbujas": {
    "name": "Tire des balles",
@@ -1402,6 +1437,11 @@
    "name": "Saute, petite grenouille",
    "short": "Saute de plateforme en plateforme et monte aussi haut que tu peux.",
    "long": "La petite grenouille saute toute seule d’une plateforme à l’autre. Toi, tu la bouges sur les côtés pour qu’elle ne tombe pas. Plus elle va haut, mieux c’est."
+  },
+  "minigolf": {
+   "name": "Minigolf",
+   "short": "Mets la balle dans le trou en le moins de coups possible.",
+   "long": "Vise avec le doigt et glisse la puissance pour frapper la balle. Mets-la dans le trou en le moins de coups possible, trou après trou."
   },
   "caminos": {
    "name": "Chemins",
@@ -1497,6 +1537,16 @@
    "name": "Puissance 4",
    "short": "Fais tomber des pions. Gagne celui qui en aligne quatre.",
    "long": "Toi, tu joues avec les pions rouges. Touche une colonne et le pion tombe jusqu’en bas. Tu gagnes si tu alignes quatre d’affilée, en ligne, colonne ou diagonale. À chaque revanche, c’est l’autre qui commence."
+  },
+  "mancala": {
+   "name": "Mancala",
+   "short": "Sème les graines dans les trous et remplis ton grenier.",
+   "long": "Touche un de tes trous et ses graines sont semées une à une vers ton grenier. Celui qui a le plus de graines dans son grenier gagne."
+  },
+  "billar": {
+   "name": "Billard",
+   "short": "Boule 8, boule 9, partie libre et trois bandes sur une table de billard.",
+   "long": "Vise avec le doigt et glisse la puissance pour jouer. Choisis boule 8, boule 9, partie libre ou trois bandes et joue contre le téléphone ou avec un ami."
   },
   "hundir-la-flota": {
    "name": "Bataille navale",
@@ -1668,17 +1718,12 @@
   "match-3": {
    "name": "Früchte verbinden",
    "short": "Verbinde drei gleiche Früchte und sammle Punkte.",
-   "long": "Zieh eine Frucht auf eine daneben. Wenn du drei oder mehr Gleiche verbindest, verschwinden sie und an ihrer Stelle erscheinen neue Früchte. Mit vier geht die ganze Linie; mit fünf diese Frucht vom ganzen Brett. Mach weiter, bis kein Dreier mehr bleibt."
+   "long": "Zieh eine Frucht auf die daneben. Bilden drei oder mehr gleiche eine Reihe, verschwinden sie und neue Früchte rücken nach. Mit vier verschwindet die ganze Linie, mit fünf diese Frucht auf dem ganzen Brett. Gegen die Uhr hast du drei Minuten; bei Endlos geht es weiter, bis kein Trio mehr möglich ist."
   },
   "lluvia-de-bloques": {
    "name": "Blockregen",
    "short": "Drehe die fallenden Teile und fülle Reihen.",
    "long": "Die Teile fallen weiter. Bewege sie und drehe sie, um Reihen zu füllen. Jede volle Reihe verschwindet und du sammelst Punkte. Halte durch, bis der Schacht voll ist."
-  },
-  "canicas": {
-   "name": "Murmeln schießen",
-   "short": "Schieß eine Murmel in die Schlange. Drei derselben Farbe springen raus.",
-   "long": "Die Murmeln laufen den Weg zum Loch. Ziel und lass los, um deine zu werfen: Wenn du drei oder mehr derselben Farbe verbindest, verschwinden sie. Wenn die Schlange weg ist, hast du gewonnen. Wenn sie zum Loch kommen, ist Schluss."
   },
   "burbujas": {
    "name": "Kugeln schießen",
@@ -1704,6 +1749,11 @@
    "name": "Spring, kleiner Frosch",
    "short": "Spring von Plattform zu Plattform und steig so hoch du kannst.",
    "long": "Der kleine Frosch springt von allein von einer Plattform zur anderen. Du bewegst ihn zur Seite, damit er nicht fällt. Je höher er kommt, desto besser."
+  },
+  "minigolf": {
+   "name": "Minigolf",
+   "short": "Bring den Ball mit möglichst wenigen Schlägen ins Loch.",
+   "long": "Ziel mit dem Finger und schieb die Kraft, um den Ball zu schlagen. Bring ihn mit möglichst wenigen Schlägen ins Loch, Loch für Loch."
   },
   "caminos": {
    "name": "Wege",
@@ -1799,6 +1849,16 @@
    "name": "Vier gewinnt",
    "short": "Lass Steine fallen. Gewonnen hat, wer vier in einer Linie legt.",
    "long": "Du spielst die roten Steine. Tippe eine Spalte und der Stein fällt nach unten. Du gewinnst, wenn du vier in Folge verbindest, in Reihe, Spalte oder Diagonale. Bei jeder Revanche fängt der andere an."
+  },
+  "mancala": {
+   "name": "Mancala",
+   "short": "Verteile Samen auf die Mulden und fülle dein Lager.",
+   "long": "Tippe eine deiner Mulden an, und ihre Samen werden einzeln in Richtung deines Lagers verteilt. Wer die meisten Samen im Lager hat, gewinnt."
+  },
+  "billar": {
+   "name": "Billard",
+   "short": "8-Ball, 9-Ball, Freie Partie und Dreiband auf einem Billardtisch.",
+   "long": "Ziel mit dem Finger und schieb die Kraft, um zu stoßen. Wähle 8-Ball, 9-Ball, Freie Partie oder Dreiband und spiel gegen das Handy oder mit einem Freund."
   },
   "hundir-la-flota": {
    "name": "Schiffe versenken",

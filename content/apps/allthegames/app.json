@@ -12,7 +12,7 @@
     "Casi todo se juega sin conexión. Solo Banderas y algunos juegos de palabras necesitan internet.",
     "Juegos para dos personas en el mismo teléfono.",
     "En español, inglés, francés, alemán, italiano y portugués.",
-    "Para toda la familia: los anuncios nunca son personalizados y son aptos para menores."
+    "Para toda la familia: anuncios aptos para menores; a los adultos solo se les personalizan si lo aceptan."
   ],
   "categories": [
     {
@@ -46,5 +46,5 @@
       "accent": "#7048A8"
     }
   ],
-  "policyVersion": "2026-10-26"
+  "policyVersion": "2026-11-05"
 }
